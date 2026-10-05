@@ -1,0 +1,30 @@
+---
+interface Props {
+  label: string;
+  href?: string | null;
+  variant?: 'primary' | 'secondary' | 'status' | 'text';
+  external?: boolean;
+}
+
+const { label, href, variant = 'primary', external = false } = Astro.props;
+const className = `cta cta--${variant}`;
+---
+
+{
+  href ? (
+    <a
+      class={className}
+      href={href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+    >
+      {label}
+      {variant !== 'status' && <span aria-hidden="true">→</span>}
+    </a>
+  ) : (
+    <span class={className} role="status">
+      <span class="cta__dot" aria-hidden="true"></span>
+      {label}
+    </span>
+  )
+}

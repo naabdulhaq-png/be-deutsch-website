@@ -1,0 +1,28 @@
+---
+import brandMark from '../assets/branding/be_deutsch_icon.svg';
+import { site } from '../config/site';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="brand brand--footer" href="#top" aria-label="Be Deutsch — back to top">
+        <img src={brandMark.src} width="44" height="44" alt="" />
+        <span>{site.name}</span>
+      </a>
+      <p lang="de">{site.tagline}</p>
+    </div>
+    <div class="site-footer__details">
+      <nav class="site-footer__nav" aria-label="Support and legal information">
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+      <span>{site.domain}</span>
+      <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>
+      <span>© {currentYear} Be Deutsch</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,6 @@
+overrides:
+  http-cache-semantics: 4.3.0
+
+allowBuilds:
+  esbuild: true
+  sharp: true

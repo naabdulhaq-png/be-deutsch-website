@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import MediaFrame from '../components/MediaFrame.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import featureArtwork from '../assets/branding/clarity_fold_feature.svg';
+import courseOverview from '../assets/screenshots/02_learn_course_overview.png';
+import grammarLesson from '../assets/screenshots/03_grammar_lesson.png';
+import guidedPractice from '../assets/screenshots/04_guided_practice.png';
+import quiz from '../assets/screenshots/05_quiz.png';
+import myMistakes from '../assets/screenshots/06_review_my_mistakes.png';
+import progress from '../assets/screenshots/07_progress.png';
+import { appRelease, site } from '../config/site';
+
+const learningSteps = [
+  ['01', 'Learn', 'Start with a focused lesson and a clear explanation.'],
+  ['02', 'Practice', 'Build confidence through guided and independent activities.'],
+  ['03', 'Check', 'Use lesson quizzes and unit checkpoints to check understanding.'],
+  ['04', 'Review mistakes', 'Return to incorrect answers in My Mistakes.'],
+  ['05', 'Improve', 'Track progress and keep strengthening your foundations.'],
+];
+
+const courseFacts = [
+  ['5', 'units'],
+  ['34', 'structured lessons'],
+  ['320', 'vocabulary items'],
+  ['12', 'readings'],
+];
+
+const learningFeatures = [
+  ['Grammar', 'Clear explanations for essential German structures.'],
+  ['Vocabulary', 'Core words organized within a structured course.'],
+  ['Reading', 'Twelve readings that reinforce lesson content.'],
+  ['Guided practice', 'Supported activities that introduce each task step by step.'],
+  ['Independent practice', 'A chance to apply what you have learned on your own.'],
+  ['Lesson quizzes', 'Short checks at the end of lessons.'],
+  ['Unit checkpoints', 'Review points across the five-unit course.'],
+  ['My Mistakes', 'A dedicated place to revisit incorrect answers.'],
+  ['Review', 'Repeat key material when it needs more attention.'],
+  ['Progress tracking', 'See your movement through lessons and units.'],
+  ['Offline learning', 'Keep lessons available without a constant connection.'],
+];
+
+const audiences = [
+  'English-speaking beginners',
+  'Migrants and newcomers',
+  'International students',
+  'International workers',
+  'People building German foundations',
+];
+
+const websiteStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: `${site.url}/`,
+  description: site.description,
+  inLanguage: 'en',
+};
+---
+
+<BaseLayout structuredData={websiteStructuredData}>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="hero" tone="canvas" labelledby="hero-title">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">A1 Foundations · Android</p>
+          <h1 id="hero-title">A clearer way to build your German foundations.</h1>
+          <p class="hero__tagline" lang="de">{site.tagline}</p>
+          <p class="hero__promise">
+            Be Deutsch A1 Foundations helps English-speaking beginners build essential German
+            grammar, vocabulary and reading skills through clear explanations, guided practice,
+            quizzes and mistake-based revision, with lessons available offline.
+          </p>
+          <div class="hero__actions">
+            <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
+            <CTA label="Explore A1 Foundations" href="#app" variant="secondary" />
+          </div>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <img src={featureArtwork.src} width="1024" height="500" alt="" />
+        </div>
+      </div>
+    </Section>
+
+    <Section id="app" tone="white" class="product-preview" labelledby="product-title">
+      <div class="split-grid split-grid--preview">
+        <div class="section-heading section-heading--sticky">
+          <p class="eyebrow">The real app</p>
+          <h2 id="product-title">A structured course you can see and follow.</h2>
+          <p>
+            Open the course overview, choose a lesson and move through each learning stage at your
+            own pace. The preview shows the current production app—not a concept mockup.
+          </p>
+          <div class="mini-note">
+            <span class="mini-note__line" aria-hidden="true"></span>
+            <span>Built for focused, self-paced study.</span>
+          </div>
+        </div>
+        <MediaFrame
+          src={courseOverview}
+          alt="Be Deutsch course overview showing A1 Foundations units and lessons"
+          caption="A1 Foundations course overview"
+          featured
+          eager
+          sizes="(min-width: 900px) 430px, 76vw"
+        />
+      </div>
+    </Section>
+
+    <Section tone="navy" labelledby="learning-title">
+      <div class="section-heading section-heading--light">
+        <p class="eyebrow">How learning works</p>
+        <h2 id="learning-title">One clear learning rhythm.</h2>
+      </div>
+      <ol class="learning-path">
+        {learningSteps.map(([number, title, description]) => (
+          <li>
+            <span class="learning-path__number">{number}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </li>
+        ))}
+      </ol>
+    </Section>
+
+    <Section tone="canvas" labelledby="course-title">
+      <div class="course-intro">
+        <div class="section-heading">
+          <p class="eyebrow">Course structure</p>
+          <h2 id="course-title">A1 Foundations, clearly organized.</h2>
+        </div>
+        <p>
+          A defined path through essential beginner content, designed to make the next step easy to
+          find without promising a fixed study duration.
+        </p>
+      </div>
+      <dl class="fact-grid">
+        {courseFacts.map(([value, label]) => (
+          <div>
+            <dt>{value}</dt>
+            <dd>{label}</dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
+
+    <Section tone="white" labelledby="experience-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Core learning experience</p>
+        <h2 id="experience-title">The essentials, working together.</h2>
+        <p>
+          Learn, apply, check and return to the material that needs another look—all within one
+          focused course.
+        </p>
+      </div>
+      <div class="feature-grid">
+        {learningFeatures.map(([title, description], index) => (
+          <article class:list={['feature-card', { 'feature-card--accent': index === 7 }]}>
+            <span class="feature-card__mark" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </article>
+        ))}
+      </div>
+    </Section>
+
+    <Section id="about" tone="teal" labelledby="why-title">
+      <div class="why-grid">
+        <div class="section-heading section-heading--light">
+          <p class="eyebrow">Why Be Deutsch</p>
+          <h2 id="why-title">Less guesswork. More purposeful practice.</h2>
+        </div>
+        <div class="why-list">
+          <article><h3>Clear explanations</h3><p>Understand the point before you practise it.</p></article>
+          <article><h3>Structured progression</h3><p>Move through connected units and lessons in order.</p></article>
+          <article><h3>Practice-based learning</h3><p>Apply each topic through supported and independent tasks.</p></article>
+          <article><h3>Mistake-based revision</h3><p>Use incorrect answers to guide what you review next.</p></article>
+          <article><h3>Self-paced and offline</h3><p>Study on your schedule, including without a constant connection.</p></article>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="audience-title">
+      <div class="audience-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Who it is for</p>
+          <h2 id="audience-title">German foundations for many starting points.</h2>
+          <p>
+            Be Deutsch is designed for adults learning through English. It is open to anyone who
+            wants a calm, structured beginning—not only one type of learner.
+          </p>
+        </div>
+        <ul class="audience-list">
+          {audiences.map((audience) => <li>{audience}</li>)}
+        </ul>
+      </div>
+    </Section>
+
+    <Section tone="white" class="screenshot-story" labelledby="story-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Inside the course</p>
+        <h2 id="story-title">From explanation to visible progress.</h2>
+        <p>Production screens show the learning flow as it exists in the Android app today.</p>
+      </div>
+      <div class="story-grid">
+        <MediaFrame
+          src={courseOverview}
+          alt="Be Deutsch A1 Foundations course overview with unit and lesson cards"
+          caption="Choose a unit and lesson"
+        />
+        <MediaFrame
+          src={grammarLesson}
+          alt="Be Deutsch grammar lesson screen with an explanation and examples"
+          caption="Read a focused grammar explanation"
+        />
+        <MediaFrame
+          src={guidedPractice}
+          alt="Be Deutsch guided practice activity with a learning prompt"
+          caption="Work through guided practice"
+        />
+        <MediaFrame
+          src={myMistakes}
+          alt="Be Deutsch My Mistakes screen for reviewing incorrect answers"
+          caption="Revisit answers in My Mistakes"
+        />
+        <MediaFrame
+          src={progress}
+          alt="Be Deutsch progress screen showing course learning progress"
+          caption="See progress across the course"
+        />
+        <MediaFrame
+          src={quiz}
+          alt="Be Deutsch lesson quiz screen with a multiple-choice question"
+          caption="Check understanding with a lesson quiz"
+        />
+      </div>
+    </Section>
+
+    <Section tone="navy" size="compact" labelledby="languages-title">
+      <div class="language-strip">
+        <div>
+          <p class="eyebrow">Learner support languages</p>
+          <h2 id="languages-title">English at launch. More planned.</h2>
+        </div>
+        <p>
+          English learner support will be available at launch. Persian/Farsi and additional
+          learner-support languages are planned for future releases and are not available yet.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="partners" tone="canvas" labelledby="partners-title">
+      <div class="partners-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Partners</p>
+          <h2 id="partners-title">Help shape a practical learning resource.</h2>
+          <p>
+            We welcome conversations with universities, integration organizations, NGOs,
+            employers, foundations, sponsors and educational partners.
+          </p>
+        </div>
+        <div class="partner-panel">
+          <h3>Ways to collaborate</h3>
+          <ul>
+            <li>Pilot collaboration</li>
+            <li>Learner and educator feedback</li>
+            <li>Distribution support</li>
+            <li>Institutional support</li>
+            <li>Partnership discussions</li>
+          </ul>
+          <CTA label="Start a partnership conversation" href={`mailto:${site.supportEmail}?subject=Partnership%20conversation`} variant="secondary" />
+        </div>
+      </div>
+    </Section>
+
+    <Section id="support" tone="white" size="compact" labelledby="support-title">
+      <div class="support-card">
+        <div>
+          <p class="eyebrow">Support & contact</p>
+          <h2 id="support-title">Questions about Be Deutsch?</h2>
+          <p>For app support, feedback or partnership enquiries, email us directly.</p>
+        </div>
+        <a class="support-card__email" href={`mailto:${site.supportEmail}`}>
+          {site.supportEmail}<span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

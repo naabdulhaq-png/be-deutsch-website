@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { appRelease, publicContact } from '../config/site';
+
+const learningHelp = [
+  ['Lessons', 'Work through the units in order or return to an earlier lesson when you need another explanation.'],
+  ['Practice', 'Guided practice introduces the task step by step; independent practice gives you room to apply it yourself.'],
+  ['Checks', 'Lesson quizzes and unit checkpoints help you see what you understand and what needs another look.'],
+  ['Review', 'My Mistakes keeps incorrect answers available as focused review material.'],
+];
+
+const troubleshooting = [
+  ['A lesson does not open', 'Close and reopen the app. If the issue continues, restart the Android device and try again.'],
+  ['Progress looks unexpected', 'Check that you are using the same device and app installation. Progress is stored locally and is not synced to a Be Deutsch account.'],
+  ['The app was reinstalled or its storage was cleared', 'Local progress can be removed when app storage is cleared or the app is uninstalled. Android backup settings may affect whether app data is restored.'],
+  ['You found a content or technical issue', 'Email support with the lesson or screen name, what you expected and what happened. Do not include passwords or sensitive personal information.'],
+];
+
+const faqs = [
+  ['What is Be Deutsch A1 Foundations?', 'It is an Android learning app for English-speaking beginners building German grammar, vocabulary and reading foundations through structured lessons, practice, quizzes, checkpoints and review.'],
+  ['Who is it for?', 'It is designed for English-speaking beginners, including migrants and newcomers, international students, international workers and anyone building German foundations.'],
+  ['Does it work offline?', 'Yes. The learning content and core study experience are designed for offline use after the app is installed.'],
+  ['Does it include speaking or listening?', 'No. The current first release focuses on grammar, vocabulary, reading, guided and independent practice, quizzes, checkpoints, review and progress tracking. It does not include listening, speaking or pronunciation training.'],
+  ['Is it an official A1 certificate?', 'No. Be Deutsch is a learning product, not an official certification or exam-preparation provider, and it does not issue certificates.'],
+  ['How does My Mistakes work?', 'Incorrect answers are kept as review material so you can return to areas that need more attention.'],
+  ['How do quizzes and checkpoints work?', 'Lesson quizzes check understanding within a lesson. Unit checkpoints provide a broader check after a group of lessons.'],
+  ['Is Persian/Farsi available?', 'Not yet. English learner support is planned for launch. Persian/Farsi and additional learner-support languages are planned for later releases.'],
+  ['Where can I download the app?', `The Android public release is pending. The current status is: ${appRelease.label}. There is no public Google Play link yet.`],
+  ['How can I contact support?', `Email ${publicContact.supportEmail}. Email is the primary support channel.`],
+];
+---
+
+<BaseLayout
+  title="Be Deutsch Support — Help with Learning and the Android App"
+  description="Get help with Be Deutsch A1 Foundations, lessons, quizzes, My Mistakes, offline learning, progress and Android app availability."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="page-hero support-hero" tone="canvas" labelledby="support-page-title">
+      <div class="support-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Learner support</p>
+          <h1 id="support-page-title">Clear help for your next step.</h1>
+          <p class="page-hero__lead">
+            Find practical guidance for lessons, practice, quizzes, review, progress and offline use.
+            If you still need help, email Be Deutsch directly.
+          </p>
+          <CTA label="Email support" href={`mailto:${publicContact.supportEmail}?subject=Be%20Deutsch%20support`} />
+        </div>
+        <aside class="support-status" aria-labelledby="availability-title">
+          <p class="eyebrow">App availability</p>
+          <h2 id="availability-title">Android release pending</h2>
+          <p>{appRelease.label}. A public Google Play link is not available yet.</p>
+        </aside>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="getting-started-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">Getting started</p>
+          <h2 id="getting-started-title">Follow the course, then use feedback to decide what to revisit.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            Be Deutsch A1 Foundations organizes German grammar, vocabulary and reading into five
+            units and 34 structured lessons. Each lesson combines explanation with practice and a
+            check of understanding.
+          </p>
+          <p>
+            You can study at your own pace. The app keeps your lesson progress and review activity
+            on your Android device; there is no Be Deutsch account or cloud sync.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="learning-help-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Learning and lesson help</p>
+        <h2 id="learning-help-title">Understand, practise, check and review.</h2>
+      </div>
+      <div class="support-topic-grid">
+        {learningHelp.map(([title, description]) => (
+          <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </article>
+        ))}
+      </div>
+    </Section>
+
+    <Section tone="navy" labelledby="offline-title">
+      <div class="support-feature-grid">
+        <article>
+          <p class="eyebrow">Offline use</p>
+          <h2 id="offline-title">Keep learning without a constant connection.</h2>
+          <p>
+            Core lessons, practice, quizzes, checkpoints, My Mistakes and progress tracking work
+            offline after installation. Your learning records remain on the device unless Android
+            backup restores them.
+          </p>
+        </article>
+        <article>
+          <p class="eyebrow">Progress and My Mistakes</p>
+          <h2>Use local progress as a study guide.</h2>
+          <p>
+            Progress tracking shows completed learning activity. My Mistakes turns incorrect answers
+            into focused review material. These records are local and are not synced to Be Deutsch.
+          </p>
+        </article>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="troubleshooting-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Common troubleshooting</p>
+        <h2 id="troubleshooting-title">Start with these checks.</h2>
+      </div>
+      <div class="troubleshooting-list">
+        {troubleshooting.map(([title, answer], index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div><h3>{title}</h3><p>{answer}</p></div>
+          </article>
+        ))}
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="faq-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2 id="faq-title">About the current app.</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map(([question, answer]) => (
+          <details>
+            <summary>{question}</summary>
+            <p>{answer}</p>
+          </details>
+        ))}
+      </div>
+    </Section>
+
+    <Section tone="teal" size="compact" labelledby="support-contact-title">
+      <div class="support-contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="support-contact-title">Still need help?</h2>
+          <p>Email is the primary support channel. Phone contact is also available for appropriate enquiries.</p>
+        </div>
+        <address>
+          <a href={`mailto:${publicContact.supportEmail}`}>{publicContact.supportEmail}</a>
+          <a href={publicContact.phoneHref}>{publicContact.phoneDisplay}</a>
+        </address>
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

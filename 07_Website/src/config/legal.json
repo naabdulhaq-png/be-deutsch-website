@@ -1,0 +1,21 @@
+{
+  "legalReady": true,
+  "providerName": "Abdul Haq Nazari",
+  "providerNameConfirmedComplete": true,
+  "providerStatus": "Private individual / natural person",
+  "operatingCountry": "Germany",
+  "serviceAddress": {
+    "street": "Friedrich-König-Straße 17",
+    "postalCode": "98527",
+    "city": "Suhl",
+    "country": "Germany"
+  },
+  "supportEmail": "support@bedeutsch.de",
+  "phoneDisplay": "+49 1522 1922027",
+  "phoneHref": "tel:+4915221922027",
+  "businessRegistration": "None",
+  "commercialRegister": "None",
+  "vatId": "None",
+  "plannedWebsiteHost": "GitHub Pages",
+  "emailProvider": "STRATO"
+}

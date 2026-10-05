@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { site } from '../config/site';
+
+const organizationTypes = [
+  'Universities',
+  'Integration organizations',
+  'NGOs',
+  'Employers',
+  'Foundations',
+  'Migrant-support organizations',
+  'Educational institutions',
+  'Language-learning organizations',
+  'Sponsors and funders',
+  'Research and innovation partners',
+];
+
+const collaborationAreas = [
+  ['Pilot testing', 'Explore a defined pilot with a learner group and agreed feedback goals.'],
+  ['Learner feedback', 'Collect structured observations from beginners using the current Android release candidate.'],
+  ['Usability studies', 'Study how learners navigate lessons, practice, review and progress information.'],
+  ['Educational review', 'Review course structure, explanations and activities from an educational perspective.'],
+  ['Distribution and referrals', 'Discuss responsible ways to introduce Be Deutsch to relevant learner communities.'],
+  ['Language access', 'Explore future learner-support languages and the needs of specific learner groups.'],
+  ['Integration support', 'Consider how the app could complement existing orientation or learning services.'],
+  ['Research cooperation', 'Define focused research questions around beginner learning and digital course use.'],
+];
+
+const pilotSteps = [
+  ['Define', 'Agree on the learner group, purpose, timeframe and boundaries.'],
+  ['Prepare', 'Set up access, guidance and a simple feedback approach.'],
+  ['Observe', 'Gather structured learner and educator feedback during the pilot.'],
+  ['Review', 'Discuss findings and identify responsible next steps.'],
+];
+---
+
+<BaseLayout
+  title="Partner with Be Deutsch"
+  description="Explore pilot, feedback, educational review, distribution, language-access, research and sponsorship discussions with Be Deutsch."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="page-hero page-hero--partners" tone="canvas" labelledby="partners-page-title">
+      <div class="partners-hero">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Partnerships</p>
+          <h1 id="partners-page-title">Build useful learning pathways together.</h1>
+          <p class="page-hero__lead">
+            Be Deutsch welcomes professional conversations with organizations interested in pilot
+            collaboration, learner feedback, educational review, distribution, language access,
+            research or institutional support.
+          </p>
+          <CTA label="Start a conversation" href="#partner-contact" variant="secondary" />
+        </div>
+        <aside class="stage-panel" aria-labelledby="stage-title">
+          <p class="eyebrow">Current project stage</p>
+          <h2 id="stage-title">Prelaunch</h2>
+          <ul>
+            <li><span>Android</span><strong>Release candidate complete locally</strong></li>
+            <li><span>Google Play</span><strong>Verification and public release pending</strong></li>
+            <li><span>Website</span><strong>Prelaunch stage</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="useful-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">Why collaborate</p>
+          <h2 id="useful-title">Connect a structured learning product with real learner contexts.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            Organizations often understand the practical conditions surrounding language learning:
+            learner goals, available study time, access constraints and the support already in place.
+          </p>
+          <p>
+            Collaboration can help evaluate how Be Deutsch fits those conditions, identify where the
+            experience is clear or difficult and shape responsible decisions before wider release.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="navy" labelledby="organizations-title">
+      <div class="organization-layout">
+        <div class="section-heading section-heading--light">
+          <p class="eyebrow">Who we would like to hear from</p>
+          <h2 id="organizations-title">Organizations working around learning, access and integration.</h2>
+        </div>
+        <ul class="organization-cloud">
+          {organizationTypes.map((type) => <li>{type}</li>)}
+        </ul>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="areas-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Potential collaboration areas</p>
+        <h2 id="areas-title">Start with a focused question and a practical scope.</h2>
+        <p>
+          The examples below are possibilities for discussion, not claims of current partnerships or
+          active programs.
+        </p>
+      </div>
+      <div class="collaboration-grid">
+        {collaborationAreas.map(([title, description], index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </article>
+        ))}
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="pilot-title">
+      <div class="pilot-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Pilot opportunities</p>
+          <h2 id="pilot-title">A small, defined pilot can produce useful evidence.</h2>
+          <p>
+            A pilot should have a clear learner group, a realistic timeframe and specific questions.
+            It should also respect learner privacy and avoid promising outcomes before evidence exists.
+          </p>
+        </div>
+        <ol class="pilot-steps">
+          {pilotSteps.map(([title, description], index) => (
+            <li>
+              <span>{index + 1}</span>
+              <div><h3>{title}</h3><p>{description}</p></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </Section>
+
+    <Section tone="teal" labelledby="feedback-title">
+      <div class="partner-focus-grid">
+        <article>
+          <p class="eyebrow">Learner feedback and testing</p>
+          <h2 id="feedback-title">Learn where the experience supports—or slows—the learner.</h2>
+          <p>
+            Structured feedback can examine course navigation, explanation clarity, practice flow,
+            mistake review and progress information. Usability work should be scoped and interpreted
+            carefully rather than presented as broad impact evidence.
+          </p>
+        </article>
+        <article>
+          <p class="eyebrow">Educational and integration collaboration</p>
+          <h2>Consider how the app could complement existing support.</h2>
+          <p>
+            Educational institutions and integration organizations may help review learning content,
+            identify appropriate learner contexts and discuss referrals or distribution without
+            replacing their existing services.
+          </p>
+        </article>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="outreach-title">
+      <div class="two-idea-grid partner-discussion-grid">
+        <article>
+          <p class="eyebrow">Distribution and outreach</p>
+          <h2 id="outreach-title">Help relevant learners discover the app after public release.</h2>
+          <p>
+            Future discussions may cover institutional referrals, learner information, distribution
+            through existing programs and responsible outreach. The app is not yet publicly released.
+          </p>
+        </article>
+        <article class="two-idea-grid__accent">
+          <p class="eyebrow">Funding and sponsorship</p>
+          <h2>Discuss support for clearly defined work.</h2>
+          <p>
+            Be Deutsch is open to professional sponsorship or funding discussions related to pilots,
+            educational review, language access, research or distribution. No current funding or
+            sponsorship relationship is implied.
+          </p>
+        </article>
+      </div>
+    </Section>
+
+    <Section id="partner-contact" tone="white" size="compact" labelledby="partner-contact-title">
+      <div class="support-card">
+        <div>
+          <p class="eyebrow">Partnership contact</p>
+          <h2 id="partner-contact-title">Begin with your organization and the question you want to explore.</h2>
+          <p>Email Be Deutsch to start a partnership discussion. No form or public commitment is required.</p>
+        </div>
+        <CTA
+          label={site.supportEmail}
+          href={`mailto:${site.supportEmail}?subject=Be%20Deutsch%20partnership%20discussion`}
+          variant="secondary"
+        />
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

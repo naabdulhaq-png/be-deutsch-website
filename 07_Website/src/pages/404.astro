@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import brandMark from '../assets/branding/be_deutsch_icon.svg';
+---
+
+<BaseLayout
+  title="Page not found — Be Deutsch"
+  description="The requested page could not be found. Return to Be Deutsch or visit app and support information."
+  noindex
+  canonicalPath="/404.html"
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content" class="error-page">
+    <div class="container error-page__inner">
+      <img src={brandMark.src} width="88" height="88" alt="" />
+      <p class="eyebrow">Error 404</p>
+      <h1>That page is not here.</h1>
+      <p>
+        The address may be incorrect or the page may have moved. Return to the homepage or use one
+        of the useful links below.
+      </p>
+      <div class="error-page__actions">
+        <CTA label="Return to homepage" href="/" />
+        <CTA label="Explore the app" href="/app/" variant="secondary" />
+        <CTA label="Get support" href="/support/" variant="secondary" />
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

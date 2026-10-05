@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import legal from '../config/legal.json';
+---
+
+<BaseLayout
+  title="Impressum / Legal Notice — Be Deutsch"
+  description="Provider and contact information for Be Deutsch, with the German primary text and an English information translation."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content" class="legal-page">
+    <Section class="page-hero legal-hero" tone="canvas" labelledby="impressum-page-title">
+      <div class="legal-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Provider information</p>
+          <h1 id="impressum-page-title">Impressum / Legal Notice</h1>
+          <p class="page-hero__lead">
+            German provider information followed by a matching English information translation.
+          </p>
+        </div>
+        {!legal.legalReady && (
+          <div class="legal-status" aria-label="Publication status">
+            <span>Release blocked</span>
+            <p>Not legally publication-ready</p>
+          </div>
+        )}
+      </div>
+    </Section>
+
+    {!legal.legalReady && (
+      <div class="release-warning release-warning--critical" role="alert">
+        <div class="container release-warning__inner">
+          <strong>Development copy — do not publish unchanged</strong>
+          <p>
+            The provider information is incomplete. The production release check fails until every
+            required legal field is supplied and confirmed.
+          </p>
+        </div>
+      </div>
+    )}
+
+    <Section tone="white" labelledby="impressum-de-title">
+      <article class="legal-copy legal-copy--notice" lang="de">
+        <p class="eyebrow">Deutsche Fassung · maßgeblicher Text</p>
+        <h2 id="impressum-de-title">Impressum</h2>
+        <p class="legal-intro">Angaben gemäß § 5 DDG</p>
+
+        <h3>Anbieter / verantwortlich</h3>
+        <dl class="legal-facts legal-facts--stacked">
+          <div><dt>Name</dt><dd>{legal.providerName}</dd></div>
+          <div><dt>Status</dt><dd>Privatperson / natürliche Person</dd></div>
+          <div>
+            <dt>Anschrift</dt>
+            <dd>
+              <address>
+                {legal.serviceAddress.street}<br />
+                {legal.serviceAddress.postalCode} {legal.serviceAddress.city}<br />
+                {legal.serviceAddress.country}
+              </address>
+            </dd>
+          </div>
+        </dl>
+
+        <h3>Kontakt</h3>
+        <dl class="legal-facts">
+          <div><dt>E-Mail</dt><dd><a href={`mailto:${legal.supportEmail}`}>{legal.supportEmail}</a></dd></div>
+          <div><dt>Telefon</dt><dd><a href={legal.phoneHref}>{legal.phoneDisplay}</a></dd></div>
+        </dl>
+
+        <h3>Register- und Steuerangaben</h3>
+        <dl class="legal-facts legal-facts--stacked">
+          <div><dt>Gewerbeanmeldung</dt><dd>Keine</dd></div>
+          <div><dt>Handelsregister</dt><dd>Keine Eintragung</dd></div>
+          <div><dt>Umsatzsteuer-Identifikationsnummer</dt><dd>Nicht vorhanden</dd></div>
+        </dl>
+      </article>
+    </Section>
+
+    <Section tone="canvas" labelledby="impressum-en-title">
+      <article class="legal-copy legal-copy--notice" lang="en">
+        <p class="eyebrow">English information translation</p>
+        <h2 id="impressum-en-title">Legal notice</h2>
+        <p class="legal-intro">
+          This English section is provided for information. It mirrors the facts in the German
+          section; the German text is the primary version.
+        </p>
+
+        <h3>Provider / responsible person</h3>
+        <dl class="legal-facts legal-facts--stacked">
+          <div><dt>Name</dt><dd>{legal.providerName}</dd></div>
+          <div><dt>Status</dt><dd>Private individual / natural person</dd></div>
+          <div>
+            <dt>Service address</dt>
+            <dd>
+              <address>
+                {legal.serviceAddress.street}<br />
+                {legal.serviceAddress.postalCode} {legal.serviceAddress.city}<br />
+                {legal.serviceAddress.country}
+              </address>
+            </dd>
+          </div>
+        </dl>
+
+        <h3>Contact</h3>
+        <dl class="legal-facts">
+          <div><dt>Email</dt><dd><a href={`mailto:${legal.supportEmail}`}>{legal.supportEmail}</a></dd></div>
+          <div><dt>Phone</dt><dd><a href={legal.phoneHref}>{legal.phoneDisplay}</a></dd></div>
+        </dl>
+
+        <h3>Register and tax information</h3>
+        <dl class="legal-facts legal-facts--stacked">
+          <div><dt>Business registration</dt><dd>None</dd></div>
+          <div><dt>Commercial register</dt><dd>None</dd></div>
+          <div><dt>VAT identification number</dt><dd>None</dd></div>
+        </dl>
+      </article>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

@@ -1,0 +1,21 @@
+{
+  "name": "Be Deutsch",
+  "short_name": "Be Deutsch",
+  "description": "German foundations for English-speaking beginners.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFCF7",
+  "theme_color": "#17324D",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

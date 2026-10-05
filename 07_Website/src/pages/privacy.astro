@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import legal from '../config/legal.json';
+---
+
+<BaseLayout
+  title="Privacy — Be Deutsch Website and Android App"
+  description="Privacy information for the Be Deutsch website and the Be Deutsch A1 Foundations Android app."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content" class="legal-page">
+    <Section class="page-hero legal-hero" tone="canvas" labelledby="privacy-page-title">
+      <div class="legal-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Privacy</p>
+          <h1 id="privacy-page-title">Privacy information for the website and Android app.</h1>
+          <p class="page-hero__lead">
+            This page separates the data practices of the public website from those of Be Deutsch
+            A1 Foundations for Android.
+          </p>
+          <p class="legal-meta">Last updated: 5 October 2026</p>
+        </div>
+        <nav class="legal-toc" aria-label="Privacy page sections">
+          <p>On this page</p>
+          <a href="#website-privacy">A. Website privacy</a>
+          <a href="#app-privacy">B. Android app privacy</a>
+          <a href="#privacy-rights">Your rights</a>
+          <a href="#privacy-contact">Contact</a>
+        </nav>
+      </div>
+    </Section>
+
+    {!legal.legalReady && (
+      <div class="release-warning" role="status">
+        <div class="container release-warning__inner">
+          <strong>Pre-publication legal status</strong>
+          <p>
+            A legally suitable service address and confirmation of the complete legal provider name
+            are still required. The production release check remains blocked until both are resolved.
+          </p>
+        </div>
+      </div>
+    )}
+
+    <Section id="website-privacy" tone="white" labelledby="website-privacy-title">
+      <div class="legal-copy">
+        <p class="eyebrow">A. Website privacy</p>
+        <h2 id="website-privacy-title">How the Be Deutsch website handles data.</h2>
+
+        <h3>Controller and contact</h3>
+        <p>
+          The controller for this website is <strong>{legal.providerName}</strong>, a private
+          individual / natural person operating from Germany.
+        </p>
+        <dl class="legal-facts legal-facts--stacked">
+          <div>
+            <dt>Service address</dt>
+            <dd>
+              <address>
+                {legal.serviceAddress.street}<br />
+                {legal.serviceAddress.postalCode} {legal.serviceAddress.city}<br />
+                {legal.serviceAddress.country}
+              </address>
+            </dd>
+          </div>
+          <div><dt>Email</dt><dd><a href={`mailto:${legal.supportEmail}`}>{legal.supportEmail}</a></dd></div>
+          <div><dt>Phone</dt><dd><a href={legal.phoneHref}>{legal.phoneDisplay}</a></dd></div>
+        </dl>
+
+        <h3>Website code: no tracking or browser storage</h3>
+        <p>
+          The website code does not set cookies, use local storage or session storage, run analytics,
+          use tracking pixels, show advertising, load external fonts, embed third-party media, offer
+          a newsletter or provide a contact form. No consent banner is used because the website code
+          does not use consent-based tracking technologies.
+        </p>
+
+        <h3>Planned hosting through GitHub Pages</h3>
+        <p>
+          The website is planned to be hosted with GitHub Pages. When a browser requests a page, the
+          hosting provider may process connection and request data needed to deliver and protect the
+          service. Depending on the request, this can include an IP address, request date and time,
+          requested resource, browser or device information and referrer information sent by the browser.
+        </p>
+        <p>
+          The purpose is reliable delivery, security, abuse prevention and technical operation. The
+          intended legal basis is Article 6(1)(f) GDPR: the legitimate interest in providing a secure,
+          functional website. GitHub determines its own technical logging and retention practices;
+          this notice does not claim an exact retention period. See the
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.
+        </p>
+
+        <h3>International transfers</h3>
+        <p>
+          GitHub is part of a group with operations in the United States. Hosting-provider processing
+          may therefore involve access or transfers outside the European Economic Area. GitHub describes
+          the transfer safeguards and frameworks it relies on in its privacy statement. The final hosting
+          arrangement, applicable data-protection terms and transfer mechanism must be confirmed before deployment.
+        </p>
+
+        <h3>Email and phone enquiries</h3>
+        <p>
+          If you email or call, Be Deutsch processes the contact details, message content and any
+          information you voluntarily provide in order to respond, manage the enquiry and resolve a
+          support issue. Email is provided through STRATO. The legal basis is Article 6(1)(b) GDPR where
+          the enquiry concerns a contract or steps before a contract, and otherwise Article 6(1)(f)
+          GDPR, based on the legitimate interest in answering genuine enquiries and providing support.
+        </p>
+        <p>
+          Correspondence is kept only as long as reasonably necessary for the enquiry and any applicable
+          legal, security or record-keeping requirement. No exact STRATO retention period is asserted here.
+          See the <a href="https://www.strato.de/datenschutz/" lang="de">STRATO privacy information</a>.
+          Please do not send passwords or unnecessary sensitive personal information.
+        </p>
+
+        <h3>Recipients and processors</h3>
+        <p>
+          Website request data may be processed by GitHub as the planned hosting provider. Email data may
+          be processed by STRATO as the email service provider. Data may also be disclosed where required
+          by law or a binding request from a competent authority. Be Deutsch does not sell contact or
+          website data and does not provide it to advertising or analytics services.
+        </p>
+
+        <h3>External links</h3>
+        <p>
+          This website can link to external services. No content from those services is embedded. Once
+          you follow an external link, the destination provider is responsible for its own processing.
+        </p>
+
+        <h3 id="privacy-rights">Your GDPR rights</h3>
+        <p>
+          Subject to the applicable conditions, you may have rights of access, rectification, erasure,
+          restriction of processing, data portability and objection. Where processing is based on consent,
+          consent can be withdrawn for the future. You also have the right to lodge a complaint with a data
+          protection supervisory authority, including in the EU member state of your habitual residence,
+          place of work or the place of the alleged infringement.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="app-privacy" tone="canvas" labelledby="app-privacy-title">
+      <div class="legal-copy">
+        <p class="eyebrow">B. Android app privacy</p>
+        <h2 id="app-privacy-title">Be Deutsch A1 Foundations for Android</h2>
+        <p class="legal-meta">Package: <code>com.bedeutsch.app</code> · App-policy effective date: 3 October 2026</p>
+
+        <h3>Summary</h3>
+        <p>
+          The app is designed to work offline and stores learning progress on the Android device. It
+          does not require a Be Deutsch account, does not provide cloud sync and does not send learner
+          progress to Be Deutsch servers.
+        </p>
+
+        <h3>Data stored locally on the device</h3>
+        <p>The app may store:</p>
+        <ul>
+          <li>onboarding and app settings;</li>
+          <li>lesson completion and resume position;</li>
+          <li>practice, quiz, checkpoint and review attempts;</li>
+          <li>answers, scores, feedback and mistake categories;</li>
+          <li>mistake-based review items and due dates; and</li>
+          <li>progress history used to display learning status and review activity.</li>
+        </ul>
+        <p>
+          This information is kept in the app's private local database and is used to provide progress,
+          scoring, feedback, My Mistakes and review features on that device.
+        </p>
+
+        <h3>What the app does not provide or use</h3>
+        <p>
+          The current app has no accounts or sign-in, cloud sync, advertising identifiers, ads,
+          subscriptions, in-app purchases, social or community features, messaging, user-generated
+          content, AI tutor or AI conversation. It does not request microphone, camera, contacts,
+          location or general file-library access and does not provide listening, speaking or
+          pronunciation features. It contains no developer-operated analytics or crash-reporting SDK.
+        </p>
+
+        <h3>No transmission of learning records</h3>
+        <p>
+          The app does not transmit learning progress, answers, scores, review history or mistake data
+          to Be Deutsch, an analytics provider, an advertising provider or a Be Deutsch cloud service.
+        </p>
+
+        <h3>Android backup and restore</h3>
+        <p>
+          Android backup is currently permitted. Depending on device settings and the Android or Google
+          backup service, app-private data may be backed up or restored by the operating-system provider.
+          That processing is controlled by the relevant platform or backup provider and its terms. Be
+          Deutsch cannot access data in a user's platform backup.
+        </p>
+
+        <h3>Platform diagnostics</h3>
+        <p>
+          Android or Google Play may process platform diagnostics such as crash or application-not-responding
+          reports under the user's device and Play settings and Google's policies. The app does not include
+          a developer-operated crash-reporting SDK and does not directly transmit diagnostics to Be Deutsch.
+        </p>
+
+        <h3>Sharing or sale</h3>
+        <p>
+          Be Deutsch does not sell app data and does not share learning records with third parties.
+          Platform backup or diagnostics may be handled by the device or platform provider as described above.
+        </p>
+
+        <h3>Retention and deletion</h3>
+        <p>
+          Local learning data remains on the device until app storage is cleared or the app is uninstalled.
+          It can be deleted through Android Settings by opening the Be Deutsch app entry and clearing its
+          storage, or by uninstalling the app. Clearing storage is irreversible on that installation.
+          A platform backup provider may retain or later restore a backup according to its settings and
+          policies. Because Be Deutsch keeps no server-side learner record, there is no Be Deutsch cloud
+          record to request for deletion.
+        </p>
+
+        <h3>Support correspondence</h3>
+        <p>
+          If a user emails support, the sender address, message and any voluntarily included information
+          are used to respond and resolve the request. Support correspondence is separate from the offline
+          learning database and is retained only as reasonably necessary for the request and applicable
+          legal or security needs. Users should not send passwords or unnecessary sensitive information.
+        </p>
+
+        <h3>Children</h3>
+        <p>
+          The app is a general language-learning product planned for users aged 13 and older. It is not
+          directed to children under 13, and Be Deutsch does not knowingly collect personal data from
+          children through an app account or developer server because neither exists. The final Google Play
+          target-audience settings must remain consistent with this policy before public release.
+        </p>
+
+        <h3>Security and changes</h3>
+        <p>
+          Local data is held in Android app-private storage and benefits from the device's Android sandbox
+          and security settings, but no storage method is risk-free. Users should keep Android updated and
+          use a secure screen lock. This policy will be updated if features such as accounts, cloud sync,
+          analytics, ads, payments or other network services are introduced.
+        </p>
+
+        <h3 id="privacy-contact">Privacy contact</h3>
+        <p>
+          Questions about either section can be sent to
+          <a href={`mailto:${legal.supportEmail}?subject=Be%20Deutsch%20privacy%20question`}>{legal.supportEmail}</a>.
+        </p>
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

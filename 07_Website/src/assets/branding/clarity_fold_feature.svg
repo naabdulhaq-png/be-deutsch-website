@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFDF8"/>
+      <stop offset="0.62" stop-color="#F6F2E9"/>
+      <stop offset="1" stop-color="#E8EFEA"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163954"/>
+      <stop offset="1" stop-color="#102A43"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A9691"/>
+      <stop offset="1" stop-color="#397D7A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D7A23A"/>
+      <stop offset="1" stop-color="#B87917"/>
+    </linearGradient>
+    <linearGradient id="gatewayGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF9E9"/>
+      <stop offset="1" stop-color="#F2C96A"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#102A43" flood-opacity="0.18"/>
+    </filter>
+    <clipPath id="featureClip"><rect width="1024" height="500" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#featureClip)">
+    <rect width="1024" height="500" fill="url(#bg)"/>
+
+    <!-- Quiet layered learning landscape. -->
+    <path d="M0 330 C150 292 272 319 390 297 C514 275 617 294 735 274 C846 255 927 272 1024 240 L1024 500 L0 500 Z" fill="#D9E7E2"/>
+    <path d="M0 374 C159 331 281 365 419 327 C558 289 688 335 812 296 C900 269 963 276 1024 260 L1024 500 L0 500 Z" fill="url(#teal)" opacity="0.96"/>
+    <path d="M0 423 C187 363 306 411 464 358 C622 305 755 359 876 327 C943 309 986 302 1024 298 L1024 500 L0 500 Z" fill="url(#navy)"/>
+
+    <!-- The path is a stack of pages; gold is only a restrained progress edge. -->
+    <path d="M286 500 C425 447 509 430 592 418 C698 402 731 377 758 345 C790 307 821 282 865 262 L931 286 C886 310 850 337 826 374 C799 416 754 451 667 470 C596 485 538 493 502 500 Z" fill="#D3CCBE" opacity="0.65"/>
+    <path d="M270 500 C415 438 510 420 590 409 C692 395 724 368 751 338 C781 303 815 274 858 253 L919 279 C876 302 842 329 817 365 C788 408 746 438 660 458 C585 475 527 489 487 500 Z" fill="#FFFDF8" filter="url(#softShadow)"/>
+    <path d="M303 500 C436 451 523 432 600 421 C697 407 732 381 759 351 C788 318 817 294 854 275" fill="none" stroke="#D8D0C2" stroke-width="2" opacity="0.95"/>
+    <path d="M322 500 C449 458 529 441 608 430 C705 417 741 390 768 360 C796 329 823 306 858 287" fill="none" stroke="#E9E2D7" stroke-width="2"/>
+    <path d="M487 500 C568 477 621 469 671 456 C751 436 794 405 821 365 C847 327 881 299 923 279 L939 287 C895 311 862 339 839 375 C810 420 764 454 680 475 C626 488 584 496 565 500 Z" fill="url(#gold)" opacity="0.55"/>
+
+    <!-- A clearly page-shaped gateway / destination. -->
+    <path d="M792 99 C862 73 934 77 1001 106 L1001 323 C938 297 871 299 806 325 L806 151 C806 130 801 113 792 99 Z" fill="url(#navy)"/>
+    <path d="M806 151 C866 126 924 128 973 151 L973 310 C924 292 868 294 806 325 Z" fill="url(#teal)"/>
+    <path d="M827 176 C867 159 905 162 936 179 L936 294 C905 283 869 286 827 303 Z" fill="#FFFDF8" filter="url(#softShadow)"/>
+    <path d="M850 198 C874 188 896 190 913 201 L913 278 C895 272 874 274 850 284 Z" fill="url(#gatewayGlow)"/>
+    <path d="M806 151 C866 126 924 128 973 151" fill="none" stroke="#76AAA7" stroke-width="3"/>
+    <path d="M827 176 C867 159 905 162 936 179" fill="none" stroke="#E1D8C9" stroke-width="3"/>
+
+    <!-- Compact Clarity Fold mark. -->
+    <g transform="translate(64 145) scale(0.34)">
+      <path d="M0 0 L238 56 C296 69 330 111 330 159 C330 196 310 228 272 250 L0 159 Z" fill="#FFFDF8" filter="url(#softShadow)"/>
+      <path d="M0 159 L272 250 L0 325 Z" fill="url(#teal)"/>
+      <path d="M0 250 L258 313 C312 326 341 365 330 407 C322 438 298 458 258 470 L0 522 Z" fill="url(#gold)"/>
+    </g>
+
+    <text x="195" y="209" fill="#102A43" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-1.2">Be Deutsch</text>
+    <text x="198" y="253" fill="#397D7A" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="600" letter-spacing="0.1">Dein klarer Weg zu Deutsch</text>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import featureArtwork from '../assets/branding/clarity_fold_feature.svg';
+import { site } from '../config/site';
+
+const principles = [
+  ['Explain clearly', 'Beginners need to understand the idea before they are asked to apply it.'],
+  ['Practise purposefully', 'Guided and independent work help turn an explanation into usable knowledge.'],
+  ['Make feedback useful', 'Quizzes and checkpoints show what is understood and what needs another look.'],
+  ['Learn from mistakes', 'Incorrect answers should become focused review material, not a dead end.'],
+];
+---
+
+<BaseLayout
+  title="About Be Deutsch — Mission and Learning Philosophy"
+  description="Learn about the Be Deutsch mission: clear, structured German foundations with purposeful practice, useful feedback and self-paced offline learning."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="page-hero page-hero--about" tone="canvas" labelledby="about-page-title">
+      <div class="about-hero">
+        <div class="page-hero__copy">
+          <p class="eyebrow">About Be Deutsch</p>
+          <h1 id="about-page-title">German learning should feel clear, structured and possible.</h1>
+          <p class="page-hero__lead">
+            Be Deutsch is built around a simple idea: beginners make stronger progress when
+            explanation, practice, feedback and review work together.
+          </p>
+        </div>
+        <div class="about-hero__art" aria-hidden="true">
+          <img src={featureArtwork.src} width="1024" height="500" alt="" />
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="navy" labelledby="mission-title">
+      <div class="mission-statement">
+        <p class="eyebrow">Our mission</p>
+        <h2 id="mission-title">
+          Give English-speaking beginners a dependable path into German foundations.
+        </h2>
+        <p>
+          That means keeping lessons focused, making the next step visible and giving learners room
+          to study at their own pace. The goal is not hype or shortcuts; it is a practical learning
+          experience that respects the work required to build a foundation.
+        </p>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="why-exists-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">Why Be Deutsch exists</p>
+          <h2 id="why-exists-title">Beginners need more than disconnected exercises.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            Starting a language can feel fragmented: a rule in one place, vocabulary in another and
+            practice without enough explanation. Be Deutsch brings essential beginner content into
+            an ordered course so learners can understand how the pieces connect.
+          </p>
+          <p>
+            A clear structure reduces guesswork. Learners can see what they are working on, practise
+            it, check their understanding and return to the parts that need more attention.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="philosophy-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Learning philosophy</p>
+        <h2 id="philosophy-title">Four principles shape the experience.</h2>
+      </div>
+      <div class="principle-grid">
+        {principles.map(([title, description], index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </article>
+        ))}
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="structure-title">
+      <div class="two-idea-grid">
+        <article>
+          <p class="eyebrow">Structured learning</p>
+          <h2 id="structure-title">A visible path supports independent study.</h2>
+          <p>
+            Units and lessons provide an order learners can follow. Grammar, vocabulary, reading,
+            practice and checks are part of the same course rather than isolated activities.
+          </p>
+        </article>
+        <article class="two-idea-grid__accent">
+          <p class="eyebrow">Learning from mistakes</p>
+          <h2>Mistakes should guide the next review.</h2>
+          <p>
+            My Mistakes keeps incorrect answers available for revision. This turns feedback into a
+            practical next step and helps learners return to material that needs more work.
+          </p>
+        </article>
+      </div>
+    </Section>
+
+    <Section tone="teal" labelledby="practical-title">
+      <div class="practical-grid">
+        <div class="section-heading section-heading--light">
+          <p class="eyebrow">Practical learning</p>
+          <h2 id="practical-title">Designed around real study conditions.</h2>
+        </div>
+        <div class="practical-points">
+          <article>
+            <h3>Self-paced</h3>
+            <p>Learners can move through the course according to their available time.</p>
+          </article>
+          <article>
+            <h3>Offline</h3>
+            <p>Lessons remain usable without a constant internet connection.</p>
+          </article>
+          <article>
+            <h3>Beginner-friendly</h3>
+            <p>Short explanations and a clear sequence reduce unnecessary complexity.</p>
+          </article>
+          <article>
+            <h3>Focused</h3>
+            <p>The current product stays centred on German grammar, vocabulary and reading foundations.</p>
+          </article>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="vision-title">
+      <div class="vision-layout">
+        <div>
+          <p class="eyebrow">Future vision</p>
+          <h2 id="vision-title">Make structured learner support useful across more starting languages.</h2>
+        </div>
+        <div class="vision-layout__copy">
+          <p>
+            English learner support is planned for launch. Persian/Farsi and additional
+            learner-support languages are part of the future vision, helping more learners access
+            clear German explanations through a language they understand well.
+          </p>
+          <p class="availability-note">
+            Persian/Farsi and other additional learner-support languages are planned and are not
+            currently available.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="white" size="compact" labelledby="about-contact-title">
+      <div class="support-card support-card--light">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="about-contact-title">Questions, feedback or support?</h2>
+          <p>Contact Be Deutsch directly by email.</p>
+        </div>
+        <CTA
+          label={site.supportEmail}
+          href={`mailto:${site.supportEmail}?subject=Be%20Deutsch%20enquiry`}
+          variant="secondary"
+        />
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

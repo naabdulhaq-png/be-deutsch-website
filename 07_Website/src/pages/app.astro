@@ -1,0 +1,324 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import MediaFrame from '../components/MediaFrame.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import courseOverview from '../assets/screenshots/02_learn_course_overview.png';
+import grammarLesson from '../assets/screenshots/03_grammar_lesson.png';
+import guidedPractice from '../assets/screenshots/04_guided_practice.png';
+import quiz from '../assets/screenshots/05_quiz.png';
+import myMistakes from '../assets/screenshots/06_review_my_mistakes.png';
+import progress from '../assets/screenshots/07_progress.png';
+import { appRelease, site } from '../config/site';
+
+const courseFacts = [
+  ['5', 'units'],
+  ['34', 'structured lessons'],
+  ['320', 'vocabulary items'],
+  ['12', 'readings'],
+];
+
+const learningSteps = [
+  ['Learn', 'Begin with a focused explanation and examples.'],
+  ['Practise', 'Work through guided activities before applying the topic independently.'],
+  ['Check', 'Use lesson quizzes and unit checkpoints to check understanding.'],
+  ['Review', 'Return to incorrect answers through My Mistakes.'],
+  ['Continue', 'Follow progress through the course and move to the next lesson.'],
+];
+
+const audiences = [
+  'English-speaking adults beginning German',
+  'Migrants and newcomers building everyday foundations',
+  'International students and workers',
+  'Independent learners who value a structured path',
+  'Learners who need lessons available offline',
+];
+
+const appStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Be Deutsch A1 Foundations',
+  url: `${site.url}/app/`,
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Android',
+  inLanguage: 'en',
+  description:
+    'A structured Android learning app for English-speaking beginners building German grammar, vocabulary and reading foundations through lessons, practice, quizzes and mistake-based review.',
+  featureList: [
+    '34 structured lessons across 5 units',
+    'German grammar, vocabulary and reading',
+    'Guided and independent practice',
+    'Lesson quizzes and unit checkpoints',
+    'Mistake-based review and progress tracking',
+    'Offline learning',
+  ],
+};
+---
+
+<BaseLayout
+  title="Be Deutsch A1 Foundations — App"
+  description="Explore Be Deutsch A1 Foundations: 34 structured German lessons with grammar, vocabulary, reading, practice, quizzes, mistake review and offline learning."
+  structuredData={appStructuredData}
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="page-hero page-hero--app" tone="canvas" labelledby="app-page-title">
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Be Deutsch for Android</p>
+          <h1 id="app-page-title">A1 Foundations, explained step by step.</h1>
+          <p class="page-hero__lead">
+            A structured beginner course for building essential German grammar, vocabulary and
+            reading skills through explanation, practice, feedback and review.
+          </p>
+          <div class="hero__actions">
+            <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
+            <CTA label="See what is included" href="#course" variant="secondary" />
+          </div>
+        </div>
+        <div class="page-hero__media">
+          <MediaFrame
+            src={courseOverview}
+            alt="Be Deutsch A1 Foundations course overview with units and lesson progress"
+            caption="The current A1 Foundations course overview"
+            featured
+            eager
+            sizes="(min-width: 900px) 410px, 76vw"
+          />
+        </div>
+      </div>
+    </Section>
+
+    <Section id="course" tone="white" labelledby="what-title">
+      <div class="course-intro">
+        <div class="section-heading">
+          <p class="eyebrow">What it is</p>
+          <h2 id="what-title">A defined course for German foundations.</h2>
+        </div>
+        <p>
+          A1 Foundations brings essential beginner content into one ordered course. Lessons connect
+          explanation, vocabulary and reading with practice, quizzes and review, so learners always
+          have a clear next step.
+        </p>
+      </div>
+      <dl class="fact-grid">
+        {courseFacts.map(([value, label]) => (
+          <div>
+            <dt>{value}</dt>
+            <dd>{label}</dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
+
+    <Section tone="navy" labelledby="system-title">
+      <div class="section-heading section-heading--light section-heading--wide">
+        <p class="eyebrow">The learning system</p>
+        <h2 id="system-title">A repeatable rhythm from explanation to review.</h2>
+        <p class="light-copy">
+          Each stage has a clear role. Learners understand the topic, apply it, check their work and
+          use mistakes to decide what deserves another look.
+        </p>
+      </div>
+      <ol class="process-grid">
+        {learningSteps.map(([title, description], index) => (
+          <li>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </li>
+        ))}
+      </ol>
+    </Section>
+
+    <Section tone="white" labelledby="lesson-title">
+      <div class="detail-split">
+        <div class="detail-split__media">
+          <MediaFrame
+            src={grammarLesson}
+            alt="Be Deutsch grammar lesson with a clear explanation and German examples"
+            caption="A focused grammar explanation"
+            sizes="(min-width: 900px) 320px, 72vw"
+          />
+        </div>
+        <div class="content-stack">
+          <p class="eyebrow">Inside a lesson</p>
+          <h2 id="lesson-title">Understand first, then put it into practice.</h2>
+          <p>
+            Lessons introduce a focused topic with explanations and examples. Vocabulary and
+            reading content reinforce the course, while activities move from support toward more
+            independent work.
+          </p>
+          <ul class="check-list">
+            <li><strong>Grammar</strong><span>Explanations for essential structures.</span></li>
+            <li><strong>Vocabulary</strong><span>320 items organized within the course.</span></li>
+            <li><strong>Reading</strong><span>12 readings connected to beginner content.</span></li>
+            <li><strong>Practice</strong><span>Guided work followed by independent application.</span></li>
+          </ul>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="practice-title">
+      <div class="section-heading section-heading--wide">
+        <p class="eyebrow">Practice and feedback</p>
+        <h2 id="practice-title">Check understanding without breaking the learning flow.</h2>
+        <p>
+          Practice is part of the lesson sequence. Quizzes and checkpoints give learners a direct
+          way to see what they understood and what needs review.
+        </p>
+      </div>
+      <div class="paired-experience">
+        <article class="experience-panel">
+          <MediaFrame
+            src={guidedPractice}
+            alt="Be Deutsch guided practice activity with a German learning prompt"
+            caption="Guided practice"
+          />
+          <div>
+            <p class="eyebrow">Build confidence</p>
+            <h3>Guided and independent practice</h3>
+            <p>Supported activities introduce the task before learners apply the topic themselves.</p>
+          </div>
+        </article>
+        <article class="experience-panel">
+          <MediaFrame
+            src={quiz}
+            alt="Be Deutsch lesson quiz with a multiple-choice German question"
+            caption="Lesson quiz"
+          />
+          <div>
+            <p class="eyebrow">Check understanding</p>
+            <h3>Lesson quizzes and unit checkpoints</h3>
+            <p>Short checks provide feedback at lesson and unit level without making exam claims.</p>
+          </div>
+        </article>
+      </div>
+    </Section>
+
+    <Section tone="teal" labelledby="review-title">
+      <div class="detail-split detail-split--reverse">
+        <div class="content-stack content-stack--light">
+          <p class="eyebrow">Review and My Mistakes</p>
+          <h2 id="review-title">Incorrect answers become useful review material.</h2>
+          <p>
+            My Mistakes gives learners a dedicated place to revisit incorrect answers. This keeps
+            review connected to the work each learner has already completed instead of treating a
+            mistake as the end of the activity.
+          </p>
+          <p>
+            Learners can return to material that needs attention, repeat it and continue through the
+            course at their own pace.
+          </p>
+        </div>
+        <div class="detail-split__media">
+          <MediaFrame
+            src={myMistakes}
+            alt="Be Deutsch My Mistakes screen listing answers available for review"
+            caption="My Mistakes supports focused revision"
+          />
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="progress-title">
+      <div class="progress-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Progress and offline learning</p>
+          <h2 id="progress-title">Keep track—and keep learning without a constant connection.</h2>
+          <p>
+            Progress tracking shows movement through the course. Lessons are also available for
+            offline use, supporting self-paced study when a reliable connection is not available.
+          </p>
+          <div class="compact-benefits">
+            <article><h3>Visible progress</h3><p>Follow completion across lessons and units.</p></article>
+            <article><h3>Offline use</h3><p>Continue with course content without a constant connection.</p></article>
+          </div>
+        </div>
+        <MediaFrame
+          src={progress}
+          alt="Be Deutsch progress screen showing completion across the A1 Foundations course"
+          caption="Course progress at a glance"
+          sizes="(min-width: 900px) 330px, 72vw"
+        />
+      </div>
+    </Section>
+
+    <Section tone="navy" labelledby="screens-title">
+      <div class="section-heading section-heading--light section-heading--wide">
+        <p class="eyebrow">Real app screens</p>
+        <h2 id="screens-title">The current Android experience.</h2>
+        <p class="light-copy">These are production screenshots from the Be Deutsch release candidate.</p>
+      </div>
+      <div class="dark-gallery">
+        <MediaFrame
+          src={grammarLesson}
+          alt="Be Deutsch grammar lesson showing an explanation and examples"
+          caption="Grammar explanation"
+        />
+        <MediaFrame
+          src={guidedPractice}
+          alt="Be Deutsch guided practice screen with a learning activity"
+          caption="Guided practice"
+        />
+        <MediaFrame
+          src={myMistakes}
+          alt="Be Deutsch My Mistakes screen for mistake-based review"
+          caption="Mistake-based review"
+        />
+      </div>
+    </Section>
+
+    <Section tone="canvas" labelledby="for-title">
+      <div class="audience-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Who it is for</p>
+          <h2 id="for-title">A calm starting point for adults learning through English.</h2>
+          <p>
+            Be Deutsch is for beginners who want an ordered path through German foundations. It is
+            not limited to one background or reason for learning.
+          </p>
+        </div>
+        <ul class="audience-list">
+          {audiences.map((audience) => <li>{audience}</li>)}
+        </ul>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="scope-title">
+      <div class="scope-grid">
+        <div>
+          <p class="eyebrow">Current scope</p>
+          <h2 id="scope-title">Focused on the foundations available today.</h2>
+        </div>
+        <div class="scope-copy">
+          <p>
+            The current course focuses on German grammar, vocabulary, reading and practice for
+            English-speaking beginners.
+          </p>
+          <p>
+            It does not currently include speaking, listening or pronunciation training, exam
+            preparation, certification, live teacher support or an AI tutor. Android is the planned
+            launch platform; iOS and web-app access are not currently offered.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="teal" size="compact" labelledby="coming-title">
+      <div class="closing-cta">
+        <div>
+          <p class="eyebrow">Current availability</p>
+          <h2 id="coming-title">Be Deutsch is preparing for its Android launch.</h2>
+        </div>
+        <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
