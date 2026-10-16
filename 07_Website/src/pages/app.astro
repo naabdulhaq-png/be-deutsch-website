@@ -14,10 +14,10 @@ import progress from '../assets/screenshots/07_progress.png';
 import { appRelease, site } from '../config/site';
 
 const courseFacts = [
-  ['5', 'units'],
-  ['34', 'structured lessons'],
-  ['320', 'vocabulary items'],
-  ['12', 'readings'],
+  ['12', 'units'],
+  ['60', 'structured lessons'],
+  ['642', 'vocabulary records'],
+  ['48', 'listening activities'],
 ];
 
 const learningSteps = [
@@ -45,10 +45,10 @@ const appStructuredData = {
   operatingSystem: 'Android',
   inLanguage: 'en',
   description:
-    'A structured Android learning app for English-speaking beginners building German grammar, vocabulary and reading foundations through lessons, practice, quizzes and mistake-based review.',
+    'A structured Android learning app for English-speaking beginners completing a full A1 course through lessons, practice, quizzes and mistake-based review.',
   featureList: [
-    '34 structured lessons across 5 units',
-    'German grammar, vocabulary and reading',
+    '60 structured lessons across 12 units',
+    'Vocabulary, reading, listening, writing and pronunciation',
     'Guided and independent practice',
     'Lesson quizzes and unit checkpoints',
     'Mistake-based review and progress tracking',
@@ -59,7 +59,7 @@ const appStructuredData = {
 
 <BaseLayout
   title="Be Deutsch A1 Foundations — App"
-  description="Explore Be Deutsch A1 Foundations: 34 structured German lessons with grammar, vocabulary, reading, practice, quizzes, mistake review and offline learning."
+  description="Explore Be Deutsch A1 Foundations: 60 structured German lessons with vocabulary, reading, listening, writing, pronunciation, quizzes, review and offline learning."
   structuredData={appStructuredData}
 >
   <div id="top"></div>
@@ -72,8 +72,8 @@ const appStructuredData = {
           <p class="eyebrow">Be Deutsch for Android</p>
           <h1 id="app-page-title">A1 Foundations, explained step by step.</h1>
           <p class="page-hero__lead">
-            A structured beginner course for building essential German grammar, vocabulary and
-            reading skills through explanation, practice, feedback and review.
+            A structured beginner course for building practical German across vocabulary, reading,
+            listening, writing and pronunciation through explanation, practice, feedback and review.
           </p>
           <div class="hero__actions">
             <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
@@ -115,7 +115,7 @@ const appStructuredData = {
       </dl>
     </Section>
 
-    <Section tone="navy" labelledby="system-title">
+    <Section tone="dark" labelledby="system-title">
       <div class="section-heading section-heading--light section-heading--wide">
         <p class="eyebrow">The learning system</p>
         <h2 id="system-title">A repeatable rhythm from explanation to review.</h2>
@@ -155,8 +155,9 @@ const appStructuredData = {
           </p>
           <ul class="check-list">
             <li><strong>Grammar</strong><span>Explanations for essential structures.</span></li>
-            <li><strong>Vocabulary</strong><span>320 items organized within the course.</span></li>
-            <li><strong>Reading</strong><span>12 readings connected to beginner content.</span></li>
+            <li><strong>Vocabulary</strong><span>642 reviewed records organized within the course.</span></li>
+            <li><strong>Reading and listening</strong><span>Practical input with offline audio.</span></li>
+            <li><strong>Writing and pronunciation</strong><span>Guided, unscored learner practice.</span></li>
             <li><strong>Practice</strong><span>Guided work followed by independent application.</span></li>
           </ul>
         </div>
@@ -200,7 +201,7 @@ const appStructuredData = {
       </div>
     </Section>
 
-    <Section tone="teal" labelledby="review-title">
+    <Section tone="accent" labelledby="review-title">
       <div class="detail-split detail-split--reverse">
         <div class="content-stack content-stack--light">
           <p class="eyebrow">Review and My Mistakes</p>
@@ -248,7 +249,7 @@ const appStructuredData = {
       </div>
     </Section>
 
-    <Section tone="navy" labelledby="screens-title">
+    <Section tone="dark" labelledby="screens-title">
       <div class="section-heading section-heading--light section-heading--wide">
         <p class="eyebrow">Real app screens</p>
         <h2 id="screens-title">The current Android experience.</h2>
@@ -297,19 +298,19 @@ const appStructuredData = {
         </div>
         <div class="scope-copy">
           <p>
-            The current course focuses on German grammar, vocabulary, reading and practice for
-            English-speaking beginners.
+            The current course is a complete A1 pathway with vocabulary, reading, listening,
+            writing, pronunciation and structured practice for English-speaking beginners.
           </p>
           <p>
-            It does not currently include speaking, listening or pronunciation training, exam
-            preparation, certification, live teacher support or an AI tutor. Android is the planned
+            Speaking and writing practice are learner-confirmed and unscored; there is no microphone,
+            speech recognition, official certification, live teacher support or AI tutor. Android is the planned
             launch platform; iOS and web-app access are not currently offered.
           </p>
         </div>
       </div>
     </Section>
 
-    <Section tone="teal" size="compact" labelledby="coming-title">
+    <Section tone="accent" size="compact" labelledby="coming-title">
       <div class="closing-cta">
         <div>
           <p class="eyebrow">Current availability</p>

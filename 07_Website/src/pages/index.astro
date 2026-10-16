@@ -23,16 +23,19 @@ const learningSteps = [
 ];
 
 const courseFacts = [
-  ['5', 'units'],
-  ['34', 'structured lessons'],
-  ['320', 'vocabulary items'],
-  ['12', 'readings'],
+  ['12', 'units'],
+  ['60', 'structured lessons'],
+  ['642', 'vocabulary records'],
+  ['48', 'listening activities'],
 ];
 
 const learningFeatures = [
   ['Grammar', 'Clear explanations for essential German structures.'],
   ['Vocabulary', 'Core words organized within a structured course.'],
-  ['Reading', 'Twelve readings that reinforce lesson content.'],
+  ['Reading', 'Practical texts that reinforce lesson content.'],
+  ['Listening', 'Offline audio activities with gated transcripts.'],
+  ['Writing', 'Guided tasks with visible support.'],
+  ['Speaking', 'Pronunciation models and learner-confirmed practice.'],
   ['Guided practice', 'Supported activities that introduce each task step by step.'],
   ['Independent practice', 'A chance to apply what you have learned on your own.'],
   ['Lesson quizzes', 'Short checks at the end of lessons.'],
@@ -74,8 +77,8 @@ const websiteStructuredData = {
           <p class="hero__tagline" lang="de">{site.tagline}</p>
           <p class="hero__promise">
             Be Deutsch A1 Foundations helps English-speaking beginners build essential German
-            grammar, vocabulary and reading skills through clear explanations, guided practice,
-            quizzes and mistake-based revision, with lessons available offline.
+            vocabulary, reading, listening, writing and pronunciation through clear explanations,
+            guided practice, quizzes and mistake-based revision, with lessons available offline.
           </p>
           <div class="hero__actions">
             <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
@@ -113,7 +116,7 @@ const websiteStructuredData = {
       </div>
     </Section>
 
-    <Section tone="navy" labelledby="learning-title">
+    <Section tone="dark" labelledby="learning-title">
       <div class="section-heading section-heading--light">
         <p class="eyebrow">How learning works</p>
         <h2 id="learning-title">One clear learning rhythm.</h2>
@@ -170,7 +173,7 @@ const websiteStructuredData = {
       </div>
     </Section>
 
-    <Section id="about" tone="teal" labelledby="why-title">
+    <Section id="about" tone="accent" labelledby="why-title">
       <div class="why-grid">
         <div class="section-heading section-heading--light">
           <p class="eyebrow">Why Be Deutsch</p>
@@ -242,7 +245,7 @@ const websiteStructuredData = {
       </div>
     </Section>
 
-    <Section tone="navy" size="compact" labelledby="languages-title">
+    <Section tone="dark" size="compact" labelledby="languages-title">
       <div class="language-strip">
         <div>
           <p class="eyebrow">Learner support languages</p>

@@ -1,5 +1,5 @@
 ---
-import brandMark from '../assets/branding/be_deutsch_icon.svg';
+import brandLogo from '../assets/branding/be_deutsch_logo.svg';
 import { site } from '../config/site';
 
 const currentYear = new Date().getFullYear();
@@ -9,8 +9,7 @@ const currentYear = new Date().getFullYear();
   <div class="container site-footer__grid">
     <div>
       <a class="brand brand--footer" href="#top" aria-label="Be Deutsch — back to top">
-        <img src={brandMark.src} width="44" height="44" alt="" />
-        <span>{site.name}</span>
+        <img src={brandLogo.src} width="176" height="44" alt={site.name} />
       </a>
       <p lang="de">{site.tagline}</p>
     </div>

@@ -4,8 +4,8 @@
   "description": "German foundations for English-speaking beginners.",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#FFFCF7",
-  "theme_color": "#17324D",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF6A2A",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

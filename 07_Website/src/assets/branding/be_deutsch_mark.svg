@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <title>Be Deutsch mark</title>
+  <g transform="translate(15 15) scale(.72)">
+    <path fill="#000000" d="M25 20H58C76 20 88 29 88 42 88 49 84 55 78 59L62 50C66 48 68 45 68 41 68 35 64 32 57 31L25 28Z"/>
+    <path fill="#DD0000" d="M23 33C23 30 25 29 28 31L67 52C71 54 71 57 67 59L28 80C25 82 23 81 23 78Z"/>
+    <path fill="#FFCC00" d="M31 82 62 64 77 72C85 76 89 83 88 90 86 100 77 104 62 104H30C26 104 24 102 24 98V88C24 85 27 83 31 82Z"/>
+  </g>
+</svg>

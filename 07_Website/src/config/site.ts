@@ -29,7 +29,7 @@ export const site = {
   tagline: 'Dein klarer Weg zu Deutsch',
   title: 'Be Deutsch — German for beginners, step by step',
   description:
-    'Learn German foundations step by step with clear grammar, vocabulary, reading, guided practice, mistake review and offline lessons for English-speaking beginners.',
+    'Learn German step by step with a complete A1 course: vocabulary, reading, listening, writing, pronunciation, practice, review and offline lessons for English-speaking beginners.',
   socialImage: '/social/be-deutsch-social-card.png',
 } as const;
 
