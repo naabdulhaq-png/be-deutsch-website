@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Section from '../components/Section.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { appRelease, site } from '../config/site';
+---
+
+<BaseLayout
+  title="Become a Be Deutsch Beta Tester — Android Closed Testing"
+  description="Help test Be Deutsch A1 Foundations on Android. Join the tester Google Group, opt in through Google Play and share feedback before public release."
+>
+  <div id="top"></div>
+  <SiteHeader />
+
+  <main id="main-content">
+    <Section class="page-hero" tone="canvas" labelledby="testing-title">
+      <div class="support-hero__grid">
+        <div class="page-hero__copy">
+          <p class="eyebrow">Be Deutsch for Android · Beta testing</p>
+          <h1 id="testing-title">Become a Be Deutsch Beta Tester</h1>
+          <p class="page-hero__lead">
+            Help improve Be Deutsch A1 Foundations before public release. The Android app offers
+            12 units and 60 structured German lessons, with vocabulary, listening, practice,
+            quizzes and offline learning after installation.
+          </p>
+          <CTA label="See How to Join" href="#join-testing" />
+        </div>
+        <aside class="support-status" aria-labelledby="testing-status-title">
+          <p class="eyebrow">Current availability</p>
+          <h2 id="testing-status-title">{appRelease.label}</h2>
+          <p>{appRelease.description}</p>
+          <p class="testing-status-note">
+            This is a test version, and you may encounter issues. Installation depends on Google
+            Play eligibility and a compatible Android device.
+          </p>
+        </aside>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="tester-audience-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">Who can take part</p>
+          <h2 id="tester-audience-title">Help us understand the beginner experience.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            English-speaking adults beginning German—including migrants, international students
+            and workers—are welcome. You will need an Android device, a Google account and time
+            to try the app and share feedback.
+          </p>
+          <p>You can join the tester group now and follow the Google Play steps below.</p>
+        </div>
+      </div>
+    </Section>
+
+    <Section id="join-testing" tone="canvas" labelledby="join-title">
+      <div class="pilot-layout">
+        <div class="section-heading">
+          <p class="eyebrow">How to join</p>
+          <h2 id="join-title">Three steps to start testing.</h2>
+          <p>Use the same Google account for the group, the testing invitation and Google Play.</p>
+          <p>Join the group first. The testing invitation alone does not give every visitor access.</p>
+        </div>
+        <ol class="pilot-steps testing-steps" role="list">
+          <li>
+            <span aria-hidden="true">1</span>
+            <div>
+              <h3>Join the tester group</h3>
+              <p>
+                Open the Be Deutsch Testers Google Group and join using the Google account
+                you use on Google Play.
+              </p>
+              <CTA label="Join the Tester Group" href={appRelease.testerGroupUrl} />
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">2</span>
+            <div>
+              <h3>Opt in on Google Play</h3>
+              <p>
+                With the same Google account, open the testing invitation and select <strong>Become a tester</strong>.
+              </p>
+              <CTA label="Open Google Play Testing" href={appRelease.testingOptInUrl} variant="secondary" />
+            </div>
+          </li>
+          <li>
+            <span aria-hidden="true">3</span>
+            <div>
+              <h3>Install through Google Play</h3>
+              <p>
+                Follow the installation link on Google's confirmation page. Install Be Deutsch
+                from Google Play on your compatible Android device. Keep your group membership
+                and tester enrollment active while participating.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </Section>
+
+    <Section tone="white" labelledby="testing-help-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">If you cannot access the test</p>
+          <h2 id="testing-help-title">Check your account and eligibility.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            Check that the same Google account is selected in Google Groups, the testing invitation
+            and Google Play. Allow time for membership and access changes to take effect.
+            Google Play also checks country and device eligibility.
+          </p>
+          <p>
+            Contact <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a> if you still
+            cannot continue, or if you are already an internal tester and need help switching tracks.
+          </p>
+          <h3>Registration and privacy</h3>
+          <p>
+            Joining and opting in take place on Google's services. Group members can see other
+            members and group conversations; managers can see member email addresses. This website
+            has no registration form and does not create a Be Deutsch account.
+          </p>
+          <a href="/privacy/">Read the Be Deutsch privacy information</a>
+        </div>
+      </div>
+    </Section>
+
+    <Section tone="accent" labelledby="tester-feedback-title">
+      <div class="editorial-grid">
+        <div>
+          <p class="eyebrow">Your feedback</p>
+          <h2 id="tester-feedback-title">Tell us what worked and what needs attention.</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>
+            Try lessons, vocabulary, listening, practice, quizzes and offline learning. Tell us
+            what worked, what was confusing, and where you encountered a problem.
+          </p>
+          <p>
+            Include the lesson or screen name, your app version, what you expected and what happened.
+            Please do not send passwords or sensitive personal information.
+          </p>
+          <CTA
+            label="Send Tester Feedback"
+            href={`mailto:${site.supportEmail}?subject=Be%20Deutsch%20beta%20feedback`}
+            variant="secondary"
+          />
+          <p class="release-note">You can also email <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a> directly.</p>
+        </div>
+      </div>
+    </Section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

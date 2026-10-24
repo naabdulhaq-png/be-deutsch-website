@@ -89,8 +89,9 @@ Astro prints the local preview URL, normally `http://localhost:4321/`.
 ## Project conventions
 
 - English is served at `/`. Persian/Farsi is registered as a future, disabled locale in `src/config/site.ts`; no `/fa/` route exists yet.
-- Current routes are `/`, `/app/`, `/about/`, `/partners/`, `/support/`, `/privacy/` and `/impressum/`, plus the static 404 page.
-- App availability and the Google Play destination are centralized in `src/config/site.ts`. While the app is in prelaunch, the homepage shows a non-clickable status instead of a store link.
+- Current routes are `/`, `/app/`, `/testing/`, `/about/`, `/partners/`, `/support/`, `/privacy/` and `/impressum/`, plus the static 404 page. FAQ remains on `/support/`.
+- App availability and verified testing destinations are centralized in `src/config/site.ts`. As verified on 24 October 2026, version 2.0.0 (code 4) is active in the Be Deutsch closed-testing track. The homepage leads to `/testing/`, which explains Google Group membership, Play opt-in and installation using the same Google account. General public production release is unavailable; `googlePlayUrl` remains null and is separate from `testingOptInUrl`.
+- Reverify the closed track, tester-group access and invitation before publishing a status update. The website has no registration form, account database or direct collection of tester email addresses. Google handles group membership and opt-in; support email is the feedback route.
 - Shared layout and interface pieces live in `src/layouts` and `src/components`.
 - Brand tokens and responsive rules live in `src/styles/global.css`.
 - The canonical production origin is `https://www.bedeutsch.de/`; every public page emits tailored title, description, canonical and social metadata.

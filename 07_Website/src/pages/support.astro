@@ -28,8 +28,9 @@ const faqs = [
   ['Is it an official A1 certificate?', 'No. Be Deutsch is a learning product, not an official certification or exam-preparation provider, and it does not issue certificates.'],
   ['How does My Mistakes work?', 'Incorrect answers are kept as review material so you can return to areas that need more attention.'],
   ['How do quizzes and checkpoints work?', 'Lesson quizzes check understanding within a lesson. Unit checkpoints provide a broader check after a group of lessons.'],
-  ['Is Persian/Farsi available?', 'Not yet. English learner support is planned for launch. Persian/Farsi and additional learner-support languages are planned for later releases.'],
-  ['Where can I download the app?', `The Android public release is pending. The current status is: ${appRelease.label}. There is no public Google Play link yet.`],
+  ['Is Persian/Farsi available?', 'Not yet. English learner support is available in the current Android test version. Persian/Farsi and additional learner-support languages are planned for later releases.'],
+  ['Where can I download the app?', 'The app is currently available through Google Play closed testing for eligible testers. Join the Be Deutsch Testers Google Group, then opt in using the same Google account you use on Google Play. General public release is not available yet.', appRelease.testingPath],
+  ['Why can I not access the test?', 'Use the same Google account in the tester group, testing invitation and Google Play. Allow time for membership and access changes to take effect, and check device and country eligibility. Contact support if you still cannot continue. Existing internal testers can contact support for help switching test tracks.'],
   ['How can I contact support?', `Email ${publicContact.supportEmail}. Email is the primary support channel.`],
 ];
 ---
@@ -55,8 +56,9 @@ const faqs = [
         </div>
         <aside class="support-status" aria-labelledby="availability-title">
           <p class="eyebrow">App availability</p>
-          <h2 id="availability-title">Android release pending</h2>
-          <p>{appRelease.label}. A public Google Play link is not available yet.</p>
+          <h2 id="availability-title">Android closed testing</h2>
+          <p>{appRelease.description}</p>
+          <CTA label="Become a Beta Tester" href={appRelease.testingPath} />
         </aside>
       </div>
     </Section>
@@ -139,10 +141,10 @@ const faqs = [
         <h2 id="faq-title">About the current app.</h2>
       </div>
       <div class="faq-list">
-        {faqs.map(([question, answer]) => (
+        {faqs.map(([question, answer, href]) => (
           <details>
             <summary>{question}</summary>
-            <p>{answer}</p>
+            <p>{answer}{href && <> <a href={href}>Follow the beta-testing steps.</a></>}</p>
           </details>
         ))}
       </div>

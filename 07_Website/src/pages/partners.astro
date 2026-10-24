@@ -4,7 +4,7 @@ import CTA from '../components/CTA.astro';
 import Section from '../components/Section.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import { site } from '../config/site';
+import { appRelease, site } from '../config/site';
 
 const organizationTypes = [
   'Universities',
@@ -21,7 +21,7 @@ const organizationTypes = [
 
 const collaborationAreas = [
   ['Pilot testing', 'Explore a defined pilot with a learner group and agreed feedback goals.'],
-  ['Learner feedback', 'Collect structured observations from beginners using the current Android release candidate.'],
+  ['Learner feedback', 'Collect structured observations from beginners using the current Android test version.'],
   ['Usability studies', 'Study how learners navigate lessons, practice, review and progress information.'],
   ['Educational review', 'Review course structure, explanations and activities from an educational perspective.'],
   ['Distribution and referrals', 'Discuss responsible ways to introduce Be Deutsch to relevant learner communities.'],
@@ -60,11 +60,11 @@ const pilotSteps = [
         </div>
         <aside class="stage-panel" aria-labelledby="stage-title">
           <p class="eyebrow">Current project stage</p>
-          <h2 id="stage-title">Prelaunch</h2>
+          <h2 id="stage-title">Android testing underway</h2>
           <ul>
-            <li><span>Android</span><strong>Release candidate complete locally</strong></li>
-            <li><span>Google Play</span><strong>Verification and public release pending</strong></li>
-            <li><span>Website</span><strong>Prelaunch stage</strong></li>
+            <li><span>Android</span><strong>Version {appRelease.version} in Google Play testing</strong></li>
+            <li><span>Google Play</span><strong>Closed testing active; public release pending</strong></li>
+            <li><span>Website</span><strong>Live at www.bedeutsch.de</strong></li>
           </ul>
         </aside>
       </div>
@@ -152,6 +152,7 @@ const pilotSteps = [
             mistake review and progress information. Usability work should be scoped and interpreted
             carefully rather than presented as broad impact evidence.
           </p>
+          <CTA label="Become a Beta Tester" href={appRelease.testingPath} variant="secondary" />
         </article>
         <article>
           <p class="eyebrow">Educational and integration collaboration</p>

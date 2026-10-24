@@ -76,9 +76,10 @@ const appStructuredData = {
             listening, writing and pronunciation through explanation, practice, feedback and review.
           </p>
           <div class="hero__actions">
-            <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
+            <CTA label="Become a Beta Tester" href={appRelease.testingPath} />
             <CTA label="See what is included" href="#course" variant="secondary" />
           </div>
+          <p class="release-note">{appRelease.description}</p>
         </div>
         <div class="page-hero__media">
           <MediaFrame
@@ -253,7 +254,7 @@ const appStructuredData = {
       <div class="section-heading section-heading--light section-heading--wide">
         <p class="eyebrow">Real app screens</p>
         <h2 id="screens-title">The current Android experience.</h2>
-        <p class="light-copy">These are production screenshots from the Be Deutsch release candidate.</p>
+        <p class="light-copy">These are real screenshots from the current Be Deutsch Android app.</p>
       </div>
       <div class="dark-gallery">
         <MediaFrame
@@ -303,8 +304,8 @@ const appStructuredData = {
           </p>
           <p>
             Speaking and writing practice are learner-confirmed and unscored; there is no microphone,
-            speech recognition, official certification, live teacher support or AI tutor. Android is the planned
-            launch platform; iOS and web-app access are not currently offered.
+            speech recognition, official certification, live teacher support or AI tutor. Android is the current
+            testing platform; iOS and web-app access are not currently offered.
           </p>
         </div>
       </div>
@@ -314,9 +315,10 @@ const appStructuredData = {
       <div class="closing-cta">
         <div>
           <p class="eyebrow">Current availability</p>
-          <h2 id="coming-title">Be Deutsch is preparing for its Android launch.</h2>
+          <h2 id="coming-title">Help improve Be Deutsch before public release.</h2>
+          <p>{appRelease.description}</p>
         </div>
-        <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
+        <CTA label="Become a Beta Tester" href={appRelease.testingPath} />
       </div>
     </Section>
   </main>

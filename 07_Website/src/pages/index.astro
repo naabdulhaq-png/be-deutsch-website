@@ -73,17 +73,22 @@ const websiteStructuredData = {
       <div class="hero__grid">
         <div class="hero__copy">
           <p class="eyebrow">A1 Foundations · Android</p>
-          <h1 id="hero-title">A clearer way to build your German foundations.</h1>
+          <h1 id="hero-title">Learn German, step by step.</h1>
           <p class="hero__tagline" lang="de">{site.tagline}</p>
           <p class="hero__promise">
-            Be Deutsch A1 Foundations helps English-speaking beginners build essential German
-            vocabulary, reading, listening, writing and pronunciation through clear explanations,
-            guided practice, quizzes and mistake-based revision, with lessons available offline.
+            Be Deutsch A1 Foundations helps English-speaking beginners learn German through
+            12 units and 60 structured lessons. Build vocabulary and listening skills, practise
+            what you learn, and check your understanding with quizzes—all with lessons available
+            offline after installation.
           </p>
           <div class="hero__actions">
-            <CTA label={appRelease.label} href={appRelease.googlePlayUrl} variant="status" />
-            <CTA label="Explore A1 Foundations" href="#app" variant="secondary" />
+            <CTA label="Become a Beta Tester" href={appRelease.testingPath} />
+            <CTA label="Explore the App" href="/app/" variant="secondary" />
           </div>
+          <p class="release-note">
+            {appRelease.label}. Join the tester group and opt in through Google Play.
+            The app is not yet publicly released.
+          </p>
         </div>
         <div class="hero__art" aria-hidden="true">
           <img src={featureArtwork.src} width="1024" height="500" alt="" />
@@ -98,7 +103,7 @@ const websiteStructuredData = {
           <h2 id="product-title">A structured course you can see and follow.</h2>
           <p>
             Open the course overview, choose a lesson and move through each learning stage at your
-            own pace. The preview shows the current production app—not a concept mockup.
+            own pace. The preview shows the current Android app.
           </p>
           <div class="mini-note">
             <span class="mini-note__line" aria-hidden="true"></span>
@@ -209,7 +214,7 @@ const websiteStructuredData = {
       <div class="section-heading section-heading--wide">
         <p class="eyebrow">Inside the course</p>
         <h2 id="story-title">From explanation to visible progress.</h2>
-        <p>Production screens show the learning flow as it exists in the Android app today.</p>
+        <p>Real app screenshots show the learning flow in the current Android app.</p>
       </div>
       <div class="story-grid">
         <MediaFrame
@@ -249,10 +254,10 @@ const websiteStructuredData = {
       <div class="language-strip">
         <div>
           <p class="eyebrow">Learner support languages</p>
-          <h2 id="languages-title">English at launch. More planned.</h2>
+          <h2 id="languages-title">English support today. More planned.</h2>
         </div>
         <p>
-          English learner support will be available at launch. Persian/Farsi and additional
+          English learner support is available in the current Android test version. Persian/Farsi and additional
           learner-support languages are planned for future releases and are not available yet.
         </p>
       </div>

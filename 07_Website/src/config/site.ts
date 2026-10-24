@@ -41,14 +41,31 @@ export const publicContact = {
   phoneHref: legal.phoneHref,
 } as const;
 
-export type AppAvailability = 'prelaunch' | 'available';
+export type AppAvailability = 'prelaunch' | 'internal-testing' | 'closed-testing' | 'available';
 
 export const appRelease: {
   availability: AppAvailability;
   label: string;
+  description: string;
+  version: string;
+  versionCode: number;
+  verifiedOn: string;
+  testingPath: string;
+  testerGroupUrl: string;
+  testingOptInUrl: string;
   googlePlayUrl: string | null;
 } = {
-  availability: 'prelaunch',
-  label: 'Coming soon on Google Play',
+  availability: 'closed-testing',
+  label: 'Android closed testing is active',
+  description:
+    'Be Deutsch 2.0.0 is available through Google Play closed testing for eligible testers. Join the tester group and opt in before installing. General public release is not available yet.',
+  version: '2.0.0',
+  versionCode: 4,
+  verifiedOn: '2026-10-24',
+  testingPath: '/testing/',
+  // Verified in the closed track's Testers tab and Google Group settings.
+  testerGroupUrl: 'https://groups.google.com/g/be-deutsch-testers',
+  testingOptInUrl: 'https://play.google.com/apps/testing/com.bedeutsch.app',
+  // Reserved for an approved public production release, not tester enrollment.
   googlePlayUrl: null,
 };

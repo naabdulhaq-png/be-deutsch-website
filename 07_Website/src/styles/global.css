@@ -4,6 +4,7 @@
   --neutral-800: #2A2725;
   --accent-text: #9B3509;
   --accent: #FF6A2A;
+  --accent-control: var(--accent);
   --accent-deep: #7A2C08;
   --accent-soft-border: #FFD0BA;
   --accent-soft: #FFF1EA;
@@ -1959,8 +1960,8 @@ h3 {
 .hero .eyebrow {
   display: inline-flex;
   padding: 0.4rem 0.7rem;
-  color: var(--black);
-  background: var(--accent);
+  color: #FFFFFF;
+  background: var(--accent-control);
   border-radius: 999px;
   letter-spacing: 0.1em;
 }
@@ -1980,9 +1981,9 @@ h3 {
 }
 
 .hero .cta--secondary {
-  color: #ffffff;
-  background: var(--accent-text);
-  border-color: var(--accent-text);
+  color: var(--black);
+  background: var(--white);
+  border-color: rgba(0, 0, 0, 0.22);
 }
 
 .hero .cta--secondary:hover {
@@ -2105,8 +2106,8 @@ h3 {
   display: inline-block;
   inline-size: fit-content;
   padding: 0.25rem 0.48rem;
-  color: var(--accent-text);
-  background: #FFE7DB;
+  color: #FFFFFF;
+  background: var(--accent-control);
   border-radius: 999px;
 }
 
@@ -2121,8 +2122,8 @@ h3 {
 }
 
 .feature-card--accent .feature-card__mark {
-  color: var(--black);
-  background: var(--accent);
+  color: #FFFFFF;
+  background: var(--accent-control);
 }
 
 .section--accent:has(.why-grid) {
@@ -2335,8 +2336,8 @@ h3 {
 .error-page .eyebrow {
   display: inline-block;
   padding: 0.3rem 0.6rem;
-  color: var(--black);
-  background: var(--accent);
+  color: #FFFFFF;
+  background: var(--accent-control);
   border-radius: 999px;
 }
 
@@ -2375,18 +2376,18 @@ h3 {
   }
 }
 
-/* C46 final web brand lock: exact C45 mark, orange interaction, accessible dark labels. */
+/* Brand artwork stays unchanged; filled controls use the approved orange and white palette. */
 .site-header {
   border-block-end-color: rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.96);
 }
 
 .cta--primary,
-.hero .cta--secondary,
+.section--accent .cta--primary,
 .partner-panel .cta--secondary {
-  color: var(--black);
-  background: var(--accent);
-  border-color: var(--accent);
+  color: #FFFFFF;
+  background: var(--accent-control);
+  border-color: var(--accent-control);
 }
 
 .cta--primary:hover,
@@ -2395,6 +2396,38 @@ h3 {
   color: var(--white);
   background: var(--black);
   border-color: var(--black);
+}
+
+.release-note {
+  max-inline-size: 42rem;
+  margin-block: 1.25rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.section--accent .release-note {
+  color: var(--black);
+}
+
+.support-status .cta,
+.testing-steps .cta {
+  margin-block-start: 1.2rem;
+}
+
+.support-status p:not(.eyebrow) {
+  color: #D4CFCC;
+}
+
+.testing-status-note {
+  margin-block-start: 1.25rem;
+}
+
+.testing-steps .cta {
+  max-inline-size: 100%;
+}
+
+.testing-steps .cta span {
+  flex-shrink: 0;
 }
 
 .section--accent {
@@ -2418,8 +2451,8 @@ h3 {
 }
 
 .pilot-steps li > span {
-  color: var(--black);
-  background: var(--accent);
+  color: #FFFFFF;
+  background: var(--accent-control);
 }
 
 .brand img {

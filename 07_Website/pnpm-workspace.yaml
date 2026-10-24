@@ -1,5 +1,10 @@
 overrides:
   http-cache-semantics: 4.3.0
+  # Pin only compatible transitive edges to the approved security fixes.
+  "vite@": 8.3.3
+  "zod@": 4.6.6
+  "undici@": 8.12.2
+  "fast-uri@": 3.1.9
 
 allowBuilds:
   esbuild: true
