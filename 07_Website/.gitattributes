@@ -1,0 +1,5 @@
+/src/data/vocabulary-course.json -text
+/src/data/vocabulary-catalog.json -text
+/src/scripts/sound-profiles.ts -text
+/integrity/*.json text eol=lf
+/public/vocabulary-assets/** -text

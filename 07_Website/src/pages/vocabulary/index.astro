@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import course from '../../data/vocabulary-course.json';
+import '../../styles/vocabulary.css';
+
+---
+<BaseLayout title="A1 Vocabulary — 40 everyday German lessons — Be Deutsch" description="Build your everyday German with 400 illustrated words, natural pronunciation, short readings and 40 friendly vocabulary quizzes.">
+ <div id="top" aria-hidden="true"></div><SiteHeader/>
+ <main id="main-content" class="vocab-page course-page"><div class="container">
+  <div class="vocab-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>A1 Vocabulary</span></div>
+  <div class="course-hero"><div><p class="vocab-eyebrow">400 WORDS. A WORLD OF POSSIBILITIES.</p><h1>A little German.<br/><span>Every day.</span></h1><p>See it. Hear it. Make it yours. Forty small lessons for everyday life.</p><a id="continue-learning" class="vocab-button primary" href="/vocabulary/lesson-01/">Start learning →</a></div><div class="course-summary"><span class="course-level">A1</span><h2>Your next small step</h2><p>Ten useful words. Real German voices. A little reading. Then a friendly quiz.</p><span id="course-progress-label">0 of 400 words studied</span><progress id="course-progress" max="400" value="0" aria-labelledby="course-progress-label"></progress><small id="course-completed">0 of 40 lessons completed</small></div></div>
+  <div class="course-section-heading"><div><p class="vocab-eyebrow">YOUR LEARNING PATH</p><h2>Everyday words, step by step.</h2></div><p>Go at your own pace.<br/>Your progress stays on this device.</p></div>
+  <div class="course-grid">{course.lessons.map(l=><a class="course-lesson" href={`/vocabulary/lesson-${String(l.number).padStart(2,'0')}/`} data-lesson-id={l.lesson_id}><div class="course-card-top"><span>LESSON {String(l.number).padStart(2,'0')}</span><span class="lesson-completion" aria-label="Not yet completed">○</span></div><h3 lang="de">{l.title_de}</h3><p>{l.title_en}</p><div class="course-card-footer"><span class="lesson-progress">10 words · 10-question quiz</span><span aria-hidden="true">↗</span></div><progress max="10" value="0" aria-label={`Studied words in lesson ${l.number}`}></progress></a>)}</div>
+  <p class="course-privacy">Five separate translation languages. German examples and readings. No account, personal information or analytics.</p>
+ </div></main><SiteFooter/>
+ <script>
+ import catalog from '../../data/vocabulary-catalog.json';
+ import {loadProgress,progressKey} from '../../scripts/progress';
+ type Lesson={lesson_id:string;vocabulary_ids:string[];number:number};
+ const lessons=catalog.lessons as Lesson[];
+ function refreshCourseProgress(){const saved=loadProgress(lessons.flatMap(l=>l.vocabulary_ids),lessons.map(l=>l.lesson_id));
+ let completed=0;
+ for(const lesson of lessons){const card=document.querySelector<HTMLElement>(`[data-lesson-id="${lesson.lesson_id}"]`)!;const count=lesson.vocabulary_ids.filter(id=>saved.studied.includes(id)).length;const score=saved.scores[lesson.lesson_id];const done=count===10&&Boolean(score);if(done)completed++;card.classList.toggle('completed',done);const mark=card.querySelector<HTMLElement>('.lesson-completion')!;mark.textContent=done?'✓':'○';mark.setAttribute('aria-label',done?'Lesson completed':'Not yet completed');card.querySelector('progress')!.value=count;card.querySelector('.lesson-progress')!.textContent=count+'/10 studied'+(score?' · best quiz '+score.best+'/10':' · quiz ready');}
+ document.getElementById('course-progress-label')!.textContent=saved.studied.length+' of 400 words studied';(document.getElementById('course-progress') as HTMLProgressElement).value=saved.studied.length;document.getElementById('course-completed')!.textContent=completed+' of 40 lessons completed';
+ const link=document.getElementById('continue-learning') as HTMLAnchorElement;link.href='/vocabulary/lesson-'+String(saved.lesson+1).padStart(2,'0')+'/';if(saved.viewed.length)link.textContent='Continue learning · Lesson '+String(saved.lesson+1).padStart(2,'0')+' →';
+ }
+ refreshCourseProgress();
+ window.addEventListener('pageshow',refreshCourseProgress);
+ window.addEventListener('storage',event=>{if(event.key===progressKey)refreshCourseProgress();});
+ </script>
+</BaseLayout>

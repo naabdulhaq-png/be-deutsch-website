@@ -1,0 +1,13 @@
+{
+  "pair": "h",
+  "owner_approval": "W04 final publication instruction",
+  "approved_profiles_sha256": "2de6d94c11caa59455b72d9fb6402d8e0f0228e7c300c96c4593e09c1159adc0",
+  "correct": {
+    "source_pair": "d",
+    "approved_wav_sha256": "02f170f91a1b13e2cd0f7cc45fc8f9f94600ff773f78c71544549375d4698b78"
+  },
+  "incorrect": {
+    "source_pair": "g",
+    "approved_wav_sha256": "7669eabbff436af6b89e67c0d74dc995539b1deb14ac95fecefd2f69d562915e"
+  }
+}

@@ -2484,3 +2484,6 @@ h3 {
     block-size: 2.25rem;
   }
 }
+
+/* W03.1: keep already-orange filled controls orange with white labels on hover. */
+.cta--primary:hover,.partner-panel .cta--secondary:hover{background:var(--accent-control);border-color:var(--accent-control);color:#fff}

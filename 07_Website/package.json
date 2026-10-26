@@ -10,8 +10,10 @@
     "build": "astro check && astro build",
     "check:site": "node scripts/check-site.mjs",
     "preflight:production": "node scripts/check-legal-readiness.mjs",
-    "build:production": "pnpm preflight:production && astro check && astro build && pnpm check:site",
-    "preview": "astro preview"
+    "build:production": "pnpm preflight:production && astro check && astro build && pnpm check:site && pnpm check:vocabulary && pnpm check:quiz-sounds",
+    "preview": "astro preview",
+    "check:vocabulary": "node scripts/check-vocabulary.mjs",
+    "check:quiz-sounds": "node scripts/check-quiz-sounds.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",

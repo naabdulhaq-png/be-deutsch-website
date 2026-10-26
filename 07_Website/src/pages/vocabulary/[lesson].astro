@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import course from '../../data/vocabulary-course.json';
+import '../../styles/vocabulary.css';
+export function getStaticPaths(){return course.lessons.map((lesson,index)=>({params:{lesson:'lesson-'+String(lesson.number).padStart(2,'0')},props:{lesson,index}}));}
+const {lesson,index}=Astro.props;
+const pilot={languages:course.languages,currentLessonIndex:index,vocabulary:course.vocabulary.filter(v=>v.lesson_id===lesson.lesson_id)};
+const serialized=JSON.stringify(pilot).replaceAll('<','\u003c');
+---
+<BaseLayout title={`${lesson.title_de} — A1 vocabulary — Be Deutsch`} description={`Learn ten German words in lesson ${lesson.number}: ${lesson.title_en}, with approved illustrations, examples, pronunciation and a quiz.`}>
+  <div id="top" aria-hidden="true"></div>
+  <SiteHeader />
+  <main id="main-content" class="vocab-page">
+    <div class="container">
+      <div class="vocab-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/vocabulary/">A1 Vocabulary</a></div>
+      <div class="vocab-intro"><div><p class="vocab-eyebrow">YOUR EVERYDAY GERMAN</p><h1 lang="de">{lesson.title_de}</h1><p>Lesson {String(lesson.number).padStart(2,'0')} · {lesson.title_en}</p></div><div class="vocab-total"><span id="total-label">0 of 400 words studied</span><progress id="total-progress" value="0" max="400" aria-labelledby="total-label"></progress><small id="storage-status">Progress stays on this device. No account needed.</small></div></div>
+      <div class="vocab-workspace">
+        <aside class="vocab-path" aria-label="Learning path">
+          <p class="vocab-eyebrow">YOUR LEARNING PATH</p><div id="lesson-picker" class="lesson-picker"></div><a href="/vocabulary/" class="back-to-course">← All 40 lessons</a>
+          <details class="word-drawer" open><summary>Words in this lesson <span id="lesson-word-count"></span></summary><nav id="word-list" aria-label="Words in the selected lesson"></nav></details><button id="open-quiz" type="button" class="vocab-button lesson-quiz-button">Try this lesson’s quiz →</button>
+          <div class="vocab-path-note"><span class="vocab-note-icon" aria-hidden="true">✦</span><p>Small steps count.<br/>Explore ten words, then try a short quiz.</p></div>
+        </aside>
+        <div class="vocab-learning">
+          <div class="vocab-preferences"><label for="meaning-language">Your translation language<select id="meaning-language"></select></label><label class="vocab-check"><input id="show-all" type="checkbox"/>Show all five languages</label><label class="sound-setting" for="feedback-sound">Sound<select id="feedback-sound"><option value="on">On</option><option value="off">Off</option></select></label><details class="sound-preview"><summary>Preview sounds</summary><button id="preview-correct" type="button" class="vocab-button">Correct answer</button><button id="preview-incorrect" type="button" class="vocab-button">Try again</button></details><p id="feedback-audio-status" role="status" class="vocab-sr-only"></p></div>
+          <div id="learning-surface"></div>
+          <p id="vocab-live" class="vocab-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p id="playback-status" class="playback-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="vocab-bottom-note"><p>Your choices, studied words and quiz scores are saved only in this browser. No personal information or analytics are collected.</p><button id="reset-progress" type="button" class="vocab-text-button">Clear local progress</button></div>
+      <noscript><p>This interactive local preview needs JavaScript. The live Be Deutsch website remains available through the navigation above.</p></noscript>
+    </div>
+  </main>
+  <SiteFooter />
+  <script id="vocabulary-data" type="application/json" set:html={serialized}/>
+  <script>import '../../scripts/vocabulary.ts';</script>
+</BaseLayout>

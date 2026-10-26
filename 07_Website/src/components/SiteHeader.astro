@@ -4,6 +4,7 @@ import brandLogo from '../assets/branding/be_deutsch_logo.svg';
 const currentPath = Astro.url.pathname;
 const navigation = [
   { label: 'App', href: '/app/', path: '/app/' },
+  { label: 'Vocabulary', href: '/vocabulary/', path: '/vocabulary/' },
   { label: 'Testing', href: '/testing/', path: '/testing/' },
   { label: 'About', href: '/about/', path: '/about/' },
   { label: 'Partners', href: '/partners/', path: '/partners/' },
@@ -19,7 +20,7 @@ const navigation = [
 
     <nav class="desktop-nav" aria-label="Main navigation">
       {navigation.map((item) => (
-        <a href={item.href} aria-current={item.path === currentPath ? 'page' : undefined}>
+        <a href={item.href} aria-current={(item.path === currentPath || (item.path === '/vocabulary/' && currentPath.startsWith('/vocabulary/'))) ? 'page' : undefined}>
           {item.label}
         </a>
       ))}
@@ -31,7 +32,7 @@ const navigation = [
       </summary>
       <nav id="mobile-menu" aria-label="Mobile navigation">
         {navigation.map((item) => (
-          <a href={item.href} aria-current={item.path === currentPath ? 'page' : undefined}>
+          <a href={item.href} aria-current={(item.path === currentPath || (item.path === '/vocabulary/' && currentPath.startsWith('/vocabulary/'))) ? 'page' : undefined}>
             {item.label}
           </a>
         ))}
