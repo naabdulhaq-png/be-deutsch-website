@@ -3,3 +3,6 @@
 /src/scripts/sound-profiles.ts -text
 /integrity/*.json text eol=lf
 /public/vocabulary-assets/** -text
+
+/src/data/listening-course.json -text
+/public/listening-assets/** -text

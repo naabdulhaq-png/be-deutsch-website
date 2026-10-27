@@ -1,0 +1,7 @@
+---
+import ListeningExperience from '../../components/ListeningExperience.astro';
+import data from '../../data/listening-course.json';
+export function getStaticPaths(){return data.lessons.map(l=>({params:{lesson:l.id.toLowerCase()},props:{lessonId:l.id}}));}
+const {lessonId}=Astro.props;
+---
+<ListeningExperience view="lesson" lessonId={lessonId}/>

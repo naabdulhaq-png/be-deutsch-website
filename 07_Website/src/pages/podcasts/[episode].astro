@@ -1,0 +1,7 @@
+---
+import ListeningExperience from '../../components/ListeningExperience.astro';
+import episodes from '../../data/podcasts.json';
+export function getStaticPaths(){return episodes.map(e=>({params:{episode:e.slug},props:{podcastId:e.id}}));}
+const {podcastId}=Astro.props;
+---
+<ListeningExperience view="podcast" podcastId={podcastId}/>

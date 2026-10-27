@@ -4,7 +4,9 @@ import brandLogo from '../assets/branding/be_deutsch_logo.svg';
 const currentPath = Astro.url.pathname;
 const navigation = [
   { label: 'App', href: '/app/', path: '/app/' },
-  { label: 'Vocabulary', href: '/vocabulary/', path: '/vocabulary/' },
+  { label: 'A1 Vocabulary', href: '/vocabulary/', path: '/vocabulary/' },
+  { label: 'A1 Listening', href: '/listening/', path: '/listening/' },
+  { label: 'Podcasts', href: '/podcasts/', path: '/podcasts/' },
   { label: 'Testing', href: '/testing/', path: '/testing/' },
   { label: 'About', href: '/about/', path: '/about/' },
   { label: 'Partners', href: '/partners/', path: '/partners/' },
@@ -20,7 +22,7 @@ const navigation = [
 
     <nav class="desktop-nav" aria-label="Main navigation">
       {navigation.map((item) => (
-        <a href={item.href} aria-current={(item.path === currentPath || (item.path === '/vocabulary/' && currentPath.startsWith('/vocabulary/'))) ? 'page' : undefined}>
+        <a href={item.href} aria-current={(item.path === currentPath || (['/vocabulary/','/listening/','/podcasts/'].includes(item.path) && currentPath.startsWith(item.path))) ? 'page' : undefined}>
           {item.label}
         </a>
       ))}
@@ -32,7 +34,7 @@ const navigation = [
       </summary>
       <nav id="mobile-menu" aria-label="Mobile navigation">
         {navigation.map((item) => (
-          <a href={item.href} aria-current={(item.path === currentPath || (item.path === '/vocabulary/' && currentPath.startsWith('/vocabulary/'))) ? 'page' : undefined}>
+          <a href={item.href} aria-current={(item.path === currentPath || (['/vocabulary/','/listening/','/podcasts/'].includes(item.path) && currentPath.startsWith(item.path))) ? 'page' : undefined}>
             {item.label}
           </a>
         ))}
@@ -69,3 +71,64 @@ const navigation = [
     }
   });
 </script>
+
+<style>
+.desktop-nav{gap:clamp(.75rem,1.4vw,1.35rem)}
+@media(max-width:64rem){
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-nav summary {
+    display: grid;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    place-content: center;
+    gap: 0.26rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker { display: none; }
+
+  .mobile-nav summary span {
+    display: block;
+    inline-size: 1.1rem;
+    block-size: 2px;
+    background: var(--black);
+    border-radius: 2px;
+  }
+
+  .mobile-nav nav {
+    position: absolute;
+    inset-block-start: calc(100% - 0.3rem);
+    inset-inline: 0;
+    display: grid;
+    padding: 0.65rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .mobile-nav nav a {
+    padding: 0.8rem 0.9rem;
+    color: var(--black);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mobile-nav nav a[aria-current="page"] {
+    color: var(--accent-text);
+    background: #FFF3ED;
+    border-radius: 0.5rem;
+  }
+
+}
+</style>
