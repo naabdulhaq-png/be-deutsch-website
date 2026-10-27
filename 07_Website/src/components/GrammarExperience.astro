@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import GrammarExercise from './GrammarExercise.astro';
+import {
+  grammarLanguages,
+  grammarLessons,
+  grammarUi,
+  grammarUnits,
+  getFinalAssessmentExercises,
+  getUnitLessons,
+  getUnitReviewExercises,
+  type Exercise,
+} from '../data/grammar-course';
+import '../styles/grammar.css';
+
+interface Props { view: 'course' | 'lesson' | 'review' | 'final'; lessonId?: string; unit?: number; canonicalPath?: string; }
+const { view, lessonId, unit, canonicalPath } = Astro.props;
+const lesson = grammarLessons.find((item) => item.id === lessonId);
+const assessmentExercises = view === 'review' && unit ? getUnitReviewExercises(unit) : view === 'final' ? getFinalAssessmentExercises() : [];
+const ownerOf = (exercise: Exercise) => grammarLessons.find((item) => [...item.guided, ...item.independent].some((candidate) => candidate.id === exercise.id))!;
+const assessmentItems = assessmentExercises.map((exercise) => ({ exercise, owner: ownerOf(exercise) }));
+const reviewUnit = unit ? grammarUnits.find((item) => item.number === unit) : undefined;
+const hasGuide = Boolean(lesson?.englishGuide);
+const pageTitle = view === 'course' ? 'A1 Grammar course' : view === 'lesson' ? `${lesson?.title} — A1 Grammar` : view === 'review' ? `Unit ${unit} review — A1 Grammar` : 'Final assessment — A1 Grammar';
+const description = view === 'course'
+  ? 'Learn essential A1 German grammar through 28 focused lessons, guided practice, unit reviews and a final assessment.'
+  : view === 'lesson'
+    ? `Learn ${lesson?.title.toLowerCase()} with clear multilingual explanations, everyday examples and immediate practice feedback.`
+  : view === 'review'
+    ? `Review Unit ${unit}: ${reviewUnit?.title}, with immediate feedback and a saved result.`
+    : 'Complete a 28-question A1 German grammar assessment with immediate feedback and a saved result.';
+const payload = JSON.stringify({
+  view,
+  lesson,
+  unit,
+  languages: grammarLanguages,
+  ui: grammarUi,
+  totalLessons: grammarLessons.length,
+  courseMap: grammarUnits.map((courseUnit) => ({
+    number: courseUnit.number,
+    title: courseUnit.title,
+    lessons: getUnitLessons(courseUnit.number).map((item) => ({ number: item.number, title: item.title, id: item.id, searchText: `${item.title} ${item.shortTitle} ${item.objective.en}` })),
+  })),
+  exerciseIds: view === 'lesson' && lesson ? [...lesson.guided, ...lesson.independent].map((item) => item.id) : assessmentItems.map(({ exercise }) => exercise.id),
+  feedbackByOwner: Object.fromEntries([...new Set(assessmentItems.map(({ owner }) => owner.id))].map((id) => [id, grammarLessons.find((item) => item.id === id)!.feedback])),
+}).replaceAll('<', '\\u003c');
+---
+
+<BaseLayout title={`${pageTitle} — Be Deutsch`} description={description} canonicalPath={canonicalPath}>
+  <div id="top" aria-hidden="true"></div>
+  <SiteHeader />
+  <main id="main-content" class="grammar-page" data-view={view} data-lesson-id={lesson?.id} data-unit={unit}>
+    <div class="container">
+      <nav class="grammar-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{view === 'course' ? <span>A1 Grammar</span> : <><a href="/grammar/">A1 Grammar</a><span aria-hidden="true">/</span><span>{view === 'lesson' ? `Lesson ${lesson?.number}` : view === 'review' ? `Unit ${unit} review` : 'Final assessment'}</span></>}</nav>
+
+      {view === 'course' ? <>
+        <section class="grammar-hero">
+          <div><p class="grammar-eyebrow">A1 GRAMMAR · 7 UNITS · 28 LESSONS</p><h1>Build German sentences<br/><span>one clear step at a time.</span></h1><p>Understand the pattern, see it in everyday German and practise it straight away. Seven unit reviews and a final assessment help the learning stick.</p><div class="grammar-actions"><a class="grammar-button" id="grammar-continue" href="/grammar/lesson-01/">Start lesson 1 <span aria-hidden="true">→</span></a><span>No account · progress stays on this device</span></div></div>
+          <aside class="grammar-progress-card" aria-labelledby="grammar-progress-title"><span class="level-badge">A1</span><p class="grammar-eyebrow">YOUR PROGRESS</p><h2 id="grammar-progress-title">Ready for your first sentence.</h2><p id="grammar-progress-label">0 of 28 lessons completed</p><progress id="grammar-progress" max="28" value="0" aria-labelledby="grammar-progress-label"></progress><div class="progress-facts"><span><strong id="review-count">0</strong> / 7 reviews</span><span><strong id="final-score">—</strong> final</span></div></aside>
+        </section>
+        <div class="course-language-row"><p>Choose your explanation language inside any lesson. Your learning progress stays on this device.</p></div>
+        <div class="grammar-units">{grammarUnits.map((courseUnit) => <section class="grammar-unit" aria-labelledby={`unit-${courseUnit.number}-title`}>
+          <div class="unit-heading"><div><p class="grammar-eyebrow">UNIT {String(courseUnit.number).padStart(2, '0')}</p><h2 id={`unit-${courseUnit.number}-title`}>{courseUnit.title}</h2><p>{courseUnit.description}</p></div><span>4 lessons + review</span></div>
+          <div class="grammar-lesson-grid">{getUnitLessons(courseUnit.number).map((item) => <a class="grammar-lesson-card" href={`/grammar/lesson-${String(item.number).padStart(2, '0')}/`} data-grammar-lesson={item.id}><span class="lesson-number">{String(item.number).padStart(2, '0')}</span><div><p>{item.shortTitle}</p><h3>{item.title}</h3><span class="lesson-card-status">Not started</span></div><span class="card-arrow" aria-hidden="true">↗</span></a>)}</div>
+          <a class="review-card" href={`/grammar/unit-${String(courseUnit.number).padStart(2, '0')}-review/`} data-review={`U${courseUnit.number}`}><span>UNIT {courseUnit.number} REVIEW</span><strong>Check the four lessons</strong><span class="review-score">Not attempted</span></a>
+        </section>)}</div>
+        <section class="final-card"><div><p class="grammar-eyebrow">FINAL ASSESSMENT</p><h2>Bring all 28 lessons together.</h2><p>One focused question from every lesson. Your latest and best results stay on this device.</p></div><a class="grammar-button" href="/grammar/final-assessment/">Open final assessment <span aria-hidden="true">→</span></a></section>
+      </> : <>
+        {view === 'lesson' && lesson && <section class="lesson-jump" aria-labelledby="lesson-jump-title" data-current-lesson={lesson.number}>
+          <div class="lesson-jump__heading"><div><p class="grammar-eyebrow">COURSE NAVIGATION</p><h2 id="lesson-jump-title">Go directly to a grammar lesson</h2></div><a href="/grammar/">Course overview ↗</a></div>
+          <form id="lesson-jump-form" class="lesson-jump__form">
+            <label>Select unit<select id="lesson-unit-select">{grammarUnits.map((courseUnit) => <option value={courseUnit.number} selected={courseUnit.number === lesson.unit}>Unit {courseUnit.number} · {courseUnit.title}</option>)}</select></label>
+            <label>Select lesson<select id="lesson-select" aria-label={`Select lesson; current lesson is ${lesson.number}`}>{getUnitLessons(lesson.unit).map((item) => <option value={item.number} selected={item.id === lesson.id}>{String(item.number).padStart(2, '0')} · {item.title}{item.id === lesson.id ? ' · Current' : ''}</option>)}</select></label>
+            <button type="submit" class="grammar-button">Go to lesson <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="lesson-search"><label for="lesson-search">Find a topic</label><input id="lesson-search" type="search" autocomplete="off" placeholder="Search topics, e.g. dative" aria-controls="lesson-search-results" aria-expanded="false" aria-haspopup="listbox" aria-autocomplete="list"/><div id="lesson-search-results" class="lesson-search__results" role="listbox" aria-label="Matching grammar lessons" hidden></div></div>
+        </section>}
+        <div class="grammar-toolbar"><label>Explanation language <select id="grammar-language">{Object.entries(grammarLanguages).map(([code, language]) => <option value={code}>{language.nativeLabel}</option>)}</select></label><button id="grammar-sound" type="button" class="sound-button" aria-pressed="true">Pair H feedback sound: on</button><p id="feedback-audio-status" class="sr-only" role="status"></p></div>
+        {view === 'lesson' && lesson ? <>
+          <header class:list={['lesson-hero', { 'lesson-hero--prototype': hasGuide }]}><div><p class="grammar-eyebrow">UNIT {lesson.unit} · LESSON {String(lesson.number).padStart(2, '0')} OF 28</p><h1>{lesson.title}</h1><p id="lesson-title-description">{lesson.englishGuide?.titleDescription ?? lesson.shortTitle}</p></div><div class="lesson-progress-ring"><span id="lesson-correct">0</span><small>/ 4<br/>correct</small></div></header>
+          <section class="lesson-objective localized-panel"><p class="grammar-eyebrow" data-ui="objective">{grammarUi.en.objective}</p><p id="lesson-objective">{lesson.objective.en}</p></section>
+          <div class:list={['lesson-teach-grid', { 'lesson-teach-grid--prototype': hasGuide }]}>
+            <section class="lesson-explanation localized-panel"><p class="grammar-eyebrow" data-ui="explanation">{grammarUi.en.explanation}</p><h2 data-english-only>{lesson.englishGuide?.sectionHeading ?? lesson.shortTitle}</h2><p id="lesson-explanation">{lesson.explanation.en}</p>{lesson.englishGuide && <div data-english-only><p class="guide-intro">{lesson.englishGuide.intro}</p><div class="use-case-grid">{lesson.englishGuide.useCases.map((item) => <article><h3>{item.title}</h3><p>{item.text}</p></article>)}</div><h3 class="guide-subheading">{lesson.englishGuide.stepsTitle}</h3><ol class="guide-steps">{lesson.englishGuide.steps.map((step) => <li><strong>{step.title}</strong><span>{step.text}</span></li>)}</ol></div>}<div class="rule-note"><span aria-hidden="true">✦</span><p id="lesson-rule">{lesson.feedback.en}</p></div></section>
+            <section class="lesson-examples"><p class="grammar-eyebrow" data-ui="examples">{grammarUi.en.examples}</p>{lesson.examples.map((example, index) => { const highlight = example.highlight ?? lesson.englishGuide?.exampleHighlights[index]; const start = highlight ? example.de.indexOf(highlight) : -1; return <article><p lang="de">{highlight && start >= 0 ? <>{example.de.slice(0, start)}<mark>{highlight}</mark>{example.de.slice(start + highlight.length)}</> : example.de}</p><p class="translation-label" data-english-only>English</p><p class="example-meaning" data-example={index}>{example.meaning.en}</p></article>; })}{lesson.englishGuide?.table && <div class="grammar-table-wrap" data-english-only><h3>{lesson.englishGuide.table.title}</h3><table><thead><tr>{lesson.englishGuide.table.headers.map((header) => <th scope="col">{header}</th>)}</tr></thead><tbody>{lesson.englishGuide.table.rows.map((row) => <tr><th scope="row">{row[0]}</th><td>{row[1]}</td></tr>)}</tbody></table></div>}</section>
+          </div>
+          {lesson.englishGuide && <section class="example-analysis" data-english-only aria-labelledby="example-analysis-title"><div class="guide-section-heading"><p class="grammar-eyebrow">LOOK INSIDE THE SENTENCE</p><h2 id="example-analysis-title">Why these forms are correct</h2></div><div class="analysis-grid">{lesson.englishGuide.analyses.map((item) => <article><p class="analysis-sentence" lang="de">{item.before}<mark>{item.focus}</mark>{item.after}</p><p class="analysis-translation"><span>English</span>{item.translation}</p><ul>{item.points.map((point) => <li>{point}</li>)}</ul></article>)}</div>{(lesson.englishGuide.mistakes?.length || lesson.englishGuide.tip) && <div class="support-callouts">{lesson.englishGuide.mistakes?.length && <aside class="mistake-card"><p class="grammar-eyebrow">COMMON MISTAKES</p>{lesson.englishGuide.mistakes.map((item) => <div><p class="wrong" lang="de"><span>Not:</span> {item.wrong}</p><p class="correct" lang="de"><span>Use:</span> {item.correct}</p><p>{item.explanation}</p></div>)}</aside>}{lesson.englishGuide.tip && <aside class="learning-tip"><p class="grammar-eyebrow">LEARNING TIP</p><p>{lesson.englishGuide.tip}</p></aside>}</div>}</section>}
+          <section class="practice-section"><div class="practice-heading"><div><p class="grammar-eyebrow">STEP 1</p><h2 data-ui="guided">{grammarUi.en.guided}</h2></div><p>Use the rule while it is still visible.</p></div><div class="exercise-grid">{lesson.guided.map((exercise) => <GrammarExercise exercise={exercise} owner={lesson} />)}</div></section>
+          <section class="practice-section practice-section--independent"><div class="practice-heading"><div><p class="grammar-eyebrow">STEP 2</p><h2 data-ui="independent">{grammarUi.en.independent}</h2></div><p>Apply the same pattern on your own.</p></div><div class="exercise-grid">{lesson.independent.map((exercise) => <GrammarExercise exercise={exercise} owner={lesson} />)}</div></section>
+          <div class="lesson-completion" id="lesson-completion" aria-live="polite"><span>Complete all four activities to finish this lesson.</span></div>
+          <nav class="lesson-navigation" aria-label="Grammar lessons">{lesson.number > 1 && <a class="text-button" href={`/grammar/lesson-${String(lesson.number - 1).padStart(2, '0')}/`}>← Previous lesson</a>}<a class="text-button" href="/grammar/">Course overview</a>{lesson.number % 4 === 0 ? <a class="grammar-button grammar-button--small" href={`/grammar/unit-${String(lesson.unit).padStart(2, '0')}-review/`}>Unit review →</a> : <a class="grammar-button grammar-button--small" href={`/grammar/lesson-${String(lesson.number + 1).padStart(2, '0')}/`}>Next lesson →</a>}</nav>
+        </> : <>
+          <header class="assessment-hero"><p class="grammar-eyebrow">{view === 'review' ? `UNIT ${unit} REVIEW` : 'A1 FINAL ASSESSMENT'}</p><h1>{view === 'review' ? reviewUnit?.title : 'Your complete A1 grammar check'}</h1><p>{view === 'review' ? 'Six questions revisit the unit. Each answer locks for this attempt; you can retake the review.' : 'Twenty-eight questions—one from every lesson. Work at your pace and return on this device if you need a break.'}</p><div class="assessment-meta"><span>{assessmentItems.length} questions</span><span>Immediate explanations</span><span>Saved result</span></div></header>
+          <div class="assessment-status" aria-live="polite"><p id="assessment-progress">0 of {assessmentItems.length} answered</p><progress id="assessment-progress-bar" max={assessmentItems.length} value="0"></progress><p id="assessment-best">No saved result yet.</p></div>
+          <section class="assessment-list"><h2 class="sr-only">Assessment questions</h2>{assessmentItems.map(({ exercise, owner }, index) => <div class="assessment-item"><div class="assessment-source"><span>{String(index + 1).padStart(2, '0')}</span><p>Lesson {owner.number} · {owner.title}</p></div><GrammarExercise exercise={exercise} owner={owner} assessment /></div>)}</section>
+          <div class="assessment-result" id="assessment-result" hidden><p class="grammar-eyebrow">RESULT</p><h2 id="assessment-result-title">Assessment complete</h2><p id="assessment-result-copy"></p><button type="button" id="retake-assessment" class="grammar-button grammar-button--small">Retake assessment</button></div>
+          <nav class="lesson-navigation"><a class="text-button" href="/grammar/">← Course overview</a>{view === 'review' && unit && unit < 7 && <a class="grammar-button grammar-button--small" href={`/grammar/lesson-${String(unit * 4 + 1).padStart(2, '0')}/`}>Next unit →</a>}{view === 'review' && unit === 7 && <a class="grammar-button grammar-button--small" href="/grammar/final-assessment/">Final assessment →</a>}</nav>
+        </>}
+      </>}
+    </div>
+  </main>
+  <SiteFooter />
+  <script id="grammar-data" type="application/json" set:html={payload}></script>
+  <script>import '../scripts/grammar';</script>
+</BaseLayout>

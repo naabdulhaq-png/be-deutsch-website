@@ -1,0 +1,13 @@
+---
+import { grammarUi, type Exercise, type GrammarLesson } from '../data/grammar-course';
+interface Props { exercise: Exercise; owner: GrammarLesson; assessment?: boolean; }
+const { exercise, owner, assessment = false } = Astro.props;
+---
+<article class="grammar-exercise" data-exercise-id={exercise.id} data-kind={exercise.kind} data-answer={exercise.answer} data-accepted={JSON.stringify(exercise.accepted ?? [exercise.answer])} data-assessment={assessment ? 'true' : 'false'} data-owner={owner.id}>
+  <div class="exercise-heading"><span class="exercise-type" data-exercise-instruction>{exercise.kind === 'choice' ? grammarUi.en.choose : exercise.kind === 'fill' ? grammarUi.en.fill : grammarUi.en.order}</span><span class="exercise-state" aria-hidden="true">○</span></div>
+  <h3 lang="de">{exercise.prompt}</h3>
+  {exercise.kind === 'choice' && <div class="choice-options">{exercise.options?.map((option) => <button type="button" class="choice-option" data-value={option}>{option}</button>)}</div>}
+  {exercise.kind === 'fill' && <form class="fill-form"><label><span class="sr-only">Answer</span><input type="text" autocomplete="off" spellcheck="false" lang="de" /></label><button type="submit" class="grammar-button grammar-button--small" data-ui="check">{grammarUi.en.check}</button></form>}
+  {exercise.kind === 'order' && <div class="order-builder"><div class="order-answer" aria-label="Your sentence"></div><div class="order-bank" aria-label="Available words">{exercise.tokens?.map((token, index) => <button type="button" class="word-token" data-token={token} data-token-index={index}>{token}</button>)}</div><div class="order-controls"><button type="button" class="grammar-button grammar-button--small check-order" data-ui="check">{grammarUi.en.check}</button><button type="button" class="text-button clear-order" data-ui="clear">{grammarUi.en.clear}</button></div></div>}
+  <p id={`${exercise.id}-feedback`} class="exercise-feedback" role="status" aria-live="polite" hidden></p>
+</article>

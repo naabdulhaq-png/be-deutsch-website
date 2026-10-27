@@ -14,8 +14,18 @@ const pages = new Map([
   ['support/index.html', '/support/'],
   ['privacy/index.html', '/privacy/'],
   ['impressum/index.html', '/impressum/'],
+  ['grammar/index.html', '/grammar/'],
+  ['grammar/final-assessment/index.html', '/grammar/final-assessment/'],
   ['404.html', '/404.html'],
 ]);
+for (let lesson = 1; lesson <= 28; lesson += 1) {
+  const number = String(lesson).padStart(2, '0');
+  pages.set(`grammar/lesson-${number}/index.html`, `/grammar/lesson-${number}/`);
+}
+for (let unit = 1; unit <= 7; unit += 1) {
+  const number = String(unit).padStart(2, '0');
+  pages.set(`grammar/unit-${number}-review/index.html`, `/grammar/unit-${number}-review/`);
+}
 
 const failures = [];
 const titles = new Map();

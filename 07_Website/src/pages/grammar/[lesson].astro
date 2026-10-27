@@ -1,0 +1,14 @@
+---
+import GrammarExperience from '../../components/GrammarExperience.astro';
+import { grammarLessons } from '../../data/grammar-course';
+
+export function getStaticPaths() {
+  return [
+    ...grammarLessons.map((lesson) => ({ params: { lesson: `lesson-${String(lesson.number).padStart(2, '0')}` }, props: { view: 'lesson' as const, lessonId: lesson.id } })),
+    ...Array.from({ length: 7 }, (_, index) => ({ params: { lesson: `unit-${String(index + 1).padStart(2, '0')}-review` }, props: { view: 'review' as const, unit: index + 1 } })),
+    { params: { lesson: 'final-assessment' }, props: { view: 'final' as const } },
+  ];
+}
+const { view, lessonId, unit } = Astro.props;
+---
+<GrammarExperience view={view} lessonId={lessonId} unit={unit} />

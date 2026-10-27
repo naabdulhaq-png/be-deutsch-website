@@ -1,0 +1,259 @@
+.grammar-page{--grammar-soft:#fff4ee;--grammar-green:#2f7043;--grammar-red:#a54b2d;background:#fff;color:var(--black);min-height:70vh;padding:1.25rem 0 5rem}.grammar-page *{box-sizing:border-box}.grammar-page button,.grammar-page select,.grammar-page input{font:inherit}.grammar-page button,.grammar-page a,.grammar-page select,.grammar-page input{touch-action:manipulation}.grammar-breadcrumb{display:flex;gap:.55rem;align-items:center;font-size:.82rem;color:var(--muted);margin:.6rem 0 1.5rem}.grammar-breadcrumb a{color:inherit}.grammar-eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.13em;color:var(--accent-text);margin:0 0 .65rem}.grammar-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(18rem,.65fr);gap:clamp(2rem,6vw,6rem);align-items:center;padding:clamp(2.5rem,6vw,5.5rem) 0;background:linear-gradient(110deg,#fff 0 67%,var(--grammar-soft) 67%);border-radius:2rem}.grammar-hero>div{padding-inline-start:clamp(1rem,4vw,4rem)}.grammar-hero h1,.lesson-hero h1,.assessment-hero h1{font-size:clamp(2.55rem,5vw,5rem);line-height:1.03;letter-spacing:-.045em;margin:0 0 1.25rem}.grammar-hero h1 span{color:var(--accent-text)}.grammar-hero>div>p:not(.grammar-eyebrow){max-width:58ch;font-size:1.08rem;color:var(--muted)}.grammar-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}.grammar-actions>span{font-size:.78rem;color:var(--muted)}.grammar-button{display:inline-flex;align-items:center;justify-content:center;gap:1.3rem;min-height:48px;padding:.86rem 1.25rem;border:1px solid #ff6a2a;border-radius:.75rem;background:#ff6a2a;color:#fff!important;font-weight:800;text-decoration:none;cursor:pointer}.grammar-button:hover,.grammar-button:focus-visible{background:#e95418;border-color:#e95418}.grammar-button--small{min-height:44px;padding:.65rem 1rem;font-size:.85rem}.grammar-progress-card{margin-inline-end:clamp(1rem,4vw,4rem);padding:2rem;border:1px solid #ffd6c3;border-radius:1.25rem;background:#fff;box-shadow:var(--shadow-soft)}.level-badge{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:#ff6a2a;color:#fff;font-weight:900;margin-bottom:1.2rem}.grammar-progress-card h2{font-size:1.5rem}.grammar-progress-card progress,.assessment-status progress{width:100%;height:.7rem;accent-color:#ff6a2a}.progress-facts{display:flex;justify-content:space-between;gap:1rem;font-size:.78rem;color:var(--muted);margin-top:1rem}.course-language-row{display:flex;justify-content:space-between;gap:1rem;padding:1.15rem 0;border-bottom:1px solid var(--line);font-size:.8rem;color:var(--muted)}.course-language-row p{margin:0}.grammar-units{display:grid;gap:4.5rem;margin-top:4rem}.grammar-unit{scroll-margin-top:1rem}.unit-heading{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:1.5rem}.unit-heading h2{font-size:clamp(1.8rem,3vw,2.7rem);margin:0 0 .45rem}.unit-heading p{margin:0;color:var(--muted)}.unit-heading>span{white-space:nowrap;font-size:.75rem;color:var(--muted);padding:.4rem .7rem;border:1px solid var(--line);border-radius:999px}.grammar-lesson-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.85rem}.grammar-lesson-card{display:grid;grid-template-columns:auto 1fr auto;gap:.9rem;align-items:start;min-height:12rem;padding:1.25rem;border:1px solid var(--line);border-radius:1rem;text-decoration:none;color:var(--black);transition:transform .15s,border-color .15s,box-shadow .15s}.grammar-lesson-card:hover{transform:translateY(-3px);border-color:#ff6a2a;box-shadow:0 10px 28px #0000000b}.grammar-lesson-card.is-complete{border-color:#a9d2b4;background:#f6fbf7}.lesson-number{display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--grammar-soft);color:var(--accent-text);font-size:.75rem;font-weight:800}.grammar-lesson-card h3{font-size:1.15rem;line-height:1.22;margin:.25rem 0 1.2rem}.grammar-lesson-card p{font-size:.7rem;color:var(--accent-text);font-weight:700;margin:0}.lesson-card-status{font-size:.72rem;color:var(--muted)}.is-complete .lesson-card-status{color:var(--grammar-green);font-weight:750}.card-arrow{color:var(--accent-text)}.review-card{display:grid;grid-template-columns:1fr 2fr 1fr;gap:1rem;align-items:center;padding:1rem 1.25rem;margin-top:.85rem;border-radius:.8rem;background:var(--black);color:#fff;text-decoration:none}.review-card>span:first-child{font-size:.68rem;letter-spacing:.12em;color:#ffc5aa}.review-card strong{font-size:.95rem}.review-score{text-align:end;font-size:.75rem;color:#ddd}.final-card{display:flex;justify-content:space-between;gap:2rem;align-items:center;margin-top:5rem;padding:clamp(1.5rem,4vw,3rem);border-radius:1.4rem;background:var(--grammar-soft)}.final-card h2{font-size:clamp(1.8rem,3vw,2.8rem);margin:.2rem 0}.final-card p:not(.grammar-eyebrow){color:var(--muted);margin:0}.grammar-toolbar{display:flex;justify-content:flex-end;gap:.75rem;align-items:center;flex-wrap:wrap;margin:1rem 0}.grammar-toolbar label{display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:700}.grammar-toolbar select,.sound-button{min-height:44px;padding:.55rem .75rem;border:1px solid var(--line);border-radius:.55rem;background:#fff;color:var(--black)}.sound-button{cursor:pointer}.translation-draft{margin:0 0 1rem;padding:.65rem 1rem;border-inline-start:.2rem solid #ff6a2a;background:var(--grammar-soft);font-size:.75rem;color:var(--muted)}.lesson-hero{display:flex;justify-content:space-between;gap:2rem;align-items:center;padding:clamp(2rem,5vw,4rem);background:var(--grammar-soft);border-radius:1.5rem}.lesson-hero h1{font-size:clamp(2.5rem,5vw,4.7rem)}.lesson-hero>div>p:last-child{font-size:1.1rem;color:var(--muted)}.lesson-progress-ring{display:flex;align-items:baseline;justify-content:center;min-width:8.5rem;height:8.5rem;padding:2rem;border:.65rem solid #ffd3bf;border-radius:50%;background:#fff}.lesson-progress-ring>span{font-size:2.3rem;font-weight:850}.lesson-progress-ring small{font-size:.65rem;color:var(--muted);line-height:1.1}.lesson-objective{margin:1.25rem 0;padding:1.15rem 1.4rem;border-inline-start:.25rem solid #ff6a2a;background:#fff;border-radius:.4rem;box-shadow:0 4px 18px #00000008}.lesson-objective p:last-child{margin:0;font-size:1.05rem}.lesson-teach-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}.lesson-explanation,.lesson-examples{padding:clamp(1.4rem,3vw,2.4rem);border:1px solid var(--line);border-radius:1rem}.lesson-explanation h2{font-size:clamp(1.5rem,2.6vw,2.2rem)}.lesson-explanation>p:not(.grammar-eyebrow){line-height:1.75;color:var(--muted)}.rule-note{display:flex;gap:.8rem;margin-top:1.25rem;padding:1rem;background:var(--grammar-soft);border-radius:.7rem}.rule-note span{color:var(--accent-text)}.rule-note p{margin:0;font-size:.87rem}.lesson-examples{display:grid;align-content:start;gap:.8rem;background:#faf9f8}.lesson-examples>p{margin-bottom:0}.lesson-examples article{padding:1rem;background:#fff;border-radius:.7rem}.lesson-examples article p{margin:0}.lesson-examples article p:first-child{font-weight:750;font-size:1.02rem}.example-meaning{margin-top:.45rem!important;color:var(--muted);font-size:.84rem}.practice-section{margin-top:3rem}.practice-heading{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1rem}.practice-heading h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:0}.practice-heading>p{font-size:.8rem;color:var(--muted)}.exercise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.grammar-exercise{padding:1.3rem;border:1px solid var(--line);border-radius:1rem;background:#fff}.grammar-exercise.is-correct{border-color:#84b991;background:#f6fbf7}.grammar-exercise.is-incorrect{border-color:#e1a58d}.exercise-heading{display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.72rem}.exercise-state{display:grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:#f3f1ef;font-weight:900}.is-correct .exercise-state{background:#dff0e3;color:var(--grammar-green)}.is-incorrect .exercise-state{background:#ffdfd2;color:var(--grammar-red)}.grammar-exercise h3{font-size:1rem;line-height:1.45;margin:1rem 0}.choice-options{display:grid;gap:.5rem}.choice-option,.word-token{min-height:44px;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.55rem;background:#fff;color:var(--black);text-align:start;cursor:pointer}.choice-option:hover,.word-token:hover{border-color:#ff6a2a;background:var(--grammar-soft)}.choice-option[aria-pressed=true]{border-color:#ff6a2a;box-shadow:inset 0 0 0 1px #ff6a2a}.choice-option:disabled,.word-token:disabled{opacity:1;cursor:default}.fill-form{display:flex;gap:.6rem}.fill-form label{flex:1}.fill-form input{width:100%;min-height:44px;padding:.7rem;border:1px solid var(--line);border-radius:.55rem}.order-answer,.order-bank{display:flex;flex-wrap:wrap;gap:.45rem;min-height:3.6rem;padding:.55rem;border-radius:.6rem}.order-answer{border:1px dashed #ff6a2a;background:var(--grammar-soft)}.order-bank{margin-top:.5rem;border:1px solid var(--line)}.order-controls{display:flex;gap:.8rem;align-items:center;margin-top:.7rem}.text-button{display:inline-flex;min-height:44px;align-items:center;border:0;background:none;color:var(--accent-text);font-weight:750;text-decoration:underline;text-underline-offset:.2rem;cursor:pointer}.exercise-feedback{margin:1rem 0 0;padding:.8rem;border-radius:.55rem;background:#f1efed;font-size:.85rem;line-height:1.55}.is-correct .exercise-feedback{background:#e8f5eb}.is-incorrect .exercise-feedback{background:#fff0ea}.lesson-completion{margin-top:2rem;padding:1.2rem;text-align:center;border:1px dashed var(--line);border-radius:.8rem;color:var(--muted)}.lesson-completion.is-complete{border-style:solid;border-color:#84b991;background:#f0f8f2;color:var(--grammar-green);font-weight:800}.lesson-navigation{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)}.assessment-hero{max-width:56rem;padding:3rem 0}.assessment-hero p:not(.grammar-eyebrow){font-size:1.05rem;color:var(--muted);max-width:60ch}.assessment-meta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}.assessment-meta span{padding:.45rem .7rem;border-radius:999px;background:var(--grammar-soft);font-size:.72rem}.assessment-status{position:sticky;z-index:2;top:0;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:.8rem;background:#ffffffee;backdrop-filter:blur(12px);box-shadow:0 8px 24px #00000008}.assessment-status p{margin:.25rem 0;font-size:.8rem}.assessment-list{display:grid;gap:1rem;margin-top:1.5rem}.assessment-item{display:grid;grid-template-columns:12rem 1fr;gap:1rem;align-items:start}.assessment-source{display:flex;gap:.6rem;padding:.8rem;position:sticky;top:7rem}.assessment-source>span{color:var(--accent-text);font-weight:850}.assessment-source p{margin:0;font-size:.78rem;color:var(--muted)}.assessment-result{margin-top:2rem;padding:2rem;border-radius:1rem;background:var(--grammar-soft);text-align:center}.assessment-result h2{font-size:2rem}.assessment-result[hidden]{display:none}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:64rem){.grammar-lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grammar-hero{grid-template-columns:1fr;background:linear-gradient(180deg,#fff 0 60%,var(--grammar-soft) 60%)}.grammar-progress-card{margin:0 1rem}.assessment-item{grid-template-columns:9rem 1fr}}
+@media(max-width:48rem){.grammar-page{padding-top:.5rem}.grammar-hero{border-radius:1rem}.grammar-hero>div{padding:1rem}.grammar-hero h1,.lesson-hero h1,.assessment-hero h1{font-size:2.5rem}.course-language-row,.unit-heading,.final-card,.practice-heading{align-items:start;flex-direction:column}.lesson-hero{align-items:start}.lesson-teach-grid,.exercise-grid{grid-template-columns:1fr}.assessment-item{grid-template-columns:1fr}.assessment-source{position:static;padding:.35rem .3rem}.review-card{grid-template-columns:1fr}.review-score{text-align:start}.grammar-toolbar{justify-content:start}.grammar-toolbar label{width:100%;justify-content:space-between}.grammar-toolbar select{max-width:58%}}
+@media(max-width:30rem){.grammar-page>.container{padding-inline:1rem}.grammar-lesson-grid{grid-template-columns:1fr}.grammar-lesson-card{min-height:9rem}.lesson-hero{padding:1.4rem;flex-direction:column}.lesson-progress-ring{min-width:6.5rem;width:6.5rem;height:6.5rem;padding:1rem}.fill-form{flex-direction:column}.fill-form .grammar-button{width:100%}.lesson-navigation>*{width:100%;justify-content:center}.grammar-actions .grammar-button{width:100%}.grammar-progress-card{margin:0 .25rem;padding:1.3rem}.progress-facts{flex-direction:column}.assessment-status{top:.25rem}.sound-button{width:100%}}
+@media(prefers-reduced-motion:reduce){.grammar-page *{transition:none!important;scroll-behavior:auto!important}}
+
+/* G01.1 representative design: Lesson 24 only until project-owner approval. */
+.lesson-jump{margin:1rem 0 1.25rem;padding:1.15rem 1.25rem;border:1px solid #ded8d4;border-radius:1rem;background:#f8f6f4}.lesson-jump__heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.lesson-jump__heading h2{margin:0;font-size:1.12rem;letter-spacing:-.01em}.lesson-jump__heading a{color:var(--accent-text);font-size:.8rem;font-weight:800}.lesson-jump__form{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr) auto;gap:.75rem;align-items:end}.lesson-jump__form label,.lesson-search label{display:grid;gap:.35rem;color:#47413e;font-size:.72rem;font-weight:800}.lesson-jump select,.lesson-search input{width:100%;min-height:46px;padding:.68rem .75rem;border:1px solid #cfc7c2;border-radius:.65rem;background:#fff;color:#1a1a1a}.lesson-jump select:focus,.lesson-search input:focus{outline:3px solid rgba(255,106,42,.25);border-color:#ff6a2a}.lesson-search{position:relative;display:grid;grid-template-columns:9rem 1fr;align-items:center;gap:.75rem;margin-top:.8rem}.lesson-search__results{position:absolute;z-index:10;inset:calc(100% + .35rem) 0 auto 9.75rem;display:grid;padding:.4rem;border:1px solid #d9d2cd;border-radius:.65rem;background:#fff;box-shadow:0 14px 32px #0002}.lesson-search__results[hidden]{display:none}.lesson-search__results button{min-height:42px;padding:.55rem .7rem;border:0;border-radius:.45rem;background:#fff;text-align:left;color:#1a1a1a;cursor:pointer}.lesson-search__results button:hover,.lesson-search__results button:focus-visible{background:#fff1e9;color:#a83b0a}
+.lesson-hero--prototype{padding:clamp(1.6rem,3.5vw,2.8rem);background:#ff6a2a;color:#fff;box-shadow:0 16px 36px rgba(98,42,16,.16)}.lesson-hero--prototype .grammar-eyebrow{color:#fff;opacity:.9}.lesson-hero--prototype h1{max-width:18ch;margin-bottom:.7rem;color:#fff;font-size:clamp(2rem,4vw,3.6rem);line-height:1.03;text-shadow:0 1px 1px rgba(70,24,5,.22)}.lesson-hero--prototype>div>p:last-child{max-width:54ch;margin:0;color:#fff;font-size:1rem;font-weight:650;line-height:1.55;text-shadow:0 1px 1px rgba(70,24,5,.18)}.lesson-hero--prototype .lesson-progress-ring{width:7.2rem;height:7.2rem;min-width:7.2rem;padding:1.3rem;border:.45rem solid rgba(255,255,255,.48);background:#fff;color:#1a1a1a}.lesson-hero--prototype .lesson-progress-ring small{color:#51453f}
+.grammar-page[data-lesson-id=G24] .lesson-objective{margin-top:1.1rem;border-inline-start:.3rem solid #ff6a2a;box-shadow:none;background:#fffaf7}.grammar-page[data-lesson-id=G24] .lesson-teach-grid{grid-template-columns:minmax(0,1.25fr) minmax(18rem,.75fr);gap:1.15rem}.grammar-page[data-lesson-id=G24] .lesson-explanation,.grammar-page[data-lesson-id=G24] .lesson-examples{padding:clamp(1.25rem,2.5vw,2rem);border-color:#ddd6d1;box-shadow:0 8px 24px rgba(30,22,18,.055)}.grammar-page[data-lesson-id=G24] .lesson-explanation h2{max-width:22ch;margin:.15rem 0 .75rem;font-size:clamp(1.55rem,2.5vw,2.1rem);line-height:1.15}.guide-intro{padding-top:.85rem;border-top:1px solid #e8e2de;color:#2e2926!important}.use-case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;margin:1.1rem 0}.use-case-grid article{padding:.85rem;border-radius:.7rem;background:#eef8f7}.use-case-grid h3{margin:0 0 .35rem;font-size:.82rem;color:#164e4a}.use-case-grid p{margin:0;font-size:.76rem;line-height:1.5;color:#3f5c59}.guide-subheading{margin:1.4rem 0 .7rem;font-size:1.05rem}.guide-steps{display:grid;gap:.65rem;margin:0;padding:0;list-style:none}.guide-steps li{display:grid;grid-template-columns:10.2rem 1fr;gap:.8rem;padding:.65rem .75rem;border-inline-start:.22rem solid #ff6a2a;background:#fff8f4;border-radius:.35rem}.guide-steps strong{font-size:.78rem}.guide-steps span{font-size:.78rem;color:#5f5752;line-height:1.5}.grammar-page[data-lesson-id=G24] .rule-note{background:#fff1e9;border:1px solid #ffd4c0}.grammar-page[data-lesson-id=G24] .lesson-examples{background:#eaf7f8}.grammar-page[data-lesson-id=G24] .lesson-examples>article{border:1px solid #cce5e6}.grammar-page[data-lesson-id=G24] mark{padding:.04em .22em;border-radius:.25em;background:#ffcb67;color:#1a1a1a;font-weight:850}.translation-label{margin-top:.55rem!important;color:#477572!important;font-size:.62rem!important;font-weight:850!important;letter-spacing:.1em;text-transform:uppercase}.grammar-table-wrap{margin-top:.4rem;padding:1rem;border-radius:.75rem;background:#fff}.grammar-table-wrap h3{margin:0 0 .7rem;font-size:1rem}.grammar-table-wrap table{width:100%;border-collapse:collapse;font-size:.78rem}.grammar-table-wrap th,.grammar-table-wrap td{padding:.4rem .55rem;border-bottom:1px solid #e5e0dc;text-align:left}.grammar-table-wrap thead th{background:#fff1e9;color:#71300f}.grammar-table-wrap tbody th{font-weight:650}.grammar-table-wrap tbody td{color:#0f625c;font-weight:850}.example-analysis{margin-top:1.25rem;padding:clamp(1.25rem,2.5vw,2rem);border:1px solid #ded8d4;border-radius:1rem;background:#fff}.guide-section-heading h2{margin:.15rem 0 1rem;font-size:clamp(1.55rem,2.5vw,2.2rem)}.analysis-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.analysis-grid article{padding:1.05rem;border-top:.28rem solid #53a6a0;border-radius:.75rem;background:#f0f9f8}.analysis-sentence{margin:0;font-size:1.05rem;font-weight:800}.analysis-translation{display:grid;gap:.2rem;margin:.6rem 0;color:#405653;font-size:.8rem}.analysis-translation span{font-size:.6rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.analysis-grid ul{margin:.7rem 0 0;padding-left:1.05rem;color:#46403c;font-size:.78rem;line-height:1.55}.support-callouts{display:grid;grid-template-columns:1.15fr .85fr;gap:.8rem;margin-top:.8rem}.mistake-card,.learning-tip{padding:1.1rem;border-radius:.75rem}.mistake-card{background:#fff2ec}.mistake-card>div+div{margin-top:.9rem;padding-top:.9rem;border-top:1px solid #f0cdbd}.mistake-card p{margin:.25rem 0;font-size:.78rem}.mistake-card p>span{display:inline-block;min-width:2.7rem;font-weight:850}.mistake-card .wrong{color:#8f321d}.mistake-card .correct{color:#28613a}.learning-tip{background:#fff6cf}.learning-tip p:last-child{margin:0;color:#564912;font-size:.86rem;line-height:1.65}.grammar-page[data-lesson-id=G24] .practice-section{padding:clamp(1.2rem,2.5vw,1.8rem);border-radius:1rem;background:#f4fafb}.grammar-page[data-lesson-id=G24] .practice-section--independent{background:#fff8f4}.grammar-page[data-lesson-id=G24] .practice-heading{margin-bottom:.85rem}.grammar-page[data-lesson-id=G24] .grammar-exercise{border-color:#d5dedd;box-shadow:0 5px 16px rgba(22,57,55,.045)}.grammar-page[data-lesson-id=G24] .practice-section--independent .grammar-exercise{border-color:#ead8cf}.grammar-page[data-lesson-id=G24] .choice-option,.grammar-page[data-lesson-id=G24] .fill-form input,.grammar-page[data-lesson-id=G24] .word-token{border-color:#c9cfcd}.grammar-page[data-lesson-id=G24] [data-english-only][hidden]{display:none!important}
+@media(max-width:64rem){.lesson-jump__form{grid-template-columns:1fr 1fr}.lesson-jump__form .grammar-button{grid-column:1/-1}.grammar-page[data-lesson-id=G24] .lesson-teach-grid{grid-template-columns:1fr}.analysis-grid{grid-template-columns:1fr 1fr}.analysis-grid article:last-child{grid-column:1/-1}}
+@media(max-width:48rem){.lesson-jump{padding:1rem}.lesson-jump__heading{align-items:flex-start;flex-direction:column}.lesson-jump__form{grid-template-columns:1fr}.lesson-jump__form .grammar-button{grid-column:auto;width:100%}.lesson-search{grid-template-columns:1fr}.lesson-search__results{inset-inline:0}.lesson-hero--prototype{align-items:flex-start}.lesson-hero--prototype h1{font-size:2.25rem}.use-case-grid,.analysis-grid,.support-callouts{grid-template-columns:1fr}.analysis-grid article:last-child{grid-column:auto}.guide-steps li{grid-template-columns:1fr;gap:.25rem}.grammar-page[data-lesson-id=G24] .practice-section{padding:1rem}}
+@media(max-width:30rem){.lesson-hero--prototype{padding:1.25rem}.lesson-hero--prototype h1{font-size:1.9rem}.lesson-hero--prototype .lesson-progress-ring{width:5.8rem;height:5.8rem;min-width:5.8rem;padding:.7rem}.lesson-jump__heading h2{font-size:1rem}.grammar-table-wrap{overflow-x:auto}.grammar-table-wrap table{min-width:15rem}}
+
+/* G01.2 approved course-wide grammar design */
+.lesson-hero--prototype .grammar-eyebrow {
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 900;
+  opacity: 1;
+  text-shadow: 0 1px 1px rgba(70, 24, 5, .25);
+}
+
+.lesson-jump option:checked {
+  font-weight: 800;
+}
+
+.grammar-page[data-view="lesson"] .lesson-objective {
+  margin-top: 1.1rem;
+  border-inline-start: .3rem solid #ff6a2a;
+  background: #fffaf7;
+  box-shadow: none;
+}
+
+.grammar-page[data-view="lesson"] .lesson-teach-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, .75fr);
+  gap: 1.15rem;
+}
+
+.grammar-page[data-view="lesson"] .lesson-explanation,
+.grammar-page[data-view="lesson"] .lesson-examples {
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border-color: #ddd6d1;
+  box-shadow: 0 8px 24px rgba(30, 22, 18, .055);
+}
+
+.grammar-page[data-view="lesson"] .lesson-explanation h2 {
+  max-width: 25ch;
+  margin: .15rem 0 .75rem;
+  font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+  line-height: 1.15;
+}
+
+.grammar-page[data-view="lesson"] .rule-note {
+  background: #fff1e9;
+  border: 1px solid #ffd4c0;
+}
+
+.grammar-page[data-view="lesson"] .lesson-examples {
+  background: #eaf7f8;
+}
+
+.grammar-page[data-view="lesson"] .lesson-examples > article {
+  border: 1px solid #cce5e6;
+}
+
+.grammar-page[data-view="lesson"] mark {
+  padding: .04em .22em;
+  border-radius: .25em;
+  background: #ffcb67;
+  color: #1a1a1a;
+  font-weight: 850;
+}
+
+.grammar-page[data-view="lesson"] .practice-section {
+  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+  border-radius: 1rem;
+  background: #f4fafb;
+}
+
+.grammar-page[data-view="lesson"] .practice-section--independent {
+  background: #fff8f4;
+}
+
+.grammar-page[data-view="lesson"] .practice-heading {
+  margin-bottom: .85rem;
+}
+
+.grammar-page[data-view="lesson"] .grammar-exercise {
+  border-color: #d5dedd;
+  box-shadow: 0 5px 16px rgba(22, 57, 55, .045);
+}
+
+.grammar-page[data-view="lesson"] .practice-section--independent .grammar-exercise {
+  border-color: #ead8cf;
+}
+
+.grammar-page[data-view="lesson"] .choice-option,
+.grammar-page[data-view="lesson"] .fill-form input,
+.grammar-page[data-view="lesson"] .word-token {
+  border-color: #c9cfcd;
+}
+
+.grammar-page[data-view="lesson"] [data-english-only][hidden] {
+  display: none !important;
+}
+
+.analysis-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+.support-callouts:has(.learning-tip:only-child),
+.support-callouts:has(.mistake-card:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.assessment-hero {
+  max-width: none;
+  margin-bottom: 1.25rem;
+  padding: clamp(1.6rem, 3.5vw, 2.8rem);
+  border-radius: 1.5rem;
+  background: #ff6a2a;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(98, 42, 16, .16);
+}
+
+.assessment-hero .grammar-eyebrow,
+.assessment-hero p:not(.grammar-eyebrow) {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(70, 24, 5, .2);
+}
+
+.assessment-hero h1 {
+  max-width: 21ch;
+  margin-bottom: .8rem;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  text-shadow: 0 1px 1px rgba(70, 24, 5, .22);
+}
+
+.assessment-meta span {
+  border: 1px solid rgba(255, 255, 255, .52);
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  font-weight: 800;
+}
+
+.assessment-status {
+  border-color: #ffd1bd;
+}
+
+.assessment-item {
+  padding: 1rem;
+  border: 1px solid #e5dfdb;
+  border-radius: 1rem;
+  background: #faf9f8;
+}
+
+@media(max-width: 48rem) {
+  .grammar-page[data-view="lesson"] .lesson-teach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grammar-page[data-view="lesson"] .practice-section {
+    padding: 1rem;
+  }
+
+  .assessment-hero {
+    border-radius: 1rem;
+  }
+}
+
+@media(max-width: 30rem) {
+  .assessment-hero {
+    padding: 1.25rem;
+  }
+
+  .assessment-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .assessment-item {
+    padding: .75rem;
+  }
+}
+
+/* G01.2 final closure: submitted-answer feedback only. */
+.grammar-page .choice-option[data-answer-feedback],
+.grammar-page .fill-form label[data-answer-feedback],
+.grammar-page .order-answer[data-answer-feedback] {
+  position: relative;
+}
+
+.grammar-page .choice-option[data-answer-feedback],
+.grammar-page .order-answer[data-answer-feedback] {
+  padding-inline-end: 2.7rem;
+}
+
+.grammar-page .fill-form input[data-answer-feedback] {
+  padding-inline-end: 2.7rem;
+}
+
+.grammar-page .choice-option[data-answer-feedback="correct"],
+.grammar-page .fill-form input[data-answer-feedback="correct"],
+.grammar-page .order-answer[data-answer-feedback="correct"] {
+  border: 2px solid #16a34a;
+  background: #f0fdf4;
+  box-shadow: none;
+}
+
+.grammar-page .choice-option[data-answer-feedback="incorrect"],
+.grammar-page .fill-form input[data-answer-feedback="incorrect"],
+.grammar-page .order-answer[data-answer-feedback="incorrect"] {
+  border: 2px solid #dc2626;
+  background: #fef2f2;
+  box-shadow: none;
+}
+
+.grammar-page .choice-option[data-answer-feedback]::after,
+.grammar-page .fill-form label[data-answer-feedback]::after,
+.grammar-page .order-answer[data-answer-feedback]::after {
+  position: absolute;
+  inset-inline-end: .8rem;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.grammar-page [data-answer-feedback="correct"]::after {
+  content: "✓";
+  color: #15803d;
+}
+
+.grammar-page [data-answer-feedback="incorrect"]::after {
+  content: "✕";
+  color: #b91c1c;
+}
+
+.grammar-page .is-correct .exercise-state {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.grammar-page .is-incorrect .exercise-state {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.grammar-page .is-correct .exercise-feedback {
+  background: #f0fdf4;
+}
+
+.grammar-page .is-incorrect .exercise-feedback {
+  background: #fef2f2;
+}

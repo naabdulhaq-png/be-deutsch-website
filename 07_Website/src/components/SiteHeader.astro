@@ -2,15 +2,17 @@
 import brandLogo from '../assets/branding/be_deutsch_logo.svg';
 
 const currentPath = Astro.url.pathname;
-const navigation = [
-  { label: 'App', href: '/app/', path: '/app/' },
-  { label: 'A1 Vocabulary', href: '/vocabulary/', path: '/vocabulary/' },
-  { label: 'A1 Listening', href: '/listening/', path: '/listening/' },
-  { label: 'Podcasts', href: '/podcasts/', path: '/podcasts/' },
-  { label: 'Testing', href: '/testing/', path: '/testing/' },
-  { label: 'About', href: '/about/', path: '/about/' },
-  { label: 'Partners', href: '/partners/', path: '/partners/' },
-  { label: 'Support', href: '/support/', path: '/support/' },
+const active = (path: string) => currentPath === path || currentPath.startsWith(path);
+const learning = [
+  { label: 'Vocabulary', href: '/vocabulary/', note: 'A1 · Available' },
+  { label: 'Listening', href: '/listening/', note: 'A1 · Available' },
+  { label: 'Grammar', href: '/grammar/', note: 'A1 · New course' },
+] as const;
+const secondary = [
+  { label: 'Testing', href: '/testing/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Partners', href: '/partners/' },
+  { label: 'Support', href: '/support/' },
 ] as const;
 ---
 
@@ -20,12 +22,21 @@ const navigation = [
       <img src={brandLogo.src} width="168" height="42" alt="Be Deutsch" />
     </a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
-      {navigation.map((item) => (
-        <a href={item.href} aria-current={(item.path === currentPath || (['/vocabulary/','/listening/','/podcasts/'].includes(item.path) && currentPath.startsWith(item.path))) ? 'page' : undefined}>
-          {item.label}
-        </a>
+    <nav class="desktop-nav learning-navigation" aria-label="Main navigation">
+      {learning.map((item) => (
+        <details class="nav-dropdown" data-active={active(item.href) ? 'true' : undefined}>
+          <summary aria-label={`${item.label} levels`}>{item.label}<span aria-hidden="true">⌄</span></summary>
+          <div class="nav-dropdown__menu">
+            <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><strong>{item.note.split(' · ')[0]}</strong><span>{item.note.split(' · ')[1]}</span></a>
+          </div>
+        </details>
       ))}
+      <a href="/podcasts/" aria-current={active('/podcasts/') ? 'page' : undefined}>Podcasts</a>
+      <a href="/app/" aria-current={active('/app/') ? 'page' : undefined}>App</a>
+      <details class="nav-dropdown nav-dropdown--end" data-active={secondary.some((item) => active(item.href)) ? 'true' : undefined}>
+        <summary aria-label="More pages">More<span aria-hidden="true">⌄</span></summary>
+        <div class="nav-dropdown__menu">{secondary.map((item) => <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
+      </details>
     </nav>
 
     <details class="mobile-nav">
@@ -33,11 +44,12 @@ const navigation = [
         <span></span><span></span><span></span>
       </summary>
       <nav id="mobile-menu" aria-label="Mobile navigation">
-        {navigation.map((item) => (
-          <a href={item.href} aria-current={(item.path === currentPath || (['/vocabulary/','/listening/','/podcasts/'].includes(item.path) && currentPath.startsWith(item.path))) ? 'page' : undefined}>
-            {item.label}
-          </a>
-        ))}
+        <p>Learn German</p>
+        {learning.map((item) => <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span><small>{item.note}</small></a>)}
+        <a href="/podcasts/" aria-current={active('/podcasts/') ? 'page' : undefined}><span>Podcasts</span><small>Everyday German audio</small></a>
+        <p>Be Deutsch</p>
+        <a href="/app/" aria-current={active('/app/') ? 'page' : undefined}><span>App</span></a>
+        {secondary.map((item) => <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span></a>)}
       </nav>
     </details>
   </div>
@@ -46,6 +58,7 @@ const navigation = [
 <script>
   const mobileMenu = document.querySelector<HTMLDetailsElement>('.mobile-nav');
   const mobileMenuSummary = mobileMenu?.querySelector('summary');
+  const dropdowns = [...document.querySelectorAll<HTMLDetailsElement>('.nav-dropdown')];
 
   const updateMobileMenuLabel = () => {
     mobileMenuSummary?.setAttribute(
@@ -58,22 +71,31 @@ const navigation = [
 
   mobileMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      mobileMenu.removeAttribute('open');
+      mobileMenu?.removeAttribute('open');
       updateMobileMenuLabel();
     });
   });
 
-  mobileMenu?.addEventListener('keydown', (event) => {
+  dropdowns.forEach((dropdown) => dropdown.addEventListener('toggle', () => {
+    if (dropdown.open) dropdowns.filter((item) => item !== dropdown).forEach((item) => item.removeAttribute('open'));
+  }));
+
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element) || !event.target.closest('.nav-dropdown')) dropdowns.forEach((item) => item.removeAttribute('open'));
+  });
+
+  document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      mobileMenu.removeAttribute('open');
+      mobileMenu?.removeAttribute('open');
       updateMobileMenuLabel();
       mobileMenuSummary?.focus();
+      dropdowns.forEach((item) => { if (item.open) { item.removeAttribute('open'); item.querySelector<HTMLElement>('summary')?.focus(); } });
     }
   });
 </script>
 
 <style>
-.desktop-nav{gap:clamp(.75rem,1.4vw,1.35rem)}
+.learning-navigation{gap:clamp(.55rem,1vw,1.05rem);align-items:center}.learning-navigation>a,.nav-dropdown summary{font-size:.86rem}.nav-dropdown{position:relative}.nav-dropdown summary{display:flex;align-items:center;gap:.25rem;padding:.55rem 0;font-weight:750;cursor:pointer;list-style:none}.nav-dropdown summary::-webkit-details-marker{display:none}.nav-dropdown summary span{font-size:.72rem;transition:transform .15s}.nav-dropdown[open] summary span{transform:rotate(180deg)}.nav-dropdown[data-active=true] summary{color:var(--accent-text)}.nav-dropdown__menu{position:absolute;z-index:20;inset-block-start:calc(100% + .45rem);inset-inline-start:-.8rem;display:grid;min-width:13rem;padding:.5rem;background:#fff;border:1px solid var(--line);border-radius:.75rem;box-shadow:0 15px 35px #0002}.nav-dropdown--end .nav-dropdown__menu{inset-inline:auto 0}.nav-dropdown__menu a{display:flex;justify-content:space-between;gap:1rem;padding:.7rem;border-radius:.5rem;text-decoration:none;white-space:nowrap}.nav-dropdown__menu a:hover,.nav-dropdown__menu a[aria-current=page]{background:#fff3ed;color:var(--accent-text)}.nav-dropdown__menu span{font-size:.68rem;color:var(--muted)}
 @media(max-width:64rem){
   .desktop-nav {
     display: none;
@@ -106,10 +128,13 @@ const navigation = [
   }
 
   .mobile-nav nav {
+    z-index: 30;
     position: absolute;
     inset-block-start: calc(100% - 0.3rem);
     inset-inline: 0;
     display: grid;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
     padding: 0.65rem;
     background: var(--white);
     border: 1px solid var(--line);
@@ -118,11 +143,18 @@ const navigation = [
   }
 
   .mobile-nav nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     padding: 0.8rem 0.9rem;
     color: var(--black);
     font-weight: 700;
     text-decoration: none;
   }
+
+  .mobile-nav nav p { margin: .45rem .9rem .2rem; font-size: .65rem; font-weight: 850; letter-spacing: .13em; color: var(--muted); text-transform: uppercase; }
+  .mobile-nav nav a small { font-size: .65rem; color: var(--muted); font-weight: 500; }
 
   .mobile-nav nav a[aria-current="page"] {
     color: var(--accent-text);
