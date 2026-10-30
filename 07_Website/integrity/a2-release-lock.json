@@ -1,0 +1,3633 @@
+{
+  "approvedCandidate": "BD-FULLSITE-A1-A2U01-RC2-NODE22-2026-10-30",
+  "contentSha256": "7b1fc7dc80dac1579d5a64bac3c3148b313a583830dd0fd0248228d51dd644f4",
+  "a1Baseline": "8df1f0afa50d11bd7e1f0dff9fb270c463abb9cb",
+  "a1SourceCanonicalLf": {
+    "src/data/grammar-course.ts": "ff4b2e03f03b16ddb69fa4b935d909b2a048d183f016ecf26721fab30729c875",
+    "src/data/grammar-english-guides.ts": "0ce8146c60ca945bdac52858fe0cd877d1b8b067f1614bafba2219297fdc730d",
+    "src/data/listening-course.json": "9be212b1b174868a1f2f2dabef861f6c48a50ea7386e1bf555132dc3b817498a",
+    "src/data/podcasts.json": "f501298ce42f16ffa4448e9f7ef1aeb7b6ecab5b2ba7a8ce0cd792ad604980cd",
+    "src/data/vocabulary-catalog.json": "6fdcf991b586e0d592c2e2db0a6ceafe7f0fd6a6529e0c3918b9a706e146c648",
+    "src/data/vocabulary-course.json": "82b4ede81e9f026c736a2735b7ae0b51031327ccf0976c34ced9ad38aaac6d5b",
+    "src/scripts/feedback-audio.ts": "8152ce3c7ebc69a79d7df9144711fcd3c77d7e0270d67fac49cff9056e7ec913",
+    "src/scripts/grammar-progress.ts": "92f9a326c739c7744fa89681d2c9376d8689209adde7f9a5904a4b085adfdde3",
+    "src/scripts/grammar.ts": "0f5c4098d54d7ddb073aa01fc764f730d87c07aa4d9a36cbc71c983ba9e90f3d",
+    "src/scripts/listening.ts": "5730c8211eb8498aa01059ef9530344b0a223d5cd8e54b55d7b044b126037bae",
+    "src/scripts/progress.ts": "03d7302b2fc2089798eecee64186c5722cd0354298c5bd057b014a0a2ea9feac",
+    "src/scripts/pronunciation.ts": "447e8aa1ff6f3097949b4ac4ab99bff68ddb669e40bbccf76b8a4f86252d7399",
+    "src/scripts/quiz-plan.ts": "79be281e1a35ce284298169bb00133d30f9bec7535019b75e5be275fc3e8f6cf",
+    "src/scripts/sound-profiles.ts": "2de6d94c11caa59455b72d9fb6402d8e0f0228e7c300c96c4593e09c1159adc0",
+    "src/scripts/vocabulary.ts": "92aed5927256fc806f38df827e9b3f00a2467353e3732e485c66180f14ffbd84"
+  },
+  "audio": [
+    {
+      "id": "A2-U01-G01-A-EX01",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-EX01.mp3",
+      "bytes": 36823,
+      "sha256": "b505f06fcbee790d5c352827a7b65581bc19a58c2b097760c3e776edcbdd9541",
+      "durationSeconds": 2.229,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G01-A-EX02",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-EX02.mp3",
+      "bytes": 39749,
+      "sha256": "ba2a75cece3741085ba446a071434c97e1e18c0ba5577afc6066d4a6a0ef872a",
+      "durationSeconds": 2.415,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G01-A-EX03",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-EX03.mp3",
+      "bytes": 38077,
+      "sha256": "6110012a20a62555f5091b36d41e6b946000e83d928fdcfe25c801dba49601bb",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G01-A-EX04",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-EX04.mp3",
+      "bytes": 32225,
+      "sha256": "84b0cbaa8caf394302b502d5bc03b49d1feb759dbd5c25407e3fed09f63c24dd",
+      "durationSeconds": 1.95,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G01-A-EX05",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-EX05.mp3",
+      "bytes": 25538,
+      "sha256": "6aef9656275643d4b6099087be06ab48ac2225a05d349215b0bc22f274716187",
+      "durationSeconds": 1.533,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G01-A-DLG01",
+      "contentId": "A2-U01-G01",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G01-A-DLG01.mp3",
+      "bytes": 110802,
+      "sha256": "7e30566302d2c26c1d778ec5741b281e8c6c06bbd6836ed8c922e2c6f3a1372f",
+      "durationSeconds": 6.847,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Mila",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Freundin",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-EX01",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-EX01.mp3",
+      "bytes": 26374,
+      "sha256": "4bcfb6e9cc50ec78edf92fff636736f4e61e01c42573bdf95b6ac86be2a11dee",
+      "durationSeconds": 1.579,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-EX02",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-EX02.mp3",
+      "bytes": 28464,
+      "sha256": "8094b8c3f71103868e0fbd3e343cc1d2876943a79abad27c4d2cf5f81840cc84",
+      "durationSeconds": 1.718,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-EX03",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-EX03.mp3",
+      "bytes": 26374,
+      "sha256": "25ceafe47d394d801dbcc44b1c78e00f7b967e340a575bae9199aac7050673f2",
+      "durationSeconds": 1.579,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-EX04",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-EX04.mp3",
+      "bytes": 35987,
+      "sha256": "77b4a51d1913df7661b80ceef17a2f5cd4c92d99e6aacc97bc2562b0412b9b5b",
+      "durationSeconds": 2.183,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-EX05",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-EX05.mp3",
+      "bytes": 38077,
+      "sha256": "a09378405753a1ce904485770e2e2325bb8585aa059a8ea8de2413e42c84cb93",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G02-A-DLG01",
+      "contentId": "A2-U01-G02",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G02-A-DLG01.mp3",
+      "bytes": 111638,
+      "sha256": "7c3fcf456ce7ff951045ae2bf5ac8d9ab00929690963dbaa2084d283eec9a114",
+      "durationSeconds": 6.92,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-EX01",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-EX01.mp3",
+      "bytes": 26792,
+      "sha256": "7267eea8c7bbdd82480b0036bdb3d43c53fcb4c9cb4b9adfe0bc3c3bf763d2e4",
+      "durationSeconds": 1.62,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-EX02",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-EX02.mp3",
+      "bytes": 25538,
+      "sha256": "817ff301bc1f8abad0dd335e50a6f78a06c5c4adae9207fd45fd42da43e83c3a",
+      "durationSeconds": 1.533,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-EX03",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-EX03.mp3",
+      "bytes": 23448,
+      "sha256": "64c636f5324c5c0084761c2364d04d47f31d171c1d761d575bab63c6e397ef22",
+      "durationSeconds": 1.393,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-EX04",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-EX04.mp3",
+      "bytes": 35151,
+      "sha256": "c6a9244393c9bbffeff650e49e7e2b051c2a75294ae8b76cb09e12cb7a60aecc",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-EX05",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-EX05.mp3",
+      "bytes": 28464,
+      "sha256": "2f4a7b7401c00e3c85ee8db5ef79718e0783fab5ac328f0d0f46f5b6e8fdc3cc",
+      "durationSeconds": 1.718,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G03-A-DLG01",
+      "contentId": "A2-U01-G03",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G03-A-DLG01.mp3",
+      "bytes": 106622,
+      "sha256": "bcf8dcb1667bf45664a1ed24b5dda64c1ce96ce90e8972f867b9b05216fee181",
+      "durationSeconds": 6.594,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Nora",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-EX01",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-EX01.mp3",
+      "bytes": 28464,
+      "sha256": "5d18bcd74d249bfdfbf42d6703d2c6dbae9a024c3efd8a4e86dddbf428703f30",
+      "durationSeconds": 1.718,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-EX02",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-EX02.mp3",
+      "bytes": 25538,
+      "sha256": "540c21bd550c4c4a89375153dd7dbdd1f659d7f31a6326c9e6e70d459cb590fc",
+      "durationSeconds": 1.533,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-EX03",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-EX03.mp3",
+      "bytes": 35151,
+      "sha256": "2fab2c8047de925490f8896b90609cfad8d077adf139411ec5af197fc5c5e195",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-EX04",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-EX04.mp3",
+      "bytes": 44346,
+      "sha256": "ca06121b2d027987832f3f117c196bf20163c7c169e332e0967287b14e99e124",
+      "durationSeconds": 2.694,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-EX05",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-EX05.mp3",
+      "bytes": 34315,
+      "sha256": "d947fe34362ffd84a6a2f8bd1e18546478588c269dd55d9a3886a938fc0d69b0",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-G04-A-DLG01",
+      "contentId": "A2-U01-G04",
+      "section": "Grammar",
+      "path": "a2-audio/A2-U01-G04-A-DLG01.mp3",
+      "bytes": 171824,
+      "sha256": "7a1d8695a67a076319e2d138df8e855fe69201cc0d110918b8894d2d585845b9",
+      "durationSeconds": 10.681,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X01-A-WORD",
+      "contentId": "A2-U01-V01-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X01-A-WORD.mp3",
+      "bytes": 18851,
+      "sha256": "d6a84b3618ed61a997640e8e83097a4c4351630171a477c3471125693934864a",
+      "durationSeconds": 1.115,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X01-A-FORM",
+      "contentId": "A2-U01-V01-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X01-A-FORM.mp3",
+      "bytes": 33897,
+      "sha256": "40aeb29471de800e334f5189ea5c23b28522664cb4698c486d04343aa95034d4",
+      "durationSeconds": 2.043,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X01-A-EX01",
+      "contentId": "A2-U01-V01-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X01-A-EX01.mp3",
+      "bytes": 36823,
+      "sha256": "6ebfbbced9a3adb6f31b19ba1b3fa79a735da3b51c4d8b3c862888f3196ab262",
+      "durationSeconds": 2.229,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X02-A-WORD",
+      "contentId": "A2-U01-V01-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X02-A-WORD.mp3",
+      "bytes": 21776,
+      "sha256": "db40bf7a26ef59b4d5912131d5e9c31e84904225e52e6f8fb16ced422926dc14",
+      "durationSeconds": 1.3,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X02-A-FORM",
+      "contentId": "A2-U01-V01-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X02-A-FORM.mp3",
+      "bytes": 34315,
+      "sha256": "69f7f1d91f19571c81bdf87410ccbf535cd3e4f1c81b7214a0558d3f531e8ed4",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X02-A-EX01",
+      "contentId": "A2-U01-V01-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X02-A-EX01.mp3",
+      "bytes": 44346,
+      "sha256": "bc1cff8f0a8ad33c96b5b32aead4accba8e71fb8c63d1daa8cdfc376902eeb46",
+      "durationSeconds": 2.694,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X03-A-WORD",
+      "contentId": "A2-U01-V01-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X03-A-WORD.mp3",
+      "bytes": 25538,
+      "sha256": "aebd54666a258c7a220776c3f59319d3ae0f1201ee9603e133c73c545677c62b",
+      "durationSeconds": 1.533,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X03-A-FORM",
+      "contentId": "A2-U01-V01-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X03-A-FORM.mp3",
+      "bytes": 47690,
+      "sha256": "968f187d4726b6a1bcdb16f9b4ca6d778abe7b61ef6ad91aebe4ed8e97b0a20c",
+      "durationSeconds": 2.926,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X03-A-EX01",
+      "contentId": "A2-U01-V01-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X03-A-EX01.mp3",
+      "bytes": 49362,
+      "sha256": "5f2e8c7dd5b247daf3100bae4a4daceb28c3c39ef6ebd5f345765a5cb78ecccc",
+      "durationSeconds": 3.019,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "BD-A1-V118-A-WORD",
+      "contentId": "A2-U01-V01-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/BD-A1-V118-A-WORD.mp3",
+      "bytes": 25120,
+      "sha256": "1840eaff998b64b286a58e80511ea93d40296705a1ec69d618f3e8f121d7088b",
+      "durationSeconds": 0.975,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 192000,
+      "provenance": "REUSE_A1",
+      "voices": [
+        {
+          "speaker": "A1 pronunciation model",
+          "voice": "Existing approved A1 voice"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X04-A-FORM",
+      "contentId": "A2-U01-V01-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X04-A-FORM.mp3",
+      "bytes": 53959,
+      "sha256": "4cd276385f97b7ee3790d2f9416c6c566c8884dff4cb510edf3590c8e97d1ba1",
+      "durationSeconds": 3.297,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X04-A-EX01",
+      "contentId": "A2-U01-V01-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X04-A-EX01.mp3",
+      "bytes": 43510,
+      "sha256": "72993ff710c3f352c9b81b3f49f5a53ff46f036dc387bfc31f14f3ef00172edd",
+      "durationSeconds": 2.647,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X05-A-WORD",
+      "contentId": "A2-U01-V01-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X05-A-WORD.mp3",
+      "bytes": 19687,
+      "sha256": "5ef7b62021393faef68acfeb3f6866215bd1f7bd53ca743129b23348c5ad914d",
+      "durationSeconds": 1.161,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X05-A-FORM",
+      "contentId": "A2-U01-V01-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X05-A-FORM.mp3",
+      "bytes": 58139,
+      "sha256": "ad2548859a03297581e3eeab75fbd52a12049c42078b960dc6f4efd1bb46601d",
+      "durationSeconds": 3.576,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X05-A-EX01",
+      "contentId": "A2-U01-V01-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X05-A-EX01.mp3",
+      "bytes": 38077,
+      "sha256": "cc617cb70f3d52194eb36edbbb1cf4a64d9c074fe200e7bf055a3ed0d26fa96a",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X06-A-WORD",
+      "contentId": "A2-U01-V01-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X06-A-WORD.mp3",
+      "bytes": 16761,
+      "sha256": "4f9df4fba6599fa90605bf653faa6a52fa1958bf784f0115b020d87d846392ee",
+      "durationSeconds": 0.975,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X06-A-FORM",
+      "contentId": "A2-U01-V01-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X06-A-FORM.mp3",
+      "bytes": 58139,
+      "sha256": "0b8b6f048dd2bd341f6f72f3704a8463b59a2a39cc1488e90f7a9663a652a873",
+      "durationSeconds": 3.576,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X06-A-EX01",
+      "contentId": "A2-U01-V01-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X06-A-EX01.mp3",
+      "bytes": 47690,
+      "sha256": "3f224f237e22dc9c0c0fb4dcd4eb00f757ce1524a010aa0f8f222e0d936012ea",
+      "durationSeconds": 2.926,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "BD-A1-V117-A-WORD",
+      "contentId": "A2-U01-V01-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/BD-A1-V117-A-WORD.mp3",
+      "bytes": 21359,
+      "sha256": "1acd676a8da10dc3b12988e581ba771c8b2214dac88b85c21ec3df9bae1f3e7e",
+      "durationSeconds": 0.836,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 192000,
+      "provenance": "REUSE_A1",
+      "voices": [
+        {
+          "speaker": "A1 pronunciation model",
+          "voice": "Existing approved A1 voice"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X07-A-FORM",
+      "contentId": "A2-U01-V01-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X07-A-FORM.mp3",
+      "bytes": 34315,
+      "sha256": "76f7d47eb84b2048fdcd92bb9a1bb8e8f9152397b50b0a7cbd4582342834c600",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X07-A-EX01",
+      "contentId": "A2-U01-V01-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X07-A-EX01.mp3",
+      "bytes": 40585,
+      "sha256": "b5e24a6c18f14ffecc6b26a8064dfcc4eeb545224287d40b5974cdb3975f7529",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X08-A-WORD",
+      "contentId": "A2-U01-V01-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X08-A-WORD.mp3",
+      "bytes": 15089,
+      "sha256": "0d3eb329800656916e5f46e774d2833ab2e0c883bfaedb703dd46c941c4f5325",
+      "durationSeconds": 0.882,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X08-A-FORM",
+      "contentId": "A2-U01-V01-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X08-A-FORM.mp3",
+      "bytes": 39749,
+      "sha256": "2158322c54f4d3c89e7c2c34998a4d9e00c8f0bf5ac8071ce52e48c7c2a51a44",
+      "durationSeconds": 2.415,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X08-A-EX01",
+      "contentId": "A2-U01-V01-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X08-A-EX01.mp3",
+      "bytes": 36823,
+      "sha256": "a02cfad6cbab06568e43c558bde980386c19b6246e3af4f07516808b02ae1b77",
+      "durationSeconds": 2.229,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X09-A-WORD",
+      "contentId": "A2-U01-V01-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X09-A-WORD.mp3",
+      "bytes": 21776,
+      "sha256": "7fb80b278cf6dfd1eefe0fde92577e4e8aab637859b45d933181b85cc6a4fca9",
+      "durationSeconds": 1.3,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X09-A-FORM",
+      "contentId": "A2-U01-V01-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X09-A-FORM.mp3",
+      "bytes": 76111,
+      "sha256": "c241edc870feef22f94baeca1a7057b9d98bdc3a4c5eacb4a0966b1b8abc859f",
+      "durationSeconds": 4.69,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X09-A-EX01",
+      "contentId": "A2-U01-V01-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X09-A-EX01.mp3",
+      "bytes": 40585,
+      "sha256": "3ff57a8fb82123586660ed5c05e9bf51ae32a6bcfef05ebb6d6135f7afd619a3",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X10-A-WORD",
+      "contentId": "A2-U01-V01-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X10-A-WORD.mp3",
+      "bytes": 20941,
+      "sha256": "0a86f44520804c1b0123adc967a0c84c292403745694a8a2a29ba3ce96b770fb",
+      "durationSeconds": 1.254,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X10-A-FORM",
+      "contentId": "A2-U01-V01-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X10-A-FORM.mp3",
+      "bytes": 61901,
+      "sha256": "ba233e411bf7c1b76a22d6569bbea4b73405195f5cb06d782c9f8bf91725812b",
+      "durationSeconds": 3.808,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X10-A-EX01",
+      "contentId": "A2-U01-V01-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X10-A-EX01.mp3",
+      "bytes": 41838,
+      "sha256": "ecb95e07ae6090ba4c5a8e3fd8065fe66ee75dff9aa22c23a36ed293d3ba10ee",
+      "durationSeconds": 2.554,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "BD-A1-V080-A-WORD",
+      "contentId": "A2-U01-V01-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/BD-A1-V080-A-WORD.mp3",
+      "bytes": 21359,
+      "sha256": "ebe8309c8a9b5ef81ef7179a8af6423b5488b5839a74621c192cd02065822df6",
+      "durationSeconds": 0.836,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 192000,
+      "provenance": "REUSE_A1",
+      "voices": [
+        {
+          "speaker": "A1 pronunciation model",
+          "voice": "Existing approved A1 voice"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X11-A-EX01",
+      "contentId": "A2-U01-V01-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X11-A-EX01.mp3",
+      "bytes": 33897,
+      "sha256": "7819478a777203a31b795c6f0d0304430c19702af5ca3d65bf080af57133bfee",
+      "durationSeconds": 2.043,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X12-A-WORD",
+      "contentId": "A2-U01-V01-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X12-A-WORD.mp3",
+      "bytes": 25538,
+      "sha256": "2f22f4473940fb9caf89a9f4e46f995bfde40a8d9e4ea35c1c5cf06070a1274e",
+      "durationSeconds": 1.533,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X12-A-EX01",
+      "contentId": "A2-U01-V01-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X12-A-EX01.mp3",
+      "bytes": 43510,
+      "sha256": "cc23565c8d6d3e78f9d9a0ec4e9754303471bcb6a915d852c2892734d911819e",
+      "durationSeconds": 2.647,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X13-A-WORD",
+      "contentId": "A2-U01-V01-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X13-A-WORD.mp3",
+      "bytes": 22612,
+      "sha256": "7ff359b1bd138b52110b5a10aef86413ea055c2d26312be3203cdce6488a689e",
+      "durationSeconds": 1.347,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X13-A-FORM",
+      "contentId": "A2-U01-V01-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X13-A-FORM.mp3",
+      "bytes": 42674,
+      "sha256": "cae1661215b51c3dea35c353b8134492853c0acc08945e2ed7af265102044b15",
+      "durationSeconds": 2.601,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X13-A-EX01",
+      "contentId": "A2-U01-V01-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X13-A-EX01.mp3",
+      "bytes": 56885,
+      "sha256": "547cbc1713775d6fcb64a581db9e4cefc97850f40077a66e0d0c5bc00a55004a",
+      "durationSeconds": 3.483,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X14-A-WORD",
+      "contentId": "A2-U01-V01-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X14-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "86aac41fde1f42353fc49fd4ec77344dbe32a0993e5f2d4513efe2dbcc1248ec",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X14-A-EX01",
+      "contentId": "A2-U01-V01-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X14-A-EX01.mp3",
+      "bytes": 47690,
+      "sha256": "e9ce09a49dfc798a3a7df054968e4d4da7fad67dfd339f8317519e391a6efdab",
+      "durationSeconds": 2.926,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X15-A-WORD",
+      "contentId": "A2-U01-V01-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X15-A-WORD.mp3",
+      "bytes": 19687,
+      "sha256": "9376aeffdcefe45906122234d9bc7b26c6daa0808849fce14db03ced5a2116d8",
+      "durationSeconds": 1.161,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X15-A-FORM",
+      "contentId": "A2-U01-V01-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X15-A-FORM.mp3",
+      "bytes": 62736,
+      "sha256": "7ce3193043219260a3b8cb2549d6830623ed94c6ffd81fa53a483569d4dadddc",
+      "durationSeconds": 3.855,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V01-X15-A-EX01",
+      "contentId": "A2-U01-V01-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V01-X15-A-EX01.mp3",
+      "bytes": 39749,
+      "sha256": "64668287dba1ab8c0b0e4c33e979a9d9fe6ba0cd2a91422e875eff46fc09f8b5",
+      "durationSeconds": 2.415,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X01-A-WORD",
+      "contentId": "A2-U01-V02-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X01-A-WORD.mp3",
+      "bytes": 20941,
+      "sha256": "3cbfd6e306897bb4cd5fe78654648a945dc66e3fb3e2d7dc90424f9baeab6b9c",
+      "durationSeconds": 1.254,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X01-A-FORM",
+      "contentId": "A2-U01-V02-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X01-A-FORM.mp3",
+      "bytes": 40585,
+      "sha256": "8279d72371356e6f7a58788be58dcc9f4f560c37e245c83764325a5be9b5609c",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X01-A-EX01",
+      "contentId": "A2-U01-V02-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X01-A-EX01.mp3",
+      "bytes": 40585,
+      "sha256": "11a3a205e264af2bcc556604e2a18cc54c54df7b1242bf293a380f86424c4766",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X02-A-WORD",
+      "contentId": "A2-U01-V02-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X02-A-WORD.mp3",
+      "bytes": 22612,
+      "sha256": "87c69fd383422924a4540fe1618bc585d9196f76984b88eb9741e5f47c31d5b7",
+      "durationSeconds": 1.347,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X02-A-FORM",
+      "contentId": "A2-U01-V02-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X02-A-FORM.mp3",
+      "bytes": 48526,
+      "sha256": "14d87cdf650f24347e6d2d4d5c24cd5039b36d8953070451b98c3e55c10a74db",
+      "durationSeconds": 2.972,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X02-A-EX01",
+      "contentId": "A2-U01-V02-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X02-A-EX01.mp3",
+      "bytes": 56049,
+      "sha256": "a8e3f713f69cb400bcf822868ea94f95433b895f581fc9b1003a6159306ce1a5",
+      "durationSeconds": 3.437,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "BD-A1-V029-A-WORD",
+      "contentId": "A2-U01-V02-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/BD-A1-V029-A-WORD.mp3",
+      "bytes": 32643,
+      "sha256": "cf731612b9817f9d49015500423bc98914cb19cf9aaeb6e23c0ba554ea0322c0",
+      "durationSeconds": 1.3,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 192000,
+      "provenance": "REUSE_A1",
+      "voices": [
+        {
+          "speaker": "A1 pronunciation model",
+          "voice": "Existing approved A1 voice"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X03-A-FORM",
+      "contentId": "A2-U01-V02-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X03-A-FORM.mp3",
+      "bytes": 44764,
+      "sha256": "05d2f6d06cae347bd5a4a0b7cd6123fb7382ffc9af6c6190eb529a8060e3cdcf",
+      "durationSeconds": 2.74,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X03-A-EX01",
+      "contentId": "A2-U01-V02-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X03-A-EX01.mp3",
+      "bytes": 43092,
+      "sha256": "eabc6d26e8f951cfc9458848600e005662a33a8f3f02203a87f16d6dab254965",
+      "durationSeconds": 2.638,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X04-A-WORD",
+      "contentId": "A2-U01-V02-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X04-A-WORD.mp3",
+      "bytes": 20523,
+      "sha256": "a64803ee23d91943435f0a0022314af7958518813495dc0d26736d5d2d7405f9",
+      "durationSeconds": 1.207,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X04-A-FORM",
+      "contentId": "A2-U01-V02-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X04-A-FORM.mp3",
+      "bytes": 37659,
+      "sha256": "f3171953e67eadca5f25b9072eab63f004e3d5d12f8f74d4eca4520173c1227d",
+      "durationSeconds": 2.276,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X04-A-EX01",
+      "contentId": "A2-U01-V02-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X04-A-EX01.mp3",
+      "bytes": 39749,
+      "sha256": "9cb4aabf997a2e236b11a25914f3fd9a261dd5188880ad0f4004fc2ca05c39d8",
+      "durationSeconds": 2.415,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X05-A-WORD",
+      "contentId": "A2-U01-V02-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X05-A-WORD.mp3",
+      "bytes": 17597,
+      "sha256": "557bdc96b4465469e92a4d2f009ed756720ad9d07efbde94b817cd442d9c559c",
+      "durationSeconds": 1.022,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X05-A-FORM",
+      "contentId": "A2-U01-V02-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X05-A-FORM.mp3",
+      "bytes": 51452,
+      "sha256": "839bdf37e6c9b2555f44d2c973b26aeb74eb9c19354c268fa41d5eff8aefafb2",
+      "durationSeconds": 3.158,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X05-A-EX01",
+      "contentId": "A2-U01-V02-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X05-A-EX01.mp3",
+      "bytes": 34315,
+      "sha256": "26bf06411d6f7cb0b8994e7af652ac717cbd6226e4f2fd557cdae065f91dacea",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X06-A-WORD",
+      "contentId": "A2-U01-V02-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X06-A-WORD.mp3",
+      "bytes": 17597,
+      "sha256": "f216a5205dd3b3bc2a909f2c9c9bfb910e2429a44dce2ebd2d7df5a98caeb675",
+      "durationSeconds": 1.022,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X06-A-FORM",
+      "contentId": "A2-U01-V02-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X06-A-FORM.mp3",
+      "bytes": 41838,
+      "sha256": "9e603035045287122686eb697d46c781673be8ad2c396c632bc090d670c38289",
+      "durationSeconds": 2.554,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X06-A-EX01",
+      "contentId": "A2-U01-V02-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X06-A-EX01.mp3",
+      "bytes": 45600,
+      "sha256": "b6cd3a8d8ba88e2f18ebd7a8a90e0c95e74b9a5f5eb4a748e38760de919864af",
+      "durationSeconds": 2.786,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X07-A-WORD",
+      "contentId": "A2-U01-V02-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X07-A-WORD.mp3",
+      "bytes": 15925,
+      "sha256": "77a86ece97c74874d4b5fb3d983b5f78f498880a3c2f7346708e980e258013be",
+      "durationSeconds": 0.929,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X07-A-FORM",
+      "contentId": "A2-U01-V02-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X07-A-FORM.mp3",
+      "bytes": 44764,
+      "sha256": "ccc1b7c7ddb740c8a862f0fa4b8032bd6df72f6afea3fce4ef5ab90c13a8ea0f",
+      "durationSeconds": 2.74,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X07-A-EX01",
+      "contentId": "A2-U01-V02-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X07-A-EX01.mp3",
+      "bytes": 41003,
+      "sha256": "6de77131a1d76d691494906ca888d7b8a453ac8c89592d34f14e0701ad0f530c",
+      "durationSeconds": 2.508,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X08-A-WORD",
+      "contentId": "A2-U01-V02-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X08-A-WORD.mp3",
+      "bytes": 20523,
+      "sha256": "083f506b37eceee88af02e5e7fbb7f89d1a5446b260b661a92b23d3155b89589",
+      "durationSeconds": 1.207,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X08-A-FORM",
+      "contentId": "A2-U01-V02-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X08-A-FORM.mp3",
+      "bytes": 58975,
+      "sha256": "085a278303c0b7947278fe649bb5a4f735f2a4de7850b0c8b66ff0013d0e98d9",
+      "durationSeconds": 3.622,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X08-A-EX01",
+      "contentId": "A2-U01-V02-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X08-A-EX01.mp3",
+      "bytes": 47690,
+      "sha256": "79ec47e8f38508b353054caab41d7f3288c3c7c4b6d1ca4beaf635d4b1ccf00d",
+      "durationSeconds": 2.926,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X09-A-WORD",
+      "contentId": "A2-U01-V02-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X09-A-WORD.mp3",
+      "bytes": 20523,
+      "sha256": "85c0cd2a599c16fbe5a1eb986a5027ca9bb15fab7f07e33d56e66687ee970c33",
+      "durationSeconds": 1.207,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X09-A-FORM",
+      "contentId": "A2-U01-V02-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X09-A-FORM.mp3",
+      "bytes": 53959,
+      "sha256": "dfbaad8b96a4c8a83db54ac13386bf4df6e661c575d3f1df30594991f7e09018",
+      "durationSeconds": 3.297,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X09-A-EX01",
+      "contentId": "A2-U01-V02-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X09-A-EX01.mp3",
+      "bytes": 46436,
+      "sha256": "0674782994d123df7f428936b5b2c23752d5169c3bde0086b4da9fd4f58f5aec",
+      "durationSeconds": 2.833,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X10-A-WORD",
+      "contentId": "A2-U01-V02-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X10-A-WORD.mp3",
+      "bytes": 18851,
+      "sha256": "3d853347e2011ea53f88c59722eec580b7c83dbab3a11ea1ca2880b689b25155",
+      "durationSeconds": 1.115,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X10-A-FORM",
+      "contentId": "A2-U01-V02-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X10-A-FORM.mp3",
+      "bytes": 46436,
+      "sha256": "003a3f37e11212011f8338b034d387ccf27d6d5734868778d9177fe1f6af9364",
+      "durationSeconds": 2.833,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X10-A-EX01",
+      "contentId": "A2-U01-V02-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X10-A-EX01.mp3",
+      "bytes": 30972,
+      "sha256": "45643ae909d6e75df74389ed2c28ce18dffea96805ca832e37d96939e1764246",
+      "durationSeconds": 1.858,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X11-A-WORD",
+      "contentId": "A2-U01-V02-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X11-A-WORD.mp3",
+      "bytes": 19687,
+      "sha256": "461e6cd8c71d2efd6371524308d66d6aa8db83419883e1db357a1eee1c4aa31c",
+      "durationSeconds": 1.161,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X11-A-EX01",
+      "contentId": "A2-U01-V02-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X11-A-EX01.mp3",
+      "bytes": 38913,
+      "sha256": "4dfeea3822feb2a1d113314c8e417228776bb30dc905ad1c548ee97dff1e020f",
+      "durationSeconds": 2.368,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X12-A-WORD",
+      "contentId": "A2-U01-V02-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X12-A-WORD.mp3",
+      "bytes": 23448,
+      "sha256": "76ddc7d6a9aaaabf628edf7f1b5ec8a51c78acc2916b7d53a95d96747fb97897",
+      "durationSeconds": 1.393,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X12-A-EX01",
+      "contentId": "A2-U01-V02-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X12-A-EX01.mp3",
+      "bytes": 36823,
+      "sha256": "78457a003b8cfe185bd1d9b55c6e530e2b248363f136fec739563fdb6e008a22",
+      "durationSeconds": 2.229,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X13-A-WORD",
+      "contentId": "A2-U01-V02-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X13-A-WORD.mp3",
+      "bytes": 19687,
+      "sha256": "36a17e0168cccdecc81d9db31dd64b1cc5dad72aada96253e571574ad6699fe6",
+      "durationSeconds": 1.161,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X13-A-FORM",
+      "contentId": "A2-U01-V02-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X13-A-FORM.mp3",
+      "bytes": 38913,
+      "sha256": "a99fc4305c759f5622e739c0ef9baae853cda37ac75ced8e4cc137978555217b",
+      "durationSeconds": 2.368,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X13-A-EX01",
+      "contentId": "A2-U01-V02-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X13-A-EX01.mp3",
+      "bytes": 48526,
+      "sha256": "9f1f528491af73422a70faaab30d894d3c5a28df7953cce6c19c3dea8bc18135",
+      "durationSeconds": 2.972,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X14-A-WORD",
+      "contentId": "A2-U01-V02-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X14-A-WORD.mp3",
+      "bytes": 24284,
+      "sha256": "37a31f833b08f324b160378f29402f7006ebed39dc76e600af1ccf672232c62e",
+      "durationSeconds": 1.44,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X14-A-FORM",
+      "contentId": "A2-U01-V02-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X14-A-FORM.mp3",
+      "bytes": 47272,
+      "sha256": "20cf123b4411841f540c4025d7a7b3ef62b424c743606cddfbb2d630239574e4",
+      "durationSeconds": 2.879,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X14-A-EX01",
+      "contentId": "A2-U01-V02-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X14-A-EX01.mp3",
+      "bytes": 53959,
+      "sha256": "c4216b24685edfdc7b452d4d563a688c345b7673b8bec3b64d7ad430865278f3",
+      "durationSeconds": 3.297,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X15-A-WORD",
+      "contentId": "A2-U01-V02-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X15-A-WORD.mp3",
+      "bytes": 17597,
+      "sha256": "cfeaaf5967635eddb7384b3ca03a03b9d0809140a67739b556984c245b3a1349",
+      "durationSeconds": 1.022,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V02-X15-A-EX01",
+      "contentId": "A2-U01-V02-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V02-X15-A-EX01.mp3",
+      "bytes": 40585,
+      "sha256": "53ba0a9b8a77b299d81b7a944cf3302aa5ca7fa17ff80dfa8fb610df6bb75e98",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X01-A-WORD",
+      "contentId": "A2-U01-V03-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X01-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "80aa80986386604cc2366a899b341c521822ed197353fa40022b6495ca02feb7",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X01-A-FORM",
+      "contentId": "A2-U01-V03-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X01-A-FORM.mp3",
+      "bytes": 41003,
+      "sha256": "31f83e21f1a13444a30c0439396bc8791fa45d4d7721958585459a03ecb57df3",
+      "durationSeconds": 2.508,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X01-A-EX01",
+      "contentId": "A2-U01-V03-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X01-A-EX01.mp3",
+      "bytes": 44346,
+      "sha256": "bbbee74ba002c7bb2947ce8a2218e3b5a177035a0caf158194a13baa9f0617fd",
+      "durationSeconds": 2.694,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X02-A-WORD",
+      "contentId": "A2-U01-V03-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X02-A-WORD.mp3",
+      "bytes": 20941,
+      "sha256": "071198102bfd6c04392848d1b4ca55f623d72fe92f465321492b6e0610ecefa6",
+      "durationSeconds": 1.254,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X02-A-FORM",
+      "contentId": "A2-U01-V03-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X02-A-FORM.mp3",
+      "bytes": 47690,
+      "sha256": "063a9cb45aee5cb92e1dd45b51607cb71bfdd7149561f371a76870d50947262d",
+      "durationSeconds": 2.926,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X02-A-EX01",
+      "contentId": "A2-U01-V03-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X02-A-EX01.mp3",
+      "bytes": 36823,
+      "sha256": "765ac027ded8a7bedfae7488fa814bec5b7ba691117a02719c20ca8af856ca2e",
+      "durationSeconds": 2.229,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X03-A-WORD",
+      "contentId": "A2-U01-V03-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X03-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "bb054a8e2ae7c5b7fc75b6fcb6db21c75f99080b68fd16c8ed8a7345448d0c86",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X03-A-FORM",
+      "contentId": "A2-U01-V03-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X03-A-FORM.mp3",
+      "bytes": 33061,
+      "sha256": "826af6022be2f114ee61a599bd544930c7e27d8a069da885fe794336d7e99f37",
+      "durationSeconds": 1.997,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X03-A-EX01",
+      "contentId": "A2-U01-V03-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X03-A-EX01.mp3",
+      "bytes": 37659,
+      "sha256": "b01ca93bf35a63412050561f1236cbd9db233c1064bbc1344f17f670b61ef14d",
+      "durationSeconds": 2.276,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X04-A-WORD",
+      "contentId": "A2-U01-V03-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X04-A-WORD.mp3",
+      "bytes": 18851,
+      "sha256": "ee0b60fa2b2df74c3ade8fe1d8d9b69feedfbe8e7f81069785097b746f455d6b",
+      "durationSeconds": 1.115,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X04-A-EX01",
+      "contentId": "A2-U01-V03-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X04-A-EX01.mp3",
+      "bytes": 38913,
+      "sha256": "88bfde5539aa2bce548b34ac12eeef44abcf5eb36e59af3e5be72eb3e49efc34",
+      "durationSeconds": 2.368,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X05-A-WORD",
+      "contentId": "A2-U01-V03-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X05-A-WORD.mp3",
+      "bytes": 33897,
+      "sha256": "c73da627f5e42e1eb3fdf9ee1c52e9d4ee5f5770aa1ea8f8025850c00515ea5b",
+      "durationSeconds": 2.043,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X05-A-EX01",
+      "contentId": "A2-U01-V03-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X05-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "caff98b818ba8f7babbb54e4e4ebd9e7bdb7fecd223bb1dae2b9dbec9d1771bd",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X06-A-WORD",
+      "contentId": "A2-U01-V03-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X06-A-WORD.mp3",
+      "bytes": 13835,
+      "sha256": "90307b695ba2547bf4f1ac192904e6dff3f3b0cc9136b0b7877e95b9f4af6945",
+      "durationSeconds": 0.789,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X06-A-EX01",
+      "contentId": "A2-U01-V03-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X06-A-EX01.mp3",
+      "bytes": 37659,
+      "sha256": "6b685459630ed6c45fb0dfa3defc90409047ecb7d32c5715adb3884bc1045b25",
+      "durationSeconds": 2.276,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "BD-A1-V363-A-WORD",
+      "contentId": "A2-U01-V03-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/BD-A1-V363-A-WORD.mp3",
+      "bytes": 23866,
+      "sha256": "f03c7b00e2dd015d027f72404e90005912e94bdef84c88ed709bb5c7ca7fb264",
+      "durationSeconds": 0.929,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 192000,
+      "provenance": "REUSE_A1",
+      "voices": [
+        {
+          "speaker": "A1 pronunciation model",
+          "voice": "Existing approved A1 voice"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X07-A-EX01",
+      "contentId": "A2-U01-V03-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X07-A-EX01.mp3",
+      "bytes": 48526,
+      "sha256": "00e88adddd0e2ac23acf8c0e2416df62654afe58dd7a61bf3876375283b8c98d",
+      "durationSeconds": 2.972,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X08-A-WORD",
+      "contentId": "A2-U01-V03-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X08-A-WORD.mp3",
+      "bytes": 19687,
+      "sha256": "afefac305b5e5b04701b5c2f98609c6c60bd8e40bf296c4f6dce15b1c07fb673",
+      "durationSeconds": 1.161,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X08-A-EX01",
+      "contentId": "A2-U01-V03-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X08-A-EX01.mp3",
+      "bytes": 38077,
+      "sha256": "6cb7a011c0a7e629f733c5fe5d445ed7bed5d7b63b27f71679ee4c95ab3a4040",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X09-A-WORD",
+      "contentId": "A2-U01-V03-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X09-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "8d9e27b71f488b4fe177dd489a4244884e4a556ad36a82c49c8b6ce1a6e77ebb",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X09-A-EX01",
+      "contentId": "A2-U01-V03-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X09-A-EX01.mp3",
+      "bytes": 38913,
+      "sha256": "45848b51e2e0007b78b5972256f9cb524fe2b93918a4faca8b26c56101815a72",
+      "durationSeconds": 2.368,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X10-A-WORD",
+      "contentId": "A2-U01-V03-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X10-A-WORD.mp3",
+      "bytes": 16761,
+      "sha256": "bf3452b51c1ec4cb6e6f767f5c1f1f50532a4d0ad502ddfeb2cbcfd18a0c0c04",
+      "durationSeconds": 0.975,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X10-A-EX01",
+      "contentId": "A2-U01-V03-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X10-A-EX01.mp3",
+      "bytes": 29300,
+      "sha256": "ade45d6cb9228f347a0432af76797025f9db18a540274c83ce1e2a064914cc33",
+      "durationSeconds": 1.765,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X11-A-WORD",
+      "contentId": "A2-U01-V03-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X11-A-WORD.mp3",
+      "bytes": 21776,
+      "sha256": "c6f2bdc9df7fab7d707becf478881366faa1adc0f36fb992c5b3952ce3bca9f5",
+      "durationSeconds": 1.3,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X11-A-FORM",
+      "contentId": "A2-U01-V03-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X11-A-FORM.mp3",
+      "bytes": 53959,
+      "sha256": "d363f71cc55cc21e43b2d091c5737360f0bcf804f5e241098e2792965b62c822",
+      "durationSeconds": 3.297,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X11-A-EX01",
+      "contentId": "A2-U01-V03-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X11-A-EX01.mp3",
+      "bytes": 42674,
+      "sha256": "a4830a54121f944724f13b996b8a500037371f28004d115517bbe93f3f7d77ab",
+      "durationSeconds": 2.601,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "REUSE_COMPLETE_PILOT",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X12-A-WORD",
+      "contentId": "A2-U01-V03-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X12-A-WORD.mp3",
+      "bytes": 16761,
+      "sha256": "37b45088625d21939d5832d8e4a2b8b5599f7d91883bdef70dba10cf766d8096",
+      "durationSeconds": 0.975,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X12-A-EX01",
+      "contentId": "A2-U01-V03-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X12-A-EX01.mp3",
+      "bytes": 38077,
+      "sha256": "60d3fd082435306a9d2cc745d833dcc01acbdb7ffb5a33e97e92748df96b34d5",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X13-A-WORD",
+      "contentId": "A2-U01-V03-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X13-A-WORD.mp3",
+      "bytes": 30972,
+      "sha256": "902f05136411bc4f92619fdae3948461d9812c05c7c7ca80c214712de1c11969",
+      "durationSeconds": 1.858,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X13-A-EX01",
+      "contentId": "A2-U01-V03-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X13-A-EX01.mp3",
+      "bytes": 40585,
+      "sha256": "2b3e832fd5601c878331d9ae644802f35713ccf34840c74ec0abb5e00bb04889",
+      "durationSeconds": 2.461,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X14-A-WORD",
+      "contentId": "A2-U01-V03-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X14-A-WORD.mp3",
+      "bytes": 17597,
+      "sha256": "53812610c1a2690ff6bb52d5795bd0ca85743a1d7368ffe203f7229d76c11f45",
+      "durationSeconds": 1.022,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X14-A-EX01",
+      "contentId": "A2-U01-V03-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X14-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "8c35d1682c32b74c31170061b0ef958605ef2866b9f27d3b7baeccbdeed0d641",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X15-A-WORD",
+      "contentId": "A2-U01-V03-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X15-A-WORD.mp3",
+      "bytes": 20941,
+      "sha256": "85cc948470b87e2a0f20d068236fdec142e8ed866e669a8988b1c10b1abfe2ba",
+      "durationSeconds": 1.254,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V03-X15-A-EX01",
+      "contentId": "A2-U01-V03-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V03-X15-A-EX01.mp3",
+      "bytes": 41838,
+      "sha256": "d07de57e6553f65a5acb448db137e11bb3d0f59c23710aa2e386c306b0ab3447",
+      "durationSeconds": 2.554,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X01-A-WORD",
+      "contentId": "A2-U01-V04-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X01-A-WORD.mp3",
+      "bytes": 15925,
+      "sha256": "312c112b4f16cb30c04866d48f5002e1aebacff4f26baee0a634de5cc7a7a33e",
+      "durationSeconds": 0.929,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X01-A-EX01",
+      "contentId": "A2-U01-V04-X01",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X01-A-EX01.mp3",
+      "bytes": 37659,
+      "sha256": "954c1c9d45bd76df36c1d7dfc8f772c5097eacf43bdbda996abee4742b377887",
+      "durationSeconds": 2.276,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X02-A-WORD",
+      "contentId": "A2-U01-V04-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X02-A-WORD.mp3",
+      "bytes": 15089,
+      "sha256": "a761752950cbcf04d735584c4f2b28ca5396871832374eaee0770528e187fdb6",
+      "durationSeconds": 0.882,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X02-A-EX01",
+      "contentId": "A2-U01-V04-X02",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X02-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "291189c273ab5b83ff077a5552e4417b497974d128341fb62a42a5896e28536c",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X03-A-WORD",
+      "contentId": "A2-U01-V04-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X03-A-WORD.mp3",
+      "bytes": 15925,
+      "sha256": "9841283ba7cb23330df218f38478cf6a90b9ab26923b7c25a3743aedc284e3a8",
+      "durationSeconds": 0.929,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X03-A-EX01",
+      "contentId": "A2-U01-V04-X03",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X03-A-EX01.mp3",
+      "bytes": 38077,
+      "sha256": "7afbbdd35fb4544eb8b9c9186f596d5ce44df04ca0598d456b18554243614da9",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X04-A-WORD",
+      "contentId": "A2-U01-V04-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X04-A-WORD.mp3",
+      "bytes": 16761,
+      "sha256": "b767fc590beec004b3bc3ad46a36a91118685d65c2d29b4f0cfe3cdab3c85f4c",
+      "durationSeconds": 0.975,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X04-A-EX01",
+      "contentId": "A2-U01-V04-X04",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X04-A-EX01.mp3",
+      "bytes": 38913,
+      "sha256": "8416154333245c48abcd84f284453ef34a7587f50d00eba0217572d3d7b06bc4",
+      "durationSeconds": 2.368,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X05-A-WORD",
+      "contentId": "A2-U01-V04-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X05-A-WORD.mp3",
+      "bytes": 17597,
+      "sha256": "3407a7c2c00b12391459f989dbb8f23541e8e020e40251d8d63b993e0bc2aaaf",
+      "durationSeconds": 1.022,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X05-A-EX01",
+      "contentId": "A2-U01-V04-X05",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X05-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "07b4548d88372ebf7dc20cca998d089d4f8963f5539082e3ccf397aaa71db790",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X06-A-WORD",
+      "contentId": "A2-U01-V04-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X06-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "eb8d3143bf71bae35b2ae05572a30bbcceab0d807ac1fbb3082222ab0c771bda",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X06-A-EX01",
+      "contentId": "A2-U01-V04-X06",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X06-A-EX01.mp3",
+      "bytes": 35987,
+      "sha256": "8267b589889e8cd02183ee2e5bfbea9dca02eac12d4b1fe9a3b377484870cef4",
+      "durationSeconds": 2.183,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X07-A-WORD",
+      "contentId": "A2-U01-V04-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X07-A-WORD.mp3",
+      "bytes": 20941,
+      "sha256": "bebf31bc5555bcf5da9d851a9d91d777c5e8b173924bf1d51f86c877b5b02665",
+      "durationSeconds": 1.254,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X07-A-EX01",
+      "contentId": "A2-U01-V04-X07",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X07-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "c09c15987c736151bf024bd8a12878bf567a26a6ef79bfb8f520ed5f5c9cff11",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X08-A-WORD",
+      "contentId": "A2-U01-V04-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X08-A-WORD.mp3",
+      "bytes": 15925,
+      "sha256": "ef38bfe42343f42efa5c4ce4d57714b7692d5c505f2aa22cc329bde106eabc3f",
+      "durationSeconds": 0.929,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X08-A-EX01",
+      "contentId": "A2-U01-V04-X08",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X08-A-EX01.mp3",
+      "bytes": 35987,
+      "sha256": "2ab61dc972d52ec2206cb5995de3263957962410767c9a6cf36801f69596ffb2",
+      "durationSeconds": 2.183,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X09-A-WORD",
+      "contentId": "A2-U01-V04-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X09-A-WORD.mp3",
+      "bytes": 15089,
+      "sha256": "0b3366f0e6365e133397292e432295d7c0d4d950bb0dbaa159d7c3ec834f36df",
+      "durationSeconds": 0.882,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X09-A-EX01",
+      "contentId": "A2-U01-V04-X09",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X09-A-EX01.mp3",
+      "bytes": 34315,
+      "sha256": "a1228e8e6e162319e7c1d6fb5840d08e79f7bf371be23f6af0dce505127e7b56",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X10-A-WORD",
+      "contentId": "A2-U01-V04-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X10-A-WORD.mp3",
+      "bytes": 15089,
+      "sha256": "e205ae20010ca0b06244847efe8c707c746a0f0f53a84401696c7a739c1f09b8",
+      "durationSeconds": 0.882,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X10-A-EX01",
+      "contentId": "A2-U01-V04-X10",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X10-A-EX01.mp3",
+      "bytes": 44764,
+      "sha256": "945c96fd91224364bf249fdf0acde7decdbf3413c2acd5c2f4f6dc677d6ebe32",
+      "durationSeconds": 2.74,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X11-A-WORD",
+      "contentId": "A2-U01-V04-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X11-A-WORD.mp3",
+      "bytes": 15089,
+      "sha256": "d49767584a22d9dc8421140c4a62d4b69a9c88d8f3641ef0bdc22e2e86526f10",
+      "durationSeconds": 0.882,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X11-A-EX01",
+      "contentId": "A2-U01-V04-X11",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X11-A-EX01.mp3",
+      "bytes": 34315,
+      "sha256": "4a4a6191587e25c18045ac337b54c5075ee53eebbe1f56cb95e55ec03a41d702",
+      "durationSeconds": 2.09,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X12-A-WORD",
+      "contentId": "A2-U01-V04-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X12-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "fc9172fde017da66b5773bd1a289de3a0eb2efbed2bbff4eb8623838113fb219",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X12-A-EX01",
+      "contentId": "A2-U01-V04-X12",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X12-A-EX01.mp3",
+      "bytes": 35151,
+      "sha256": "a0c626aed3e52e0939c870e8c2a35934c5394cc1e5ac6756e14f119d8b04f218",
+      "durationSeconds": 2.136,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X13-A-WORD",
+      "contentId": "A2-U01-V04-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X13-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "117a5afa51e90b00c02965fd8ef172ec8cce578249a42961c114ed96c98cbe44",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X13-A-EX01",
+      "contentId": "A2-U01-V04-X13",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X13-A-EX01.mp3",
+      "bytes": 47272,
+      "sha256": "7242124fdbf04f05d3a47e15c08c04d3278a501ba47ef065399e3029d14537fa",
+      "durationSeconds": 2.879,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X14-A-WORD",
+      "contentId": "A2-U01-V04-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X14-A-WORD.mp3",
+      "bytes": 18851,
+      "sha256": "86655740a98cba88fac52938efa605ade42b9c371d91e5873408b80130ceef2e",
+      "durationSeconds": 1.115,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X14-A-EX01",
+      "contentId": "A2-U01-V04-X14",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X14-A-EX01.mp3",
+      "bytes": 35987,
+      "sha256": "d302b0cc1e89e91dc433b3e495269595b896352fcf705ccd1a3881f177c2cad7",
+      "durationSeconds": 2.183,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X15-A-WORD",
+      "contentId": "A2-U01-V04-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X15-A-WORD.mp3",
+      "bytes": 18015,
+      "sha256": "9a53f40827bc95b436300633e9c14f34fb19fdd5a5430e69bbd7682b5e455342",
+      "durationSeconds": 1.068,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-V04-X15-A-EX01",
+      "contentId": "A2-U01-V04-X15",
+      "section": "Vocabulary",
+      "path": "a2-audio/A2-U01-V04-X15-A-EX01.mp3",
+      "bytes": 38077,
+      "sha256": "4087e5671bb5aeecb2891daaaafa2622f2ced057c578add8db0f53cd2d4c0573",
+      "durationSeconds": 2.322,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Model voice",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-L01-P01-AUDIO",
+      "contentId": "A2-U01-L01-P01",
+      "section": "Listening",
+      "path": "a2-audio/A2-U01-L01-P01-AUDIO.mp3",
+      "bytes": 630325,
+      "sha256": "5f83cd3942bcc2749a13ef7fa259f3a0742521e826e9623f96f6e7740d47d4d1",
+      "durationSeconds": 39.34,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mara",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mara",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mara",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mara",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-L01-P02-AUDIO",
+      "contentId": "A2-U01-L01-P02",
+      "section": "Listening",
+      "path": "a2-audio/A2-U01-L01-P02-AUDIO.mp3",
+      "bytes": 795419,
+      "sha256": "f83396819be2f6012b59dbf78d3a4deca41e211eb06c716857fa0748122d5d16",
+      "durationSeconds": 49.639,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Omar",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Omar",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Lea",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-L02-P01-AUDIO",
+      "contentId": "A2-U01-L02-P01",
+      "section": "Listening",
+      "path": "a2-audio/A2-U01-L02-P01-AUDIO.mp3",
+      "bytes": 816735,
+      "sha256": "056559a31e419e71efba556a683cee9c1e7713ff893ff363aa710d6216269658",
+      "durationSeconds": 50.986,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Nina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Nina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Nina",
+          "voice": "Carla"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-L02-P02-AUDIO",
+      "contentId": "A2-U01-L02-P02",
+      "section": "Listening",
+      "path": "a2-audio/A2-U01-L02-P02-AUDIO.mp3",
+      "bytes": 1072108,
+      "sha256": "e6463d9babb9f868a0e7b06d781733f76d01312732651551f470721c8b14ff93",
+      "durationSeconds": 66.93,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Interviewer",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Farid",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Farid",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Farid",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-U01-R01-L01-AUDIO",
+      "contentId": "A2-U01-R01-L01",
+      "section": "Listening",
+      "path": "a2-audio/A2-U01-R01-L01-AUDIO.mp3",
+      "bytes": 1292372,
+      "sha256": "44dee0ce62ed066efbd748d353964f5e09fc0045a9003a0e1d6ddb9a2656885b",
+      "durationSeconds": 80.707,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Hana",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Hana",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Hana",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Hana",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Hana",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Ben",
+          "voice": "Christian"
+        }
+      ]
+    },
+    {
+      "id": "A2-P01-AUDIO",
+      "contentId": "A2-P01",
+      "section": "Podcast",
+      "path": "a2-audio/A2-P01-AUDIO.mp3",
+      "bytes": 5590247,
+      "sha256": "3fd545dfe84a6c685eaa3659f1aa464da434e6bfd810b6182bc3088e4ac88e71",
+      "durationSeconds": 349.326,
+      "sampleRate": 44100,
+      "channels": 1,
+      "bitrate": 128000,
+      "provenance": "GENERATED_FULL_ASSET",
+      "voices": [
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        },
+        {
+          "speaker": "Mina",
+          "voice": "Carla"
+        },
+        {
+          "speaker": "Jonas",
+          "voice": "Christian"
+        }
+      ]
+    }
+  ],
+  "sourceVersions": {
+    "grammar": "candidate 1.1",
+    "vocabulary": "candidate 1.1",
+    "listeningPodcastAssessments": "candidate 1.2",
+    "listeningPodcastGermanScripts": "1.1 locked",
+    "integrated": "candidate 1.1"
+  }
+}

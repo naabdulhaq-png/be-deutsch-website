@@ -1,0 +1,11 @@
+---
+interface Props { contexts: string[]; integrated?: boolean; title?: string }
+const { contexts, integrated=false, title='Knowledge check' }=Astro.props;
+---
+<section class="assessment" data-contexts={JSON.stringify(contexts)} data-integrated={String(integrated)}>
+  <h2>{title}</h2>
+  <p>{integrated?'Four separate sections: 16 Grammar, 20 Vocabulary, 6 Listening and 6 Podcast questions. Feedback appears only after you submit each section.':'One point per question. Use the supplied options or the exact forms requested. You can retry without losing previous attempts.'}</p>
+  <div class="assessment-tabs" aria-label="Assessment sections"></div>
+  <div class="question-surface" aria-live="polite"></div>
+  <noscript><p>This local assessment requires JavaScript. The lesson explanations and audio remain readable above.</p></noscript>
+</section>

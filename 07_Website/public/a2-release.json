@@ -1,0 +1,17 @@
+{
+  "releaseId": "BD-A2-U01-WEB-2026-10-30",
+  "status": "PUBLIC RELEASE AUTHORIZED",
+  "a1Baseline": "8df1f0afa50d11bd7e1f0dff9fb270c463abb9cb",
+  "g015Included": false,
+  "a2Baseline": "BD-A2-U01-WEB-RC1-2026-10-30",
+  "contentVersion": "BD-A2-W01.1",
+  "contentSha256": "7b1fc7dc80dac1579d5a64bac3c3148b313a583830dd0fd0248228d51dd644f4",
+  "ownerAcceptanceReference": "BD-A2-W03-OWNER-ACCEPTANCE",
+  "publicationAuthorized": true,
+  "buildRuntime": "Node 22.23.4",
+  "approvedBaseline": "BD-FULLSITE-A1-A2U01-RC2-NODE22-2026-10-30",
+  "approvedBaselineZipSha256": "730e3bcd0732d5cb96227b1153fcae19cc83a13c9bb799fa2c7ac457801eda45",
+  "authorizationReference": "BD-A2-W07-PUBLIC-RELEASE-AUTHORIZATION",
+  "authorizationDate": "2026-10-30",
+  "ownerReview": "Owner-attested educational materials and document presentation approval; no independent professional certification inferred"
+}

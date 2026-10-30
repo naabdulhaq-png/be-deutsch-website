@@ -1,0 +1,6 @@
+/* Candidate-only reflow correction; no content, brand colors or scoring changes. */
+@media(max-width:700px){
+ main :where(div,section,article,figure){min-inline-size:0}
+ main :where(h1,h2,h3,h4,p,a,li,span,figcaption){overflow-wrap:anywhere}
+ main .cta{white-space:normal;min-inline-size:0;max-inline-size:100%}
+}

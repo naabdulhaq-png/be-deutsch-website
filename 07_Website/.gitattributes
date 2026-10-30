@@ -6,3 +6,7 @@
 
 /src/data/listening-course.json -text
 /public/listening-assets/** -text
+
+/src/a2/data/course.json -text
+/public/a2/unit-1/content.json -text
+/public/a2-audio/** -text

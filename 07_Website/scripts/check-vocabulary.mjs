@@ -1,3 +1,4 @@
+import { forbiddenBuildPath } from './release-paths.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -36,5 +37,5 @@ for(const a of lock.assets){for(const prefix of ['public','dist']){const p=path.
 async function files(dir){return(await Promise.all((await fs.readdir(dir,{withFileTypes:true})).map(async e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]))).flat();}
 for(const prefix of ['public','dist']){const actual=await files(path.join(site,prefix,'vocabulary-assets'));assert.deepEqual(actual.map(p=>'/'+path.relative(path.join(site,prefix),p).split(path.sep).join('/')).sort(),lock.assets.map(a=>a.path).sort(),'Unexpected vocabulary asset');}
 const output=await files(path.join(site,'dist'));
-assert.ok(!output.some(p=>/(?:^|[/\\])(?:preview-[^/\\]*|node_modules|src|Review|Screenshots|backups?|rejected)(?:[/\\]|$)|\.(?:zip|xlsx|map|pem|key)$|[/\\]\.env(?:\.|$)/i.test(p)),'Development/private file in build');
+assert.ok(!output.some(p=>forbiddenBuildPath(path.relative(path.join(site,'dist'),p))),'Development/private file in build');
 console.log('Vocabulary release check passed: 40 lessons, 400 words, 400 final illustration mappings, 1200 examples, 400 readings, 1600 unchanged approved recordings, 2400 exact media files.');

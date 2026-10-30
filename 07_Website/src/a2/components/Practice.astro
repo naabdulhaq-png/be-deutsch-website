@@ -1,0 +1,7 @@
+---
+interface Props { title: string; rows: string[][] }
+const { title, rows } = Astro.props;
+---
+<section class="practice"><h2>{title}</h2><p class="muted">Learning practice · self-check only · no automatic score</p>
+{rows.map(row=><article class="practice-item"><p class="eyebrow">{row[0]}</p><h3>{row[1]}</h3><textarea aria-label={`Your practice notes for ${row[0]}`} data-note={row[0]} rows="3" placeholder="Try it aloud or write your response here. Notes stay in this tab only."></textarea><details><summary>Compare with the model and self-check</summary><p>{row[2]}</p>{row[3]&&<p>{row[3]}</p>}</details><label class="checkline"><input type="checkbox" data-practice={row[0]} /> I tried this and checked the model</label></article>)}
+</section>

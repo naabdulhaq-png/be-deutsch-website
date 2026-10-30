@@ -1,0 +1,13 @@
+---
+import type { AudioAsset } from '../lib/model';
+interface Props { asset: AudioAsset; label?: string }
+const { asset, label = 'Listen' } = Astro.props;
+const mins = Math.floor(asset.duration/60), secs = Math.floor(asset.duration%60).toString().padStart(2,'0');
+---
+<div class="audio-player" data-audio-id={asset.id}>
+  <p class="audio-caption"><strong>{label}</strong> <span>{mins}:{secs} · {asset.voices.map(v=>v.voice).filter((v,i,a)=>a.indexOf(v)===i).join(' / ')}</span></p>
+  <audio controls preload="none" src={asset.url} aria-label={`${label} — ${asset.id}`} data-asset-id={asset.id} data-duration={asset.duration}></audio>
+  <div class="audio-actions"><button type="button" class="quiet play-audio">Play {label}</button><button type="button" class="quiet restart-audio">Play from beginning</button></div>
+  <p class="audio-status muted" role="status">Ready to play. Progress is saved on this browser.</p>
+  <button type="button" class="quiet resume-audio" hidden>Resume saved position</button>
+</div>

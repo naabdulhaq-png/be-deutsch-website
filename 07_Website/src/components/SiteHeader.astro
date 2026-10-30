@@ -4,9 +4,10 @@ import brandLogo from '../assets/branding/be_deutsch_logo.svg';
 const currentPath = Astro.url.pathname;
 const active = (path: string) => currentPath === path || currentPath.startsWith(path);
 const learning = [
-  { label: 'Vocabulary', href: '/vocabulary/', note: 'A1 · Available' },
-  { label: 'Listening', href: '/listening/', note: 'A1 · Available' },
-  { label: 'Grammar', href: '/grammar/', note: 'A1 · New course' },
+  { label: 'Vocabulary', href: '/vocabulary/', note: 'A1 · Available', a2Base: '/a2/unit-1/vocabulary/', a2Href: '/a2/unit-1/vocabulary/v01/' },
+  { label: 'Listening', href: '/listening/', note: 'A1 · Available', a2Base: '/a2/unit-1/listening/', a2Href: '/a2/unit-1/listening/l01/' },
+  { label: 'Grammar', href: '/grammar/', note: 'A1 · New course', a2Base: '/a2/unit-1/grammar/', a2Href: '/a2/unit-1/grammar/g01/' },
+  { label: 'Podcasts', href: '/podcasts/', note: 'A1 · Available', a2Base: '/a2/unit-1/podcast/', a2Href: '/a2/unit-1/podcast/' },
 ] as const;
 const secondary = [
   { label: 'Testing', href: '/testing/' },
@@ -24,14 +25,14 @@ const secondary = [
 
     <nav class="desktop-nav learning-navigation" aria-label="Main navigation">
       {learning.map((item) => (
-        <details class="nav-dropdown" data-active={active(item.href) ? 'true' : undefined}>
+        <details class="nav-dropdown" data-active={active(item.href) || active(item.a2Base) ? 'true' : undefined}>
           <summary aria-label={`${item.label} levels`}>{item.label}<span aria-hidden="true">⌄</span></summary>
           <div class="nav-dropdown__menu">
-            <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><strong>{item.note.split(' · ')[0]}</strong><span>{item.note.split(' · ')[1]}</span></a>
+            <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><strong>{item.note.split(' · ')[0]}</strong><span>{item.note.split(' · ')[1]}</span></a><a href={item.a2Href} aria-current={active(item.a2Base)?"location":undefined}><strong>A2</strong><span>Unit 1 · English · Available</span></a>
           </div>
         </details>
       ))}
-      <a href="/podcasts/" aria-current={active('/podcasts/') ? 'page' : undefined}>Podcasts</a>
+      <a href="/a2/unit-1/">A2 Unit 1</a>
       <a href="/app/" aria-current={active('/app/') ? 'page' : undefined}>App</a>
       <details class="nav-dropdown nav-dropdown--end" data-active={secondary.some((item) => active(item.href)) ? 'true' : undefined}>
         <summary aria-label="More pages">More<span aria-hidden="true">⌄</span></summary>
@@ -45,8 +46,8 @@ const secondary = [
       </summary>
       <nav id="mobile-menu" aria-label="Mobile navigation">
         <p>Learn German</p>
-        {learning.map((item) => <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span><small>{item.note}</small></a>)}
-        <a href="/podcasts/" aria-current={active('/podcasts/') ? 'page' : undefined}><span>Podcasts</span><small>Everyday German audio</small></a>
+        {learning.map((item) => <><a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span><small>{item.note}</small></a><a href={item.a2Href}><span>A2 {item.label}</span><small>Unit 1 · English · Available</small></a></>)}
+        <a href="/a2/unit-1/"><span>A2 Unit 1 overview</span></a>
         <p>Be Deutsch</p>
         <a href="/app/" aria-current={active('/app/') ? 'page' : undefined}><span>App</span></a>
         {secondary.map((item) => <a href={item.href} aria-current={active(item.href) ? 'page' : undefined}><span>{item.label}</span></a>)}
