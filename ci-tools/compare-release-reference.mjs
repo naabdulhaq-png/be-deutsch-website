@@ -70,6 +70,16 @@ const report = {
 };
 await mkdir(outputDirectory, { recursive: true });
 await writeFile(outputFile, `${JSON.stringify(report, null, 2)}\n`);
-console.log(JSON.stringify({ status: report.status, expected: report.expected, actual: report.actual, exactMatch, matched, missing: missing.length, extra: extra.length, hashMismatches: hashMismatches.length }, null, 2));
+console.log(JSON.stringify({
+  status: report.status,
+  expected: report.expected,
+  actual: report.actual,
+  exactMatch,
+  matched,
+  missing,
+  extra,
+  hashMismatchPaths: hashMismatches.map(entry => entry.path),
+  mismatchCategories,
+}, null, 2));
 if (!exactMatch) process.exitCode = 1;
 
