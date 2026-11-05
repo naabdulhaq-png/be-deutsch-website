@@ -1,0 +1,75 @@
+---
+import logo from '../../assets/branding/be_deutsch_logo.svg';
+import course from '../data/integrated-course.json';
+import '../../styles/bd-ui-02.css';
+import '../../styles/bd-ui-07.css';
+
+interface Props {
+  unit: number;
+  area: 'vocabulary' | 'grammar' | 'listening' | 'podcast' | 'overview';
+  title: string;
+}
+
+const { unit, area, title } = Astro.props;
+const path = Astro.url.pathname;
+const unitData = course.units.find(item => item.unit === unit)!;
+const unitVocabulary = course.vocabulary.filter(item => item.unit === unit);
+const unitGrammar = course.grammar.filter(item => (item.unit ?? 1) === unit);
+const unitListening = course.listening.filter(item => item.unit === unit);
+const unitPodcasts = course.podcasts.filter(item => item.unit_placement.includes(unit));
+const categoryMeta = {
+  vocabulary: { label: 'Vocabulary', icon: '▤', tone: 'sky' },
+  grammar: { label: 'Grammar', icon: '◆', tone: 'violet' },
+  listening: { label: 'Listening', icon: '◉', tone: 'mint' },
+  podcast: { label: 'Podcast', icon: '◍', tone: 'orange' },
+};
+const groups = [
+  { id: 'vocabulary', href: `/a2/unit-${unit}/vocabulary/${unitData.vocabulary_lessons[0]?.id.slice(-3).toLowerCase()}/`, items: unitData.vocabulary_lessons.map(item => ({ id: item.id, label: item.topic, href: `/a2/unit-${unit}/vocabulary/${item.id.slice(-3).toLowerCase()}/` })) },
+  { id: 'grammar', href: `/a2/unit-${unit}/grammar/${unitData.grammar_lessons[0]?.id.slice(-3).toLowerCase()}/`, items: unitData.grammar_lessons.map(item => ({ id: item.id, label: item.title, href: `/a2/unit-${unit}/grammar/${item.id.slice(-3).toLowerCase()}/` })) },
+  ...(unitData.listening_lessons.length ? [{ id: 'listening', href: `/a2/unit-${unit}/listening/${unitData.listening_lessons[0].id.slice(-3).toLowerCase()}/`, items: unitData.listening_lessons.map(item => ({ id: item.id, label: item.title_de, href: `/a2/unit-${unit}/listening/${item.id.slice(-3).toLowerCase()}/` })) }] : []),
+  ...(unitData.podcast_episodes.length ? [{ id: 'podcast', href: `/a2/unit-${unit}/podcast/${unitData.podcast_episodes[0].blueprint_ref.toLowerCase()}/`, items: unitData.podcast_episodes.map(item => ({ id: item.id, label: item.title_de, href: `/a2/unit-${unit}/podcast/${item.blueprint_ref.toLowerCase()}/` })) }] : []),
+];
+const searchIndex = [
+  ...unitGrammar.map(item => ({ title: item.title, meta: `A2 Unit ${unit} · Grammar`, href: `/a2/unit-${unit}/grammar/${item.id.slice(-3).toLowerCase()}/` })),
+  ...unitData.vocabulary_lessons.map(item => ({ title: item.topic, meta: `A2 Unit ${unit} · Vocabulary`, href: `/a2/unit-${unit}/vocabulary/${item.id.slice(-3).toLowerCase()}/` })),
+  ...unitVocabulary.map(item => ({ title: item.german.display, meta: `${item.meaning.en} · A2 Unit ${unit}`, href: `/a2/unit-${unit}/vocabulary/${item.lesson_id.slice(-3).toLowerCase()}/#${item.id}` })),
+  ...unitListening.map(item => ({ title: item.title_de, meta: `A2 Unit ${unit} · Listening · accepted audio`, href: `/a2/unit-${unit}/listening/${item.lesson_id.slice(-3).toLowerCase()}/#${item.id}` })),
+  ...unitPodcasts.map(item => ({ title: item.title_de, meta: `A2 Unit ${unit} · Podcast · accepted audio`, href: `/a2/unit-${unit}/podcast/${item.blueprint_ref.toLowerCase()}/` })),
+];
+---
+<div class="bd-ui02 bd-ui07" data-bd-ui02 data-area={area} data-level="A2" data-search-index={JSON.stringify(searchIndex)}>
+  <aside class="bd-ui02__sidebar bd-ui07__sidebar" id="bd-course-drawer" aria-label={`A2 Unit ${unit} course navigation`}>
+    <div class="bd-ui02__brand"><a href="/" aria-label="Be Deutsch home"><img src={logo.src} alt="Be Deutsch" /></a><button type="button" data-bd-drawer-close aria-label="Close course outline">×</button></div>
+    <div class="bd-ui07__course-heading">
+      <span class="bd-ui02__level">A2</span>
+      <div><strong>A2 Unit {unit}</strong><small>{unitData.title}</small></div>
+    </div>
+    <nav class="bd-ui07__category-cards" aria-label="Learning sections">
+      {groups.map(group => {
+        const meta = categoryMeta[group.id as keyof typeof categoryMeta];
+        const active = group.id === area;
+        return <details class:list={['bd-ui07__category', `is-${meta.tone}`, active && 'is-active']} open={active}>
+          <summary><span class="bd-ui07__category-icon" aria-hidden="true">{meta.icon}</span><strong>{meta.label}</strong><small>{group.items.length}</small><span class="bd-ui07__chevron" aria-hidden="true">⌄</span></summary>
+          <ol>{group.items.map((item, index) => <li><a href={item.href} aria-current={path === item.href ? 'page' : undefined} data-nav-id={item.id}><span>{index + 1}</span><b>{item.label}</b><i data-nav-completion={item.id}></i></a></li>)}</ol>
+          <a class="bd-ui02__all" href={group.href}>Open {meta.label.toLowerCase()}</a>
+        </details>;
+      })}
+    </nav>
+    <nav class="bd-ui07__utilities" aria-label="Course revision">
+      <a href={`/a2/unit-${unit}/revision/`} aria-current={path === `/a2/unit-${unit}/revision/` ? 'page' : undefined}><span aria-hidden="true">↻</span>Revision</a>
+      {unit === 1 && <a href="/a2/unit-1/review/"><span aria-hidden="true">✓</span>Assessment</a>}
+    </nav>
+    <label class="bd08-unit-switch"><span>Course outline</span><select data-bd-course-switch aria-label="Switch A2 unit">{course.units.map(item => <option value={`/a2/unit-${item.unit}/`} selected={item.unit === unit}>Unit {item.unit} · {item.title}</option>)}</select></label>
+    <a class="bd-ui02__switch-link" href="/grammar/">Switch to A1 Foundations →</a>
+    <p class="bd-ui02__note">German remains primary. Choose a support language for explanations, translations and learning hints.</p>
+  </aside>
+  <div class="bd-ui02__backdrop" data-bd-drawer-close hidden></div>
+  <header class="bd-ui02__topbar bd-ui07__topbar">
+    <button type="button" class="bd-ui02__menu" data-bd-drawer-open aria-controls="bd-course-drawer" aria-expanded="false">☰ <span>Course</span></button>
+    <div class="bd-ui02__search"><span aria-hidden="true">⌕</span><label class="bd-ui02__sr" for="bd-course-search">Search this unit</label><input id="bd-course-search" type="search" placeholder="Search lessons, topics or words…" autocomplete="off" aria-controls="bd-search-results" aria-expanded="false"/><div id="bd-search-results" class="bd-ui02__results" role="listbox" hidden></div></div>
+    <div class="bd-ui02__context"><small>Current lesson</small><strong>{title}</strong></div>
+    <label class="bd-ui02__course"><span>Unit</span><select data-bd-course-switch aria-label="Switch unit">{course.units.map(item => <option value={`/a2/unit-${item.unit}/`} selected={item.unit === unit}>A2 · Unit {item.unit}</option>)}</select></label>
+    <a class="bd-ui02__home" href="/a2/" aria-label="A2 course overview">⌂</a>
+  </header>
+</div>
+<script>import '../../scripts/bd-ui-02';</script>

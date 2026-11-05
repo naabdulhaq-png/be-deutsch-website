@@ -1,0 +1,68 @@
+name: BD A2 release review CI
+
+on:
+  push:
+    branches:
+      - review/bd-a2-release-ci-01
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bd-a2-release-ci-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  review-build:
+    if: github.ref == 'refs/heads/review/bd-a2-release-ci-01'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: 07_Website
+    steps:
+      - name: Check out review commit without retained credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Install pinned pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 11.25.0
+          run_install: false
+
+      - name: Install pinned Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22.23.4
+
+      - name: Verify toolchain
+        run: |
+          test "$(node --version)" = "v22.23.4"
+          test "$(pnpm --version)" = "11.25.0"
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit current dependency advisories
+        run: pnpm audit --audit-level low
+
+      - name: Verify immutable Unit-1 baseline and prepare ephemeral regression fixture
+        working-directory: .
+        run: |
+          node ci-tools/prepare-ui08-baseline-fixture.mjs
+          mkdir -p manifests
+
+      - name: Build and validate release candidate
+        run: pnpm build:release-candidate
+
+      - name: Run Unit-1 behavioral contracts
+        run: node --experimental-strip-types --test tests/a2-release.test.ts
+
+      - name: Compare CI artifact with validated local reference
+        working-directory: .
+        run: node ci-tools/compare-release-reference.mjs
+

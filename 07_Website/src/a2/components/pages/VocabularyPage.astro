@@ -1,0 +1,81 @@
+---
+import data from '../../data/course.json';
+import type { AudioAsset } from '../../lib/model';
+import AudioPlayer from '../AudioPlayer.astro';
+import Practice from '../Practice.astro';
+import Assessment from '../Assessment.astro';
+import Hint from '../Hint.astro';
+import { hintLibrary, supportLanguages, vocabularyMeaningDrafts } from '../../i18n/support';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const lesson = data.vocabulary.find((item) => item.id === id)!;
+const items = data.lexical.filter((item) => item.lesson_id === id);
+const assets = data.audio as AudioAsset[];
+const contentAudio = (key: string) => assets.filter((item) => item.contentId === key);
+function exampleParts(item: (typeof data.lexical)[number]) {
+  const candidates = [item.headword, item.singular, item.plural, ...item.headword.split(/\s+/), ...item.verb_principal_forms.split(/[·\s]+/)]
+    .map((value) => value.trim().replace(/[.,;:!?]/g, '')).filter((value) => value.length > 3).sort((a, b) => b.length - a.length);
+  const match = candidates.find((value) => item.example_de.toLocaleLowerCase('de').includes(value.toLocaleLowerCase('de')));
+  if (!match) return [{ text: item.example_de, match: false }];
+  const index = item.example_de.toLocaleLowerCase('de').indexOf(match.toLocaleLowerCase('de'));
+  return [
+    { text: item.example_de.slice(0, index), match: false },
+    { text: item.example_de.slice(index, index + match.length), match: true },
+    { text: item.example_de.slice(index + match.length), match: false },
+  ].filter((part) => part.text);
+}
+---
+<section class="vocab-intro-panel bd07-color-panel">
+  <div><p class="section-kicker">Your word set</p><h2>15 words and expressions, clearly organized</h2><p>{lesson.intro}</p></div>
+  <div class="vocab-quick-stats"><span><strong>{items.filter((item) => item.status === 'Productive').length}</strong> use actively</span><span><strong>{items.filter((item) => item.status === 'Receptive').length}</strong> recognize</span><span><strong>{items.length}</strong> approved records</span></div>
+</section>
+
+<section class="vocab-toolbar" aria-label="Vocabulary filters">
+  <label>Find a word<input id="vocab-search" type="search" placeholder="Search German or meaning"/></label>
+  <label>Learning goal<select id="vocab-status"><option value="all">All records</option><option value="Productive">Use actively</option><option value="Receptive">Recognize</option></select></label>
+  <label>Word type<select id="vocab-type"><option value="all">All word types</option>{[...new Set(items.map((item) => item.part_of_speech))].map((type) => <option value={type}>{type}</option>)}</select></label>
+  <p id="vocab-filter-status" role="status">Showing all {items.length} records</p>
+</section>
+
+<div class="learning-layout vocabulary-layout">
+  <section class="learning-main vocab-workspace">
+    <div class="section-heading"><div><p class="section-kicker">Learn</p><h2>Multilingual vocabulary cards</h2></div><span>Identity · meaning · forms · example · practice</span></div>
+    <div class="vocab-card-grid">
+      {items.map((item, index) => {
+        const audios = contentAudio(item.lexical_id);
+        const primary = audios.find((asset) => asset.id.endsWith('-WORD')) ?? audios[0];
+        const exampleAudio = audios.find((asset) => asset.id.endsWith('-EX01'));
+        const forms = [['Article', item.article], ['Singular', item.singular], ['Plural', item.plural], ['Verb forms', item.verb_principal_forms], ['Auxiliary', item.perfekt_auxiliary], ['Construction', item.separable_reflexive], ['Pattern', item.case_preposition]].filter(([, value]) => value);
+        const meanings = vocabularyMeaningDrafts[item.lexical_id] ?? { en: item.meaning_en };
+        return <article class="vocab-card bd07-vocab-card" id={item.lexical_id} data-vocab-card data-status={item.status} data-type={item.part_of_speech} data-search={`${item.headword} ${item.meaning_en} ${item.collocations}`.toLocaleLowerCase('de')}>
+          <div class="vocab-card__top"><div><span class:list={['learning-chip', item.status === 'Productive' ? 'is-productive' : 'is-receptive']}>{item.status === 'Productive' ? 'Use actively' : 'Recognize'}</span><span class="pos-chip">{item.part_of_speech}</span></div><span class="word-position">{index + 1} / {items.length}</span></div>
+          <div class="word-identity"><div><h3 lang="de">{item.headword}</h3>{primary && <AudioPlayer asset={primary} label={`Pronunciation: ${item.headword}`}/>}</div></div>
+          <div class="vocab-language-tabs" role="group" aria-label={`Translation language for ${item.headword}`}>
+            {Object.entries(supportLanguages).map(([code, meta]) => <button type="button" data-support-language={code} aria-pressed={code === 'en' ? 'true' : 'false'} lang={code} dir={meta.dir}>{code.toUpperCase()}</button>)}
+          </div>
+          <div class="word-meaning bd07-meaning-panel"><span>Meaning</span><strong data-support-values={JSON.stringify(meanings)} data-support-provenance="true">{item.meaning_en}</strong><small class="translation-provenance">AI-draft languages · review required</small></div>
+          {forms.length > 0 && <div class="forms-panel"><h4>Grammar and forms</h4><dl>{forms.map(([label, value]) => <div><dt>{label}</dt><dd lang={['Article', 'Singular', 'Plural', 'Verb forms', 'Auxiliary'].includes(label) ? 'de' : undefined}>{value}</dd></div>)}</dl></div>}
+          <div class="example-panel"><h4>Example</h4><p class="example-de" lang="de">{exampleParts(item).map((part) => part.match ? <mark>{part.text}</mark> : part.text)}</p><p class="example-en" data-support-values={JSON.stringify({ en: item.example_en })}>{item.example_en}</p><p class="translation-fallback" data-support-fallback hidden></p>{exampleAudio && <AudioPlayer asset={exampleAudio} label="Example sentence"/>}</div>
+          <details class="word-support"><summary>Usage and combinations</summary><h4>Useful combinations</h4><p lang="de">{item.collocations}</p><h4>Usage note</h4><p data-support-values={JSON.stringify({ en: item.usage_note })}>{item.usage_note}</p><p class="translation-fallback" data-support-fallback hidden></p></details>
+          <Hint id={`vocab-${item.lexical_id}`} first={hintLibrary.vocabulary.first}/>
+          <div class="word-actions">
+            <a class="word-previous" href={index > 0 ? `#${items[index - 1].lexical_id}` : `#${item.lexical_id}`} aria-disabled={index === 0}>← Previous word</a>
+            <button class="quiet recall" data-recall={item.lexical_id} data-receptive={String(item.status === 'Receptive')}>{item.status === 'Receptive' ? 'I recognize this' : 'I can use this'}</button>
+            <a class="word-next" href={index < items.length - 1 ? `#${items[index + 1].lexical_id}` : `#${item.lexical_id}`} aria-disabled={index === items.length - 1}>Next word →</a>
+          </div>
+          <span class="recall-status muted" data-recall-status={item.lexical_id}></span>
+        </article>;
+      })}
+    </div>
+    <p id="vocab-empty" class="empty-state" hidden>No records match these filters. Clear a filter to continue.</p>
+  </section>
+  <aside class="context-rail" aria-label="Vocabulary lesson support">
+    <section class="is-blue"><p class="section-kicker">Speak</p><h2>Useful phrases</h2><ul class="phrase-list">{lesson.phrases.map((phrase) => <li lang="de">{phrase}</li>)}</ul></section>
+    <section class="is-violet"><p class="section-kicker">Lesson aim</p><h2>What you are learning</h2><p>{lesson.objective}</p><details><summary>All goals</summary><ul>{lesson.subobjectives.map((goal) => <li>{goal}</li>)}</ul></details></section>
+    <section class="is-mint"><p class="section-kicker">Practice</p><h2>Use the words</h2><a class="button" href="#guided-vocabulary-practice">Go to practice</a></section>
+  </aside>
+</div>
+
+<div id="guided-vocabulary-practice" class="practice-zone"><Practice title="Guided practice" rows={lesson.guided}/><Practice title="Independent practice" rows={lesson.independent}/></div>
+<Assessment contexts={[id]} title="Check what you understood"/>

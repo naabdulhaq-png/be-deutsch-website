@@ -1,0 +1,1066 @@
+{
+  "schemaVersion": 1,
+  "integrationPackage": "BD-A2-WEB-AUDIO-01",
+  "status": "accepted_audio_integrated_local_owner_review_pending",
+  "listening": [
+    {
+      "contentId": "BD-A2-AUDIO-D-U02-L01-P01",
+      "unit": 2,
+      "lessonId": "BD-A2-AUDIO-D-U02-L01",
+      "titleDe": "Neuigkeiten von Leila",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u02-l01-p01.mp3",
+      "durationSeconds": 45.657,
+      "sha256": "b3be0d70b1fed7f1b0eab2e591c49b0011ad885f36220f9ace5ca54cf99c4e47",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-2/listening/l01/#BD-A2-AUDIO-D-U02-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U02-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-001",
+        "BD-A2-A03-RUN-002",
+        "BD-A2-A03-RUN-003",
+        "BD-A2-A03-RUN-004",
+        "BD-A2-A03-RUN-005",
+        "BD-A2-A03-RUN-006",
+        "BD-A2-A03-RUN-007",
+        "BD-A2-A03-RUN-008"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U02-L01-P02",
+      "unit": 2,
+      "lessonId": "BD-A2-AUDIO-D-U02-L01",
+      "titleDe": "Eine Einladung mit neuer Uhrzeit",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u02-l01-p02.mp3",
+      "durationSeconds": 38.313,
+      "sha256": "8651df5d4556e13e5363e04f5b003234133a0c6c113dd2c4608cf9df63a1ebd8",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-2/listening/l01/#BD-A2-AUDIO-D-U02-L01-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U02-L01-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-009"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U02-L02-P01",
+      "unit": 2,
+      "lessonId": "BD-A2-AUDIO-D-U02-L02",
+      "titleDe": "Großvaters erster Arbeitstag",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u02-l02-p01.mp3",
+      "durationSeconds": 54.62,
+      "sha256": "cf6e79808ba3e749071096521bad652457822cd891899a9e4bacb5f43cb7a9d4",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-2/listening/l02/#BD-A2-AUDIO-D-U02-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U02-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-010",
+        "BD-A2-A03-RUN-011",
+        "BD-A2-A03-RUN-012",
+        "BD-A2-A03-RUN-013",
+        "BD-A2-A03-RUN-014",
+        "BD-A2-A03-RUN-015",
+        "BD-A2-A03-RUN-016",
+        "BD-A2-A03-RUN-017"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U03-L01-P01",
+      "unit": 3,
+      "lessonId": "BD-A2-AUDIO-D-U03-L01",
+      "titleDe": "Die neue Wohnung",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u03-l01-p01.mp3",
+      "durationSeconds": 46.322,
+      "sha256": "e6f154f0dd0ac8b43f849ce3cd01bed5782bd6adfb7577a286c84374a15f9244",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-3/listening/l01/#BD-A2-AUDIO-D-U03-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U03-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-018",
+        "BD-A2-A03-RUN-019",
+        "BD-A2-A03-RUN-020",
+        "BD-A2-A03-RUN-021",
+        "BD-A2-A03-RUN-022",
+        "BD-A2-A03-RUN-023",
+        "BD-A2-A03-RUN-024",
+        "BD-A2-A03-RUN-025",
+        "BD-A2-A03-RUN-026"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U03-L02-P01",
+      "unit": 3,
+      "lessonId": "BD-A2-AUDIO-D-U03-L02",
+      "titleDe": "Wer macht was am Umzugstag?",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u03-l02-p01.mp3",
+      "durationSeconds": 43.66,
+      "sha256": "a8fae6fa87f2548cb8a17b13f4c32eb8012e30c3c67ab5526ce55990ca1e24a9",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-3/listening/l02/#BD-A2-AUDIO-D-U03-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U03-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-027",
+        "BD-A2-A03-RUN-028",
+        "BD-A2-A03-RUN-029",
+        "BD-A2-A03-RUN-030",
+        "BD-A2-A03-RUN-031",
+        "BD-A2-A03-RUN-032",
+        "BD-A2-A03-RUN-033",
+        "BD-A2-A03-RUN-034"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U03-L02-P02",
+      "unit": 3,
+      "lessonId": "BD-A2-AUDIO-D-U03-L02",
+      "titleDe": "Die Heizung ist wieder kalt",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u03-l02-p02.mp3",
+      "durationSeconds": 51.88,
+      "sha256": "f17458f8e2914ad6686147b2fdd59d023ec568a214b2d671b52705d689d614a2",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-3/listening/l02/#BD-A2-AUDIO-D-U03-L02-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U03-L02-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-042",
+        "BD-A2-PILOT-01-REQ-02",
+        "BD-A2-PILOT-01-REQ-03",
+        "BD-A2-PILOT-01-REQ-04",
+        "BD-A2-PILOT-01-REQ-05",
+        "BD-A2-PILOT-01-REQ-06",
+        "BD-A2-PILOT-01-REQ-07",
+        "BD-A2-PILOT-01-REQ-08"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U04-L01-P01",
+      "unit": 4,
+      "lessonId": "BD-A2-AUDIO-D-U04-L01",
+      "titleDe": "Der Dienstplan für Freitag",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u04-l01-p01.mp3",
+      "durationSeconds": 41.803,
+      "sha256": "97190a41b97e44136d79da7b29cc6cf8a1d44d236784b61ebcdd27fecc84704a",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-4/listening/l01/#BD-A2-AUDIO-D-U04-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U04-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-043",
+        "BD-A2-A03-RUN-044",
+        "BD-A2-A03-RUN-045",
+        "BD-A2-A03-RUN-046",
+        "BD-A2-A03-RUN-047",
+        "BD-A2-A03-RUN-048",
+        "BD-A2-A03-RUN-049",
+        "BD-A2-A03-RUN-050"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U04-L01-P02",
+      "unit": 4,
+      "lessonId": "BD-A2-AUDIO-D-U04-L01",
+      "titleDe": "Informationen zum Abendkurs",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u04-l01-p02.mp3",
+      "durationSeconds": 50.348,
+      "sha256": "43ae7be29faef9d4f1e8f953a78bb0a6a33b9928e48bb9fb621915a06db40f92",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-4/listening/l01/#BD-A2-AUDIO-D-U04-L01-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U04-L01-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-051",
+        "BD-A2-A03-RUN-052",
+        "BD-A2-A03-RUN-053",
+        "BD-A2-A03-RUN-054",
+        "BD-A2-A03-RUN-055",
+        "BD-A2-A03-RUN-056",
+        "BD-A2-A03-RUN-057",
+        "BD-A2-A03-RUN-058"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U04-L02-P01",
+      "unit": 4,
+      "lessonId": "BD-A2-AUDIO-D-U04-L02",
+      "titleDe": "Ein kurzes Bewerbungsgespräch",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u04-l02-p01.mp3",
+      "durationSeconds": 45.161,
+      "sha256": "4bba5222f73ad9bf48c59a5c113a6b860f01d7f09af61f33fd224072682a76a7",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-4/listening/l02/#BD-A2-AUDIO-D-U04-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U04-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-059",
+        "BD-A2-A03-RUN-060",
+        "BD-A2-A03-RUN-061",
+        "BD-A2-A03-RUN-062",
+        "BD-A2-A03-RUN-063",
+        "BD-A2-A03-RUN-064",
+        "BD-A2-A03-RUN-065",
+        "BD-A2-A03-RUN-066",
+        "BD-A2-A03-RUN-067"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U05-L01-P01",
+      "unit": 5,
+      "lessonId": "BD-A2-AUDIO-D-U05-L01",
+      "titleDe": "Der Pullover ist zu klein",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u05-l01-p01.mp3",
+      "durationSeconds": 44.418,
+      "sha256": "3050221df4394778f3abcd3f5592822ac1b0254099094e8c39715f3363a4a567",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-5/listening/l01/#BD-A2-AUDIO-D-U05-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U05-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-068",
+        "BD-A2-A03-RUN-069",
+        "BD-A2-A03-RUN-070",
+        "BD-A2-A03-RUN-071",
+        "BD-A2-A03-RUN-072",
+        "BD-A2-A03-RUN-073",
+        "BD-A2-A03-RUN-074",
+        "BD-A2-A03-RUN-075",
+        "BD-A2-A03-RUN-076"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U05-L01-P02",
+      "unit": 5,
+      "lessonId": "BD-A2-AUDIO-D-U05-L01",
+      "titleDe": "Ein fehlender Artikel",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u05-l01-p02.mp3",
+      "durationSeconds": 49.898,
+      "sha256": "def66a0f550d21b3e0e2c1e84ade15b7a2d026eb0c58f64f544f56fe0531af41",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-5/listening/l01/#BD-A2-AUDIO-D-U05-L01-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U05-L01-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-077",
+        "BD-A2-A03-RUN-078",
+        "BD-A2-A03-RUN-079",
+        "BD-A2-A03-RUN-080",
+        "BD-A2-A03-RUN-081",
+        "BD-A2-A03-RUN-082",
+        "BD-A2-A03-RUN-083",
+        "BD-A2-A03-RUN-084",
+        "BD-A2-A03-RUN-085"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U05-L02-P01",
+      "unit": 5,
+      "lessonId": "BD-A2-AUDIO-D-U05-L02",
+      "titleDe": "Bestellung mit einer Änderung",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u05-l02-p01.mp3",
+      "durationSeconds": 41.924,
+      "sha256": "05490fb341c2f4736314ae3afced53da0bfb6a11873a23c2204379c4848de223",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-5/listening/l02/#BD-A2-AUDIO-D-U05-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U05-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-086",
+        "BD-A2-A03-RUN-087",
+        "BD-A2-A03-RUN-088",
+        "BD-A2-A03-RUN-089",
+        "BD-A2-A03-RUN-090",
+        "BD-A2-A03-RUN-091",
+        "BD-A2-A03-RUN-092",
+        "BD-A2-A03-RUN-093",
+        "BD-A2-A03-RUN-094",
+        "BD-A2-A03-RUN-095"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U06-L01-P01",
+      "unit": 6,
+      "lessonId": "BD-A2-AUDIO-D-U06-L01",
+      "titleDe": "Ein Termin, der nicht passt",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u06-l01-p01.mp3",
+      "durationSeconds": 45.3,
+      "sha256": "0045b40ad4a5c039452cb5187eb1fa2ea5397e3449ac399f7456e910a926a7a0",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-6/listening/l01/#BD-A2-AUDIO-D-U06-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U06-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-096",
+        "BD-A2-A03-RUN-097",
+        "BD-A2-A03-RUN-098",
+        "BD-A2-A03-RUN-099",
+        "BD-A2-A03-RUN-100",
+        "BD-A2-A03-RUN-101",
+        "BD-A2-A03-RUN-102",
+        "BD-A2-A03-RUN-103",
+        "BD-A2-A03-RUN-104"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U06-L01-P02",
+      "unit": 6,
+      "lessonId": "BD-A2-AUDIO-D-U06-L01",
+      "titleDe": "In der Apotheke",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u06-l01-p02.mp3",
+      "durationSeconds": 54.834,
+      "sha256": "05e4f045ab9ddc2d747692c8e2264719b200d52537e2b755686defb90bd32811",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-6/listening/l01/#BD-A2-AUDIO-D-U06-L01-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U06-L01-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-105",
+        "BD-A2-A03-RUN-106",
+        "BD-A2-A03-RUN-107",
+        "BD-A2-A03-RUN-108",
+        "BD-A2-A03-RUN-109",
+        "BD-A2-A03-RUN-110",
+        "BD-A2-A03-RUN-111",
+        "BD-A2-A03-RUN-112",
+        "BD-A2-A03-RUN-113",
+        "BD-A2-A03-RUN-114"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U06-L02-P01",
+      "unit": 6,
+      "lessonId": "BD-A2-AUDIO-D-U06-L02",
+      "titleDe": "Weniger Stress am Morgen",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u06-l02-p01.mp3",
+      "durationSeconds": 45.704,
+      "sha256": "78f90fffdbf6932e2be27eb0a1713085ebedee49ff81d8e4e8122d71beb5cec1",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-6/listening/l02/#BD-A2-AUDIO-D-U06-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U06-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-115",
+        "BD-A2-A03-RUN-116",
+        "BD-A2-A03-RUN-117",
+        "BD-A2-A03-RUN-118",
+        "BD-A2-A03-RUN-119",
+        "BD-A2-A03-RUN-120",
+        "BD-A2-A03-RUN-121",
+        "BD-A2-A03-RUN-122"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U07-L01-P01",
+      "unit": 7,
+      "lessonId": "BD-A2-AUDIO-D-U07-L01",
+      "titleDe": "Ansage am Bahnhof",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u07-l01-p01.mp3",
+      "durationSeconds": 41.006,
+      "sha256": "3f3ebfbee0aae7d4ca459cb851b5e3f3f6487463384d5042040469da797e4a6b",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-7/listening/l01/#BD-A2-AUDIO-D-U07-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U07-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-PILOT-01-REQ-01"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U07-L01-P02",
+      "unit": 7,
+      "lessonId": "BD-A2-AUDIO-D-U07-L01",
+      "titleDe": "Der Bus kommt nicht",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u07-l01-p02.mp3",
+      "durationSeconds": 41.756,
+      "sha256": "eecb25ee5f9eb257edb5ac0506c05ff3a019a60d6e908ba9f3af07806a8f5b1e",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-7/listening/l01/#BD-A2-AUDIO-D-U07-L01-P02",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U07-L01-P02",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-124",
+        "BD-A2-A03-RUN-125",
+        "BD-A2-A03-RUN-126",
+        "BD-A2-A03-RUN-127",
+        "BD-A2-A03-RUN-128",
+        "BD-A2-A03-RUN-129",
+        "BD-A2-A03-RUN-130",
+        "BD-A2-A03-RUN-131"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U07-L02-P01",
+      "unit": 7,
+      "lessonId": "BD-A2-AUDIO-D-U07-L02",
+      "titleDe": "Eine Buchung ändern",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u07-l02-p01.mp3",
+      "durationSeconds": 57.885,
+      "sha256": "3fe6288b0c1b0ba3e9479a065e131d2b80c5079412d5b5c3a5c4ea8fef1d0b6c",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-7/listening/l02/#BD-A2-AUDIO-D-U07-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U07-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-132",
+        "BD-A2-A03-RUN-133",
+        "BD-A2-A03-RUN-134",
+        "BD-A2-A03-RUN-135",
+        "BD-A2-A03-RUN-136",
+        "BD-A2-A03-RUN-137",
+        "BD-A2-A03-RUN-138",
+        "BD-A2-A03-RUN-139",
+        "BD-A2-A03-RUN-140"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U08-L01-P01",
+      "unit": 8,
+      "lessonId": "BD-A2-AUDIO-D-U08-L01",
+      "titleDe": "Ein Dokument fehlt",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u08-l01-p01.mp3",
+      "durationSeconds": 51.198,
+      "sha256": "09342e024af60b91243de6bf83f509e6670d5cc408687059ad1fd543a300b1b4",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-8/listening/l01/#BD-A2-AUDIO-D-U08-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U08-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-141",
+        "BD-A2-A03-RUN-142",
+        "BD-A2-A03-RUN-143",
+        "BD-A2-A03-RUN-144",
+        "BD-A2-A03-RUN-145",
+        "BD-A2-A03-RUN-146",
+        "BD-A2-A03-RUN-147",
+        "BD-A2-A03-RUN-148",
+        "BD-A2-A03-RUN-149"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U08-L02-P01",
+      "unit": 8,
+      "lessonId": "BD-A2-AUDIO-D-U08-L02",
+      "titleDe": "Das Paket für die falsche Straße",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u08-l02-p01.mp3",
+      "durationSeconds": 47.608,
+      "sha256": "75098b8760e02590a4cbd3c6376d00ac0873abec650371eb687c69c595a57f3c",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-8/listening/l02/#BD-A2-AUDIO-D-U08-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U08-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-150",
+        "BD-A2-A03-RUN-151",
+        "BD-A2-A03-RUN-152",
+        "BD-A2-A03-RUN-153",
+        "BD-A2-A03-RUN-154",
+        "BD-A2-A03-RUN-155",
+        "BD-A2-A03-RUN-156",
+        "BD-A2-A03-RUN-157"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U09-L01-P01",
+      "unit": 9,
+      "lessonId": "BD-A2-AUDIO-D-U09-L01",
+      "titleDe": "Welcher Film passt?",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u09-l01-p01.mp3",
+      "durationSeconds": 43.707,
+      "sha256": "b23b546d6c2bc692736b4ead1cdf87b63a8e2b5d035d8f3099d0beca565487b0",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-9/listening/l01/#BD-A2-AUDIO-D-U09-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U09-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-158",
+        "BD-A2-A03-RUN-159",
+        "BD-A2-A03-RUN-160",
+        "BD-A2-A03-RUN-161",
+        "BD-A2-A03-RUN-162",
+        "BD-A2-A03-RUN-163",
+        "BD-A2-A03-RUN-164",
+        "BD-A2-A03-RUN-165"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U09-L02-P01",
+      "unit": 9,
+      "lessonId": "BD-A2-AUDIO-D-U09-L02",
+      "titleDe": "Das Handy hat keinen Ton",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u09-l02-p01.mp3",
+      "durationSeconds": 47.668,
+      "sha256": "5b41249d85960be7f3b233e73de8fdd89928f07e1baa499772aae65ca32e217d",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-9/listening/l02/#BD-A2-AUDIO-D-U09-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U09-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-166",
+        "BD-A2-A03-RUN-167",
+        "BD-A2-A03-RUN-168",
+        "BD-A2-A03-RUN-169",
+        "BD-A2-A03-RUN-170",
+        "BD-A2-A03-RUN-171",
+        "BD-A2-A03-RUN-172",
+        "BD-A2-A03-RUN-173",
+        "BD-A2-A03-RUN-174"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U10-L01-P01",
+      "unit": 10,
+      "lessonId": "BD-A2-AUDIO-D-U10-L01",
+      "titleDe": "Das Nachbarschaftsfest",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u10-l01-p01.mp3",
+      "durationSeconds": 58.21,
+      "sha256": "529211768e707dfcc2b179f284affbc278856f1693985984aea37049a58d8796",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-10/listening/l01/#BD-A2-AUDIO-D-U10-L01-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U10-L01-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-175",
+        "BD-A2-A03-RUN-176",
+        "BD-A2-A03-RUN-177",
+        "BD-A2-A03-RUN-178",
+        "BD-A2-A03-RUN-179",
+        "BD-A2-A03-RUN-180",
+        "BD-A2-A03-RUN-181",
+        "BD-A2-A03-RUN-182",
+        "BD-A2-A03-RUN-183"
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-U10-L02-P01",
+      "unit": 10,
+      "lessonId": "BD-A2-AUDIO-D-U10-L02",
+      "titleDe": "Drei Änderungen vor dem Ausflug",
+      "url": "/a2-expanded-audio/listening/bd-a2-audio-d-u10-l02-p01.mp3",
+      "durationSeconds": 52.988,
+      "sha256": "9aeb5dc3dc78224af3857df014506055966f0d4147e86184ae08a79921afb925",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "route": "/a2/unit-10/listening/l02/#BD-A2-AUDIO-D-U10-L02-P01",
+      "transcriptReference": "BD-A2-QA-01/listening/corrected_listening_passages.json#BD-A2-AUDIO-D-U10-L02-P01",
+      "sourceRequestIds": [
+        "BD-A2-A03-RUN-184"
+      ]
+    }
+  ],
+  "podcasts": [
+    {
+      "contentId": "BD-A2-AUDIO-D-P02",
+      "unit": 2,
+      "titleDe": "Eine Einladung mit Änderungen",
+      "route": "/a2/unit-2/podcast/a2-p02/",
+      "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/episode.mp3",
+      "durationSeconds": 491.843,
+      "sha256": "94d3922c58588c4621b08da28a473c2a2aea3e4ba7f0eb40441409c328570201",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "runtimeExceptionAccepted": true,
+      "chapters": [
+        {
+          "chapterId": "C01",
+          "titleDe": "Die erste Idee",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c01.mp3",
+          "durationSeconds": 88.746,
+          "sha256": "91b14706e78d1268e8a8f18d742adf7d83c5cf010a571443b7e3b9f9e38c48af",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-185",
+            "BD-A2-A03-RUN-186",
+            "BD-A2-A03-RUN-187",
+            "BD-A2-A03-RUN-188",
+            "BD-A2-A03-RUN-189"
+          ]
+        },
+        {
+          "chapterId": "C02",
+          "titleDe": "Ein größerer Raum",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c02.mp3",
+          "durationSeconds": 78.715,
+          "sha256": "7f6f51ffd1aabad779c4d6b55c544a8ee654fe2db17dccfd149b04e206476482",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-190",
+            "BD-A2-A03-RUN-191",
+            "BD-A2-A03-RUN-192",
+            "BD-A2-A03-RUN-193",
+            "BD-A2-A03-RUN-194"
+          ]
+        },
+        {
+          "chapterId": "C03",
+          "titleDe": "Die Uhrzeit passt nicht mehr",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c03.mp3",
+          "durationSeconds": 71.563,
+          "sha256": "6a0e41cc738376d9e62578c067cc3b8cbc8feb71164e724d80c94916b2da7c42",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-195",
+            "BD-A2-A03-RUN-196",
+            "BD-A2-A03-RUN-197",
+            "BD-A2-A03-RUN-198",
+            "BD-A2-A03-RUN-199"
+          ]
+        },
+        {
+          "chapterId": "C04",
+          "titleDe": "Das Essen organisieren",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c04.mp3",
+          "durationSeconds": 77.972,
+          "sha256": "82a87c7badf551f385777933cc76c628b19a4f1072190c6dbd9158ce0c732a16",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-200",
+            "BD-A2-A03-RUN-201",
+            "BD-A2-A03-RUN-202",
+            "BD-A2-A03-RUN-203",
+            "BD-A2-A03-RUN-204",
+            "BD-A2-A03-RUN-205"
+          ]
+        },
+        {
+          "chapterId": "C05",
+          "titleDe": "Die Überraschung beginnt",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c05.mp3",
+          "durationSeconds": 77.865,
+          "sha256": "dc31e62fd1772405438855effec0e94e5c8c1ab18decb9a5996482c1a913a302",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-209-LEONIE",
+            "BD-A2-A03-RUN-206",
+            "BD-A2-A03-RUN-207",
+            "BD-A2-A03-RUN-208",
+            "BD-A2-A03-RUN-209-CHRISTIAN",
+            "BD-A2-A03-RUN-209-BEN",
+            "BD-A2-A03-RUN-209-CARLA",
+            "BD-A2-A03-RUN-210",
+            "BD-A2-A03-RUN-211"
+          ]
+        },
+        {
+          "chapterId": "C06",
+          "titleDe": "Was hat gut funktioniert?",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p02/c06.mp3",
+          "durationSeconds": 86.981,
+          "sha256": "d31768df8689b80c8fd724e385b734334a4c4221bdb426234dcd76d87a89d0f0",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-212",
+            "BD-A2-A03-RUN-213",
+            "BD-A2-A03-RUN-214",
+            "BD-A2-A03-RUN-215",
+            "BD-A2-A03-RUN-216"
+          ]
+        }
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-P04",
+      "unit": 3,
+      "titleDe": "Der Umzugstag",
+      "route": "/a2/unit-3/podcast/a2-p04/",
+      "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/episode.mp3",
+      "durationSeconds": 507.146,
+      "sha256": "d1b8c50c8cc93eedc36d711c1980c6366a4694d3a1c834f9553f283242a3b074",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "runtimeExceptionAccepted": true,
+      "chapters": [
+        {
+          "chapterId": "C01",
+          "titleDe": "Vor dem ersten Karton",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c01.mp3",
+          "durationSeconds": 87.503,
+          "sha256": "76a51cd35e9974bf9803150f331d2bc1fbf26f01931544a873af5af67495c170",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-217",
+            "BD-A2-A03-RUN-218",
+            "BD-A2-A03-RUN-219",
+            "BD-A2-A03-RUN-220",
+            "BD-A2-A03-RUN-221"
+          ]
+        },
+        {
+          "chapterId": "C02",
+          "titleDe": "Der Wagen und die Helfer",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c02.mp3",
+          "durationSeconds": 76.346,
+          "sha256": "e648e535b852906ca977a1c80e7b1c639babeeb0aa78a8fe9b246ed7445fcfe6",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-222",
+            "BD-A2-A03-RUN-223",
+            "BD-A2-A03-RUN-224",
+            "BD-A2-A03-RUN-225",
+            "BD-A2-A03-RUN-226",
+            "BD-A2-A03-RUN-227",
+            "BD-A2-A03-RUN-228"
+          ]
+        },
+        {
+          "chapterId": "C03",
+          "titleDe": "Eine enge Treppe",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c03.mp3",
+          "durationSeconds": 84.056,
+          "sha256": "555f2baf1713d8080470f68e173cc6b394f1808b50ca135b8ce6d3a474336377",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-229",
+            "BD-A2-A03-RUN-230",
+            "BD-A2-A03-RUN-231",
+            "BD-A2-A03-RUN-232",
+            "BD-A2-A03-RUN-233"
+          ]
+        },
+        {
+          "chapterId": "C04",
+          "titleDe": "Wo gehört alles hin?",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c04.mp3",
+          "durationSeconds": 86.47,
+          "sha256": "684bae668196e4996a5970de49824a0c87e283e763688a6916fc310c2bed25b8",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-234",
+            "BD-A2-A03-RUN-235",
+            "BD-A2-A03-RUN-236",
+            "BD-A2-A03-RUN-237",
+            "BD-A2-A03-RUN-238"
+          ]
+        },
+        {
+          "chapterId": "C05",
+          "titleDe": "Wasser in der Küche",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c05.mp3",
+          "durationSeconds": 72.306,
+          "sha256": "06fc6acb701cbfc520b3921e8c8682c6aba0cfa5d6818659bd99c36e96dd69be",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-239",
+            "BD-A2-A03-RUN-240",
+            "BD-A2-A03-RUN-241",
+            "BD-A2-A03-RUN-242",
+            "BD-A2-A03-RUN-243",
+            "BD-A2-A03-RUN-244"
+          ]
+        },
+        {
+          "chapterId": "C06",
+          "titleDe": "Die erste ruhige Stunde",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p04/c06.mp3",
+          "durationSeconds": 90.464,
+          "sha256": "46bd38970f69ef7024e44751a16d2f61de8147a25b5adb7aac491cf107b463f4",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-245",
+            "BD-A2-A03-RUN-246",
+            "BD-A2-A03-RUN-247",
+            "BD-A2-A03-RUN-248",
+            "BD-A2-A03-RUN-249"
+          ]
+        }
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-P08",
+      "unit": 6,
+      "titleDe": "Ein Termin, der nicht passt",
+      "route": "/a2/unit-6/podcast/a2-p08/",
+      "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/episode.mp3",
+      "durationSeconds": 543.729,
+      "sha256": "411f540356950e20ace73b974fbcc50a9403ac5f623c42337c4cdbb1fd583233",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "runtimeExceptionAccepted": true,
+      "chapters": [
+        {
+          "chapterId": "C01",
+          "titleDe": "Seit drei Tagen",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c01.mp3",
+          "durationSeconds": 85.17,
+          "sha256": "7c16326b0b5d93f6554294ead8d52d6f0a560796b2b2bd65d5cb16b366a061e2",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-250",
+            "BD-A2-A03-RUN-251",
+            "BD-A2-A03-RUN-252",
+            "BD-A2-A03-RUN-253"
+          ]
+        },
+        {
+          "chapterId": "C02",
+          "titleDe": "Zwei Terminvorschläge",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c02.mp3",
+          "durationSeconds": 92.321,
+          "sha256": "159404f878a0a372757a8fba1d34f942de771094295c9b9fe8d4c9f293496990",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-254",
+            "BD-A2-A03-RUN-255",
+            "BD-A2-A03-RUN-256",
+            "BD-A2-A03-RUN-257",
+            "BD-A2-A03-RUN-258",
+            "BD-A2-A03-RUN-259",
+            "BD-A2-A03-RUN-260",
+            "BD-A2-A03-RUN-261",
+            "BD-A2-A03-RUN-262"
+          ]
+        },
+        {
+          "chapterId": "C03",
+          "titleDe": "In der Praxis",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c03.mp3",
+          "durationSeconds": 85.263,
+          "sha256": "85f54e63475b699e55a26efd814d4ed6f2b3a336a67e8646e1fb90a7312ebbf3",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-263",
+            "BD-A2-A03-RUN-264",
+            "BD-A2-A03-RUN-265",
+            "BD-A2-A03-RUN-266",
+            "BD-A2-A03-RUN-267",
+            "BD-A2-A03-RUN-268"
+          ]
+        },
+        {
+          "chapterId": "C04",
+          "titleDe": "Der Plan für die nächsten Tage",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c04.mp3",
+          "durationSeconds": 91.486,
+          "sha256": "8bae0531381e094c66462b78787f20f273af825843359434ef8c6953409facec",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-269",
+            "BD-A2-A03-RUN-270",
+            "BD-A2-A03-RUN-271",
+            "BD-A2-A03-RUN-272",
+            "BD-A2-A03-RUN-273",
+            "BD-A2-A03-RUN-274",
+            "BD-A2-A03-RUN-275"
+          ]
+        },
+        {
+          "chapterId": "C05",
+          "titleDe": "Eine Frage in der Apotheke",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c05.mp3",
+          "durationSeconds": 74.582,
+          "sha256": "f4683a94dc7c95942fdff26bcd9ee39a23bd9e2957274435f6530872e2f12502",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-276",
+            "BD-A2-A03-RUN-277",
+            "BD-A2-A03-RUN-278",
+            "BD-A2-A03-RUN-279",
+            "BD-A2-A03-RUN-280",
+            "BD-A2-A03-RUN-281"
+          ]
+        },
+        {
+          "chapterId": "C06",
+          "titleDe": "Der verschobene Arbeitstag",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p08/c06.mp3",
+          "durationSeconds": 104.907,
+          "sha256": "f274526912fff128ea539548657e21f0a6ad442e7f1e68d7959823c857d42748",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-282",
+            "BD-A2-A03-RUN-283",
+            "BD-A2-A03-RUN-284",
+            "BD-A2-A03-RUN-285"
+          ]
+        }
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-P10",
+      "unit": 7,
+      "titleDe": "Der Zug fährt heute anders",
+      "route": "/a2/unit-7/podcast/a2-p10/",
+      "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/episode.mp3",
+      "durationSeconds": 505.556,
+      "sha256": "7bc534d147428c3693e92f6bc104870da84707684a2544bee200a6aa51fd5144",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "runtimeExceptionAccepted": true,
+      "chapters": [
+        {
+          "chapterId": "C01",
+          "titleDe": "Ein klarer Reiseplan",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c01.mp3",
+          "durationSeconds": 74.396,
+          "sha256": "317ba4ac4818fa2f0ca1486a46b5281aafa21a674a5223483af3407747969ea4",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-286",
+            "BD-A2-A03-RUN-287",
+            "BD-A2-A03-RUN-288",
+            "BD-A2-A03-RUN-289",
+            "BD-A2-A03-RUN-290"
+          ]
+        },
+        {
+          "chapterId": "C02",
+          "titleDe": "Nicht Gleis 3, sondern Gleis 7",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c02.mp3",
+          "durationSeconds": 80.48,
+          "sha256": "77be4b3818639d5652b565b218a420a80c149dfb74ec542b50c91329f2e635e1",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-291",
+            "BD-A2-A03-RUN-292",
+            "BD-A2-A03-RUN-293",
+            "BD-A2-A03-RUN-294",
+            "BD-A2-A03-RUN-295"
+          ]
+        },
+        {
+          "chapterId": "C03",
+          "titleDe": "Die Verspätung wächst",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c03.mp3",
+          "durationSeconds": 82.012,
+          "sha256": "c11b317a99c3251003ae1e5cb7a5844218ea5699995219981196ae6bc92da7ee",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-296",
+            "BD-A2-A03-RUN-297",
+            "BD-A2-A03-RUN-298",
+            "BD-A2-A03-RUN-299",
+            "BD-A2-A03-RUN-300"
+          ]
+        },
+        {
+          "chapterId": "C04",
+          "titleDe": "Umsteigen mit Plan",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c04.mp3",
+          "durationSeconds": 71.981,
+          "sha256": "5617afe8e7cd31a90943f043b5b82a4d0958080d6680ccb52c378f22183f6baa",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-301",
+            "BD-A2-A03-RUN-302",
+            "BD-A2-A03-RUN-303",
+            "BD-A2-A03-RUN-304",
+            "BD-A2-A03-RUN-305",
+            "BD-A2-A03-RUN-306"
+          ]
+        },
+        {
+          "chapterId": "C05",
+          "titleDe": "Eine weitere Änderung im Zug",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c05.mp3",
+          "durationSeconds": 89.164,
+          "sha256": "0a51b6da42ed5806fadc9675f927210bf8edc2f39d86089df2f3d53f54ddc8b3",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-307",
+            "BD-A2-A03-RUN-308",
+            "BD-A2-A03-RUN-309",
+            "BD-A2-A03-RUN-310",
+            "BD-A2-A03-RUN-311",
+            "BD-A2-A03-RUN-312"
+          ]
+        },
+        {
+          "chapterId": "C06",
+          "titleDe": "Vier Informationen zuerst",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p10/c06.mp3",
+          "durationSeconds": 97.523,
+          "sha256": "aed8539a8e8c029625b1156a09fdcc4214cf723b243a73eabde3c52ba55565cb",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-313",
+            "BD-A2-A03-RUN-314",
+            "BD-A2-A03-RUN-315",
+            "BD-A2-A03-RUN-316"
+          ]
+        }
+      ]
+    },
+    {
+      "contentId": "BD-A2-AUDIO-D-P14",
+      "unit": 10,
+      "titleDe": "Das Nachbarschaftsfest",
+      "route": "/a2/unit-10/podcast/a2-p14/",
+      "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/episode.mp3",
+      "durationSeconds": 524.781,
+      "sha256": "6d9002e8ae19122b0c3745cb0c440fc2812a5bc153430b433379cfd17bb5fc4d",
+      "ownerAcceptance": "accepted_by_explicit_stage2_owner_authorization",
+      "runtimeExceptionAccepted": true,
+      "chapters": [
+        {
+          "chapterId": "C01",
+          "titleDe": "Warum ein Fest?",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c01.mp3",
+          "durationSeconds": 81.037,
+          "sha256": "f2b6d86bf1afd752e8be40729c34a022b91fb302cdcc45aa468edf9233c13a18",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-317",
+            "BD-A2-A03-RUN-318",
+            "BD-A2-A03-RUN-319",
+            "BD-A2-A03-RUN-320",
+            "BD-A2-A03-RUN-321",
+            "BD-A2-A03-RUN-322"
+          ]
+        },
+        {
+          "chapterId": "C02",
+          "titleDe": "Termin, Ort und Regeln",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c02.mp3",
+          "durationSeconds": 82.755,
+          "sha256": "d5528c51a0d0199050369b17222da0a419d6f5f8940d4e66cee472a24e7566d7",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-323",
+            "BD-A2-A03-RUN-324",
+            "BD-A2-A03-RUN-325",
+            "BD-A2-A03-RUN-326",
+            "BD-A2-A03-RUN-327",
+            "BD-A2-A03-RUN-328"
+          ]
+        },
+        {
+          "chapterId": "C03",
+          "titleDe": "Aufgaben, die wirklich passen",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c03.mp3",
+          "durationSeconds": 72.585,
+          "sha256": "a1937a8533ceb615661433baa94049fb940c9eee3249679bebab2c695c350aad",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-329",
+            "BD-A2-A03-RUN-330",
+            "BD-A2-A03-RUN-331",
+            "BD-A2-A03-RUN-332",
+            "BD-A2-A03-RUN-333",
+            "BD-A2-A03-RUN-334"
+          ]
+        },
+        {
+          "chapterId": "C04",
+          "titleDe": "Eine Änderung am Freitag",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c04.mp3",
+          "durationSeconds": 84.241,
+          "sha256": "7f489e7843ee04db384f9d79aff0b5b09e2bd3f5462ba3ab73b683899c88d548",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-335",
+            "BD-A2-A03-RUN-336",
+            "BD-A2-A03-RUN-337",
+            "BD-A2-A03-RUN-338",
+            "BD-A2-A03-RUN-339",
+            "BD-A2-A03-RUN-340",
+            "BD-A2-A03-RUN-341"
+          ]
+        },
+        {
+          "chapterId": "C05",
+          "titleDe": "Das Fest läuft",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c05.mp3",
+          "durationSeconds": 88.374,
+          "sha256": "059aede0d2fe9a310872c8753c0709c78c307c967834f41b734ef0eb65294600",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-342",
+            "BD-A2-A03-RUN-343",
+            "BD-A2-A03-RUN-344",
+            "BD-A2-A03-RUN-345",
+            "BD-A2-A03-RUN-346",
+            "BD-A2-A03-RUN-347"
+          ]
+        },
+        {
+          "chapterId": "C06",
+          "titleDe": "Nach dem letzten Gast",
+          "url": "/a2-expanded-audio/podcasts/bd-a2-audio-d-p14/c06.mp3",
+          "durationSeconds": 105.789,
+          "sha256": "573697ac555acdaf0f224dd664ad2fbd94a551ce5d53f73f0e64f5ac180a5677",
+          "ownerAcceptance": "accepted_as_part_of_complete_episode",
+          "sourceRequestIds": [
+            "BD-A2-A03-RUN-348",
+            "BD-A2-A03-RUN-349",
+            "BD-A2-A03-RUN-350",
+            "BD-A2-A03-RUN-351",
+            "BD-A2-A03-RUN-352",
+            "BD-A2-A03-RUN-353"
+          ]
+        }
+      ]
+    }
+  ]
+}

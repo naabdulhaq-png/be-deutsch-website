@@ -10,7 +10,12 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const path = new URL(page).pathname;
-        return !path.startsWith('/404') && !path.startsWith('/fa/') && !path.startsWith('/preview-') && path !== '/grammar/a1/';
+        return !path.startsWith('/404')
+          && !path.startsWith('/fa/')
+          && !path.startsWith('/preview-')
+          && path !== '/grammar/a1/'
+          && path !== '/a2/audio-review/'
+          && path !== '/a2/review-index/';
       },
     }),
   ],

@@ -2,12 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import LearningChrome from '../../components/redesign/LearningChrome.astro';
 import course from '../../data/vocabulary-course.json';
 import '../../styles/vocabulary.css';
 
 ---
 <BaseLayout title="A1 Vocabulary — 40 everyday German lessons — Be Deutsch" description="Build your everyday German with 400 illustrated words, natural pronunciation, short readings and 40 friendly vocabulary quizzes.">
- <div id="top" aria-hidden="true"></div><SiteHeader/>
+ <div id="top" aria-hidden="true"></div><SiteHeader/><LearningChrome area="vocabulary" level="A1" title="A1 Vocabulary" />
  <main id="main-content" class="vocab-page course-page"><div class="container">
   <div class="vocab-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>A1 Vocabulary</span></div>
   <div class="course-hero"><div><p class="vocab-eyebrow">400 WORDS. A WORLD OF POSSIBILITIES.</p><h1>A little German.<br/><span>Every day.</span></h1><p>See it. Hear it. Make it yours. Forty small lessons for everyday life.</p><a id="continue-learning" class="vocab-button primary" href="/vocabulary/lesson-01/">Start learning →</a></div><div class="course-summary"><span class="course-level">A1</span><h2>Your next small step</h2><p>Ten useful words. Real German voices. A little reading. Then a friendly quiz.</p><span id="course-progress-label">0 of 400 words studied</span><progress id="course-progress" max="400" value="0" aria-labelledby="course-progress-label"></progress><small id="course-completed">0 of 40 lessons completed</small></div></div>

@@ -1,0 +1,34 @@
+---
+import DraftExercise from '../DraftExercise.astro';
+interface Props { records: any[]; exercises: any[] }
+const { records, exercises } = Astro.props;
+const topic = records[0]?.topic ?? 'Vocabulary';
+const parts = [...new Set(records.map(item => item.german.part_of_speech))].sort();
+const recordExercise = (id: string) => exercises.find(item => item.parent_lexical_id === id);
+---
+<section class="bd08-section-heading"><div><p class="section-kicker">Vocabulary · multilingual tabs</p><h2>{topic}</h2><p>{records.length} source records. German stays primary; meanings and example translations follow the selected support language.</p></div><span class="bd08-draft-chip">Draft · review required</span></section>
+<section class="bd08-vocab-browser" data-vocabulary-browser>
+  <div class="bd08-browser-tools">
+    <label><span>Search this lesson</span><input type="search" data-vocab-search placeholder="German word or meaning"/></label>
+    <label><span>Part of speech</span><select data-vocab-filter><option value="all">All</option>{parts.map(part => <option value={part}>{part}</option>)}</select></label>
+    <p data-vocab-status role="status"></p>
+  </div>
+  <div class="bd08-vocab-grid">
+    {records.map(record => <article class="bd08-vocab-card" id={record.id} data-vocab-card data-part={record.german.part_of_speech} data-search={`${record.german.display} ${Object.values(record.meaning).join(' ')}`.toLocaleLowerCase('de')}>
+      <header><div><span class="bd08-id">{record.id}</span><h3 lang="de">{record.german.display}</h3><p>{record.german.part_of_speech} · {record.learning_classification}</p></div><span class="bd08-audio-pending" title="No recording exists for this draft record">Audio pending</span></header>
+      <div class="bd08-word-meta">
+        {record.german.article && <span>Article <b lang="de">{record.german.article}</b></span>}
+        {record.german.gender && <span>Gender <b>{record.german.gender}</b></span>}
+        {record.german.plural && <span>Plural <b lang="de">{record.german.plural}</b></span>}
+        {record.german.principal_forms && <span>Forms <b lang="de">{record.german.principal_forms}</b></span>}
+        {record.german.perfect_auxiliary && <span>Perfect <b lang="de">{record.german.perfect_auxiliary}</b></span>}
+      </div>
+      <div class="bd08-localized-block"><small>Meaning</small><p data-support-values={JSON.stringify(record.meaning)}>{record.meaning.en}</p></div>
+      <div class="bd08-example"><small>German example</small><p lang="de">{record.usage.example.de}</p><p data-support-values={JSON.stringify({ en: record.usage.example.en, ps: record.usage.example.ps, fa: record.usage.example.fa, ar: record.usage.example.ar, uk: record.usage.example.uk })}>{record.usage.example.en}</p></div>
+      {record.usage.typical_collocation_de && <p><strong>Useful chunk:</strong> <span lang="de">{record.usage.typical_collocation_de}</span></p>}
+      {record.usage.note_en && <p class="bd08-note"><strong>Context:</strong> {record.usage.note_en}</p>}
+      {recordExercise(record.id) && <details class="bd08-practice-fold"><summary>Practice this record</summary><DraftExercise exercise={recordExercise(record.id)} compact/></details>}
+    </article>)}
+  </div>
+  <nav class="bd08-pagination" aria-label="Vocabulary pages"><button type="button" data-vocab-prev>← Previous records</button><button type="button" data-vocab-next>Next records →</button></nav>
+</section>

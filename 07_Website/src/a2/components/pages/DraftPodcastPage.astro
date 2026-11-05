@@ -1,0 +1,47 @@
+---
+import DraftExercise from '../DraftExercise.astro';
+import audioLibrary from '../../data/audio-library.generated.json';
+interface Props { episode: any; episodes: any[]; localization: any[] }
+const { episode, episodes, localization } = Astro.props;
+const support = localization.find(item => item.content_id === episode.id);
+const episodeAudio = audioLibrary.podcasts.find(item => item.contentId === episode.id);
+const audioForEpisode = (id: string) => audioLibrary.podcasts.find(item => item.contentId === id);
+const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
+const asExercise = (question: any, localized: any) => ({
+  id: question.question_id,
+  type: question.type === 'mcq' ? 'podcast_choice' : 'podcast_response',
+  prompt_de: question.prompt_de,
+  prompt_en: localized?.prompt?.en ?? 'Answer from the German episode.',
+  options: question.options_de,
+  correct_answer: question.type === 'mcq' ? question.options_de[question.correct_option_index] : question.answer_de,
+  accepted_variants: [question.answer_de],
+  hint: question.hint1_de,
+  hint2: question.hint2_de,
+  feedback_correct: localized?.answer_feedback?.correct ?? { en: question.explanation_de },
+  feedback_incorrect: localized?.answer_feedback?.incorrect ?? { en: question.explanation_de }
+});
+const routeFor = (item: any) => `/a2/unit-${item.unit_placement[0]}/podcast/${item.blueprint_ref.toLowerCase()}/`;
+---
+<section class="bd08-section-heading"><div><p class="section-kicker">Podcast · featured + list</p><h2>{episode.title_de}</h2><p lang="de">{episode.objective_de}</p><p data-support-values={JSON.stringify(support?.short_introduction ?? {})}>{support?.short_introduction?.en}</p></div><span class="bd08-audio-ready">Accepted audio available</span></section>
+<section class="bd08-podcast" data-podcast-review>
+  <div class="bd08-featured-podcast">
+    <div class="bd08-podcast-cover"><span aria-hidden="true">◍</span><div><small>Featured complete episode</small><h3>{episode.title_de}</h3><p>{episode.chapters.length} chapters{episodeAudio ? ` · ${formatDuration(episodeAudio.durationSeconds)} measured` : ''}</p></div></div>
+    {episodeAudio ? <div class="bd08-integrated-player large" data-audio-content-id={episode.id}><strong>Complete German episode</strong><audio controls preload="metadata" aria-label={`Play complete podcast ${episode.title_de}`}><source src={episodeAudio.url} type="audio/mpeg"/>Your browser does not support HTML audio. Use the chapter transcripts below.</audio><small>Measured duration {formatDuration(episodeAudio.durationSeconds)} · owner-accepted natural runtime</small></div> : <div class="bd08-pending-player large"><strong>Audio unavailable</strong><p>Use the chapter transcripts below.</p></div>}
+    <nav class="bd08-chapter-nav" aria-label="Podcast chapters">{episode.chapters.map((chapter: any, index: number) => <button type="button" data-chapter-select={chapter.id} aria-pressed={index === 0 ? 'true' : 'false'}><span>{chapter.chapter_number}</span>{chapter.title_de}</button>)}</nav>
+  </div>
+  <aside class="bd08-episode-list"><h3>Complete A2 episodes</h3>{episodes.map((item: any) => { const listedAudio = audioForEpisode(item.id); return <a href={routeFor(item)} aria-current={item.id === episode.id ? 'page' : undefined}><span>Unit {item.unit_placement[0]}</span><b>{item.title_de}</b><small>{item.chapters.length} chapters{listedAudio ? ` · ${formatDuration(listedAudio.durationSeconds)}` : ''}</small></a>; })}</aside>
+</section>
+<section class="bd08-chapters">
+  {episode.chapters.map((chapter: any, index: number) => {
+    const chapterSupport = support?.chapters.find((x: any) => x.chapter_id === chapter.id);
+    const chapterAudio = episodeAudio?.chapters.find((x: any) => x.chapterId === chapter.id);
+    return <article data-chapter-panel={chapter.id} hidden={index !== 0}>
+      <header><span class="bd08-id">{episode.id} · {chapter.id}</span><h3>{chapter.chapter_number}. {chapter.title_de}</h3><p lang="de">{chapter.summary_de}</p><p data-support-values={JSON.stringify(chapterSupport?.summary ?? {})}>{chapterSupport?.summary?.en}</p></header>
+      {chapterAudio && <div class="bd08-integrated-player chapter" data-audio-content-id={`${episode.id}::${chapter.id}`}><strong>Chapter {chapter.chapter_number} audio</strong><audio controls preload="metadata" aria-label={`Play ${episode.title_de}, chapter ${chapter.chapter_number}: ${chapter.title_de}`}><source src={chapterAudio.url} type="audio/mpeg"/>Your browser does not support HTML audio. Use the transcript below.</audio><small>Measured duration {formatDuration(chapterAudio.durationSeconds)} · owner accepted</small></div>}
+      <div class="bd08-chapter-transcript">{chapter.turns.map((turn: any) => <p lang="de"><strong>{turn.speaker}: </strong>{turn.text_de}</p>)}</div>
+      {support && <details class="bd08-transcript"><summary>Translated chapter transcript</summary>{Object.entries(support.transcript_translation).map(([language, translation]: [string, any]) => <div data-language-panel={language} lang={language} dir={translation.dir} hidden={language !== 'en'}>{chapter.turns.map((turn: any) => { const translated = translation.turns.find((x: any) => x.turn_id === turn.turn_id); return <p><bdi><strong>{turn.speaker}: </strong></bdi>{translated?.text}</p>; })}</div>)}</details>}
+    </article>;
+  })}
+</section>
+<section class="bd08-question-list"><h3>Episode comprehension</h3>{episode.questions.map((question: any) => <DraftExercise exercise={asExercise(question, support?.questions.find((x: any) => x.id === question.id))}/>)}</section>
+<section class="bd08-reflection"><h3>Speaking reflection</h3><p data-support-values={JSON.stringify(support?.reflection_activity ?? {})}>{support?.reflection_activity?.en ?? episode.suggested_reflection_or_speaking_activity}</p></section>

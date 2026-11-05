@@ -1,0 +1,100 @@
+---
+import { site } from '../../../config/site';
+import course from '../../../a2/data/integrated-course.json';
+import IntegratedChrome from '../../../a2/components/IntegratedChrome.astro';
+import SupportLanguageSelector from '../../../a2/components/SupportLanguageSelector.astro';
+import DraftVocabularyPage from '../../../a2/components/pages/DraftVocabularyPage.astro';
+import DraftGrammarPage from '../../../a2/components/pages/DraftGrammarPage.astro';
+import DraftListeningPage from '../../../a2/components/pages/DraftListeningPage.astro';
+import DraftPodcastPage from '../../../a2/components/pages/DraftPodcastPage.astro';
+import DraftExercise from '../../../a2/components/DraftExercise.astro';
+import audioLibrary from '../../../a2/data/audio-library.generated.json';
+import '../../../a2/styles/a2.css';
+import '../../../styles/bd-ui-07.css';
+import '../../../a2/styles/bd-ui-08.css';
+
+export function getStaticPaths() {
+  return course.units.filter(unit => unit.unit > 1).flatMap(unit => {
+    const unitSlug = `unit-${unit.unit}`;
+    return [
+      { params: { unit: unitSlug, path: undefined }, props: { unitNumber: unit.unit, kind: 'home', id: unit.id } },
+      ...unit.vocabulary_lessons.map(lesson => ({ params: { unit: unitSlug, path: `vocabulary/${lesson.id.slice(-3).toLowerCase()}` }, props: { unitNumber: unit.unit, kind: 'vocabulary', id: lesson.id } })),
+      ...unit.grammar_lessons.map(lesson => ({ params: { unit: unitSlug, path: `grammar/${lesson.id.slice(-3).toLowerCase()}` }, props: { unitNumber: unit.unit, kind: 'grammar', id: lesson.id } })),
+      ...unit.listening_lessons.map(lesson => ({ params: { unit: unitSlug, path: `listening/${lesson.id.slice(-3).toLowerCase()}` }, props: { unitNumber: unit.unit, kind: 'listening', id: lesson.id } })),
+      ...unit.podcast_episodes.map(episode => ({ params: { unit: unitSlug, path: `podcast/${episode.blueprint_ref.toLowerCase()}` }, props: { unitNumber: unit.unit, kind: 'podcast', id: episode.id } })),
+      { params: { unit: unitSlug, path: 'revision' }, props: { unitNumber: unit.unit, kind: 'revision', id: `${unit.id}-REVISION` } }
+    ];
+  });
+}
+
+const { unitNumber, kind, id } = Astro.props;
+const unit = course.units.find(item => item.unit === unitNumber)!;
+const records = course.vocabulary.filter(item => item.unit === unitNumber && (kind !== 'vocabulary' || item.lesson_id === id));
+const grammar = course.grammar.find(item => item.id === id);
+const grammarExercises = course.exercises.filter(item => item.parent_lesson_id === id);
+const vocabExercises = course.exercises.filter(item => records.some(record => record.id === item.parent_lexical_id));
+const listeningRecords = course.listening.filter(item => item.unit === unitNumber && (kind !== 'listening' || item.lesson_id === id));
+const listeningLesson = kind === 'listening' ? { id, title_de: listeningRecords[0]?.lesson_title_de, passages: listeningRecords } : null;
+const podcast = course.podcasts.find(item => item.id === id);
+const podcastAudio = podcast ? audioLibrary.podcasts.find(item => item.contentId === podcast.id) : undefined;
+const localization = course.localization;
+const area = (['vocabulary', 'grammar', 'listening', 'podcast'].includes(kind) ? kind : 'overview') as 'vocabulary' | 'grammar' | 'listening' | 'podcast' | 'overview';
+const title = kind === 'home' ? unit.title : kind === 'vocabulary' ? records[0]?.topic : grammar?.title ?? listeningLesson?.title_de ?? podcast?.title_de ?? 'Revision and practice';
+const objective = kind === 'home' ? unit.purpose : kind === 'vocabulary' ? `Build useful language for ${records[0]?.topic}.` : grammar?.learning_objective ?? listeningRecords[0]?.objective_de ?? podcast?.objective_de ?? 'Retrieve vocabulary and grammar from this unit through the real source activities.';
+const areaLabel: Record<string, string> = { home: 'Course overview', vocabulary: 'Vocabulary', grammar: 'Grammar', listening: 'Listening', podcast: 'Podcast', revision: 'Revision' };
+const sequence = [
+  ...unit.vocabulary_lessons.map(item => ({ id: item.id, label: item.topic, href: `/a2/unit-${unitNumber}/vocabulary/${item.id.slice(-3).toLowerCase()}/` })),
+  ...unit.grammar_lessons.map(item => ({ id: item.id, label: item.title, href: `/a2/unit-${unitNumber}/grammar/${item.id.slice(-3).toLowerCase()}/` })),
+  ...unit.listening_lessons.map(item => ({ id: item.id, label: item.title_de, href: `/a2/unit-${unitNumber}/listening/${item.id.slice(-3).toLowerCase()}/` })),
+  ...unit.podcast_episodes.map(item => ({ id: item.id, label: item.title_de, href: `/a2/unit-${unitNumber}/podcast/${item.blueprint_ref.toLowerCase()}/` })),
+];
+const index = sequence.findIndex(item => item.id === id);
+const previous = index > 0 ? sequence[index - 1] : undefined;
+const next = index >= 0 && index < sequence.length - 1 ? sequence[index + 1] : undefined;
+const revisionExercises = course.exercises.filter(item => item.unit === unitNumber).filter((_, i) => i % Math.max(1, Math.floor(course.exercises.filter(item => item.unit === unitNumber).length / 8)) === 0).slice(0, 8);
+---
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="robots" content="index,follow,max-image-preview:large"/>
+    <meta name="referrer" content="strict-origin-when-cross-origin"/>
+    <title>{title} · A2 Unit {unitNumber} · Be Deutsch</title>
+    <meta name="description" content={`Learn ${title} in A2 German Unit ${unitNumber}: ${objective}`}/>
+    <link rel="canonical" href={new URL(Astro.url.pathname, site.url).href}/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  </head>
+  <body class="bd08-body" data-page-id={id} data-a2-kind={kind} data-content-status="owner-approved">
+    <a class="skip-link" href="#main">Skip to learning content</a>
+    <IntegratedChrome unit={unitNumber} area={area} title={title}/>
+    <main id="main" class="bd08-main">
+      <div class="breadcrumb"><a href="/a2/">A2 course</a><span>/</span><a href={`/a2/unit-${unitNumber}/`}>Unit {unitNumber}</a>{kind !== 'home' && <><span>/</span>{title}</>}</div>
+      <header class:list={['hero', `hero--${area}`, 'bd07-lesson-hero', 'bd08-hero']}>
+        <div class="hero-copy"><p class="eyebrow">A2 Unit {unitNumber} · {areaLabel[kind]}</p><h1>{title}</h1><p>{objective}</p><div class="hero-pills"><span class="is-level">A2</span><span class="is-area">{areaLabel[kind]}</span>{kind === 'vocabulary' && <span class="is-count">{records.length} words</span>}{kind === 'podcast' && <span class="is-count">6 chapters · {podcastAudio ? `${Math.floor(podcastAudio.durationSeconds / 60)}:${String(Math.round(podcastAudio.durationSeconds % 60)).padStart(2, '0')}` : 'audio unavailable'}</span>}</div></div>
+        <aside class="bd08-hero-art" aria-label="Unit theme"><span>{unitNumber}</span><strong>{unit.themes}</strong><small>A2 German course</small></aside>
+      </header>
+      <SupportLanguageSelector/>
+      {kind === 'home' && <>
+        <section class="bd08-unit-intro"><div><p class="section-kicker">Purpose</p><h2>What this unit builds</h2><p>{unit.purpose}</p></div><div><h3>Communication outcomes</h3><ul>{unit.outcomes.map(item => <li>{item}</li>)}</ul></div></section>
+        <div class="course-grid bd08-course-grid">
+          <section class="course-card is-blue"><p class="eyebrow">Vocabulary</p><h2>{unit.vocabulary_lessons.length} lessons · {course.vocabulary.filter(x => x.unit === unitNumber).length} records</h2><ol>{unit.vocabulary_lessons.map(item => <li><a href={`/a2/unit-${unitNumber}/vocabulary/${item.id.slice(-3).toLowerCase()}/`}>{item.topic}</a><small>{item.record_count} records</small></li>)}</ol></section>
+          <section class="course-card is-violet"><p class="eyebrow">Grammar</p><h2>{unit.grammar_lessons.length} connected lessons</h2><ol>{unit.grammar_lessons.map(item => <li><a href={`/a2/unit-${unitNumber}/grammar/${item.id.slice(-3).toLowerCase()}/`}>{item.title}</a></li>)}</ol></section>
+          {unit.listening_lessons.length > 0 && <section class="course-card is-mint"><p class="eyebrow">Listening</p><h2>{unit.listening_lessons.reduce((n, x) => n + x.passage_count, 0)} passages · accepted audio</h2>{unit.listening_lessons.map(item => <a href={`/a2/unit-${unitNumber}/listening/${item.id.slice(-3).toLowerCase()}/`}>{item.title_de}</a>)}</section>}
+          {unit.podcast_episodes.length > 0 && <section class="course-card is-orange"><p class="eyebrow">Podcast</p><h2>{unit.podcast_episodes[0].title_de}</h2><p>Six chapters, complete episode audio and full review transcript.</p><a href={`/a2/unit-${unitNumber}/podcast/${unit.podcast_episodes[0].blueprint_ref.toLowerCase()}/`}>Open featured episode</a></section>}
+        </div>
+        <section class="bd08-revision-link"><strong>Revision and practice</strong><p>Use real source activities; progress is stored under new stable IDs without changing Unit 1 data.</p><a href={`/a2/unit-${unitNumber}/revision/`}>Open Unit {unitNumber} revision →</a></section>
+      </>}
+      {kind === 'vocabulary' && <DraftVocabularyPage records={records} exercises={vocabExercises}/>} 
+      {kind === 'grammar' && grammar && <DraftGrammarPage lesson={grammar} exercises={grammarExercises}/>} 
+      {kind === 'listening' && listeningLesson && <DraftListeningPage lesson={listeningLesson} localization={localization}/>} 
+      {kind === 'podcast' && podcast && <DraftPodcastPage episode={podcast} episodes={course.podcasts} localization={localization}/>} 
+      {kind === 'revision' && <section class="bd08-practice-section"><div class="bd08-section-title"><p class="section-kicker">Revision · real source activities</p><h2>Unit {unitNumber} retrieval mix</h2><p>Eight activities sampled deterministically from this unit. All activities remain available in their source lessons.</p></div><div class="bd08-exercise-grid">{revisionExercises.map(exercise => <DraftExercise exercise={exercise}/>)}</div></section>}
+      {index >= 0 && <nav class="lesson-nav-gradient" aria-label="Previous and next learning pages">{previous ? <a class="previous" href={previous.href}><span>←</span><span><small>Previous lesson</small>{previous.label}</span></a> : <a class="previous" href={`/a2/unit-${unitNumber}/`}><span>←</span><span><small>Unit</small>Overview</span></a>}{next ? <a class="next" href={next.href}><span><small>Next lesson</small>{next.label}</span><span>→</span></a> : <a class="next" href={`/a2/unit-${unitNumber}/revision/`}><span><small>Next step</small>Revision</span><span>→</span></a>}</nav>}
+      {kind === 'revision' && <nav class="lesson-nav-gradient"><a class="previous" href={`/a2/unit-${unitNumber}/`}><span>←</span><span><small>Unit</small>Overview</span></a>{unitNumber < 10 && <a class="next" href={`/a2/unit-${unitNumber + 1}/`}><span><small>Continue</small>Unit {unitNumber + 1}</span><span>→</span></a>}</nav>}
+    </main>
+    <footer><p>Be Deutsch · Complete A2 German course</p><p>Learn with vocabulary, grammar, listening, podcasts and revision.</p></footer>
+    <script>import '../../../a2/scripts/support-language'; import '../../../a2/scripts/integrated';</script>
+  </body>
+</html>

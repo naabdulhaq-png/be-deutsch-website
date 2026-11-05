@@ -1,0 +1,55 @@
+---
+import data from '../../data/course.json';
+import type { AudioAsset } from '../../lib/model';
+import AudioPlayer from '../AudioPlayer.astro';
+import Assessment from '../Assessment.astro';
+import Practice from '../Practice.astro';
+import Hint from '../Hint.astro';
+import { hintLibrary } from '../../i18n/support';
+
+const assets = data.audio as AudioAsset[];
+const episode = assets.find((asset) => asset.id === 'A2-P01-AUDIO')!;
+const formatTime = (seconds: number) => `${Math.floor(seconds / 60)}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
+---
+<section class="podcast-feature bd07-podcast-feature">
+  <div class="podcast-player">
+    <p class="section-kicker">Featured Podcast · A2 Unit 1</p>
+    <h2 lang="de">{data.podcast.title}</h2>
+    <p>{data.podcast.summary_en}</p>
+    <AudioPlayer asset={episode} label={data.podcast.title}/>
+    <label class="support-toggle"><input type="checkbox" class="study-support"/><span><strong>Use transcript study support</strong><small>Opens chapter transcripts before submission and records an aided attempt.</small></span></label>
+    <Hint id="podcast-feature" first={hintLibrary.podcast.first}/>
+  </div>
+  <aside class="episode-list" aria-label="Podcast episodes">
+    <div class="episode-list__heading"><span aria-hidden="true">◍</span><div><strong>Podcast · A2 Unit 1</strong><small>Current approved catalogue</small></div></div>
+    <a class="episode-list__item is-current" href="#episode-chapters" aria-current="page"><span class="episode-thumb" aria-hidden="true">🎧</span><span><b>{data.podcast.title}</b><small>1 episode · 5 chapters</small></span><strong>5:49</strong></a>
+    <p class="episode-list__note">The layout is ready for future approved episodes. No fictional episodes are shown.</p>
+  </aside>
+</section>
+
+<section class="chapter-workspace" id="episode-chapters">
+  <div class="section-heading"><div><p class="section-kicker">Episode list</p><h2>Five real chapters</h2></div><span>Exact timestamps · chapter playback · transcript support</span></div>
+  <nav class="chapter-nav chapter-tabs featured-chapter-list" aria-label="Podcast chapters">
+    {data.podcast.chapters.map((chapter, index) => <button type="button" data-chapter-start={chapter.start} data-chapter-end={chapter.end} data-chapter-tab={chapter.number} aria-pressed={index === 0 ? 'true' : 'false'}><span>Chapter {chapter.number} · {formatTime(chapter.start)}</span><strong lang="de">{chapter.title}</strong><small>{formatTime(chapter.end - chapter.start)}</small></button>)}
+  </nav>
+  <p id="chapter-status" role="status" class="muted">Chapter 1 is selected. Play it or listen to the full episode.</p>
+  {data.podcast.chapters.map((chapter, index) => <article class="chapter-panel" id={`chapter-${chapter.number}`} data-chapter-panel={chapter.number} hidden={index !== 0}>
+    <div class="chapter-panel__heading"><span>{formatTime(chapter.start)}–{formatTime(chapter.end)}</span><div><p class="section-kicker">Chapter {chapter.number} of 5</p><h3 lang="de">{chapter.title}</h3></div><button type="button" class="button" data-chapter-start={chapter.start} data-chapter-end={chapter.end}>Play this chapter</button></div>
+    <button type="button" class="transcript-open-button" data-open-transcript={`podcast-${chapter.number}`}>Show German transcript</button>
+    <details class="gated-transcript transcript-panel" data-gate="A2-P01" data-transcript-id={`podcast-${chapter.number}`}>
+      <summary>German transcript</summary>
+      <p class="transcript-explanation">The complete approved chapter transcript appears here when the support rule permits it.</p>
+      <div>{chapter.turns.map((turn) => <p lang="de"><strong>{turn.speaker}: </strong>{turn.text}</p>)}</div>
+    </details>
+    <div class="passage-navigation">
+      <button type="button" data-chapter-select={Math.max(1, chapter.number - 1)} disabled={chapter.number === 1}>← Previous chapter</button>
+      <button type="button" data-chapter-select={Math.min(5, chapter.number + 1)} disabled={chapter.number === 5}>Next chapter →</button>
+    </div>
+  </article>)}
+</section>
+
+<section class="podcast-connections"><div><p class="section-kicker">Study support</p><h2>Listen, notice and practise</h2><p>Readable learning links preserve the underlying source mappings without exposing curriculum codes.</p></div><div><h3>Grammar reminders</h3>{data.grammar.map((lesson) => <a class="support-link" href={`/a2/unit-1/grammar/${lesson.id.slice(-3).toLowerCase()}/`}><strong>{lesson.title}</strong></a>)}</div><div><h3>Useful vocabulary</h3><div class="support-chip-list">{data.podcast.vocabulary_refs.slice(0, 8).map((reference) => { const id = reference.match(/A2-U01-V\d{2}-X\d{2}/)?.[0]; const item = data.lexical.find((entry) => entry.lexical_id === id); return item && <a href={`/a2/unit-1/vocabulary/${item.lesson_id.slice(-3).toLowerCase()}/#${item.lexical_id}`}>{item.headword}</a>; })}</div></div></section>
+
+<Assessment contexts={['A2-P01']} title="Podcast comprehension"/>
+<Assessment contexts={['optional:A2-P01']} title="Optional podcast practice · not scored"/>
+<Practice title="Podcast learning activities" rows={data.podcastActivities.map((activity) => [activity.activity_id, activity.instructions_en, activity.model_or_key, activity.self_check])}/>

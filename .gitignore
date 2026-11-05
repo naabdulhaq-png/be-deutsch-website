@@ -1,0 +1,7 @@
+/07_Website/.astro/
+/07_Website/dist/
+/07_Website/node_modules/
+/ci-output/
+/manifests/
+/release-dist/
+/reports/

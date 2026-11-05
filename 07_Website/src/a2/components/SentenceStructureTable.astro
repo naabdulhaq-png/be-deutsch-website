@@ -1,0 +1,23 @@
+---
+import { g01Patterns } from '../i18n/support';
+---
+<table class="structure-table">
+  <thead><tr><th scope="col">Function</th><th scope="col">Structure · Perfekt mit haben</th><th scope="col">Example and meaning</th></tr></thead>
+  <tbody>
+    {g01Patterns.map((pattern) =>
+      <tr>
+        <th scope="row" data-support-values={JSON.stringify(pattern.function)}>{pattern.function.en}</th>
+        <td data-label="Structure"><span class="sentence-formula" lang="en">{pattern.formula}</span></td>
+        <td data-label="Example and meaning">
+          <span class="sentence-example" lang="de">
+            <span class="role-subject">{pattern.example[0]}</span>
+            <span class="role-aux">{pattern.example[1]}</span>
+            <span class="role-middle">{pattern.example[2]}</span>
+            <span class="role-participle">{pattern.example[3]}</span>
+          </span>
+          <span class="sentence-meaning" data-support-values={JSON.stringify(pattern.meaning)} data-support-provenance="true">{pattern.meaning.en}</span>
+        </td>
+      </tr>
+    )}
+  </tbody>
+</table>

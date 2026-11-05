@@ -1,0 +1,202 @@
+---
+import logo from '../assets/branding/be_deutsch_logo.svg';
+import a2 from '../a2/data/course.json';
+import vocabularyA1 from '../data/vocabulary-course.json';
+import listeningA1 from '../data/listening-course.json';
+import { grammarLessons, grammarUnits } from '../data/grammar-course';
+import '../styles/phase1.css';
+
+interface NavTarget { href: string; label: string }
+interface Props {
+  kind: 'vocabulary' | 'grammar' | 'listening' | 'podcast';
+  pageId: string;
+  eyebrow: string;
+  title: string;
+  summary: string;
+  progressTotal: number;
+  previous: NavTarget;
+  next: NavTarget;
+}
+
+const { kind, pageId, eyebrow, title, summary, progressTotal, previous, next } = Astro.props;
+const prototypeNav = [
+  { kind: 'vocabulary', label: 'Vocabulary', icon: 'Aa', href: '/phase1/vocabulary/' },
+  { kind: 'grammar', label: 'Grammar', icon: '✎', href: '/phase1/grammar/' },
+  { kind: 'listening', label: 'Listening', icon: '◖', href: '/phase1/listening/' },
+  { kind: 'podcast', label: 'Podcast', icon: '◉', href: '/phase1/podcast/' },
+];
+const a2Sections = [
+  { label: 'Grammar', items: a2.grammar.map((item) => ({ label: item.title, href: `/a2/unit-1/grammar/${item.id.slice(-3).toLowerCase()}/` })) },
+  { label: 'Vocabulary', items: a2.vocabulary.map((item) => ({ label: item.title, href: `/a2/unit-1/vocabulary/${item.id.slice(-3).toLowerCase()}/` })) },
+  { label: 'Listening', items: [
+    { label: 'Weekend Update', href: '/a2/unit-1/listening/l01/' },
+    { label: 'A Short Experience Story', href: '/a2/unit-1/listening/l02/' },
+  ] },
+  { label: 'Podcast', items: [{ label: a2.podcast.title, href: '/a2/unit-1/podcast/' }] },
+];
+const a1Vocabulary = vocabularyA1.lessons.slice(0, 4).map((item) => ({ label: item.title_de, href: `/vocabulary/lesson-${String(item.number).padStart(2, '0')}/` }));
+const a1Grammar = grammarLessons.slice(0, 4).map((item) => ({ label: item.title, href: `/grammar/lesson-${String(item.number).padStart(2, '0')}/` }));
+const a1Listening = listeningA1.lessons.slice(0, 4).map((item) => ({ label: item.title, href: `/listening/${item.id.toLowerCase()}/` }));
+const searchIndex = [
+  ...prototypeNav.map((item) => ({ title: `${item.label} design prototype`, subtitle: 'A2 Unit 1 · Phase 1', href: item.href, type: item.label })),
+  ...a2.grammar.map((item) => ({ title: item.title, subtitle: 'A2 Unit 1 · Grammar', href: `/a2/unit-1/grammar/${item.id.slice(-3).toLowerCase()}/`, type: 'Grammar' })),
+  ...a2.vocabulary.map((item) => ({ title: item.title, subtitle: 'A2 Unit 1 · Vocabulary', href: `/a2/unit-1/vocabulary/${item.id.slice(-3).toLowerCase()}/`, type: 'Vocabulary' })),
+  ...a2.lexical.map((item) => ({ title: item.headword, subtitle: `${item.meaning_en} · ${item.lesson_id}`, href: `/phase1/vocabulary/#${item.lexical_id}`, type: 'Word' })),
+  ...grammarLessons.map((item) => ({ title: item.title, subtitle: `A1 Grammar · Unit ${item.unit}`, href: `/grammar/lesson-${String(item.number).padStart(2, '0')}/`, type: 'A1 Grammar' })),
+  ...vocabularyA1.lessons.map((item) => ({ title: item.title_de, subtitle: `A1 Vocabulary · Lesson ${item.number}`, href: `/vocabulary/lesson-${String(item.number).padStart(2, '0')}/`, type: 'A1 Vocabulary' })),
+  ...listeningA1.lessons.map((item) => ({ title: item.title, subtitle: `A1 Listening · ${item.id}`, href: `/listening/${item.id.toLowerCase()}/`, type: 'A1 Listening' })),
+  { title: a2.podcast.title, subtitle: 'A2 Unit 1 · Podcast', href: '/phase1/podcast/', type: 'Podcast' },
+];
+const heroImages = {
+  vocabulary: '/redesign-assets/hero-vocabulary.png',
+  grammar: '/redesign-assets/hero-grammar.png',
+  listening: '/redesign-assets/hero-listening.png',
+  podcast: '/redesign-assets/hero-podcast.png',
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content={`${title}: an interactive Be Deutsch Phase 1 design-system prototype using approved A2 Unit 1 content.`} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title} · Phase 1 prototype · Be Deutsch</title>
+  </head>
+  <body class={`phase1 phase1--${kind}`} data-phase1-page={pageId} data-progress-total={progressTotal} data-search-index={JSON.stringify(searchIndex)}>
+    <a class="ds-skip" href="#lesson-main">Skip to lesson content</a>
+    <div class="ds-app-shell">
+      <aside class="ds-sidebar" id="course-drawer" aria-label="Course outline">
+        <div class="ds-sidebar__brand">
+          <a href="/" aria-label="Be Deutsch website home"><img src={logo.src} alt="Be Deutsch" /></a>
+          <button type="button" class="ds-drawer-close" data-drawer-close aria-label="Close course outline">×</button>
+        </div>
+
+        <nav class="ds-primary-links" aria-label="Prototype sections">
+          {prototypeNav.map((item) => (
+            <a href={item.href} aria-current={item.kind === kind ? 'page' : undefined}>
+              <span aria-hidden="true">{item.icon}</span>{item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div class="ds-course-tree">
+          <p class="ds-tree-heading">Course outline</p>
+          <details open>
+            <summary><span class="ds-level-badge">A2</span><span>Unit 1</span><small>Published</small></summary>
+            <p class="ds-tree-unit">Life Updates and Recent Experiences</p>
+            {a2Sections.map((section) => (
+              <details open={section.label.toLowerCase() === kind}>
+                <summary>{section.label}<small>{section.items.length}</small></summary>
+                <ul>
+                  {section.items.map((item, index) => (
+                    <li><a href={item.href}><span>{index + 1}</span>{item.label}</a></li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+            <p class="ds-tree-note">Only approved Unit 1 is shown. Unfinished A2 units are not advertised.</p>
+          </details>
+
+          <details>
+            <summary><span class="ds-level-badge ds-level-badge--a1">A1</span><span>Foundations</span><small>Published</small></summary>
+            <details>
+              <summary>Grammar<small>28</small></summary>
+              <p class="ds-tree-unit">{grammarUnits[0].title}</p>
+              <ul>{a1Grammar.map((item, index) => <li><a href={item.href}><span>{index + 1}</span>{item.label}</a></li>)}</ul>
+              <a class="ds-tree-all" href="/grammar/">All 7 units and 28 lessons</a>
+            </details>
+            <details>
+              <summary>Vocabulary<small>40</small></summary>
+              <ul>{a1Vocabulary.map((item, index) => <li><a href={item.href}><span>{index + 1}</span>{item.label}</a></li>)}</ul>
+              <a class="ds-tree-all" href="/vocabulary/">All 40 lessons</a>
+            </details>
+            <details>
+              <summary>Listening<small>20</small></summary>
+              <ul>{a1Listening.map((item, index) => <li><a href={item.href}><span>{index + 1}</span>{item.label}</a></li>)}</ul>
+              <a class="ds-tree-all" href="/listening/">All 20 lessons</a>
+            </details>
+            <a class="ds-tree-all" href="/podcasts/">A1 Podcast · Ein Morgen in Deutschland</a>
+          </details>
+        </div>
+      </aside>
+
+      <div class="ds-drawer-backdrop" data-drawer-close hidden></div>
+
+      <div class="ds-workspace">
+        <header class="ds-topbar">
+          <button type="button" class="ds-menu-button" data-drawer-open aria-expanded="false" aria-controls="course-drawer"><span aria-hidden="true">☰</span><span>Course</span></button>
+          <div class="ds-search">
+            <label class="ds-sr-only" for="course-search">Search courses, lessons and words</label>
+            <span aria-hidden="true">⌕</span>
+            <input id="course-search" type="search" autocomplete="off" placeholder="Search lessons, topics or words…" aria-controls="search-results" aria-expanded="false" />
+            <div class="ds-search-results" id="search-results" role="listbox" hidden></div>
+          </div>
+          <label class="ds-course-switch">Course
+            <select data-course-switch aria-label="Switch course level">
+              <option value="/a2/unit-1/" selected>A2 · Unit 1</option>
+              <option value="/grammar/">A1 · Foundations</option>
+            </select>
+          </label>
+          <a class="ds-home-link" href="/" aria-label="Website home">⌂</a>
+        </header>
+
+        <main id="lesson-main" tabindex="-1">
+          <section class="ds-hero">
+            <div class="ds-hero__copy">
+              <p class="ds-kicker">{eyebrow}</p>
+              <h1>{title}</h1>
+              <p>{summary}</p>
+              <div class="ds-hero__badges"><span>A2</span><span>Approved audio</span><span>Browser-local progress</span></div>
+            </div>
+            <div class="ds-hero__art" aria-hidden="true">
+              <img class="ds-hero-illustration" src={heroImages[kind]} alt="" />
+            </div>
+            <aside class="ds-hero-progress" aria-labelledby="lesson-progress-title">
+              <div class="ds-progress-heading"><h2 id="lesson-progress-title">Lesson progress</h2><strong data-progress-fraction>0 / {progressTotal}</strong></div>
+              <progress data-progress-bar value="0" max={progressTotal}></progress>
+              <ul>
+                <li data-progress-step="explore"><span></span>Explore the lesson</li>
+                <li data-progress-step="listen"><span></span>Listen to approved audio</li>
+                <li data-progress-step="practice"><span></span>Check your understanding</li>
+                <li data-progress-step="review"><span></span>Mark lesson reviewed</li>
+              </ul>
+              <button type="button" class="ds-button ds-button--complete" data-mark-reviewed>Mark lesson reviewed</button>
+              <p class="ds-progress-storage" role="status" data-storage-status>Progress stays in this browser, separately from A1.</p>
+            </aside>
+          </section>
+
+          <nav class="ds-lesson-tabs" aria-label="Representative lesson pages">
+            {prototypeNav.map((item) => <a href={item.href} aria-current={item.kind === kind ? 'page' : undefined}><span aria-hidden="true">{item.icon}</span>{item.label}</a>)}
+            <label>Example support
+              <select data-translation-mode>
+                <option value="en">English</option>
+                <option value="de">German only</option>
+              </select>
+            </label>
+          </nav>
+
+          <div class="ds-content-layout">
+            <div class="ds-main-column"><slot /></div>
+            <aside class="ds-context-rail" aria-label="Contextual learning support"><slot name="rail" /></aside>
+          </div>
+
+          <nav class="ds-bottom-nav" aria-label="Lesson navigation">
+            <a href={previous.href}>← <span><small>Previous</small>{previous.label}</span></a>
+            <div class="ds-page-dots" aria-label={`${prototypeNav.findIndex((item) => item.kind === kind) + 1} of 4 prototypes`}>
+              {prototypeNav.map((item) => <a href={item.href} aria-current={item.kind === kind ? 'page' : undefined} aria-label={item.label}></a>)}
+            </div>
+            <a href={next.href}><span><small>Next</small>{next.label}</span> →</a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <div class="ds-toast" role="status" aria-live="polite" data-toast hidden></div>
+    <noscript><div class="ds-noscript">These interactive prototypes need JavaScript. The approved lesson content and native audio controls remain available.</div></noscript>
+    <script>import '../scripts/phase1.ts';</script>
+  </body>
+</html>
+

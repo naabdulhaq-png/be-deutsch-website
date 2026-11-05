@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import LearningChrome from '../../components/redesign/LearningChrome.astro';
 import course from '../../data/vocabulary-course.json';
 import '../../styles/vocabulary.css';
 export function getStaticPaths(){return course.lessons.map((lesson,index)=>({params:{lesson:'lesson-'+String(lesson.number).padStart(2,'0')},props:{lesson,index}}));}
@@ -12,6 +13,7 @@ const serialized=JSON.stringify(pilot).replaceAll('<','\u003c');
 <BaseLayout title={`${lesson.title_de} — A1 vocabulary — Be Deutsch`} description={`Learn ten German words in lesson ${lesson.number}: ${lesson.title_en}, with approved illustrations, examples, pronunciation and a quiz.`}>
   <div id="top" aria-hidden="true"></div>
   <SiteHeader />
+  <LearningChrome area="vocabulary" level="A1" title={lesson.title_de} />
   <main id="main-content" class="vocab-page">
     <div class="container">
       <div class="vocab-breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/vocabulary/">A1 Vocabulary</a></div>

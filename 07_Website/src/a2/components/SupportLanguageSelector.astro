@@ -1,0 +1,18 @@
+---
+import { supportLanguages, sharedCopy } from '../i18n/support';
+---
+<section class="support-language" aria-labelledby="support-language-title">
+  <div class="support-language__intro">
+    <strong id="support-language-title" data-support-values={JSON.stringify(sharedCopy.supportLanguage)}>Support language</strong>
+    <small data-support-values={JSON.stringify(sharedCopy.supportDescription)}>German stays visible. Explanations and available translations follow your selection.</small>
+  </div>
+  <div class="support-language__tabs" role="group" aria-label="Choose support language">
+    {Object.entries(supportLanguages).map(([code, language]) =>
+      <button type="button" data-support-language={code} aria-pressed={code === 'en' ? 'true' : 'false'} lang={code} dir={language.dir}>
+        <span aria-hidden="true">{code.toUpperCase()}</span> {language.label}
+      </button>
+    )}
+  </div>
+  <p class="support-language__status" role="status" data-support-status>English source support is selected.</p>
+</section>
+

@@ -1,0 +1,87 @@
+---
+interface Option { id: string; label: string }
+interface Question {
+  id: string;
+  mode: 'choice' | 'entry' | 'order' | 'matching' | 'sequence';
+  instructions: string;
+  prompt: string;
+  options: Option[];
+  tokens: Option[];
+  people: Option[];
+  solution: string | string[] | Record<string, string>;
+  canonical: string;
+  accepted: string[];
+  correctFeedback: string;
+  incorrectFeedback: string;
+}
+interface Props { question: Question; index: number; accent?: string }
+const { question, index, accent = 'blue' } = Astro.props;
+const choices = question.options?.length ? question.options : question.tokens;
+---
+
+<article
+  class={`ds-exercise ds-exercise--${accent}`}
+  data-question-card
+  data-question-id={question.id}
+  data-mode={question.mode}
+  data-solution={JSON.stringify(question.solution)}
+  data-canonical={question.canonical}
+  data-accepted={JSON.stringify(question.accepted ?? [])}
+  data-correct-feedback={question.correctFeedback}
+  data-incorrect-feedback={question.incorrectFeedback}
+>
+  <div class="ds-exercise__number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+  <div class="ds-exercise__body">
+    <p class="ds-kicker">Practice · {question.id}</p>
+    <h3>{question.prompt}</h3>
+    <p class="ds-muted">{question.instructions}</p>
+
+    {question.mode === 'choice' && (
+      <div class="ds-answer-grid" role="group" aria-label={`Answers for question ${index + 1}`}>
+        {question.options.map((option, optionIndex) => (
+          <button type="button" class="ds-answer" data-answer-id={option.id}>
+            <span>{String.fromCharCode(65 + optionIndex)}</span>{option.label}
+          </button>
+        ))}
+      </div>
+    )}
+
+    {question.mode === 'entry' && (
+      <div class="ds-entry-row">
+        <label class="ds-sr-only" for={`answer-${question.id}`}>Your answer</label>
+        <input id={`answer-${question.id}`} type="text" data-entry-answer autocomplete="off" spellcheck="false" placeholder="Type the requested German form" />
+        <button type="button" class="ds-button ds-button--small" data-check-entry>Check answer</button>
+      </div>
+    )}
+
+    {(question.mode === 'order' || question.mode === 'sequence') && (
+      <div class="ds-order-builder">
+        <p class="ds-order-output" data-order-output aria-live="polite">Choose items in order.</p>
+        <div class="ds-token-bank" role="group" aria-label="Items to put in order">
+          {choices.map((option) => <button type="button" data-order-id={option.id}>{option.label}</button>)}
+        </div>
+        <div class="ds-inline-actions">
+          <button type="button" class="ds-button ds-button--small" data-check-order>Check order</button>
+          <button type="button" class="ds-text-button" data-reset-order>Reset</button>
+        </div>
+      </div>
+    )}
+
+    {question.mode === 'matching' && (
+      <div class="ds-matching">
+        {question.people.map((person) => (
+          <label>{person.label}
+            <select data-match-person={person.id}>
+              <option value="">Choose an action</option>
+              {question.options.map((option) => <option value={option.id}>{option.label}</option>)}
+            </select>
+          </label>
+        ))}
+        <button type="button" class="ds-button ds-button--small" data-check-matching>Check matches</button>
+      </div>
+    )}
+
+    <p class="ds-feedback" data-question-feedback role="status" hidden></p>
+  </div>
+</article>
+

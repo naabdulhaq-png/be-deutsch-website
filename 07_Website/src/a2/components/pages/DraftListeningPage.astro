@@ -1,0 +1,42 @@
+---
+import DraftExercise from '../DraftExercise.astro';
+import audioLibrary from '../../data/audio-library.generated.json';
+interface Props { lesson: any; localization: any[] }
+const { lesson, localization } = Astro.props;
+const supportFor = (id: string) => localization.find(item => item.content_id === id);
+const audioFor = (id: string) => audioLibrary.listening.find(item => item.contentId === id);
+const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
+const asExercise = (question: any, support: any) => ({
+  id: question.question_id,
+  type: question.type === 'mcq' ? 'listening_choice' : 'listening_response',
+  prompt_de: question.prompt_de,
+  prompt_en: support?.prompt?.en ?? 'Answer from the German passage.',
+  options: question.options_de,
+  correct_answer: question.type === 'mcq' ? question.options_de[question.correct_option_index] : question.answer_de,
+  accepted_variants: [question.answer_de],
+  hint: question.hint1_de,
+  hint2: question.hint2_de,
+  feedback_correct: support?.answer_feedback?.correct ?? { en: question.explanation_de },
+  feedback_incorrect: support?.answer_feedback?.incorrect ?? { en: question.explanation_de }
+});
+---
+<section class="bd08-section-heading"><div><p class="section-kicker">Listening · compact and modern</p><h2>{lesson.title_de}</h2><p>{lesson.passages.length} accepted German recording{lesson.passages.length === 1 ? '' : 's'} with transcript and comprehension practice.</p></div><span class="bd08-audio-ready">Accepted audio available</span></section>
+<section class="bd08-listening" data-listening-review>
+  <nav class="bd08-listening-list" aria-label="Passages in this lesson">
+    <h3>Passages</h3>
+    {lesson.passages.map((passage: any, index: number) => <button type="button" data-passage-select={passage.id} aria-pressed={index === 0 ? 'true' : 'false'}><span>{index + 1}</span><b>{passage.title_de}</b><small>{passage.difficulty}</small></button>)}
+  </nav>
+  <div class="bd08-listening-stage">
+    {lesson.passages.map((passage: any, index: number) => {
+      const support = supportFor(passage.id);
+      const audio = audioFor(passage.id);
+      return <article id={passage.id} data-passage-panel={passage.id} hidden={index !== 0}>
+        <header><div><span class="bd08-id">{passage.id}</span><h3>{passage.title_de}</h3><p lang="de">{passage.objective_de}</p><p data-support-values={JSON.stringify(support?.short_introduction ?? {})}>{support?.short_introduction?.en}</p></div>{audio ? <div class="bd08-integrated-player" data-audio-content-id={passage.id}><strong>German listening audio</strong><audio controls preload="metadata" aria-label={`Play ${passage.title_de}`}><source src={audio.url} type="audio/mpeg"/>Your browser does not support HTML audio. Use the German transcript below.</audio><small>Measured duration {formatDuration(audio.durationSeconds)} · owner accepted</small></div> : <div class="bd08-pending-player"><strong>Audio unavailable</strong><small>Use the German transcript below.</small></div>}</header>
+        <div class="bd08-focus"><strong>Vocabulary focus</strong><p lang="de">{passage.vocabulary.join(' · ')}</p><strong>Grammar focus</strong><p lang="de">{passage.grammar.join(' · ')}</p></div>
+        <details class="bd08-transcript"><summary>German transcript</summary><div>{passage.turns.map((turn: any) => <p lang="de"><strong>{turn.speaker}: </strong>{turn.text_de}</p>)}</div></details>
+        {support && <details class="bd08-transcript"><summary>Support-language transcript</summary><div data-support-transcript>{Object.entries(support.transcript_translation).map(([language, translation]: [string, any]) => <div data-language-panel={language} lang={language} dir={translation.dir} hidden={language !== 'en'}>{translation.turns.map((turn: any) => <p><bdi><strong>{turn.speaker}: </strong></bdi>{turn.text}</p>)}</div>)}</div></details>}
+        <section class="bd08-question-list"><h4>Comprehension practice</h4>{passage.questions.map((question: any) => <DraftExercise exercise={asExercise(question, support?.questions.find((x: any) => x.id === question.id))}/>)}</section>
+      </article>;
+    })}
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+import data from '../../data/course.json';
+import type { AudioAsset } from '../../lib/model';
+import AudioPlayer from '../AudioPlayer.astro';
+import Assessment from '../Assessment.astro';
+import Hint from '../Hint.astro';
+import { hintLibrary } from '../../i18n/support';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const passages = data.passages.filter((passage) => passage.lesson_id === id);
+const assets = data.audio as AudioAsset[];
+const audio = (key: string) => assets.find((asset) => asset.id === key)!;
+const formatTime = (seconds: number) => `${Math.floor(seconds / 60)}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
+function friendly(reference: string) {
+  const grammarId = reference.match(/A2-U01-G\d{2}/)?.[0];
+  if (grammarId) return { label: data.grammar.find((item) => item.id === grammarId)?.title ?? 'Grammar reminder', href: `/a2/unit-1/grammar/${grammarId.slice(-3).toLowerCase()}/` };
+  const lexicalId = reference.match(/A2-U01-V\d{2}-X\d{2}/)?.[0];
+  const item = data.lexical.find((entry) => entry.lexical_id === lexicalId);
+  return { label: item?.headword ?? 'Useful vocabulary', href: item ? `/a2/unit-1/vocabulary/${item.lesson_id.slice(-3).toLowerCase()}/#${item.lexical_id}` : '/a2/unit-1/revision/' };
+}
+---
+<section class="audio-first-intro bd07-color-panel">
+  <div><p class="section-kicker">Audio first</p><h2>{passages.length} approved passages in this lesson</h2><p>Choose a passage, listen for the main event, then check details. The transcript follows the approved support rule.</p></div>
+  <label class="support-toggle"><input type="checkbox" class="study-support"/><span><strong>Use transcript study support</strong><small>Opens real German transcripts before submission and records an aided attempt.</small></span></label>
+</section>
+
+<div class="compact-listening">
+  <nav class="compact-listening__list" aria-label="Passages in this lesson">
+    <h2>Listening · A2 Unit 1</h2>
+    {passages.map((passage, index) => <button type="button" data-passage-tab={passage.id} aria-pressed={index === 0 ? 'true' : 'false'}><span aria-hidden="true">▶</span><b>{index + 1}. {passage.title}</b><small>{formatTime(audio(`${passage.id}-AUDIO`).duration)}</small></button>)}
+  </nav>
+
+  <div class="compact-listening__current">
+    {passages.map((passage, index) => <article class="passage-card compact-passage" id={passage.id} data-passage-panel={passage.id} hidden={index !== 0}>
+      <div class="passage-card__heading"><span class="passage-number">{index + 1}</span><div><p class="section-kicker">Passage {index + 1} of {passages.length}</p><h2>{passage.title}</h2><p>{passage.objective}</p></div></div>
+      <AudioPlayer asset={audio(`${passage.id}-AUDIO`)} label={passage.title}/>
+      <div class="listening-instructions"><span>1 · Main event</span><span>2 · Sequence and details</span><span>3 · Comprehension check</span></div>
+      <div class="transcript-actions"><span>Study tools</span><button type="button" data-open-transcript={passage.id}>Show German transcript</button></div>
+      <details class="gated-transcript transcript-panel" data-gate={id} data-transcript-id={passage.id}>
+        <summary>German transcript</summary>
+        <p class="transcript-explanation">This is the complete approved German transcript. Enable study support or submit the check to open it.</p>
+        <div>{passage.turns.map((turn) => <p lang="de"><strong>{turn.speaker}: </strong>{turn.text}</p>)}</div>
+      </details>
+      <Hint id={`listening-${passage.id}`} first={hintLibrary.listening.first}/>
+      <aside class="compact-passage__support">
+        <div><p class="section-kicker">Listening tip</p><h3>{index === 0 ? 'Track the sequence' : 'Notice the problem and reaction'}</h3><p>{passage.description_en}</p></div>
+        <details><summary>Grammar reminders</summary>{(passage.grammar_refs ?? []).map((reference) => { const item = friendly(reference); return <a class="support-link" href={item.href}>{item.label}</a>; })}</details>
+        <details><summary>Useful vocabulary</summary><div class="support-chip-list">{(passage.vocabulary_refs ?? []).map((reference) => { const item = friendly(reference); return <a href={item.href}>{item.label}</a>; })}</div></details>
+      </aside>
+      <div class="passage-navigation">
+        <button type="button" data-passage-select={passages[Math.max(0, index - 1)].id} disabled={index === 0}>← Previous passage</button>
+        <button type="button" data-passage-select={passages[Math.min(passages.length - 1, index + 1)].id} disabled={index === passages.length - 1}>Next passage →</button>
+      </div>
+    </article>)}
+  </div>
+</div>
+
+<Assessment contexts={[id]} title="Listening comprehension"/>

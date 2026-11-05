@@ -1,0 +1,6310 @@
+{
+  "metadata": {
+    "package_id": "BD-UI-08",
+    "generated": "2026-11-02",
+    "source_status": "MIXED_APPROVED_UNIT1_AND_AI_DRAFT_UNITS2_TO10",
+    "publication_authorized": false,
+    "human_approved_new_content": false,
+    "audio_policy": "Existing approved Unit 1 assets only; all new Listening and Podcast audio pending",
+    "support_languages": {
+      "en": {
+        "label": "English",
+        "dir": "ltr"
+      },
+      "ps": {
+        "label": "پښتو",
+        "dir": "rtl"
+      },
+      "fa": {
+        "label": "فارسی",
+        "dir": "rtl"
+      },
+      "ar": {
+        "label": "العربية",
+        "dir": "rtl"
+      },
+      "uk": {
+        "label": "Українська",
+        "dir": "ltr"
+      }
+    },
+    "source_checksums": {
+      "blueprint": "43c989892ecd895a24039f0260f8c52560ea51d1fdcda1e7ddef4cdfe8565438",
+      "vocabulary": "0202bfbfd73e5220787c56cf1930eda545e098c171628ab44b77813532b3345a",
+      "grammar": "88ea62f6fe4e672b2f4554fdefd7037a55ed5ff8671913e2a868c1ba0fe014d9",
+      "exercises": "3ec2d7f47e2542c74051acad96a09e4447082d3633f9285451c485ba2515e251",
+      "listening": "ca83cfc3f9ae8e40ec3b386ac72ff8b83673ea8c35d258b44525b1a87a3955cc",
+      "podcasts": "318be7cf78f3ce07816149fb7c7e342722201bdb28230478b10560be79d173df",
+      "localization": "b5dc1aad61cc83ad4eeb493e9f6d794f2b705b94d06bcc3d96fe9be406f615cf",
+      "approved_unit1_course": "7b1fc7dc80dac1579d5a64bac3c3148b313a583830dd0fd0248228d51dd644f4"
+    }
+  },
+  "counts": {
+    "units": 10,
+    "vocabulary": 300,
+    "vocabulary_approved_unit1": 60,
+    "vocabulary_draft": 240,
+    "grammar": 40,
+    "grammar_approved_unit1": 4,
+    "grammar_draft": 36,
+    "exercises": 384,
+    "listening_new": 24,
+    "podcasts_new": 5,
+    "podcast_chapters_new": 30,
+    "localization_items": 29,
+    "existing_unit1_assessment_questions": 48,
+    "existing_unit1_audio_assets": 178
+  },
+  "units": [
+    {
+      "id": "A2-U01",
+      "title": "Life updates and recent experiences",
+      "routes": {
+        "overview": "/a2/unit-1/",
+        "vocabulary": [
+          "/a2/unit-1/vocabulary/v01/",
+          "/a2/unit-1/vocabulary/v02/",
+          "/a2/unit-1/vocabulary/v03/",
+          "/a2/unit-1/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-1/grammar/g01/",
+          "/a2/unit-1/grammar/g02/",
+          "/a2/unit-1/grammar/g03/",
+          "/a2/unit-1/grammar/g04/"
+        ],
+        "listening": [],
+        "podcasts": [],
+        "revision": "/a2/unit-1/revision/",
+        "assessment": "/a2/unit-1/review/"
+      }
+    },
+    {
+      "id": "A2-U02",
+      "title": "Family relationships and social life",
+      "routes": {
+        "overview": "/a2/unit-2/",
+        "vocabulary": [
+          "/a2/unit-2/vocabulary/v01/",
+          "/a2/unit-2/vocabulary/v02/",
+          "/a2/unit-2/vocabulary/v03/",
+          "/a2/unit-2/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-2/grammar/g01/",
+          "/a2/unit-2/grammar/g02/",
+          "/a2/unit-2/grammar/g03/",
+          "/a2/unit-2/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-2/listening/l01/",
+          "/a2/unit-2/listening/l02/"
+        ],
+        "podcasts": [
+          "/a2/unit-2/podcast/a2-p02/"
+        ],
+        "revision": "/a2/unit-2/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U03",
+      "title": "Home moving and household life",
+      "routes": {
+        "overview": "/a2/unit-3/",
+        "vocabulary": [
+          "/a2/unit-3/vocabulary/v01/",
+          "/a2/unit-3/vocabulary/v02/",
+          "/a2/unit-3/vocabulary/v03/",
+          "/a2/unit-3/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-3/grammar/g01/",
+          "/a2/unit-3/grammar/g02/",
+          "/a2/unit-3/grammar/g03/",
+          "/a2/unit-3/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-3/listening/l01/",
+          "/a2/unit-3/listening/l02/"
+        ],
+        "podcasts": [
+          "/a2/unit-3/podcast/a2-p04/"
+        ],
+        "revision": "/a2/unit-3/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U04",
+      "title": "Work education and training",
+      "routes": {
+        "overview": "/a2/unit-4/",
+        "vocabulary": [
+          "/a2/unit-4/vocabulary/v01/",
+          "/a2/unit-4/vocabulary/v02/",
+          "/a2/unit-4/vocabulary/v03/",
+          "/a2/unit-4/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-4/grammar/g01/",
+          "/a2/unit-4/grammar/g02/",
+          "/a2/unit-4/grammar/g03/",
+          "/a2/unit-4/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-4/listening/l01/",
+          "/a2/unit-4/listening/l02/"
+        ],
+        "podcasts": [],
+        "revision": "/a2/unit-4/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U05",
+      "title": "Shopping food and consumer choices",
+      "routes": {
+        "overview": "/a2/unit-5/",
+        "vocabulary": [
+          "/a2/unit-5/vocabulary/v01/",
+          "/a2/unit-5/vocabulary/v02/",
+          "/a2/unit-5/vocabulary/v03/",
+          "/a2/unit-5/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-5/grammar/g01/",
+          "/a2/unit-5/grammar/g02/",
+          "/a2/unit-5/grammar/g03/",
+          "/a2/unit-5/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-5/listening/l01/",
+          "/a2/unit-5/listening/l02/"
+        ],
+        "podcasts": [],
+        "revision": "/a2/unit-5/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U06",
+      "title": "Health appointments and wellbeing",
+      "routes": {
+        "overview": "/a2/unit-6/",
+        "vocabulary": [
+          "/a2/unit-6/vocabulary/v01/",
+          "/a2/unit-6/vocabulary/v02/",
+          "/a2/unit-6/vocabulary/v03/",
+          "/a2/unit-6/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-6/grammar/g01/",
+          "/a2/unit-6/grammar/g02/",
+          "/a2/unit-6/grammar/g03/",
+          "/a2/unit-6/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-6/listening/l01/",
+          "/a2/unit-6/listening/l02/"
+        ],
+        "podcasts": [
+          "/a2/unit-6/podcast/a2-p08/"
+        ],
+        "revision": "/a2/unit-6/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U07",
+      "title": "Travel transport and accommodation",
+      "routes": {
+        "overview": "/a2/unit-7/",
+        "vocabulary": [
+          "/a2/unit-7/vocabulary/v01/",
+          "/a2/unit-7/vocabulary/v02/",
+          "/a2/unit-7/vocabulary/v03/",
+          "/a2/unit-7/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-7/grammar/g01/",
+          "/a2/unit-7/grammar/g02/",
+          "/a2/unit-7/grammar/g03/",
+          "/a2/unit-7/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-7/listening/l01/",
+          "/a2/unit-7/listening/l02/"
+        ],
+        "podcasts": [
+          "/a2/unit-7/podcast/a2-p10/"
+        ],
+        "revision": "/a2/unit-7/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U08",
+      "title": "City services problems and solutions",
+      "routes": {
+        "overview": "/a2/unit-8/",
+        "vocabulary": [
+          "/a2/unit-8/vocabulary/v01/",
+          "/a2/unit-8/vocabulary/v02/",
+          "/a2/unit-8/vocabulary/v03/",
+          "/a2/unit-8/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-8/grammar/g01/",
+          "/a2/unit-8/grammar/g02/",
+          "/a2/unit-8/grammar/g03/",
+          "/a2/unit-8/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-8/listening/l01/",
+          "/a2/unit-8/listening/l02/"
+        ],
+        "podcasts": [],
+        "revision": "/a2/unit-8/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U09",
+      "title": "Leisure media technology and opinions",
+      "routes": {
+        "overview": "/a2/unit-9/",
+        "vocabulary": [
+          "/a2/unit-9/vocabulary/v01/",
+          "/a2/unit-9/vocabulary/v02/",
+          "/a2/unit-9/vocabulary/v03/",
+          "/a2/unit-9/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-9/grammar/g01/",
+          "/a2/unit-9/grammar/g02/",
+          "/a2/unit-9/grammar/g03/",
+          "/a2/unit-9/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-9/listening/l01/",
+          "/a2/unit-9/listening/l02/"
+        ],
+        "podcasts": [],
+        "revision": "/a2/unit-9/revision/",
+        "assessment": null
+      }
+    },
+    {
+      "id": "A2-U10",
+      "title": "Plans community and A2 integration",
+      "routes": {
+        "overview": "/a2/unit-10/",
+        "vocabulary": [
+          "/a2/unit-10/vocabulary/v01/",
+          "/a2/unit-10/vocabulary/v02/",
+          "/a2/unit-10/vocabulary/v03/",
+          "/a2/unit-10/vocabulary/v04/"
+        ],
+        "grammar": [
+          "/a2/unit-10/grammar/g01/",
+          "/a2/unit-10/grammar/g02/",
+          "/a2/unit-10/grammar/g03/",
+          "/a2/unit-10/grammar/g04/"
+        ],
+        "listening": [
+          "/a2/unit-10/listening/l01/",
+          "/a2/unit-10/listening/l02/"
+        ],
+        "podcasts": [
+          "/a2/unit-10/podcast/a2-p14/"
+        ],
+        "revision": "/a2/unit-10/revision/",
+        "assessment": null
+      }
+    }
+  ],
+  "reviewer_items": [
+    {
+      "id": "A2-U01-V01-X01",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Ausflug",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X01"
+    },
+    {
+      "id": "A2-U01-V01-X02",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Besuch",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X02"
+    },
+    {
+      "id": "A2-U01-V01-X03",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Veranstaltung",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X03"
+    },
+    {
+      "id": "A2-U01-V01-X04",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "aufräumen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X04"
+    },
+    {
+      "id": "A2-U01-V01-X05",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "besuchen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X05"
+    },
+    {
+      "id": "A2-U01-V01-X06",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "erledigen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X06"
+    },
+    {
+      "id": "A2-U01-V01-X07",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "kochen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X07"
+    },
+    {
+      "id": "A2-U01-V01-X08",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "putzen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X08"
+    },
+    {
+      "id": "A2-U01-V01-X09",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "spazieren gehen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X09"
+    },
+    {
+      "id": "A2-U01-V01-X10",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "sich treffen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X10"
+    },
+    {
+      "id": "A2-U01-V01-X11",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "gestern",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X11"
+    },
+    {
+      "id": "A2-U01-V01-X12",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "letztes Wochenende",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X12"
+    },
+    {
+      "id": "A2-U01-V01-X13",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Unternehmung",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X13"
+    },
+    {
+      "id": "A2-U01-V01-X14",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "gemütlich",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X14"
+    },
+    {
+      "id": "A2-U01-V01-X15",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "unterwegs sein",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v01/#A2-U01-V01-X15"
+    },
+    {
+      "id": "A2-U01-V02-X01",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "das Erlebnis",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X01"
+    },
+    {
+      "id": "A2-U01-V02-X02",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Erinnerung",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X02"
+    },
+    {
+      "id": "A2-U01-V02-X03",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Geburtstag",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X03"
+    },
+    {
+      "id": "A2-U01-V02-X04",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Prüfung",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X04"
+    },
+    {
+      "id": "A2-U01-V02-X05",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "bestehen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X05"
+    },
+    {
+      "id": "A2-U01-V02-X06",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "beginnen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X06"
+    },
+    {
+      "id": "A2-U01-V02-X07",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "feiern",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X07"
+    },
+    {
+      "id": "A2-U01-V02-X08",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "kennenlernen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X08"
+    },
+    {
+      "id": "A2-U01-V02-X09",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "umziehen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X09"
+    },
+    {
+      "id": "A2-U01-V02-X10",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "passieren",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X10"
+    },
+    {
+      "id": "A2-U01-V02-X11",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "vor einem Jahr",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X11"
+    },
+    {
+      "id": "A2-U01-V02-X12",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "zum ersten Mal",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X12"
+    },
+    {
+      "id": "A2-U01-V02-X13",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Abschluss",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X13"
+    },
+    {
+      "id": "A2-U01-V02-X14",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Lebensabschnitt",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X14"
+    },
+    {
+      "id": "A2-U01-V02-X15",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "prägend",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v02/#A2-U01-V02-X15"
+    },
+    {
+      "id": "A2-U01-V03-X01",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Freude",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X01"
+    },
+    {
+      "id": "A2-U01-V03-X02",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "die Überraschung",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X02"
+    },
+    {
+      "id": "A2-U01-V03-X03",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "der Spaß",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X03"
+    },
+    {
+      "id": "A2-U01-V03-X04",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "aufgeregt",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X04"
+    },
+    {
+      "id": "A2-U01-V03-X05",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "enttäuscht",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X05"
+    },
+    {
+      "id": "A2-U01-V03-X06",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "froh",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X06"
+    },
+    {
+      "id": "A2-U01-V03-X07",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "glücklich",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X07"
+    },
+    {
+      "id": "A2-U01-V03-X08",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "langweilig",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X08"
+    },
+    {
+      "id": "A2-U01-V03-X09",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "schrecklich",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X09"
+    },
+    {
+      "id": "A2-U01-V03-X10",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "spannend",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X10"
+    },
+    {
+      "id": "A2-U01-V03-X11",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "sich freuen über",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X11"
+    },
+    {
+      "id": "A2-U01-V03-X12",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "zum Glück",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X12"
+    },
+    {
+      "id": "A2-U01-V03-X13",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "erleichtert",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X13"
+    },
+    {
+      "id": "A2-U01-V03-X14",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "überrascht",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X14"
+    },
+    {
+      "id": "A2-U01-V03-X15",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "beeindruckend",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v03/#A2-U01-V03-X15"
+    },
+    {
+      "id": "A2-U01-V04-X01",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "zuerst",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X01"
+    },
+    {
+      "id": "A2-U01-V04-X02",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "danach",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X02"
+    },
+    {
+      "id": "A2-U01-V04-X03",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "später",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X03"
+    },
+    {
+      "id": "A2-U01-V04-X04",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "am Ende",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X04"
+    },
+    {
+      "id": "A2-U01-V04-X05",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "plötzlich",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X05"
+    },
+    {
+      "id": "A2-U01-V04-X06",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "schon",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X06"
+    },
+    {
+      "id": "A2-U01-V04-X07",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "noch nicht",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X07"
+    },
+    {
+      "id": "A2-U01-V04-X08",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "gerade",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X08"
+    },
+    {
+      "id": "A2-U01-V04-X09",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "damals",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X09"
+    },
+    {
+      "id": "A2-U01-V04-X10",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "früher",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X10"
+    },
+    {
+      "id": "A2-U01-V04-X11",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "einmal",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X11"
+    },
+    {
+      "id": "A2-U01-V04-X12",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "mehrmals",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X12"
+    },
+    {
+      "id": "A2-U01-V04-X13",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "anschließend",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X13"
+    },
+    {
+      "id": "A2-U01-V04-X14",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "schließlich",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X14"
+    },
+    {
+      "id": "A2-U01-V04-X15",
+      "type": "vocabulary",
+      "unit": 1,
+      "title": "inzwischen",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/vocabulary/v04/#A2-U01-V04-X15"
+    },
+    {
+      "id": "A2-U02-V01-X01",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Verwandte",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X01"
+    },
+    {
+      "id": "A2-U02-V01-X02",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Enkel",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X02"
+    },
+    {
+      "id": "A2-U02-V01-X03",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Partner",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X03"
+    },
+    {
+      "id": "A2-U02-V01-X04",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Beziehung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X04"
+    },
+    {
+      "id": "A2-U02-V01-X05",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "ledig",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X05"
+    },
+    {
+      "id": "A2-U02-V01-X06",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "verheiratet",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X06"
+    },
+    {
+      "id": "A2-U02-V01-X13",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Patchworkfamilie",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X13"
+    },
+    {
+      "id": "A2-U02-V02-X01",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Einladung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X01"
+    },
+    {
+      "id": "A2-U02-V02-X02",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Feier",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X02"
+    },
+    {
+      "id": "A2-U02-V02-X03",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "das Geschenk",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X03"
+    },
+    {
+      "id": "A2-U02-V02-X04",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Gast",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X04"
+    },
+    {
+      "id": "A2-U02-V02-X05",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "einladen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X05"
+    },
+    {
+      "id": "A2-U02-V02-X06",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "zusagen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X06"
+    },
+    {
+      "id": "A2-U02-V02-X13",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Überraschungsparty",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X13"
+    },
+    {
+      "id": "A2-U02-V03-X01",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Nachricht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X01"
+    },
+    {
+      "id": "A2-U02-V03-X02",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Mailbox",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X02"
+    },
+    {
+      "id": "A2-U02-V03-X03",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Anruf",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X03"
+    },
+    {
+      "id": "A2-U02-V03-X04",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "erreichen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X04"
+    },
+    {
+      "id": "A2-U02-V03-X05",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "zurückrufen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X05"
+    },
+    {
+      "id": "A2-U02-V03-X06",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "sich melden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X06"
+    },
+    {
+      "id": "A2-U02-V03-X13",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Sprachnachricht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X13"
+    },
+    {
+      "id": "A2-U02-V04-X01",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Kindheit",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X01"
+    },
+    {
+      "id": "A2-U02-V04-X02",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Heimat",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X02"
+    },
+    {
+      "id": "A2-U02-V04-X03",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Umzug",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X03"
+    },
+    {
+      "id": "A2-U02-V04-X04",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "die Veränderung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X04"
+    },
+    {
+      "id": "A2-U02-V04-X05",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "aufwachsen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X05"
+    },
+    {
+      "id": "A2-U02-V04-X13",
+      "type": "vocabulary",
+      "unit": 2,
+      "title": "der Wohnort",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X13"
+    },
+    {
+      "id": "A2-U03-V01-X01",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Flur",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X01"
+    },
+    {
+      "id": "A2-U03-V01-X02",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Balkon",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X02"
+    },
+    {
+      "id": "A2-U03-V01-X03",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "das Regal",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X03"
+    },
+    {
+      "id": "A2-U03-V01-X04",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Schrank",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X04"
+    },
+    {
+      "id": "A2-U03-V01-X05",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "die Kommode",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X05"
+    },
+    {
+      "id": "A2-U03-V01-X06",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Teppich",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X06"
+    },
+    {
+      "id": "A2-U03-V01-X13",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Abstellraum",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X13"
+    },
+    {
+      "id": "A2-U03-V02-X01",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Karton",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X01"
+    },
+    {
+      "id": "A2-U03-V02-X02",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Umzugswagen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X02"
+    },
+    {
+      "id": "A2-U03-V02-X03",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "die Kiste",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X03"
+    },
+    {
+      "id": "A2-U03-V02-X04",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "packen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X04"
+    },
+    {
+      "id": "A2-U03-V02-X05",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "auspacken",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X05"
+    },
+    {
+      "id": "A2-U03-V02-X06",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "tragen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X06"
+    },
+    {
+      "id": "A2-U03-V02-X13",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Transporter",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X13"
+    },
+    {
+      "id": "A2-U03-V03-X01",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Haushalt",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X01"
+    },
+    {
+      "id": "A2-U03-V03-X02",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Müll",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X02"
+    },
+    {
+      "id": "A2-U03-V03-X03",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "die Wäsche",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X03"
+    },
+    {
+      "id": "A2-U03-V03-X04",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "die Aufgabe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X04"
+    },
+    {
+      "id": "A2-U03-V03-X05",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "den Müll rausbringen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X05"
+    },
+    {
+      "id": "A2-U03-V03-X06",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "Wäsche waschen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X06"
+    },
+    {
+      "id": "A2-U03-V03-X13",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Putzplan",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X13"
+    },
+    {
+      "id": "A2-U03-V04-X01",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Hausmeister",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X01"
+    },
+    {
+      "id": "A2-U03-V04-X02",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "die Heizung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X02"
+    },
+    {
+      "id": "A2-U03-V04-X03",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Wasserhahn",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X03"
+    },
+    {
+      "id": "A2-U03-V04-X04",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Lärm",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X04"
+    },
+    {
+      "id": "A2-U03-V04-X05",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "kaputtgehen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X05"
+    },
+    {
+      "id": "A2-U03-V04-X13",
+      "type": "vocabulary",
+      "unit": 3,
+      "title": "der Schaden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X13"
+    },
+    {
+      "id": "A2-U04-V01-X01",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Stelle",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X01"
+    },
+    {
+      "id": "A2-U04-V01-X02",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Betrieb",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X02"
+    },
+    {
+      "id": "A2-U04-V01-X03",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Abteilung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X03"
+    },
+    {
+      "id": "A2-U04-V01-X04",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Kollege",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X04"
+    },
+    {
+      "id": "A2-U04-V01-X05",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Chef",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X05"
+    },
+    {
+      "id": "A2-U04-V01-X06",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "Vollzeit arbeiten",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X06"
+    },
+    {
+      "id": "A2-U04-V01-X13",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Schicht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X13"
+    },
+    {
+      "id": "A2-U04-V02-X01",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Bewerbung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X01"
+    },
+    {
+      "id": "A2-U04-V02-X02",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "das Vorstellungsgespräch",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X02"
+    },
+    {
+      "id": "A2-U04-V02-X03",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "das Zeugnis",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X03"
+    },
+    {
+      "id": "A2-U04-V02-X04",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Ausbildung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X04"
+    },
+    {
+      "id": "A2-U04-V02-X05",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Erfahrung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X05"
+    },
+    {
+      "id": "A2-U04-V02-X06",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "sich bewerben um",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X06"
+    },
+    {
+      "id": "A2-U04-V02-X13",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Voraussetzung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X13"
+    },
+    {
+      "id": "A2-U04-V03-X01",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Weiterbildung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X01"
+    },
+    {
+      "id": "A2-U04-V03-X02",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Anmeldung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X02"
+    },
+    {
+      "id": "A2-U04-V03-X03",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Unterricht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X03"
+    },
+    {
+      "id": "A2-U04-V03-X04",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Hausaufgabe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X04"
+    },
+    {
+      "id": "A2-U04-V03-X05",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "teilnehmen an",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X05"
+    },
+    {
+      "id": "A2-U04-V03-X06",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "üben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X06"
+    },
+    {
+      "id": "A2-U04-V03-X13",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Lernstoff",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X13"
+    },
+    {
+      "id": "A2-U04-V04-X01",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Besprechung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X01"
+    },
+    {
+      "id": "A2-U04-V04-X02",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "der Termin",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X02"
+    },
+    {
+      "id": "A2-U04-V04-X03",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Pause",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X03"
+    },
+    {
+      "id": "A2-U04-V04-X04",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Vertretung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X04"
+    },
+    {
+      "id": "A2-U04-V04-X05",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "verschieben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X05"
+    },
+    {
+      "id": "A2-U04-V04-X13",
+      "type": "vocabulary",
+      "unit": 4,
+      "title": "die Frist",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X13"
+    },
+    {
+      "id": "A2-U05-V01-X01",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Größe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X01"
+    },
+    {
+      "id": "A2-U05-V01-X02",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "das Material",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X02"
+    },
+    {
+      "id": "A2-U05-V01-X03",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Qualität",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X03"
+    },
+    {
+      "id": "A2-U05-V01-X04",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Stoff",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X04"
+    },
+    {
+      "id": "A2-U05-V01-X05",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "passen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X05"
+    },
+    {
+      "id": "A2-U05-V01-X06",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "anprobieren",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X06"
+    },
+    {
+      "id": "A2-U05-V01-X13",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "gebraucht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X13"
+    },
+    {
+      "id": "A2-U05-V02-X01",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Quittung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X01"
+    },
+    {
+      "id": "A2-U05-V02-X02",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Kassenbon",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X02"
+    },
+    {
+      "id": "A2-U05-V02-X03",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Garantie",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X03"
+    },
+    {
+      "id": "A2-U05-V02-X04",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Umtausch",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X04"
+    },
+    {
+      "id": "A2-U05-V02-X05",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "bezahlen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X05"
+    },
+    {
+      "id": "A2-U05-V02-X06",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "zurückgeben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X06"
+    },
+    {
+      "id": "A2-U05-V02-X13",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Erstattung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X13"
+    },
+    {
+      "id": "A2-U05-V03-X01",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Speisekarte",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X01"
+    },
+    {
+      "id": "A2-U05-V03-X02",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "das Hauptgericht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X02"
+    },
+    {
+      "id": "A2-U05-V03-X03",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Beilage",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X03"
+    },
+    {
+      "id": "A2-U05-V03-X04",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Rechnung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X04"
+    },
+    {
+      "id": "A2-U05-V03-X05",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "bestellen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X05"
+    },
+    {
+      "id": "A2-U05-V03-X06",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "empfehlen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X06"
+    },
+    {
+      "id": "A2-U05-V03-X13",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Allergie",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X13"
+    },
+    {
+      "id": "A2-U05-V04-X01",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Vergleich",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X01"
+    },
+    {
+      "id": "A2-U05-V04-X02",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "die Auswahl",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X02"
+    },
+    {
+      "id": "A2-U05-V04-X03",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Vorteil",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X03"
+    },
+    {
+      "id": "A2-U05-V04-X04",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "der Nachteil",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X04"
+    },
+    {
+      "id": "A2-U05-V04-X05",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "vergleichen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X05"
+    },
+    {
+      "id": "A2-U05-V04-X13",
+      "type": "vocabulary",
+      "unit": 5,
+      "title": "preiswert",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X13"
+    },
+    {
+      "id": "A2-U06-V01-X01",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Erkältung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X01"
+    },
+    {
+      "id": "A2-U06-V01-X02",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "der Husten",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X02"
+    },
+    {
+      "id": "A2-U06-V01-X03",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "das Fieber",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X03"
+    },
+    {
+      "id": "A2-U06-V01-X04",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Halsschmerzen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X04"
+    },
+    {
+      "id": "A2-U06-V01-X05",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Kopfschmerzen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X05"
+    },
+    {
+      "id": "A2-U06-V01-X06",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "husten",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X06"
+    },
+    {
+      "id": "A2-U06-V01-X13",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Beschwerden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X13"
+    },
+    {
+      "id": "A2-U06-V02-X01",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Praxis",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X01"
+    },
+    {
+      "id": "A2-U06-V02-X02",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Sprechstunde",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X02"
+    },
+    {
+      "id": "A2-U06-V02-X03",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Versichertenkarte",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X03"
+    },
+    {
+      "id": "A2-U06-V02-X04",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Untersuchung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X04"
+    },
+    {
+      "id": "A2-U06-V02-X05",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "einen Termin vereinbaren",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X05"
+    },
+    {
+      "id": "A2-U06-V02-X06",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "einen Termin verschieben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X06"
+    },
+    {
+      "id": "A2-U06-V02-X13",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Überweisung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X13"
+    },
+    {
+      "id": "A2-U06-V03-X01",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Apotheke",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X01"
+    },
+    {
+      "id": "A2-U06-V03-X02",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "das Medikament",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X02"
+    },
+    {
+      "id": "A2-U06-V03-X03",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Tablette",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X03"
+    },
+    {
+      "id": "A2-U06-V03-X04",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "das Rezept",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X04"
+    },
+    {
+      "id": "A2-U06-V03-X05",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "einnehmen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X05"
+    },
+    {
+      "id": "A2-U06-V03-X06",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "anwenden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X06"
+    },
+    {
+      "id": "A2-U06-V03-X13",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Nebenwirkung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X13"
+    },
+    {
+      "id": "A2-U06-V04-X01",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "der Stress",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X01"
+    },
+    {
+      "id": "A2-U06-V04-X02",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Ruhe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X02"
+    },
+    {
+      "id": "A2-U06-V04-X03",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "die Bewegung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X03"
+    },
+    {
+      "id": "A2-U06-V04-X04",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "sich ausruhen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X04"
+    },
+    {
+      "id": "A2-U06-V04-X05",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "sich entspannen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X05"
+    },
+    {
+      "id": "A2-U06-V04-X13",
+      "type": "vocabulary",
+      "unit": 6,
+      "title": "das Wohlbefinden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X13"
+    },
+    {
+      "id": "A2-U07-V01-X01",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Fahrkarte",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X01"
+    },
+    {
+      "id": "A2-U07-V01-X02",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Verbindung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X02"
+    },
+    {
+      "id": "A2-U07-V01-X03",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "der Bahnsteig",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X03"
+    },
+    {
+      "id": "A2-U07-V01-X04",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "das Gleis",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X04"
+    },
+    {
+      "id": "A2-U07-V01-X05",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Haltestelle",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X05"
+    },
+    {
+      "id": "A2-U07-V01-X06",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "umsteigen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X06"
+    },
+    {
+      "id": "A2-U07-V01-X13",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "der Anschluss",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X13"
+    },
+    {
+      "id": "A2-U07-V02-X01",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Verspätung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X01"
+    },
+    {
+      "id": "A2-U07-V02-X02",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "der Ausfall",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X02"
+    },
+    {
+      "id": "A2-U07-V02-X03",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Durchsage",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X03"
+    },
+    {
+      "id": "A2-U07-V02-X04",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "der Ersatzverkehr",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X04"
+    },
+    {
+      "id": "A2-U07-V02-X05",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "ausfallen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X05"
+    },
+    {
+      "id": "A2-U07-V02-X06",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "sich verspäten",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X06"
+    },
+    {
+      "id": "A2-U07-V02-X13",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Störung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X13"
+    },
+    {
+      "id": "A2-U07-V03-X01",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Unterkunft",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X01"
+    },
+    {
+      "id": "A2-U07-V03-X02",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "das Einzelzimmer",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X02"
+    },
+    {
+      "id": "A2-U07-V03-X03",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "das Doppelzimmer",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X03"
+    },
+    {
+      "id": "A2-U07-V03-X04",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Rezeption",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X04"
+    },
+    {
+      "id": "A2-U07-V03-X05",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Übernachtung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X05"
+    },
+    {
+      "id": "A2-U07-V03-X06",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "buchen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X06"
+    },
+    {
+      "id": "A2-U07-V03-X13",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Stornierung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X13"
+    },
+    {
+      "id": "A2-U07-V04-X01",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Reise",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X01"
+    },
+    {
+      "id": "A2-U07-V04-X02",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Sehenswürdigkeit",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X02"
+    },
+    {
+      "id": "A2-U07-V04-X03",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Führung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X03"
+    },
+    {
+      "id": "A2-U07-V04-X04",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "der Reiseführer",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X04"
+    },
+    {
+      "id": "A2-U07-V04-X05",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "besichtigen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X05"
+    },
+    {
+      "id": "A2-U07-V04-X13",
+      "type": "vocabulary",
+      "unit": 7,
+      "title": "die Aussicht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X13"
+    },
+    {
+      "id": "A2-U08-V01-X01",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "das Amt",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X01"
+    },
+    {
+      "id": "A2-U08-V01-X02",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Schalter",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X02"
+    },
+    {
+      "id": "A2-U08-V01-X03",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "das Formular",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X03"
+    },
+    {
+      "id": "A2-U08-V01-X04",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Antrag",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X04"
+    },
+    {
+      "id": "A2-U08-V01-X05",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Ausweis",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X05"
+    },
+    {
+      "id": "A2-U08-V01-X06",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "ausfüllen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X06"
+    },
+    {
+      "id": "A2-U08-V01-X13",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Meldebescheinigung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X13"
+    },
+    {
+      "id": "A2-U08-V02-X01",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "das Paket",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X01"
+    },
+    {
+      "id": "A2-U08-V02-X02",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Briefumschlag",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X02"
+    },
+    {
+      "id": "A2-U08-V02-X03",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "das Konto",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X03"
+    },
+    {
+      "id": "A2-U08-V02-X04",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Überweisung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X04"
+    },
+    {
+      "id": "A2-U08-V02-X05",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Betrag",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X05"
+    },
+    {
+      "id": "A2-U08-V02-X06",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "abschicken",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X06"
+    },
+    {
+      "id": "A2-U08-V02-X13",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Gebühr",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X13"
+    },
+    {
+      "id": "A2-U08-V03-X01",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Beschwerde",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X01"
+    },
+    {
+      "id": "A2-U08-V03-X02",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Kundenservice",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X02"
+    },
+    {
+      "id": "A2-U08-V03-X03",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Techniker",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X03"
+    },
+    {
+      "id": "A2-U08-V03-X04",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Rechnung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X04"
+    },
+    {
+      "id": "A2-U08-V03-X05",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "prüfen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X05"
+    },
+    {
+      "id": "A2-U08-V03-X06",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "lösen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X06"
+    },
+    {
+      "id": "A2-U08-V03-X13",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Reklamation",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X13"
+    },
+    {
+      "id": "A2-U08-V04-X01",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Kreuzung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X01"
+    },
+    {
+      "id": "A2-U08-V04-X02",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Ampel",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X02"
+    },
+    {
+      "id": "A2-U08-V04-X03",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Eingang",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X03"
+    },
+    {
+      "id": "A2-U08-V04-X04",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "der Ausgang",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X04"
+    },
+    {
+      "id": "A2-U08-V04-X05",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Brücke",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X05"
+    },
+    {
+      "id": "A2-U08-V04-X13",
+      "type": "vocabulary",
+      "unit": 8,
+      "title": "die Umleitung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X13"
+    },
+    {
+      "id": "A2-U09-V01-X01",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "der Verein",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X01"
+    },
+    {
+      "id": "A2-U09-V01-X02",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "der Eintritt",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X02"
+    },
+    {
+      "id": "A2-U09-V01-X03",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Ausstellung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X03"
+    },
+    {
+      "id": "A2-U09-V01-X04",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "das Konzert",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X04"
+    },
+    {
+      "id": "A2-U09-V01-X05",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Vorstellung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X05"
+    },
+    {
+      "id": "A2-U09-V01-X07",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "stattfinden",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X07"
+    },
+    {
+      "id": "A2-U09-V01-X13",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "das Programmheft",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X13"
+    },
+    {
+      "id": "A2-U09-V02-X01",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "der Film",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X01"
+    },
+    {
+      "id": "A2-U09-V02-X02",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Serie",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X02"
+    },
+    {
+      "id": "A2-U09-V02-X03",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Handlung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X03"
+    },
+    {
+      "id": "A2-U09-V02-X04",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Rolle",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X04"
+    },
+    {
+      "id": "A2-U09-V02-X05",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "der Schauspieler",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X05"
+    },
+    {
+      "id": "A2-U09-V02-X06",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "anschauen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X06"
+    },
+    {
+      "id": "A2-U09-V02-X13",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Kritik",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X13"
+    },
+    {
+      "id": "A2-U09-V03-X01",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "das Gerät",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X01"
+    },
+    {
+      "id": "A2-U09-V03-X02",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die App",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X02"
+    },
+    {
+      "id": "A2-U09-V03-X03",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "das Passwort",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X03"
+    },
+    {
+      "id": "A2-U09-V03-X04",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Datei",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X04"
+    },
+    {
+      "id": "A2-U09-V03-X05",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "herunterladen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X05"
+    },
+    {
+      "id": "A2-U09-V03-X06",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "hochladen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X06"
+    },
+    {
+      "id": "A2-U09-V03-X13",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Einstellung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X13"
+    },
+    {
+      "id": "A2-U09-V04-X01",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Gewohnheit",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X01"
+    },
+    {
+      "id": "A2-U09-V04-X02",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Stärke",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X02"
+    },
+    {
+      "id": "A2-U09-V04-X03",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Schwäche",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X03"
+    },
+    {
+      "id": "A2-U09-V04-X04",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "die Meinung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X04"
+    },
+    {
+      "id": "A2-U09-V04-X05",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "nutzen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X05"
+    },
+    {
+      "id": "A2-U09-V04-X13",
+      "type": "vocabulary",
+      "unit": 9,
+      "title": "der Datenschutz",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X13"
+    },
+    {
+      "id": "A2-U10-V01-X01",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Verabredung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X01"
+    },
+    {
+      "id": "A2-U10-V01-X02",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "der Vorschlag",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X02"
+    },
+    {
+      "id": "A2-U10-V01-X03",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Möglichkeit",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X03"
+    },
+    {
+      "id": "A2-U10-V01-X04",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Zusage",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X04"
+    },
+    {
+      "id": "A2-U10-V01-X05",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "festlegen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X05"
+    },
+    {
+      "id": "A2-U10-V01-X13",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Alternative",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X13"
+    },
+    {
+      "id": "A2-U10-V02-X01",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Nachbarschaft",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X01"
+    },
+    {
+      "id": "A2-U10-V02-X02",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Gemeinschaft",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X02"
+    },
+    {
+      "id": "A2-U10-V02-X03",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "das Fest",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X03"
+    },
+    {
+      "id": "A2-U10-V02-X04",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Hilfe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X04"
+    },
+    {
+      "id": "A2-U10-V02-X05",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "der Stand",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X05"
+    },
+    {
+      "id": "A2-U10-V02-X13",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "das Ehrenamt",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X13"
+    },
+    {
+      "id": "A2-U10-V03-X01",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "der Wetterbericht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X01"
+    },
+    {
+      "id": "A2-U10-V03-X02",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "das Gewitter",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X02"
+    },
+    {
+      "id": "A2-U10-V03-X03",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "der Regen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X03"
+    },
+    {
+      "id": "A2-U10-V03-X04",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "der Wind",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X04"
+    },
+    {
+      "id": "A2-U10-V03-X05",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "sich ändern",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X05"
+    },
+    {
+      "id": "A2-U10-V03-X13",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Unwetterwarnung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X13"
+    },
+    {
+      "id": "A2-U10-V04-X01",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "die Erklärung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X01"
+    },
+    {
+      "id": "A2-U10-V04-X02",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "das Missverständnis",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X02"
+    },
+    {
+      "id": "A2-U10-V04-X03",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "nachfragen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X03"
+    },
+    {
+      "id": "A2-U10-V04-X04",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "wiederholen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X04"
+    },
+    {
+      "id": "A2-U10-V04-X05",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "erklären",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X05"
+    },
+    {
+      "id": "A2-U10-V04-X13",
+      "type": "vocabulary",
+      "unit": 10,
+      "title": "umschreiben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X13"
+    },
+    {
+      "id": "A2-U01-G01",
+      "type": "grammar",
+      "unit": 1,
+      "title": "Build the Perfekt with haben",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/grammar/g01/"
+    },
+    {
+      "id": "A2-U01-G02",
+      "type": "grammar",
+      "unit": 1,
+      "title": "Form regular past participles",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/grammar/g02/"
+    },
+    {
+      "id": "A2-U01-G03",
+      "type": "grammar",
+      "unit": 1,
+      "title": "Use common irregular participles",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/grammar/g03/"
+    },
+    {
+      "id": "A2-U01-G04",
+      "type": "grammar",
+      "unit": 1,
+      "title": "Sequence a short past account",
+      "status": "APPROVED_EXISTING_MATERIAL",
+      "route": "/a2/unit-1/grammar/g04/"
+    },
+    {
+      "id": "A2-U02-G01",
+      "type": "grammar",
+      "unit": 2,
+      "title": "Use the Perfekt with sein",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g01/"
+    },
+    {
+      "id": "A2-U02-G02",
+      "type": "grammar",
+      "unit": 2,
+      "title": "Form participles of separable verbs",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g02/"
+    },
+    {
+      "id": "A2-U02-G03",
+      "type": "grammar",
+      "unit": 2,
+      "title": "Form participles without ge",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g03/"
+    },
+    {
+      "id": "A2-U02-G04",
+      "type": "grammar",
+      "unit": 2,
+      "title": "Use war and hatte for everyday past",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g04/"
+    },
+    {
+      "id": "A2-U03-G01",
+      "type": "grammar",
+      "unit": 3,
+      "title": "Consolidate dative articles and pronouns",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g01/"
+    },
+    {
+      "id": "A2-U03-G02",
+      "type": "grammar",
+      "unit": 3,
+      "title": "Use frequent dative verbs",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g02/"
+    },
+    {
+      "id": "A2-U03-G03",
+      "type": "grammar",
+      "unit": 3,
+      "title": "Place dative and accusative objects",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g03/"
+    },
+    {
+      "id": "A2-U03-G04",
+      "type": "grammar",
+      "unit": 3,
+      "title": "Describe location with two-way prepositions",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g04/"
+    },
+    {
+      "id": "A2-U04-G01",
+      "type": "grammar",
+      "unit": 4,
+      "title": "Describe movement with two-way prepositions",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g01/"
+    },
+    {
+      "id": "A2-U04-G02",
+      "type": "grammar",
+      "unit": 4,
+      "title": "Give a reason with weil",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g02/"
+    },
+    {
+      "id": "A2-U04-G03",
+      "type": "grammar",
+      "unit": 4,
+      "title": "Report information with dass",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g03/"
+    },
+    {
+      "id": "A2-U04-G04",
+      "type": "grammar",
+      "unit": 4,
+      "title": "Use common modal verbs in the Präteritum",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g04/"
+    },
+    {
+      "id": "A2-U05-G01",
+      "type": "grammar",
+      "unit": 5,
+      "title": "Use adjective endings after definite articles",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g01/"
+    },
+    {
+      "id": "A2-U05-G02",
+      "type": "grammar",
+      "unit": 5,
+      "title": "Use adjective endings after ein and kein",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g02/"
+    },
+    {
+      "id": "A2-U05-G03",
+      "type": "grammar",
+      "unit": 5,
+      "title": "Compare with comparative forms",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g03/"
+    },
+    {
+      "id": "A2-U05-G04",
+      "type": "grammar",
+      "unit": 5,
+      "title": "Use superlatives and equal comparisons",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g04/"
+    },
+    {
+      "id": "A2-U06-G01",
+      "type": "grammar",
+      "unit": 6,
+      "title": "Use common reflexive verbs",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g01/"
+    },
+    {
+      "id": "A2-U06-G02",
+      "type": "grammar",
+      "unit": 6,
+      "title": "Use wenn for conditions and repeated situations",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g02/"
+    },
+    {
+      "id": "A2-U06-G03",
+      "type": "grammar",
+      "unit": 6,
+      "title": "Make polite requests with Konjunktiv II forms",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g03/"
+    },
+    {
+      "id": "A2-U06-G04",
+      "type": "grammar",
+      "unit": 6,
+      "title": "Choose an appropriate request form",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g04/"
+    },
+    {
+      "id": "A2-U07-G01",
+      "type": "grammar",
+      "unit": 7,
+      "title": "Use temporal prepositions and duration phrases",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g01/"
+    },
+    {
+      "id": "A2-U07-G02",
+      "type": "grammar",
+      "unit": 7,
+      "title": "Distinguish als and wenn in past time",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g02/"
+    },
+    {
+      "id": "A2-U07-G03",
+      "type": "grammar",
+      "unit": 7,
+      "title": "Express future plans",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g03/"
+    },
+    {
+      "id": "A2-U07-G04",
+      "type": "grammar",
+      "unit": 7,
+      "title": "Connect events and consequences",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g04/"
+    },
+    {
+      "id": "A2-U08-G01",
+      "type": "grammar",
+      "unit": 8,
+      "title": "Use frequent verbs with prepositions",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g01/"
+    },
+    {
+      "id": "A2-U08-G02",
+      "type": "grammar",
+      "unit": 8,
+      "title": "Ask and answer prepositional questions",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g02/"
+    },
+    {
+      "id": "A2-U08-G03",
+      "type": "grammar",
+      "unit": 8,
+      "title": "Use infinitives with zu",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g03/"
+    },
+    {
+      "id": "A2-U08-G04",
+      "type": "grammar",
+      "unit": 8,
+      "title": "State purpose with um zu",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g04/"
+    },
+    {
+      "id": "A2-U09-G01",
+      "type": "grammar",
+      "unit": 9,
+      "title": "Build simple nominative relative clauses",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g01/"
+    },
+    {
+      "id": "A2-U09-G02",
+      "type": "grammar",
+      "unit": 9,
+      "title": "Build simple accusative relative clauses",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g02/"
+    },
+    {
+      "id": "A2-U09-G03",
+      "type": "grammar",
+      "unit": 9,
+      "title": "Use adjective endings in common dative phrases",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g03/"
+    },
+    {
+      "id": "A2-U09-G04",
+      "type": "grammar",
+      "unit": 9,
+      "title": "Use common adjective and preposition combinations",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g04/"
+    },
+    {
+      "id": "A2-U10-G01",
+      "type": "grammar",
+      "unit": 10,
+      "title": "Control verb position across clause types",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g01/"
+    },
+    {
+      "id": "A2-U10-G02",
+      "type": "grammar",
+      "unit": 10,
+      "title": "Choose common linking words",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g02/"
+    },
+    {
+      "id": "A2-U10-G03",
+      "type": "grammar",
+      "unit": 10,
+      "title": "Consolidate cases and prepositions",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g03/"
+    },
+    {
+      "id": "A2-U10-G04",
+      "type": "grammar",
+      "unit": 10,
+      "title": "Choose tense and register for the situation",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g04/"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U02-L01-P01",
+      "type": "listening",
+      "unit": 2,
+      "title": "Neuigkeiten von Leila",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-2/listening/l01/#BD-A2-AUDIO-D-U02-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U02-L01-P02",
+      "type": "listening",
+      "unit": 2,
+      "title": "Eine Einladung mit neuer Uhrzeit",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-2/listening/l01/#BD-A2-AUDIO-D-U02-L01-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U02-L02-P01",
+      "type": "listening",
+      "unit": 2,
+      "title": "Großvaters erster Arbeitstag",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-2/listening/l02/#BD-A2-AUDIO-D-U02-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U03-L01-P01",
+      "type": "listening",
+      "unit": 3,
+      "title": "Die neue Wohnung",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-3/listening/l01/#BD-A2-AUDIO-D-U03-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U03-L02-P01",
+      "type": "listening",
+      "unit": 3,
+      "title": "Wer macht was am Umzugstag?",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-3/listening/l02/#BD-A2-AUDIO-D-U03-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U03-L02-P02",
+      "type": "listening",
+      "unit": 3,
+      "title": "Die Heizung ist wieder kalt",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-3/listening/l02/#BD-A2-AUDIO-D-U03-L02-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U04-L01-P01",
+      "type": "listening",
+      "unit": 4,
+      "title": "Der Dienstplan für Freitag",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-4/listening/l01/#BD-A2-AUDIO-D-U04-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U04-L01-P02",
+      "type": "listening",
+      "unit": 4,
+      "title": "Informationen zum Abendkurs",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-4/listening/l01/#BD-A2-AUDIO-D-U04-L01-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U04-L02-P01",
+      "type": "listening",
+      "unit": 4,
+      "title": "Ein kurzes Bewerbungsgespräch",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-4/listening/l02/#BD-A2-AUDIO-D-U04-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U05-L01-P01",
+      "type": "listening",
+      "unit": 5,
+      "title": "Der Pullover ist zu klein",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-5/listening/l01/#BD-A2-AUDIO-D-U05-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U05-L01-P02",
+      "type": "listening",
+      "unit": 5,
+      "title": "Ein fehlender Artikel",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-5/listening/l01/#BD-A2-AUDIO-D-U05-L01-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U05-L02-P01",
+      "type": "listening",
+      "unit": 5,
+      "title": "Bestellung mit einer Änderung",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-5/listening/l02/#BD-A2-AUDIO-D-U05-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U06-L01-P01",
+      "type": "listening",
+      "unit": 6,
+      "title": "Ein Termin, der nicht passt",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-6/listening/l01/#BD-A2-AUDIO-D-U06-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U06-L01-P02",
+      "type": "listening",
+      "unit": 6,
+      "title": "In der Apotheke",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-6/listening/l01/#BD-A2-AUDIO-D-U06-L01-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U06-L02-P01",
+      "type": "listening",
+      "unit": 6,
+      "title": "Weniger Stress am Morgen",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-6/listening/l02/#BD-A2-AUDIO-D-U06-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U07-L01-P01",
+      "type": "listening",
+      "unit": 7,
+      "title": "Ansage am Bahnhof",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-7/listening/l01/#BD-A2-AUDIO-D-U07-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U07-L01-P02",
+      "type": "listening",
+      "unit": 7,
+      "title": "Der Bus kommt nicht",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-7/listening/l01/#BD-A2-AUDIO-D-U07-L01-P02"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U07-L02-P01",
+      "type": "listening",
+      "unit": 7,
+      "title": "Eine Buchung ändern",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-7/listening/l02/#BD-A2-AUDIO-D-U07-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U08-L01-P01",
+      "type": "listening",
+      "unit": 8,
+      "title": "Ein Dokument fehlt",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-8/listening/l01/#BD-A2-AUDIO-D-U08-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U08-L02-P01",
+      "type": "listening",
+      "unit": 8,
+      "title": "Das Paket für die falsche Straße",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-8/listening/l02/#BD-A2-AUDIO-D-U08-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U09-L01-P01",
+      "type": "listening",
+      "unit": 9,
+      "title": "Welcher Film passt?",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-9/listening/l01/#BD-A2-AUDIO-D-U09-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U09-L02-P01",
+      "type": "listening",
+      "unit": 9,
+      "title": "Das Handy hat keinen Ton",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-9/listening/l02/#BD-A2-AUDIO-D-U09-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U10-L01-P01",
+      "type": "listening",
+      "unit": 10,
+      "title": "Das Nachbarschaftsfest",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-10/listening/l01/#BD-A2-AUDIO-D-U10-L01-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-U10-L02-P01",
+      "type": "listening",
+      "unit": 10,
+      "title": "Drei Änderungen vor dem Ausflug",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-10/listening/l02/#BD-A2-AUDIO-D-U10-L02-P01"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-P02",
+      "type": "podcast",
+      "unit": 2,
+      "title": "Eine Einladung mit Änderungen",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-2/podcast/a2-p02/"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-P04",
+      "type": "podcast",
+      "unit": 3,
+      "title": "Der Umzugstag",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-3/podcast/a2-p04/"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-P08",
+      "type": "podcast",
+      "unit": 6,
+      "title": "Ein Termin, der nicht passt",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-6/podcast/a2-p08/"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-P10",
+      "type": "podcast",
+      "unit": 7,
+      "title": "Der Zug fährt heute anders",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-7/podcast/a2-p10/"
+    },
+    {
+      "id": "BD-A2-AUDIO-D-P14",
+      "type": "podcast",
+      "unit": 10,
+      "title": "Das Nachbarschaftsfest",
+      "status": "DRAFT_PENDING_QUALIFIED_REVIEW",
+      "audio_status": "audio_pending",
+      "route": "/a2/unit-10/podcast/a2-p14/"
+    },
+    {
+      "id": "A2-U02-V01-X01-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "der Verwandte",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X01-E01"
+    },
+    {
+      "id": "A2-U02-V01-X02-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X02-E01"
+    },
+    {
+      "id": "A2-U02-V01-X03-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X03-E01"
+    },
+    {
+      "id": "A2-U02-V01-X04-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X04-E01"
+    },
+    {
+      "id": "A2-U02-V01-X05-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "ledig",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X05-E01"
+    },
+    {
+      "id": "A2-U02-V01-X06-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Die Person ist _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X06-E01"
+    },
+    {
+      "id": "A2-U02-V01-X13-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v01/#A2-U02-V01-X13-E01"
+    },
+    {
+      "id": "A2-U02-V02-X01-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X01-E01"
+    },
+    {
+      "id": "A2-U02-V02-X02-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "die Feier",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X02-E01"
+    },
+    {
+      "id": "A2-U02-V02-X03-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X03-E01"
+    },
+    {
+      "id": "A2-U02-V02-X04-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X04-E01"
+    },
+    {
+      "id": "A2-U02-V02-X05-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich möchte meine Nachbarn heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X05-E01"
+    },
+    {
+      "id": "A2-U02-V02-X06-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "zusagen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X06-E01"
+    },
+    {
+      "id": "A2-U02-V02-X13-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v02/#A2-U02-V02-X13-E01"
+    },
+    {
+      "id": "A2-U02-V03-X01-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X01-E01"
+    },
+    {
+      "id": "A2-U02-V03-X02-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X02-E01"
+    },
+    {
+      "id": "A2-U02-V03-X03-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "der Anruf",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X03-E01"
+    },
+    {
+      "id": "A2-U02-V03-X04-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich möchte Frau Klein heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X04-E01"
+    },
+    {
+      "id": "A2-U02-V03-X05-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich möchte dich heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X05-E01"
+    },
+    {
+      "id": "A2-U02-V03-X06-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich möchte mich morgen bei dir _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X06-E01"
+    },
+    {
+      "id": "A2-U02-V03-X13-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "die Sprachnachricht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v03/#A2-U02-V03-X13-E01"
+    },
+    {
+      "id": "A2-U02-V04-X01-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X01-E01"
+    },
+    {
+      "id": "A2-U02-V04-X02-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X02-E01"
+    },
+    {
+      "id": "A2-U02-V04-X03-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X03-E01"
+    },
+    {
+      "id": "A2-U02-V04-X04-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "die Veränderung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X04-E01"
+    },
+    {
+      "id": "A2-U02-V04-X05-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Sie ist in einer kleinen Stadt _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X05-E01"
+    },
+    {
+      "id": "A2-U02-V04-X13-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/vocabulary/v04/#A2-U02-V04-X13-E01"
+    },
+    {
+      "id": "A2-U03-V01-X01-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X01-E01"
+    },
+    {
+      "id": "A2-U03-V01-X02-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "der Balkon",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X02-E01"
+    },
+    {
+      "id": "A2-U03-V01-X03-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X03-E01"
+    },
+    {
+      "id": "A2-U03-V01-X04-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X04-E01"
+    },
+    {
+      "id": "A2-U03-V01-X05-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X05-E01"
+    },
+    {
+      "id": "A2-U03-V01-X06-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "der Teppich",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X06-E01"
+    },
+    {
+      "id": "A2-U03-V01-X13-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v01/#A2-U03-V01-X13-E01"
+    },
+    {
+      "id": "A2-U03-V02-X01-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X01-E01"
+    },
+    {
+      "id": "A2-U03-V02-X02-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X02-E01"
+    },
+    {
+      "id": "A2-U03-V02-X03-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "die Kiste",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X03-E01"
+    },
+    {
+      "id": "A2-U03-V02-X04-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich möchte heute die Bücher _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X04-E01"
+    },
+    {
+      "id": "A2-U03-V02-X05-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich möchte heute die Kisten _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X05-E01"
+    },
+    {
+      "id": "A2-U03-V02-X06-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich möchte die Kiste nach oben _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X06-E01"
+    },
+    {
+      "id": "A2-U03-V02-X13-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "der Transporter",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v02/#A2-U03-V02-X13-E01"
+    },
+    {
+      "id": "A2-U03-V03-X01-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X01-E01"
+    },
+    {
+      "id": "A2-U03-V03-X02-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X02-E01"
+    },
+    {
+      "id": "A2-U03-V03-X03-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X03-E01"
+    },
+    {
+      "id": "A2-U03-V03-X04-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "die Aufgabe",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X04-E01"
+    },
+    {
+      "id": "A2-U03-V03-X05-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich möchte heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X05-E01"
+    },
+    {
+      "id": "A2-U03-V03-X06-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich möchte heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X06-E01"
+    },
+    {
+      "id": "A2-U03-V03-X13-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v03/#A2-U03-V03-X13-E01"
+    },
+    {
+      "id": "A2-U03-V04-X01-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "der Hausmeister",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X01-E01"
+    },
+    {
+      "id": "A2-U03-V04-X02-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X02-E01"
+    },
+    {
+      "id": "A2-U03-V04-X03-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X03-E01"
+    },
+    {
+      "id": "A2-U03-V04-X04-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X04-E01"
+    },
+    {
+      "id": "A2-U03-V04-X05-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "kaputtgehen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X05-E01"
+    },
+    {
+      "id": "A2-U03-V04-X13-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/vocabulary/v04/#A2-U03-V04-X13-E01"
+    },
+    {
+      "id": "A2-U04-V01-X01-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X01-E01"
+    },
+    {
+      "id": "A2-U04-V01-X02-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X02-E01"
+    },
+    {
+      "id": "A2-U04-V01-X03-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "die Abteilung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X03-E01"
+    },
+    {
+      "id": "A2-U04-V01-X04-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X04-E01"
+    },
+    {
+      "id": "A2-U04-V01-X05-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X05-E01"
+    },
+    {
+      "id": "A2-U04-V01-X06-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich möchte später _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X06-E01"
+    },
+    {
+      "id": "A2-U04-V01-X13-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "die Schicht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v01/#A2-U04-V01-X13-E01"
+    },
+    {
+      "id": "A2-U04-V02-X01-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X01-E01"
+    },
+    {
+      "id": "A2-U04-V02-X02-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X02-E01"
+    },
+    {
+      "id": "A2-U04-V02-X03-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X03-E01"
+    },
+    {
+      "id": "A2-U04-V02-X04-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "die Ausbildung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X04-E01"
+    },
+    {
+      "id": "A2-U04-V02-X05-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X05-E01"
+    },
+    {
+      "id": "A2-U04-V02-X06-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich möchte mich um diese Stelle _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X06-E01"
+    },
+    {
+      "id": "A2-U04-V02-X13-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v02/#A2-U04-V02-X13-E01"
+    },
+    {
+      "id": "A2-U04-V03-X01-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "die Weiterbildung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X01-E01"
+    },
+    {
+      "id": "A2-U04-V03-X02-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X02-E01"
+    },
+    {
+      "id": "A2-U04-V03-X03-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X03-E01"
+    },
+    {
+      "id": "A2-U04-V03-X04-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X04-E01"
+    },
+    {
+      "id": "A2-U04-V03-X05-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "teilnehmen an",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X05-E01"
+    },
+    {
+      "id": "A2-U04-V03-X06-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich möchte heute die neuen Wörter _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X06-E01"
+    },
+    {
+      "id": "A2-U04-V03-X13-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v03/#A2-U04-V03-X13-E01"
+    },
+    {
+      "id": "A2-U04-V04-X01-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X01-E01"
+    },
+    {
+      "id": "A2-U04-V04-X02-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "der Termin",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X02-E01"
+    },
+    {
+      "id": "A2-U04-V04-X03-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X03-E01"
+    },
+    {
+      "id": "A2-U04-V04-X04-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X04-E01"
+    },
+    {
+      "id": "A2-U04-V04-X05-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich möchte die Besprechung auf morgen _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X05-E01"
+    },
+    {
+      "id": "A2-U04-V04-X13-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "die Frist",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/vocabulary/v04/#A2-U04-V04-X13-E01"
+    },
+    {
+      "id": "A2-U05-V01-X01-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X01-E01"
+    },
+    {
+      "id": "A2-U05-V01-X02-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X02-E01"
+    },
+    {
+      "id": "A2-U05-V01-X03-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X03-E01"
+    },
+    {
+      "id": "A2-U05-V01-X04-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "der Stoff",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X04-E01"
+    },
+    {
+      "id": "A2-U05-V01-X05-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Die Jacke _____ mir gut.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X05-E01"
+    },
+    {
+      "id": "A2-U05-V01-X06-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich möchte die Jacke _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X06-E01"
+    },
+    {
+      "id": "A2-U05-V01-X13-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Das Produkt ist _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v01/#A2-U05-V01-X13-E01"
+    },
+    {
+      "id": "A2-U05-V02-X01-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "die Quittung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X01-E01"
+    },
+    {
+      "id": "A2-U05-V02-X02-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X02-E01"
+    },
+    {
+      "id": "A2-U05-V02-X03-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X03-E01"
+    },
+    {
+      "id": "A2-U05-V02-X04-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X04-E01"
+    },
+    {
+      "id": "A2-U05-V02-X05-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "bezahlen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X05-E01"
+    },
+    {
+      "id": "A2-U05-V02-X06-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich möchte das Produkt _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X06-E01"
+    },
+    {
+      "id": "A2-U05-V02-X13-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v02/#A2-U05-V02-X13-E01"
+    },
+    {
+      "id": "A2-U05-V03-X01-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X01-E01"
+    },
+    {
+      "id": "A2-U05-V03-X02-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "das Hauptgericht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X02-E01"
+    },
+    {
+      "id": "A2-U05-V03-X03-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X03-E01"
+    },
+    {
+      "id": "A2-U05-V03-X04-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X04-E01"
+    },
+    {
+      "id": "A2-U05-V03-X05-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich möchte das Hauptgericht _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X05-E01"
+    },
+    {
+      "id": "A2-U05-V03-X06-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "empfehlen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X06-E01"
+    },
+    {
+      "id": "A2-U05-V03-X13-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v03/#A2-U05-V03-X13-E01"
+    },
+    {
+      "id": "A2-U05-V04-X01-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X01-E01"
+    },
+    {
+      "id": "A2-U05-V04-X02-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X02-E01"
+    },
+    {
+      "id": "A2-U05-V04-X03-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "der Vorteil",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X03-E01"
+    },
+    {
+      "id": "A2-U05-V04-X04-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X04-E01"
+    },
+    {
+      "id": "A2-U05-V04-X05-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich möchte die beiden Angebote _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X05-E01"
+    },
+    {
+      "id": "A2-U05-V04-X13-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Das Produkt ist _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/vocabulary/v04/#A2-U05-V04-X13-E01"
+    },
+    {
+      "id": "A2-U06-V01-X01-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "die Erkältung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X01-E01"
+    },
+    {
+      "id": "A2-U06-V01-X02-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X02-E01"
+    },
+    {
+      "id": "A2-U06-V01-X03-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X03-E01"
+    },
+    {
+      "id": "A2-U06-V01-X04-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ sind in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X04-E01"
+    },
+    {
+      "id": "A2-U06-V01-X05-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "die Kopfschmerzen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X05-E01"
+    },
+    {
+      "id": "A2-U06-V01-X06-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich muss heute oft _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X06-E01"
+    },
+    {
+      "id": "A2-U06-V01-X13-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ sind in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v01/#A2-U06-V01-X13-E01"
+    },
+    {
+      "id": "A2-U06-V02-X01-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X01-E01"
+    },
+    {
+      "id": "A2-U06-V02-X02-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "die Sprechstunde",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X02-E01"
+    },
+    {
+      "id": "A2-U06-V02-X03-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X03-E01"
+    },
+    {
+      "id": "A2-U06-V02-X04-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X04-E01"
+    },
+    {
+      "id": "A2-U06-V02-X05-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich möchte _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X05-E01"
+    },
+    {
+      "id": "A2-U06-V02-X06-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "einen Termin verschieben",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X06-E01"
+    },
+    {
+      "id": "A2-U06-V02-X13-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v02/#A2-U06-V02-X13-E01"
+    },
+    {
+      "id": "A2-U06-V03-X01-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X01-E01"
+    },
+    {
+      "id": "A2-U06-V03-X02-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X02-E01"
+    },
+    {
+      "id": "A2-U06-V03-X03-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "die Tablette",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X03-E01"
+    },
+    {
+      "id": "A2-U06-V03-X04-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X04-E01"
+    },
+    {
+      "id": "A2-U06-V03-X05-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich möchte das Medikament heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X05-E01"
+    },
+    {
+      "id": "A2-U06-V03-X06-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich möchte diese Salbe heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X06-E01"
+    },
+    {
+      "id": "A2-U06-V03-X13-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "die Nebenwirkung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v03/#A2-U06-V03-X13-E01"
+    },
+    {
+      "id": "A2-U06-V04-X01-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X01-E01"
+    },
+    {
+      "id": "A2-U06-V04-X02-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X02-E01"
+    },
+    {
+      "id": "A2-U06-V04-X03-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X03-E01"
+    },
+    {
+      "id": "A2-U06-V04-X04-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "sich ausruhen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X04-E01"
+    },
+    {
+      "id": "A2-U06-V04-X05-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich möchte mich heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X05-E01"
+    },
+    {
+      "id": "A2-U06-V04-X13-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/vocabulary/v04/#A2-U06-V04-X13-E01"
+    },
+    {
+      "id": "A2-U07-V01-X01-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X01-E01"
+    },
+    {
+      "id": "A2-U07-V01-X02-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "die Verbindung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X02-E01"
+    },
+    {
+      "id": "A2-U07-V01-X03-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X03-E01"
+    },
+    {
+      "id": "A2-U07-V01-X04-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X04-E01"
+    },
+    {
+      "id": "A2-U07-V01-X05-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X05-E01"
+    },
+    {
+      "id": "A2-U07-V01-X06-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "umsteigen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X06-E01"
+    },
+    {
+      "id": "A2-U07-V01-X13-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v01/#A2-U07-V01-X13-E01"
+    },
+    {
+      "id": "A2-U07-V02-X01-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X01-E01"
+    },
+    {
+      "id": "A2-U07-V02-X02-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X02-E01"
+    },
+    {
+      "id": "A2-U07-V02-X03-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "die Durchsage",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X03-E01"
+    },
+    {
+      "id": "A2-U07-V02-X04-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X04-E01"
+    },
+    {
+      "id": "A2-U07-V02-X05-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Der Zug kann heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X05-E01"
+    },
+    {
+      "id": "A2-U07-V02-X06-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Der Zug _____ heute um zehn Minuten.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X06-E01"
+    },
+    {
+      "id": "A2-U07-V02-X13-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "die Störung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v02/#A2-U07-V02-X13-E01"
+    },
+    {
+      "id": "A2-U07-V03-X01-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X01-E01"
+    },
+    {
+      "id": "A2-U07-V03-X02-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X02-E01"
+    },
+    {
+      "id": "A2-U07-V03-X03-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X03-E01"
+    },
+    {
+      "id": "A2-U07-V03-X04-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "die Rezeption",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X04-E01"
+    },
+    {
+      "id": "A2-U07-V03-X05-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X05-E01"
+    },
+    {
+      "id": "A2-U07-V03-X06-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Ich möchte ein Doppelzimmer _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X06-E01"
+    },
+    {
+      "id": "A2-U07-V03-X13-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v03/#A2-U07-V03-X13-E01"
+    },
+    {
+      "id": "A2-U07-V04-X01-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "die Reise",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X01-E01"
+    },
+    {
+      "id": "A2-U07-V04-X02-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X02-E01"
+    },
+    {
+      "id": "A2-U07-V04-X03-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X03-E01"
+    },
+    {
+      "id": "A2-U07-V04-X04-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X04-E01"
+    },
+    {
+      "id": "A2-U07-V04-X05-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "besichtigen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X05-E01"
+    },
+    {
+      "id": "A2-U07-V04-X13-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/vocabulary/v04/#A2-U07-V04-X13-E01"
+    },
+    {
+      "id": "A2-U08-V01-X01-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X01-E01"
+    },
+    {
+      "id": "A2-U08-V01-X02-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X02-E01"
+    },
+    {
+      "id": "A2-U08-V01-X03-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "das Formular",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X03-E01"
+    },
+    {
+      "id": "A2-U08-V01-X04-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X04-E01"
+    },
+    {
+      "id": "A2-U08-V01-X05-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X05-E01"
+    },
+    {
+      "id": "A2-U08-V01-X06-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich möchte das Formular heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X06-E01"
+    },
+    {
+      "id": "A2-U08-V01-X13-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "die Meldebescheinigung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v01/#A2-U08-V01-X13-E01"
+    },
+    {
+      "id": "A2-U08-V02-X01-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X01-E01"
+    },
+    {
+      "id": "A2-U08-V02-X02-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X02-E01"
+    },
+    {
+      "id": "A2-U08-V02-X03-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X03-E01"
+    },
+    {
+      "id": "A2-U08-V02-X04-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "die Überweisung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X04-E01"
+    },
+    {
+      "id": "A2-U08-V02-X05-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X05-E01"
+    },
+    {
+      "id": "A2-U08-V02-X06-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich möchte das Paket heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X06-E01"
+    },
+    {
+      "id": "A2-U08-V02-X13-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v02/#A2-U08-V02-X13-E01"
+    },
+    {
+      "id": "A2-U08-V03-X01-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "die Beschwerde",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X01-E01"
+    },
+    {
+      "id": "A2-U08-V03-X02-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X02-E01"
+    },
+    {
+      "id": "A2-U08-V03-X03-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X03-E01"
+    },
+    {
+      "id": "A2-U08-V03-X04-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X04-E01"
+    },
+    {
+      "id": "A2-U08-V03-X05-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "prüfen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X05-E01"
+    },
+    {
+      "id": "A2-U08-V03-X06-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Wir möchten das Problem heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X06-E01"
+    },
+    {
+      "id": "A2-U08-V03-X13-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v03/#A2-U08-V03-X13-E01"
+    },
+    {
+      "id": "A2-U08-V04-X01-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X01-E01"
+    },
+    {
+      "id": "A2-U08-V04-X02-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "die Ampel",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X02-E01"
+    },
+    {
+      "id": "A2-U08-V04-X03-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X03-E01"
+    },
+    {
+      "id": "A2-U08-V04-X04-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X04-E01"
+    },
+    {
+      "id": "A2-U08-V04-X05-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X05-E01"
+    },
+    {
+      "id": "A2-U08-V04-X13-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "die Umleitung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/vocabulary/v04/#A2-U08-V04-X13-E01"
+    },
+    {
+      "id": "A2-U09-V01-X01-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X01-E01"
+    },
+    {
+      "id": "A2-U09-V01-X02-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X02-E01"
+    },
+    {
+      "id": "A2-U09-V01-X03-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X03-E01"
+    },
+    {
+      "id": "A2-U09-V01-X04-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "das Konzert",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X04-E01"
+    },
+    {
+      "id": "A2-U09-V01-X05-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X05-E01"
+    },
+    {
+      "id": "A2-U09-V01-X07-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Das Konzert kann am Freitag _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X07-E01"
+    },
+    {
+      "id": "A2-U09-V01-X13-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v01/#A2-U09-V01-X13-E01"
+    },
+    {
+      "id": "A2-U09-V02-X01-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "der Film",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X01-E01"
+    },
+    {
+      "id": "A2-U09-V02-X02-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X02-E01"
+    },
+    {
+      "id": "A2-U09-V02-X03-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X03-E01"
+    },
+    {
+      "id": "A2-U09-V02-X04-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X04-E01"
+    },
+    {
+      "id": "A2-U09-V02-X05-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "der Schauspieler",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X05-E01"
+    },
+    {
+      "id": "A2-U09-V02-X06-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich möchte den Film heute _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X06-E01"
+    },
+    {
+      "id": "A2-U09-V02-X13-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v02/#A2-U09-V02-X13-E01"
+    },
+    {
+      "id": "A2-U09-V03-X01-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X01-E01"
+    },
+    {
+      "id": "A2-U09-V03-X02-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "die App",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X02-E01"
+    },
+    {
+      "id": "A2-U09-V03-X03-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X03-E01"
+    },
+    {
+      "id": "A2-U09-V03-X04-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X04-E01"
+    },
+    {
+      "id": "A2-U09-V03-X05-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich möchte die Datei _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X05-E01"
+    },
+    {
+      "id": "A2-U09-V03-X06-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "hochladen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X06-E01"
+    },
+    {
+      "id": "A2-U09-V03-X13-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v03/#A2-U09-V03-X13-E01"
+    },
+    {
+      "id": "A2-U09-V04-X01-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X01-E01"
+    },
+    {
+      "id": "A2-U09-V04-X02-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X02-E01"
+    },
+    {
+      "id": "A2-U09-V04-X03-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "die Schwäche",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X03-E01"
+    },
+    {
+      "id": "A2-U09-V04-X04-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X04-E01"
+    },
+    {
+      "id": "A2-U09-V04-X05-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich möchte die App jeden Tag _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X05-E01"
+    },
+    {
+      "id": "A2-U09-V04-X13-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/vocabulary/v04/#A2-U09-V04-X13-E01"
+    },
+    {
+      "id": "A2-U10-V01-X01-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "die Verabredung",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X01-E01"
+    },
+    {
+      "id": "A2-U10-V01-X02-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X02-E01"
+    },
+    {
+      "id": "A2-U10-V01-X03-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X03-E01"
+    },
+    {
+      "id": "A2-U10-V01-X04-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X04-E01"
+    },
+    {
+      "id": "A2-U10-V01-X05-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "festlegen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X05-E01"
+    },
+    {
+      "id": "A2-U10-V01-X13-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v01/#A2-U10-V01-X13-E01"
+    },
+    {
+      "id": "A2-U10-V02-X01-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X01-E01"
+    },
+    {
+      "id": "A2-U10-V02-X02-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X02-E01"
+    },
+    {
+      "id": "A2-U10-V02-X03-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "das Fest",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X03-E01"
+    },
+    {
+      "id": "A2-U10-V02-X04-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X04-E01"
+    },
+    {
+      "id": "A2-U10-V02-X05-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X05-E01"
+    },
+    {
+      "id": "A2-U10-V02-X13-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v02/#A2-U10-V02-X13-E01"
+    },
+    {
+      "id": "A2-U10-V03-X01-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "der Wetterbericht",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X01-E01"
+    },
+    {
+      "id": "A2-U10-V03-X02-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X02-E01"
+    },
+    {
+      "id": "A2-U10-V03-X03-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X03-E01"
+    },
+    {
+      "id": "A2-U10-V03-X04-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X04-E01"
+    },
+    {
+      "id": "A2-U10-V03-X05-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "sich ändern",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X05-E01"
+    },
+    {
+      "id": "A2-U10-V03-X13-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v03/#A2-U10-V03-X13-E01"
+    },
+    {
+      "id": "A2-U10-V04-X01-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X01-E01"
+    },
+    {
+      "id": "A2-U10-V04-X02-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ ist in dieser Situation besonders wichtig.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X02-E01"
+    },
+    {
+      "id": "A2-U10-V04-X03-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "nachfragen",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X03-E01"
+    },
+    {
+      "id": "A2-U10-V04-X04-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Könnten Sie den Satz bitte _____?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X04-E01"
+    },
+    {
+      "id": "A2-U10-V04-X05-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Könnten Sie das bitte _____?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X05-E01"
+    },
+    {
+      "id": "A2-U10-V04-X13-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Ich kann das Wort mit einfachen Worten _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/vocabulary/v04/#A2-U10-V04-X13-E01"
+    },
+    {
+      "id": "A2-U02-G01-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Wir _____ gestern früh angekommen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g01/#A2-U02-G01-E01"
+    },
+    {
+      "id": "A2-U02-G01-E02",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g01/#A2-U02-G01-E02"
+    },
+    {
+      "id": "A2-U02-G01-E03",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Wir haben gestern früh angekommen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g01/#A2-U02-G01-E03"
+    },
+    {
+      "id": "A2-U02-G01-E04",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g01/#A2-U02-G01-E04"
+    },
+    {
+      "id": "A2-U02-G02-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich habe meine Schwester _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g02/#A2-U02-G02-E01"
+    },
+    {
+      "id": "A2-U02-G02-E02",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g02/#A2-U02-G02-E02"
+    },
+    {
+      "id": "A2-U02-G02-E03",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Ich habe meine Schwester geanrufen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g02/#A2-U02-G02-E03"
+    },
+    {
+      "id": "A2-U02-G02-E04",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g02/#A2-U02-G02-E04"
+    },
+    {
+      "id": "A2-U02-G03-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Wir haben unsere Tante _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g03/#A2-U02-G03-E01"
+    },
+    {
+      "id": "A2-U02-G03-E02",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g03/#A2-U02-G03-E02"
+    },
+    {
+      "id": "A2-U02-G03-E03",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Wir haben unsere Tante gebesucht.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g03/#A2-U02-G03-E03"
+    },
+    {
+      "id": "A2-U02-G03-E04",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g03/#A2-U02-G03-E04"
+    },
+    {
+      "id": "A2-U02-G04-E01",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Früher _____ ich sehr schüchtern.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g04/#A2-U02-G04-E01"
+    },
+    {
+      "id": "A2-U02-G04-E02",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g04/#A2-U02-G04-E02"
+    },
+    {
+      "id": "A2-U02-G04-E03",
+      "type": "exercise",
+      "unit": 2,
+      "title": "Früher ist gewesen ich sehr schüchtern.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g04/#A2-U02-G04-E03"
+    },
+    {
+      "id": "A2-U02-G04-E04",
+      "type": "exercise",
+      "unit": 2,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-2/grammar/g04/#A2-U02-G04-E04"
+    },
+    {
+      "id": "A2-U03-G01-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich helfe _____ Nachbarn.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g01/#A2-U03-G01-E01"
+    },
+    {
+      "id": "A2-U03-G01-E02",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g01/#A2-U03-G01-E02"
+    },
+    {
+      "id": "A2-U03-G01-E03",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich helfe den Nachbarn.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g01/#A2-U03-G01-E03"
+    },
+    {
+      "id": "A2-U03-G01-E04",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g01/#A2-U03-G01-E04"
+    },
+    {
+      "id": "A2-U03-G02-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Der Film gefällt _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g02/#A2-U03-G02-E01"
+    },
+    {
+      "id": "A2-U03-G02-E02",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g02/#A2-U03-G02-E02"
+    },
+    {
+      "id": "A2-U03-G02-E03",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Der Film gefällt mich.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g02/#A2-U03-G02-E03"
+    },
+    {
+      "id": "A2-U03-G02-E04",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g02/#A2-U03-G02-E04"
+    },
+    {
+      "id": "A2-U03-G03-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich gebe _____ den Schlüssel.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g03/#A2-U03-G03-E01"
+    },
+    {
+      "id": "A2-U03-G03-E02",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g03/#A2-U03-G03-E02"
+    },
+    {
+      "id": "A2-U03-G03-E03",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Ich gebe meine Schwester den Schlüssel.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g03/#A2-U03-G03-E03"
+    },
+    {
+      "id": "A2-U03-G03-E04",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g03/#A2-U03-G03-E04"
+    },
+    {
+      "id": "A2-U03-G04-E01",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Das Buch liegt _____ Tisch.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g04/#A2-U03-G04-E01"
+    },
+    {
+      "id": "A2-U03-G04-E02",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g04/#A2-U03-G04-E02"
+    },
+    {
+      "id": "A2-U03-G04-E03",
+      "type": "exercise",
+      "unit": 3,
+      "title": "Das Buch liegt auf den Tisch.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g04/#A2-U03-G04-E03"
+    },
+    {
+      "id": "A2-U03-G04-E04",
+      "type": "exercise",
+      "unit": 3,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-3/grammar/g04/#A2-U03-G04-E04"
+    },
+    {
+      "id": "A2-U04-G01-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich stelle die Kiste _____ Tisch.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g01/#A2-U04-G01-E01"
+    },
+    {
+      "id": "A2-U04-G01-E02",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g01/#A2-U04-G01-E02"
+    },
+    {
+      "id": "A2-U04-G01-E03",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich stelle die Kiste auf dem Tisch.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g01/#A2-U04-G01-E03"
+    },
+    {
+      "id": "A2-U04-G01-E04",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g01/#A2-U04-G01-E04"
+    },
+    {
+      "id": "A2-U04-G02-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich bleibe zu Hause, _____ ich krank bin.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g02/#A2-U04-G02-E01"
+    },
+    {
+      "id": "A2-U04-G02-E02",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g02/#A2-U04-G02-E02"
+    },
+    {
+      "id": "A2-U04-G02-E03",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Ich bleibe zu Hause, denn ich krank bin.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g02/#A2-U04-G02-E03"
+    },
+    {
+      "id": "A2-U04-G02-E04",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g02/#A2-U04-G02-E04"
+    },
+    {
+      "id": "A2-U04-G03-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Sie sagt, _____ der Kurs morgen beginnt.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g03/#A2-U04-G03-E01"
+    },
+    {
+      "id": "A2-U04-G03-E02",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g03/#A2-U04-G03-E02"
+    },
+    {
+      "id": "A2-U04-G03-E03",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Sie sagt, das der Kurs morgen beginnt.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g03/#A2-U04-G03-E03"
+    },
+    {
+      "id": "A2-U04-G03-E04",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g03/#A2-U04-G03-E04"
+    },
+    {
+      "id": "A2-U04-G04-E01",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Früher _____ ich am Samstag arbeiten.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g04/#A2-U04-G04-E01"
+    },
+    {
+      "id": "A2-U04-G04-E02",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g04/#A2-U04-G04-E02"
+    },
+    {
+      "id": "A2-U04-G04-E03",
+      "type": "exercise",
+      "unit": 4,
+      "title": "Früher muss ich am Samstag arbeiten.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g04/#A2-U04-G04-E03"
+    },
+    {
+      "id": "A2-U04-G04-E04",
+      "type": "exercise",
+      "unit": 4,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-4/grammar/g04/#A2-U04-G04-E04"
+    },
+    {
+      "id": "A2-U05-G01-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich nehme den _____ Mantel.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g01/#A2-U05-G01-E01"
+    },
+    {
+      "id": "A2-U05-G01-E02",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g01/#A2-U05-G01-E02"
+    },
+    {
+      "id": "A2-U05-G01-E03",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich nehme den blau Mantel.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g01/#A2-U05-G01-E03"
+    },
+    {
+      "id": "A2-U05-G01-E04",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g01/#A2-U05-G01-E04"
+    },
+    {
+      "id": "A2-U05-G02-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich suche _____ Pullover.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g02/#A2-U05-G02-E01"
+    },
+    {
+      "id": "A2-U05-G02-E02",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g02/#A2-U05-G02-E02"
+    },
+    {
+      "id": "A2-U05-G02-E03",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Ich suche ein rot Pullover.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g02/#A2-U05-G02-E03"
+    },
+    {
+      "id": "A2-U05-G02-E04",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g02/#A2-U05-G02-E04"
+    },
+    {
+      "id": "A2-U05-G03-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Diese Jacke ist _____ als die andere.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g03/#A2-U05-G03-E01"
+    },
+    {
+      "id": "A2-U05-G03-E02",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g03/#A2-U05-G03-E02"
+    },
+    {
+      "id": "A2-U05-G03-E03",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Diese Jacke ist günstig als die andere.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g03/#A2-U05-G03-E03"
+    },
+    {
+      "id": "A2-U05-G03-E04",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g03/#A2-U05-G03-E04"
+    },
+    {
+      "id": "A2-U05-G04-E01",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Dieses Café gefällt mir _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g04/#A2-U05-G04-E01"
+    },
+    {
+      "id": "A2-U05-G04-E02",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g04/#A2-U05-G04-E02"
+    },
+    {
+      "id": "A2-U05-G04-E03",
+      "type": "exercise",
+      "unit": 5,
+      "title": "Dieses Café gefällt mir am gutesten.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g04/#A2-U05-G04-E03"
+    },
+    {
+      "id": "A2-U05-G04-E04",
+      "type": "exercise",
+      "unit": 5,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-5/grammar/g04/#A2-U05-G04-E04"
+    },
+    {
+      "id": "A2-U06-G01-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich fühle _____ heute besser.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g01/#A2-U06-G01-E01"
+    },
+    {
+      "id": "A2-U06-G01-E02",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g01/#A2-U06-G01-E02"
+    },
+    {
+      "id": "A2-U06-G01-E03",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Ich fühle mir heute besser.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g01/#A2-U06-G01-E03"
+    },
+    {
+      "id": "A2-U06-G01-E04",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g01/#A2-U06-G01-E04"
+    },
+    {
+      "id": "A2-U06-G02-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Wenn ich Fieber habe, bleibe ich zu Hause.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g02/#A2-U06-G02-E01"
+    },
+    {
+      "id": "A2-U06-G02-E02",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g02/#A2-U06-G02-E02"
+    },
+    {
+      "id": "A2-U06-G02-E03",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Wenn ich Fieber habe, bleibe ich zu Hause.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g02/#A2-U06-G02-E03"
+    },
+    {
+      "id": "A2-U06-G02-E04",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g02/#A2-U06-G02-E04"
+    },
+    {
+      "id": "A2-U06-G03-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ Sie den Termin verschieben?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g03/#A2-U06-G03-E01"
+    },
+    {
+      "id": "A2-U06-G03-E02",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g03/#A2-U06-G03-E02"
+    },
+    {
+      "id": "A2-U06-G03-E03",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Können Sie den Termin verschieben?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g03/#A2-U06-G03-E03"
+    },
+    {
+      "id": "A2-U06-G03-E04",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g03/#A2-U06-G03-E04"
+    },
+    {
+      "id": "A2-U06-G04-E01",
+      "type": "exercise",
+      "unit": 6,
+      "title": "_____ Sie das bitte wiederholen?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g04/#A2-U06-G04-E01"
+    },
+    {
+      "id": "A2-U06-G04-E02",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g04/#A2-U06-G04-E02"
+    },
+    {
+      "id": "A2-U06-G04-E03",
+      "type": "exercise",
+      "unit": 6,
+      "title": "Werden Sie das bitte wiederholen?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g04/#A2-U06-G04-E03"
+    },
+    {
+      "id": "A2-U06-G04-E04",
+      "type": "exercise",
+      "unit": 6,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-6/grammar/g04/#A2-U06-G04-E04"
+    },
+    {
+      "id": "A2-U07-G01-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Ich wohne _____ zwei Jahren hier.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g01/#A2-U07-G01-E01"
+    },
+    {
+      "id": "A2-U07-G01-E02",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g01/#A2-U07-G01-E02"
+    },
+    {
+      "id": "A2-U07-G01-E03",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Ich wohne für zwei Jahren hier.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g01/#A2-U07-G01-E03"
+    },
+    {
+      "id": "A2-U07-G01-E04",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g01/#A2-U07-G01-E04"
+    },
+    {
+      "id": "A2-U07-G02-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Als ich zehn war, lebte ich in Bonn.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g02/#A2-U07-G02-E01"
+    },
+    {
+      "id": "A2-U07-G02-E02",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g02/#A2-U07-G02-E02"
+    },
+    {
+      "id": "A2-U07-G02-E03",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Als ich zehn war, lebte ich in Bonn.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g02/#A2-U07-G02-E03"
+    },
+    {
+      "id": "A2-U07-G02-E04",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g02/#A2-U07-G02-E04"
+    },
+    {
+      "id": "A2-U07-G03-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Morgen _____ wir nach Köln.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g03/#A2-U07-G03-E01"
+    },
+    {
+      "id": "A2-U07-G03-E02",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g03/#A2-U07-G03-E02"
+    },
+    {
+      "id": "A2-U07-G03-E03",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Morgen gefahren wir nach Köln.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g03/#A2-U07-G03-E03"
+    },
+    {
+      "id": "A2-U07-G03-E04",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g03/#A2-U07-G03-E04"
+    },
+    {
+      "id": "A2-U07-G04-E01",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Der Zug fällt aus, _____ nehmen wir den Bus.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g04/#A2-U07-G04-E01"
+    },
+    {
+      "id": "A2-U07-G04-E02",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g04/#A2-U07-G04-E02"
+    },
+    {
+      "id": "A2-U07-G04-E03",
+      "type": "exercise",
+      "unit": 7,
+      "title": "Der Zug fällt aus, weil nehmen wir den Bus.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g04/#A2-U07-G04-E03"
+    },
+    {
+      "id": "A2-U07-G04-E04",
+      "type": "exercise",
+      "unit": 7,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-7/grammar/g04/#A2-U07-G04-E04"
+    },
+    {
+      "id": "A2-U08-G01-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Wir warten _____ den Bus.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g01/#A2-U08-G01-E01"
+    },
+    {
+      "id": "A2-U08-G01-E02",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g01/#A2-U08-G01-E02"
+    },
+    {
+      "id": "A2-U08-G01-E03",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Wir warten für den Bus.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g01/#A2-U08-G01-E03"
+    },
+    {
+      "id": "A2-U08-G01-E04",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g01/#A2-U08-G01-E04"
+    },
+    {
+      "id": "A2-U08-G02-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "_____ wartest du?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g02/#A2-U08-G02-E01"
+    },
+    {
+      "id": "A2-U08-G02-E02",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g02/#A2-U08-G02-E02"
+    },
+    {
+      "id": "A2-U08-G02-E03",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Auf was wartest du?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g02/#A2-U08-G02-E03"
+    },
+    {
+      "id": "A2-U08-G02-E04",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g02/#A2-U08-G02-E04"
+    },
+    {
+      "id": "A2-U08-G03-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich versuche, dich morgen _____.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g03/#A2-U08-G03-E01"
+    },
+    {
+      "id": "A2-U08-G03-E02",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g03/#A2-U08-G03-E02"
+    },
+    {
+      "id": "A2-U08-G03-E03",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich versuche, dich morgen zu anrufen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g03/#A2-U08-G03-E03"
+    },
+    {
+      "id": "A2-U08-G03-E04",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g03/#A2-U08-G03-E04"
+    },
+    {
+      "id": "A2-U08-G04-E01",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich gehe z_____ Amt, um den Antrag abzugeben.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g04/#A2-U08-G04-E01"
+    },
+    {
+      "id": "A2-U08-G04-E02",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g04/#A2-U08-G04-E02"
+    },
+    {
+      "id": "A2-U08-G04-E03",
+      "type": "exercise",
+      "unit": 8,
+      "title": "Ich gehe zdamit Amt, um den Antrag abzugeben.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g04/#A2-U08-G04-E03"
+    },
+    {
+      "id": "A2-U08-G04-E04",
+      "type": "exercise",
+      "unit": 8,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-8/grammar/g04/#A2-U08-G04-E04"
+    },
+    {
+      "id": "A2-U09-G01-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Das ist _____ Film, der heute beginnt.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g01/#A2-U09-G01-E01"
+    },
+    {
+      "id": "A2-U09-G01-E02",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g01/#A2-U09-G01-E02"
+    },
+    {
+      "id": "A2-U09-G01-E03",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Das ist den Film, der heute beginnt.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g01/#A2-U09-G01-E03"
+    },
+    {
+      "id": "A2-U09-G01-E04",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g01/#A2-U09-G01-E04"
+    },
+    {
+      "id": "A2-U09-G02-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Das ist der Film, _____ ich empfehle.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g02/#A2-U09-G02-E01"
+    },
+    {
+      "id": "A2-U09-G02-E02",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g02/#A2-U09-G02-E02"
+    },
+    {
+      "id": "A2-U09-G02-E03",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Das ist der Film, der ich empfehle.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g02/#A2-U09-G02-E03"
+    },
+    {
+      "id": "A2-U09-G02-E04",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g02/#A2-U09-G02-E04"
+    },
+    {
+      "id": "A2-U09-G03-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich arbeite mit einem _____ Gerät.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g03/#A2-U09-G03-E01"
+    },
+    {
+      "id": "A2-U09-G03-E02",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g03/#A2-U09-G03-E02"
+    },
+    {
+      "id": "A2-U09-G03-E03",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich arbeite mit einem neue Gerät.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g03/#A2-U09-G03-E03"
+    },
+    {
+      "id": "A2-U09-G03-E04",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g03/#A2-U09-G03-E04"
+    },
+    {
+      "id": "A2-U09-G04-E01",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich bin _____ Musik interessiert.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g04/#A2-U09-G04-E01"
+    },
+    {
+      "id": "A2-U09-G04-E02",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g04/#A2-U09-G04-E02"
+    },
+    {
+      "id": "A2-U09-G04-E03",
+      "type": "exercise",
+      "unit": 9,
+      "title": "Ich bin für Musik interessiert.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g04/#A2-U09-G04-E03"
+    },
+    {
+      "id": "A2-U09-G04-E04",
+      "type": "exercise",
+      "unit": 9,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-9/grammar/g04/#A2-U09-G04-E04"
+    },
+    {
+      "id": "A2-U10-G01-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Wenn ich Zeit habe, _____ ich mit.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g01/#A2-U10-G01-E01"
+    },
+    {
+      "id": "A2-U10-G01-E02",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g01/#A2-U10-G01-E02"
+    },
+    {
+      "id": "A2-U10-G01-E03",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Wenn ich Zeit habe, ich komme ich mit.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g01/#A2-U10-G01-E03"
+    },
+    {
+      "id": "A2-U10-G01-E04",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g01/#A2-U10-G01-E04"
+    },
+    {
+      "id": "A2-U10-G02-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Es regnet, _____ feiern wir drinnen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g02/#A2-U10-G02-E01"
+    },
+    {
+      "id": "A2-U10-G02-E02",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g02/#A2-U10-G02-E02"
+    },
+    {
+      "id": "A2-U10-G02-E03",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Es regnet, weil feiern wir drinnen.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g02/#A2-U10-G02-E03"
+    },
+    {
+      "id": "A2-U10-G02-E04",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g02/#A2-U10-G02-E04"
+    },
+    {
+      "id": "A2-U10-G03-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Ich helfe _____ Nachbarn mit dem Formular.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g03/#A2-U10-G03-E01"
+    },
+    {
+      "id": "A2-U10-G03-E02",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g03/#A2-U10-G03-E02"
+    },
+    {
+      "id": "A2-U10-G03-E03",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Ich helfe den Nachbarn mit dem Formular.",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g03/#A2-U10-G03-E03"
+    },
+    {
+      "id": "A2-U10-G03-E04",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g03/#A2-U10-G03-E04"
+    },
+    {
+      "id": "A2-U10-G04-E01",
+      "type": "exercise",
+      "unit": 10,
+      "title": "_____ Sie das bitte erklären?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g04/#A2-U10-G04-E01"
+    },
+    {
+      "id": "A2-U10-G04-E02",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g04/#A2-U10-G04-E02"
+    },
+    {
+      "id": "A2-U10-G04-E03",
+      "type": "exercise",
+      "unit": 10,
+      "title": "Können Sie das bitte erklären?",
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g04/#A2-U10-G04-E03"
+    },
+    {
+      "id": "A2-U10-G04-E04",
+      "type": "exercise",
+      "unit": 10,
+      "status": "NEW_DRAFT_MATERIAL",
+      "route": "/a2/unit-10/grammar/g04/#A2-U10-G04-E04"
+    }
+  ]
+}

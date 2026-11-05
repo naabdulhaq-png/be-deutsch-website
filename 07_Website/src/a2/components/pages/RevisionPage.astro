@@ -1,0 +1,24 @@
+---
+import data from '../../data/course.json';
+import Hint from '../Hint.astro';
+import { hintLibrary } from '../../i18n/support';
+---
+<section class="revision-intro bd07-color-panel">
+  <div><p class="section-kicker">Revision and practice bank</p><h2>Return at the right time</h2><p>Recall productive words, recognize receptive words in context, and reconnect Grammar, Listening and Podcast learning without creating fake activities.</p></div>
+  <Hint id="revision-plan" first={hintLibrary.revision.first}/>
+</section>
+
+<section>
+  <div class="section-heading"><div><p class="section-kicker">Spaced revision</p><h2>Your review stages</h2></div><span>Day 0 · Day 1 · later retrieval</span></div>
+  <div class="revision-stage-grid">
+    {data.revisionPlan.map((row, index) => <article class="revision-stage"><span class="revision-stage__badge">{row[0]}</span><h3>{row[1]}</h3>{row.slice(2).map((item) => <p>{item}</p>)}<small>Stage {index + 1} of {data.revisionPlan.length}</small></article>)}
+  </div>
+</section>
+
+<section class="due-review-panel"><div><p class="section-kicker">Due now</p><h2>Items scheduled for review</h2><p>A miss schedules a next-day retry; it never locks the course.</p></div><ul id="due-review"></ul><p id="due-empty">No scheduled items yet. Use Vocabulary recall or complete a knowledge check.</p></section>
+
+<section class="practice-bank-panel">
+  <div><p class="section-kicker">Real source questions</p><h2>Extra practice bank</h2><p>All approved source questions remain available. Practice sessions do not replace scored checks or change unit completion.</p></div>
+  <div class="practice-bank-controls"><label for="bank-filter">Choose a source bank</label><select id="bank-filter">{data.grammar.map((lesson) => <option value={lesson.id}>{lesson.title}</option>)}{data.vocabulary.map((lesson) => <option value={lesson.id}>{lesson.title}</option>)}<option value="A2-U01-R01">Grammar review pool</option><option value="audio">All audio questions</option><option value="all">All 202 questions</option></select><button type="button" id="load-bank" class="button">Open practice session</button></div>
+  <div id="bank-assessment"></div>
+</section>

@@ -1,0 +1,26 @@
+---
+import audioLibrary from '../../../a2/data/audio-library.generated.json';
+import '../../../a2/styles/bd-ui-08.css';
+const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
+const listeningRoutes = [...new Map(audioLibrary.listening.map(item => [item.route.split('#')[0], item])).values()];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <title>A2 integrated audio review · Be Deutsch</title>
+    <style>
+      body{margin:0;background:linear-gradient(135deg,#f7f4ff,#f3fbff);color:#111640;font:16px/1.55 system-ui,sans-serif}.wrap{max-width:1100px;margin:auto;padding:2rem 1rem 5rem}.hero{padding:2rem;border-radius:24px;color:#fff;background:linear-gradient(120deg,#1c287d,#7529d6 62%,#0b8dec)}.stats,.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.stats{margin:1rem 0}.stats div,.card{background:#fff;border:1px solid #dce2f7;border-radius:18px;padding:1rem}.stats strong{display:block;font-size:2rem;color:#7029ce}.card a{font-weight:800;color:#39218a}.card small{display:block;color:#58607f}h2{margin-top:2rem}.notice{background:#fff8dc;border-left:5px solid #e0a514;padding:1rem;margin:1rem 0}@media(max-width:700px){.stats,.grid{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body><main class="wrap">
+    <section class="hero"><p>BE DEUTSCH · LOCAL ONLY</p><h1>A2 integrated audio review</h1><p>Unpublished Stage 2 candidate. Accepted German audio is integrated into the existing Listening and Podcast learning pages; owner review of the integrated website remains pending.</p></section>
+    <div class="stats"><div><strong>24</strong>Listening assemblies</div><div><strong>30</strong>Podcast chapters</div><div><strong>5</strong>Complete episodes</div></div>
+    <div class="notice"><strong>Review scope:</strong> verify the player/content association, playback, transcripts, language switching and responsive behavior. This page does not publish or approve the site.</div>
+    <p><a href="/a2/">Open A2 course overview</a> · <a href="/grammar/a1/">A1 regression smoke test</a> · <a href="/a2/review-index/">Curriculum inspection index</a></p>
+    <h2>Listening routes</h2><section class="grid">{listeningRoutes.map(item => <article class="card"><strong>Unit {item.unit}</strong><h3>{item.titleDe}</h3><small>{item.lessonId}</small><p>{formatDuration(item.durationSeconds)} · accepted audio</p><a href={item.route}>Open Listening page</a></article>)}</section>
+    <h2>Podcast episodes</h2><section class="grid">{audioLibrary.podcasts.map(item => <article class="card"><strong>Unit {item.unit}</strong><h3>{item.titleDe}</h3><small>{item.contentId}</small><p>{item.chapters.length} chapters · {formatDuration(item.durationSeconds)}</p><a href={item.route}>Open complete episode</a></article>)}</section>
+  </main></body>
+</html>

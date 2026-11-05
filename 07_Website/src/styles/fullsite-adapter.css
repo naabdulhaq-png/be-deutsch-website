@@ -1,6 +1,312 @@
-/* Candidate-only reflow correction; no content, brand colors or scoring changes. */
-@media(max-width:700px){
- main :where(div,section,article,figure){min-inline-size:0}
- main :where(h1,h2,h3,h4,p,a,li,span,figcaption){overflow-wrap:anywhere}
- main .cta{white-space:normal;min-inline-size:0;max-inline-size:100%}
+/*
+ * BD-UI-03 release-candidate polish.
+ *
+ * This layer brings the public/supporting pages into the owner-approved learning
+ * visual system. It intentionally does not alter lesson data, assessment state,
+ * audio, storage keys or the dense learning shell in bd-ui-02.css.
+ */
+:root {
+  --black: #10183f;
+  --near-black: #10183f;
+  --neutral-800: #35415f;
+  --accent: #0f6ff2;
+  --accent-control: #0f6ff2;
+  --accent-text: #084fb6;
+  --accent-deep: #063d8d;
+  --accent-soft-border: #cbe4ff;
+  --accent-soft: #e8f5ff;
+  --warm-surface: #fff4c7;
+  --canvas: #f5f8fd;
+  --paper: #ffffff;
+  --background: #ffffff;
+  --white: #ffffff;
+  --ink: #10183f;
+  --muted: #61708d;
+  --line: #dce6f2;
+  --radius-sm: .9rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 1.75rem;
+  --shadow-soft: 0 18px 45px rgba(31, 61, 110, .11);
+}
+
+body:not(.bd-ui02-page) {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 90% 4%, rgba(15, 111, 242, .08), transparent 24rem),
+    var(--canvas);
+}
+
+body:not(.bd-ui02-page) .site-header {
+  border-block-end: 1px solid rgba(16, 24, 63, .08);
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 6px 24px rgba(31, 61, 110, .055);
+  backdrop-filter: blur(18px);
+}
+
+body:not(.bd-ui02-page) .site-header__inner { min-block-size: 4.4rem; }
+body:not(.bd-ui02-page) .brand img { block-size: 2.5rem; }
+
+body:not(.bd-ui02-page) :is(.desktop-nav > a, .nav-dropdown > summary) {
+  min-block-size: 2.45rem;
+  padding: .62rem .72rem;
+  border-radius: .72rem;
+  color: #3d4a68;
+  text-decoration: none;
+}
+
+body:not(.bd-ui02-page) :is(.desktop-nav > a, .nav-dropdown > summary):hover,
+body:not(.bd-ui02-page) .desktop-nav > a[aria-current="page"],
+body:not(.bd-ui02-page) .nav-dropdown[data-active="true"] > summary {
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+}
+
+body:not(.bd-ui02-page) .nav-dropdown__menu {
+  padding: .55rem;
+  border-color: var(--line);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+body:not(.bd-ui02-page) .nav-dropdown__menu a:hover,
+body:not(.bd-ui02-page) .nav-dropdown__menu a[aria-current] {
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+}
+
+body:not(.bd-ui02-page) .section {
+  padding-block: clamp(4rem, 7vw, 6.5rem);
+}
+
+body:not(.bd-ui02-page) .section--canvas { background: transparent; }
+body:not(.bd-ui02-page) .section--white { background: rgba(255, 255, 255, .82); }
+body:not(.bd-ui02-page) .section--dark { background: var(--black); }
+body:not(.bd-ui02-page) .section--accent { background: #dff3ff; }
+
+body:not(.bd-ui02-page) .hero {
+  margin: clamp(1rem, 2vw, 1.7rem) auto 0;
+  padding: clamp(3rem, 6vw, 5.2rem) clamp(1.25rem, 4vw, 3.75rem);
+  inline-size: min(calc(100% - 2rem), 79rem);
+  overflow: hidden;
+  border: 1px solid #cfe4f5;
+  border-radius: 1.75rem;
+  background:
+    linear-gradient(105deg, rgba(232, 245, 255, .98) 0 54%, rgba(223, 243, 255, .74) 74%),
+    url('/redesign-assets/hero-vocabulary.png') center right / auto 100% no-repeat;
+  box-shadow: var(--shadow-soft);
+}
+
+body:not(.bd-ui02-page) .hero::after {
+  inline-size: 36%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .28));
+  border: 0;
+}
+
+body:not(.bd-ui02-page) .hero__grid {
+  grid-template-columns: minmax(0, 1.02fr) minmax(18rem, .78fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+body:not(.bd-ui02-page) :is(.hero h1, .page-hero h1) {
+  color: var(--black);
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  letter-spacing: -.055em;
+}
+
+body:not(.bd-ui02-page) .hero .eyebrow {
+  color: var(--accent-deep);
+  background: rgba(255, 255, 255, .9);
+  border: 1px solid rgba(15, 111, 242, .18);
+}
+
+body:not(.bd-ui02-page) .hero__tagline { color: var(--accent-deep); }
+body:not(.bd-ui02-page) .hero__promise { color: #44516f; }
+
+body:not(.bd-ui02-page) .hero__art img,
+body:not(.bd-ui02-page) .about-hero__art img {
+  border: 6px solid rgba(255, 255, 255, .86);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 48px rgba(31, 61, 110, .18);
+}
+
+body:not(.bd-ui02-page) .cta {
+  min-block-size: 3.1rem;
+  padding-inline: 1.2rem;
+  border-radius: .8rem;
+}
+
+body:not(.bd-ui02-page) .cta--primary,
+body:not(.bd-ui02-page) .section--accent .cta--primary,
+body:not(.bd-ui02-page) .partner-panel .cta--secondary {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 8px 18px rgba(15, 111, 242, .2);
+}
+
+body:not(.bd-ui02-page) .cta--primary:hover,
+body:not(.bd-ui02-page) .partner-panel .cta--secondary:hover {
+  color: #fff;
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+body:not(.bd-ui02-page) :is(.feature-grid, .principle-grid, .collaboration-grid, .support-topic-grid) {
+  gap: 1rem;
+}
+
+body:not(.bd-ui02-page) :is(.feature-card, .principle-grid article, .collaboration-grid article, .support-topic-grid article) {
+  min-block-size: 12rem;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-block-start: .28rem solid var(--accent);
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(31, 61, 110, .075);
+}
+
+body:not(.bd-ui02-page) .feature-grid > :nth-child(4n + 2),
+body:not(.bd-ui02-page) :is(.principle-grid, .collaboration-grid, .support-topic-grid) > :nth-child(4n + 2) {
+  border-block-start-color: #25b778;
+  background: #e7f9f1;
+}
+
+body:not(.bd-ui02-page) .feature-grid > :nth-child(4n + 3),
+body:not(.bd-ui02-page) :is(.principle-grid, .collaboration-grid, .support-topic-grid) > :nth-child(4n + 3) {
+  border-block-start-color: #f3bc15;
+  background: #fff8d8;
+}
+
+body:not(.bd-ui02-page) .feature-grid > :nth-child(4n),
+body:not(.bd-ui02-page) :is(.principle-grid, .collaboration-grid, .support-topic-grid) > :nth-child(4n) {
+  border-block-start-color: #805ad5;
+  background: #f1ebff;
+}
+
+body:not(.bd-ui02-page) .feature-card--accent {
+  border-color: #f5c9dc;
+  border-block-start-color: #e85e9c;
+  background: #ffe8f2;
+}
+
+body:not(.bd-ui02-page) :is(.fact-grid > div, .why-list article, .experience-panel, .stage-panel, .support-status, .legal-toc, .legal-copy, .support-contact) {
+  border-color: var(--line);
+  border-radius: 1.15rem;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(31, 61, 110, .065);
+}
+
+body:not(.bd-ui02-page) .fact-grid > div:nth-child(2) { border-block-start-color: #25b778; }
+body:not(.bd-ui02-page) .fact-grid > div:nth-child(3) { border-block-start-color: #805ad5; }
+
+body:not(.bd-ui02-page) :is(.page-hero, .support-hero, .legal-hero) {
+  margin: clamp(1rem, 2vw, 1.7rem) auto 0;
+  inline-size: min(calc(100% - 2rem), 79rem);
+  border: 1px solid #cfe4f5;
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(circle at 88% 28%, rgba(128, 90, 213, .13), transparent 15rem),
+    linear-gradient(120deg, #e8f5ff, #f7fbff 65%);
+  box-shadow: var(--shadow-soft);
+}
+
+body:not(.bd-ui02-page) .page-hero.section { padding: clamp(2.8rem, 5vw, 4.75rem) clamp(1rem, 2.2vw, 2rem); }
+
+body:not(.bd-ui02-page) :is(.legal-page, .legal-page .section, .legal-hero) {
+  background-color: transparent;
+}
+
+body:not(.bd-ui02-page) .legal-copy {
+  max-inline-size: 72rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: none;
+}
+
+body:not(.bd-ui02-page) .legal-copy--notice {
+  border-inline-start: .3rem solid var(--accent);
+}
+
+body:not(.bd-ui02-page) :is(.legal-facts div, .section--canvas .legal-facts div) {
+  background: var(--accent-soft);
+}
+
+body:not(.bd-ui02-page) .support-card {
+  border-block-start: .32rem solid #25b778;
+  border-radius: 1.25rem;
+  color: #fff;
+  background: var(--black);
+  box-shadow: var(--shadow-soft);
+}
+
+body:not(.bd-ui02-page) .support-card--light {
+  color: var(--ink);
+  background: #e7f9f1;
+}
+
+body:not(.bd-ui02-page) .error-page__inner {
+  border-color: #cfe4f5;
+  background: linear-gradient(135deg, #e8f5ff, #f1ebff);
+}
+
+body:not(.bd-ui02-page) .site-footer {
+  color: #eef4ff;
+  background: var(--black);
+  border-block-start: .28rem solid var(--accent);
+}
+
+body:not(.bd-ui02-page) .site-footer :is(p, a, span) { color: #d7def0; }
+body:not(.bd-ui02-page) .site-footer a:hover { color: #fff; }
+body:not(.bd-ui02-page) .site-footer .brand img {
+  padding: .28rem .45rem;
+  border-radius: .55rem;
+  background: #fff;
+}
+
+body:not(.bd-ui02-page) :is(a, button, input, select, summary):focus-visible {
+  outline: 3px solid #f3bc15;
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+@media (max-width: 64rem) {
+  body:not(.bd-ui02-page) .mobile-nav summary {
+    border-color: var(--line);
+    background: var(--accent-soft);
+  }
+
+  body:not(.bd-ui02-page) .mobile-nav nav {
+    border-color: var(--line);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  body:not(.bd-ui02-page) .mobile-nav nav a[aria-current="page"] {
+    color: var(--accent-deep);
+    background: var(--accent-soft);
+  }
+}
+
+@media (max-width: 700px) {
+  main :where(div, section, article, figure) { min-inline-size: 0; }
+  main :where(h1, h2, h3, h4, p, a, li, span, figcaption) { overflow-wrap: anywhere; }
+  main .cta { min-inline-size: 0; max-inline-size: 100%; white-space: normal; }
+
+  body:not(.bd-ui02-page) .site-header__inner { min-block-size: 4rem; }
+  body:not(.bd-ui02-page) .brand img { block-size: 2.2rem; }
+  body:not(.bd-ui02-page) .section { padding-block: 3.35rem; }
+  body:not(.bd-ui02-page) .hero {
+    inline-size: calc(100% - 1rem);
+    margin-block-start: .5rem;
+    padding: 2.4rem 1.15rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(150deg, #e8f5ff, #f1ebff);
+  }
+  body:not(.bd-ui02-page) .hero__grid { grid-template-columns: 1fr; }
+  body:not(.bd-ui02-page) :is(.hero h1, .page-hero h1) { font-size: clamp(2.45rem, 13vw, 3.7rem); }
+  body:not(.bd-ui02-page) :is(.page-hero, .support-hero, .legal-hero) {
+    inline-size: calc(100% - 1rem);
+    margin-block-start: .5rem;
+    border-radius: 1.25rem;
+  }
 }

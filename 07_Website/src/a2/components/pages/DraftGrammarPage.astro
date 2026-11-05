@@ -1,0 +1,21 @@
+---
+import DraftExercise from '../DraftExercise.astro';
+interface Props { lesson: any; exercises: any[] }
+const { lesson, exercises } = Astro.props;
+---
+<section class="bd08-section-heading"><div><p class="section-kicker">Grammar · sentence structure</p><h2>{lesson.title}</h2><p>{lesson.learning_objective}</p></div><span class="bd08-draft-chip">Draft · review required</span></section>
+<section class="bd08-explanation-card">
+  <h3>Concept</h3>
+  <p data-support-values={JSON.stringify(lesson.explanation_drafts)}>{lesson.explanation_drafts.en}</p>
+  <ul>{lesson.formation_rules.map((rule: string) => <li>{rule}</li>)}</ul>
+</section>
+<section class="bd08-structure" aria-labelledby="structure-title">
+  <div class="bd08-section-title"><p class="section-kicker">Design D · table style</p><h3 id="structure-title">Sentence structure with examples</h3></div>
+  <div class="bd08-table-wrap"><table><thead><tr><th>Function</th><th>Structure</th><th>Example</th></tr></thead><tbody>{lesson.sentence_structure_table.map((row: any) => <tr><td>{row.function}</td><td>{row.formula}</td><td lang="de">{row.highlightable_components.map((part: any) => <span class:list={[part.role === 'target_form' && 'target-form']}>{part.text}</span>)}</td></tr>)}</tbody></table></div>
+</section>
+<section class="bd08-two-column">
+  <div class="bd08-explanation-card"><h3>Useful examples</h3>{lesson.examples.map((example: any) => <p id={example.id} lang="de">{example.de}</p>)}</div>
+  <div class="bd08-explanation-card is-warning"><h3>Typical mistakes</h3>{lesson.typical_mistakes.map((item: any) => <div><p><strong>{item.mistake}</strong></p><p>{item.feedback}</p></div>)}</div>
+</section>
+<section class="bd08-practice-section"><div class="bd08-section-title"><p class="section-kicker">Guided practice · button hints</p><h3>Four source activities</h3><p>Three activities are automatically checked; the open response uses its source self-check instead of false automatic grading.</p></div><div class="bd08-exercise-grid">{exercises.map(exercise => <DraftExercise exercise={exercise}/>)}</div></section>
+<aside class="bd08-revision-link"><strong>Revision connection</strong><p>{lesson.revision}</p><a href={`/a2/unit-${lesson.unit}/revision/`}>Open Unit {lesson.unit} revision →</a></aside>

@@ -1,0 +1,68 @@
+---
+import inventory from '../../a2/data/integrated-review-index.json';
+import '../../a2/styles/a2.css';
+import '../../a2/styles/bd-ui-08.css';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>A2 reviewer inspection index · Be Deutsch</title>
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body class="bd08-review-body">
+    <a class="skip-link" href="#main">Skip to review index</a>
+    <header class="bd08-review-header">
+      <a href="/a2/">← A2 course</a>
+      <p class="section-kicker">Owner and reviewer inspection</p>
+      <h1>Exact IDs, routes and review status</h1>
+      <p>Filter the integrated inventory without creating reviewer accounts or changing learner content.</p>
+    </header>
+    <main id="main" class="bd08-review-main">
+      <section class="bd08-stats">
+        <div><strong>{inventory.counts.vocabulary}</strong><span>Vocabulary</span></div>
+        <div><strong>{inventory.counts.grammar}</strong><span>Grammar</span></div>
+        <div><strong>{inventory.counts.exercises}</strong><span>Activities</span></div>
+        <div><strong>{inventory.counts.listening_new}</strong><span>Listening drafts</span></div>
+        <div><strong>{inventory.counts.podcasts_new}</strong><span>Podcast drafts</span></div>
+      </section>
+      <section class="bd08-review-tools">
+        <label>Search ID or title<input type="search" data-review-search /></label>
+        <label>Content type<select data-review-type><option value="all">All types</option><option value="vocabulary">Vocabulary</option><option value="grammar">Grammar</option><option value="exercise">Exercise</option><option value="listening">Listening</option><option value="podcast">Podcast</option></select></label>
+        <label>Unit<select data-review-unit><option value="all">All units</option>{inventory.units.map((_, index) => <option value={String(index + 1)}>Unit {index + 1}</option>)}</select></label>
+        <p data-review-count role="status"></p>
+      </section>
+      <div class="bd08-review-table">
+        <table>
+          <thead><tr><th>ID</th><th>Type</th><th>Unit</th><th>Title</th><th>Status</th><th>Inspect</th></tr></thead>
+          <tbody>{inventory.reviewer_items.map(item => <tr data-review-row data-type={item.type} data-unit={String(item.unit)} data-search={`${item.id} ${item.title}`.toLowerCase()}><td><code>{item.id}</code></td><td>{item.type}</td><td>{item.unit}</td><td>{item.title}</td><td>{item.status}</td><td><a href={item.route}>Open</a></td></tr>)}</tbody>
+        </table>
+      </div>
+    </main>
+    <script>
+      export {};
+      const rows = [...document.querySelectorAll<HTMLElement>('[data-review-row]')];
+      const search = document.querySelector<HTMLInputElement>('[data-review-search]')!;
+      const type = document.querySelector<HTMLSelectElement>('[data-review-type]')!;
+      const unit = document.querySelector<HTMLSelectElement>('[data-review-unit]')!;
+      const count = document.querySelector<HTMLElement>('[data-review-count]')!;
+      const render = () => {
+        let visible = 0;
+        for (const row of rows) {
+          const matchSearch = !search.value || (row.dataset.search ?? '').includes(search.value.toLowerCase());
+          const matchType = type.value === 'all' || row.dataset.type === type.value;
+          const matchUnit = unit.value === 'all' || row.dataset.unit === unit.value;
+          row.hidden = !(matchSearch && matchType && matchUnit);
+          if (!row.hidden) visible++;
+        }
+        count.textContent = `${visible} review items`;
+      };
+      search.addEventListener('input', render);
+      type.addEventListener('change', render);
+      unit.addEventListener('change', render);
+      render();
+    </script>
+  </body>
+</html>

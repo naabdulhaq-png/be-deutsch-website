@@ -1,0 +1,48 @@
+---
+interface VoiceLine { speaker: string; voice: string; text: string; start: number }
+interface AudioAsset {
+  id: string;
+  url: string;
+  duration: number;
+  voices?: VoiceLine[];
+}
+interface Props {
+  asset: AudioAsset;
+  label: string;
+  featured?: boolean;
+}
+const { asset, label, featured = false } = Astro.props;
+const minutes = Math.floor(asset.duration / 60);
+const seconds = Math.floor(asset.duration % 60).toString().padStart(2, '0');
+const voices = [...new Set((asset.voices ?? []).map((voice) => voice.voice))].join(' · ');
+---
+
+<section class:list={['ds-audio', { 'ds-audio--featured': featured }]} data-audio-panel data-audio-id={asset.id}>
+  <div class="ds-audio__topline">
+    <div>
+      <span class="ds-kicker">Approved audio</span>
+      <h2>{label}</h2>
+      <p>{minutes}:{seconds}{voices ? ` · ${voices}` : ''}</p>
+    </div>
+    <span class="ds-audio__wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+  </div>
+  <audio controls preload="metadata" src={asset.url} data-progress-audio aria-label={`${label}, ${minutes} minutes ${seconds} seconds`}></audio>
+  <div class="ds-audio__actions" aria-label="Audio controls">
+    <button type="button" class="ds-icon-button" data-skip="-10" aria-label="Go back 10 seconds">↶ <span>10 s</span></button>
+    <button type="button" class="ds-icon-button" data-primary-play aria-label={`Play ${label}`}>▶ <span>Play</span></button>
+    <button type="button" class="ds-icon-button" data-skip="10" aria-label="Go forward 10 seconds"><span>10 s</span> ↷</button>
+    <label class="ds-speed">Speed
+      <select data-playback-speed aria-label="Playback speed">
+        <option value="0.8">0.8×</option>
+        <option value="1" selected>1×</option>
+        <option value="1.2">1.2×</option>
+      </select>
+    </label>
+  </div>
+  <div class="ds-audio__status-row">
+    <p class="ds-muted" role="status" data-audio-status>Ready to play. Your position stays in this browser.</p>
+    <button type="button" class="ds-text-button" data-resume-audio hidden>Resume saved position</button>
+    <button type="button" class="ds-text-button" data-retry-audio hidden>Retry audio</button>
+  </div>
+</section>
+

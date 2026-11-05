@@ -1,0 +1,13 @@
+---
+import type { LocalizedCopy } from '../i18n/support';
+interface Props {
+  values: LocalizedCopy;
+  as?: 'span' | 'p' | 'strong' | 'small' | 'h2' | 'h3' | 'h4' | 'li';
+  class?: string;
+  provenance?: boolean;
+}
+const { values, as = 'span', class: className, provenance = false } = Astro.props;
+const Tag = as;
+---
+<Tag class={className} data-support-values={JSON.stringify(values)} data-support-provenance={provenance ? 'true' : undefined}>{values.en}</Tag>
+

@@ -1,0 +1,29 @@
+---
+interface Props { exercise: any; compact?: boolean }
+const { exercise, compact = false } = Astro.props;
+const isChoice = Array.isArray(exercise.options) && exercise.options.length > 0;
+const isProduction = exercise.type === 'short_controlled_production';
+const prompt = exercise.prompt_de ?? exercise.prompt;
+const instructions = exercise.prompt_en ?? (exercise.type === 'word_order' ? exercise.prompt : 'Complete the activity in German.');
+const feedbackCorrect = exercise.feedback_correct ?? exercise.feedback ?? 'Correct.';
+const feedbackIncorrect = exercise.feedback_incorrect ?? 'Review the model and try again.';
+const answerData = JSON.stringify({
+  correct: exercise.correct_answer,
+  accepted: exercise.accepted_variants ?? [],
+  model: exercise.model_answer ?? null,
+  production: isProduction,
+  feedbackCorrect,
+  feedbackIncorrect
+});
+---
+<article class:list={['bd08-exercise', compact && 'is-compact']} id={exercise.id} data-draft-exercise data-answer={answerData}>
+  <header><div><span class="bd08-id">{exercise.id}</span><span class="bd08-type">{exercise.type.replaceAll('_', ' ')}</span></div><button type="button" class="bd08-hint-button" data-exercise-hint aria-expanded="false">💡 Hint</button></header>
+  <p class="bd08-instructions">{instructions}</p>
+  <p class="bd08-prompt" lang="de">{prompt}</p>
+  {Array.isArray(exercise.tokens) && <div class="bd08-token-bank" aria-label="Available tokens">{exercise.tokens.map((token: string) => <button type="button" data-token={token}>{token}</button>)}</div>}
+  {isChoice ? <fieldset><legend class="sr-only">Choose one answer</legend>{exercise.options.map((option: string) => <label><input type="radio" name={exercise.id} value={option}/><span lang="de">{option}</span></label>)}</fieldset> : !isProduction ? <label class="bd08-answer"><span>Your answer</span><input type="text" autocomplete="off" data-exercise-input aria-label={`Answer for ${exercise.id}`}/></label> : <label class="bd08-answer"><span>Your two sentences</span><textarea rows="3" data-exercise-input aria-label={`Response for ${exercise.id}`}></textarea></label>}
+  <div class="bd08-hint" data-hint-panel hidden><strong>First hint</strong><p>{exercise.hint}</p>{exercise.hint2 && <><button type="button" class="bd08-second-hint-button" data-second-hint aria-expanded="false">Show stronger hint</button><p data-second-hint-panel hidden>{exercise.hint2}</p></>}</div>
+  <div class="bd08-actions"><button type="button" class="button" data-check-exercise>{isProduction ? 'Open self-check' : 'Check answer'}</button><button type="button" class="button secondary" data-reset-exercise>Try again</button></div>
+  <p class="bd08-feedback" data-exercise-feedback role="status"></p>
+  {isProduction && <div class="bd08-model" data-model-answer hidden><strong>Model answer</strong><p lang="de">{exercise.model_answer}</p><p>{exercise.feedback}</p></div>}
+</article>

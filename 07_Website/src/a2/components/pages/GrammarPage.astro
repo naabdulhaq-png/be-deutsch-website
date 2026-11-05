@@ -1,0 +1,74 @@
+---
+import data from '../../data/course.json';
+import type { AudioAsset } from '../../lib/model';
+import AudioPlayer from '../AudioPlayer.astro';
+import Practice from '../Practice.astro';
+import Assessment from '../Assessment.astro';
+import LocalizedText from '../LocalizedText.astro';
+import SentenceStructureTable from '../SentenceStructureTable.astro';
+import { g01Support } from '../../i18n/support';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const lesson = data.grammar.find((item) => item.id === id)!;
+const assets = data.audio as AudioAsset[];
+const audio = (key: string) => assets.find((asset) => asset.id === key)!;
+function exampleParts(sentence: string) {
+  const words = sentence.split(/(\s+)/);
+  const tokens = words.filter((word) => /\p{L}/u.test(word));
+  const last = tokens.at(-1)?.replace(/[.,!?]/g, '').toLocaleLowerCase('de');
+  return words.map((word) => {
+    const clean = word.replace(/[.,!?]/g, '').toLocaleLowerCase('de');
+    return { text: word, kind: ['habe', 'hast', 'hat', 'haben', 'habt'].includes(clean) ? 'auxiliary' : clean === last ? 'participle' : '' };
+  });
+}
+const related = lesson.links.map((reference) => {
+  const grammarId = reference.match(/A2-U01-G\d{2}/)?.[0];
+  if (grammarId) return { type: 'Grammar reminder', label: data.grammar.find((item) => item.id === grammarId)?.title ?? 'Grammar', href: `/a2/unit-1/grammar/${grammarId.slice(-3).toLowerCase()}/` };
+  const vocabularyId = reference.match(/A2-U01-V\d{2}/)?.[0];
+  if (vocabularyId) return { type: 'Vocabulary', label: data.vocabulary.find((item) => item.id === vocabularyId)?.title ?? 'Vocabulary', href: `/a2/unit-1/vocabulary/${vocabularyId.slice(-3).toLowerCase()}/` };
+  return { type: 'Podcast', label: data.podcast.title, href: '/a2/unit-1/podcast/' };
+});
+---
+<section class="topic-overview bd07-color-panel">
+  <div><p class="section-kicker">Start here</p><h2>One grammar topic, one clear path</h2>{id === 'A2-U01-G01' ? <LocalizedText as="p" values={g01Support.situation} provenance/> : <><p data-support-values={JSON.stringify({ en: lesson.situation })}>{lesson.situation}</p><p class="translation-fallback" data-support-fallback hidden></p></>}</div>
+  <div><h3>By the end</h3>{id === 'A2-U01-G01' ? <LocalizedText as="p" values={g01Support.objective} provenance/> : <ul>{lesson.objectives.map((objective) => <li>{objective}</li>)}</ul>}<details><summary>Before you start</summary><p>{lesson.prerequisites.join(' · ')}</p></details></div>
+</section>
+
+<div class="learning-layout grammar-layout">
+  <div class="learning-main">
+    {id === 'A2-U01-G01' && <section class="auxiliary-panel">
+      <div><p class="section-kicker">Helping verb</p><h2 lang="de">haben</h2><p>The finite form carries the person information. The completed action closes the sentence.</p></div>
+      <table><caption>Present forms used in the Perfekt</caption><tbody><tr><th scope="row">ich</th><td><mark class="auxiliary">habe</mark></td><th scope="row">wir</th><td><mark class="auxiliary">haben</mark></td></tr><tr><th scope="row">du</th><td><mark class="auxiliary">hast</mark></td><th scope="row">ihr</th><td><mark class="auxiliary">habt</mark></td></tr><tr><th scope="row">er / sie / es</th><td><mark class="auxiliary">hat</mark></td><th scope="row">sie / Sie</th><td><mark class="auxiliary">haben</mark></td></tr></tbody></table>
+    </section>}
+
+    <section>
+      <div class="section-heading"><div><p class="section-kicker">Understand</p><h2>Build the concept step by step</h2></div><span>{lesson.steps.length} connected steps</span></div>
+      <div class="rule-grid">
+        {lesson.steps.map(([heading, body], index) => <article class="rule-card"><span class="rule-number">{index + 1}</span>{id === 'A2-U01-G01' ? <><LocalizedText as="h3" values={g01Support.steps[index].heading}/><LocalizedText as="p" values={g01Support.steps[index].body} provenance/></> : <><h3>{heading.replace(/^\d+\.\s*/, '')}</h3><p data-support-values={JSON.stringify({ en: body })}>{body}</p><p class="translation-fallback" data-support-fallback hidden></p></>}</article>)}
+      </div>
+    </section>
+
+    <section class="structure-panel">
+      <div class="section-heading"><div><p class="section-kicker">See the pattern</p><h2>Sentence structure</h2></div><div class="grammar-legend"><span class="key-aux">Auxiliary</span><span class="key-part">Participle / final verb form</span></div></div>
+      {id === 'A2-U01-G01' ? <SentenceStructureTable/> : <table class="structure-table"><thead><tr><th>Function</th><th>Structure</th><th>Approved example and meaning</th></tr></thead><tbody>{lesson.structure.slice(0, 3).map((structure, index) => { const [fn, ...formula] = structure.split(':'); const example = lesson.examples[Math.min(index, lesson.examples.length - 1)]; return <tr><th scope="row">{fn}</th><td data-label="Structure"><span class="sentence-formula">{formula.join(':').trim()}</span></td><td data-label="Example and meaning"><span class="sentence-example" lang="de">{example[0]}</span><span class="sentence-meaning" data-support-values={JSON.stringify({ en: example[1] })}>{example[1]}</span><span class="translation-fallback" data-support-fallback hidden></span></td></tr>; })}</tbody></table>}
+    </section>
+
+    <section>
+      <div class="section-heading"><div><p class="section-kicker">Hear and notice</p><h2>Examples in real sentences</h2></div><span>German source + support</span></div>
+      <div class="grammar-examples">{lesson.examples.map(([de, en], index) => <article class="grammar-example"><p lang="de" class="grammar-sentence">{exampleParts(de).map((part) => part.kind ? <mark class={part.kind}>{part.text}</mark> : part.text)}</p><p class="translation" data-support-values={JSON.stringify({ en })}><span>English source</span>{en}</p><p class="translation-fallback" data-support-fallback hidden></p><AudioPlayer asset={audio(`${id}-A-EX${String(index + 1).padStart(2, '0')}`)} label={`Example ${index + 1}`}/></article>)}</div>
+    </section>
+
+    <section><div class="section-heading"><div><p class="section-kicker">Avoid these</p><h2>Common mistakes</h2></div></div><div class="mistake-grid">{lesson.mistakes.map(([bad, good, why]) => <article class="mistake-card"><p class="incorrect-form"><span>Not this</span>{bad}</p><p class="correct-form" lang="de"><span>Use this</span>{good}</p><p>{why}</p></article>)}</div></section>
+    <Practice title="Guided practice" rows={lesson.guided}/>
+    <Practice title="Independent practice" rows={lesson.independent}/>
+    <Assessment contexts={[id]} title="Check what you understood"/>
+  </div>
+
+  <aside class="context-rail" aria-label="Grammar lesson support">
+    <section class="is-blue"><p class="section-kicker">Listen</p><h2>Model dialogue</h2><AudioPlayer asset={audio(`${id}-A-DLG01`)} label="Model dialogue"/><details><summary>Show dialogue transcript</summary>{audio(`${id}-A-DLG01`).voices.map((voice) => <p lang="de"><strong>{voice.speaker}: </strong>{voice.text}</p>)}</details></section>
+    <section class="is-violet"><p class="section-kicker">Use it</p><h2>Everyday communication</h2><ul>{lesson.communication.map((item) => <li>{item}</li>)}</ul></section>
+    <section class="is-mint"><p class="section-kicker">Connect</p><h2>Related learning</h2>{related.map((item) => <a class="support-link" href={item.href}><span>{item.type}</span><strong>{item.label}</strong></a>)}</section>
+    <section class="is-orange"><p class="section-kicker">Remember</p><h2>Lesson summary</h2><p>{lesson.summary}</p></section>
+  </aside>
+</div>

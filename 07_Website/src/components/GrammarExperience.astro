@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
 import GrammarExercise from './GrammarExercise.astro';
+import LearningChrome from './redesign/LearningChrome.astro';
 import {
   grammarLanguages,
   grammarLessons,
@@ -51,6 +52,7 @@ const payload = JSON.stringify({
 <BaseLayout title={`${pageTitle} — Be Deutsch`} description={description} canonicalPath={canonicalPath}>
   <div id="top" aria-hidden="true"></div>
   <SiteHeader />
+  <LearningChrome area="grammar" level="A1" title={view === 'lesson' && lesson ? lesson.title : pageTitle} />
   <main id="main-content" class="grammar-page" data-view={view} data-lesson-id={lesson?.id} data-unit={unit}>
     <div class="container">
       <nav class="grammar-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{view === 'course' ? <span>A1 Grammar</span> : <><a href="/grammar/">A1 Grammar</a><span aria-hidden="true">/</span><span>{view === 'lesson' ? `Lesson ${lesson?.number}` : view === 'review' ? `Unit ${unit} review` : 'Final assessment'}</span></>}</nav>

@@ -6,6 +6,7 @@ import lock from '../../integrity/listening-asset-lock.json';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
+import LearningChrome from './redesign/LearningChrome.astro';
 import '../styles/listening.css';
 interface Props {view:'course'|'lesson'|'podcasts'|'podcast';lessonId?:string;podcastId?:string;}
 const {view,lessonId,podcastId}=Astro.props;
@@ -21,6 +22,7 @@ const description=lesson?`Practice A1 German listening: ${lesson.title}. Three a
 ---
 <BaseLayout title={`${title} — Be Deutsch`} description={description}>
 <div id="top"></div><SiteHeader/>
+<LearningChrome area={isPodcast || podcastOverview ? 'podcast' : 'listening'} level="A1" title={title}/>
 <div class="listening-experience"><div class="listen-main learning-toolbar" lang="de"><button class="sound-toggle subtle" type="button" aria-pressed="true">Quiztöne: an</button></div>
 <main id="main-content" class="listen-main" lang="de">
 {selected.length===0?<>

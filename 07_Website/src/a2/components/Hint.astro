@@ -1,0 +1,44 @@
+---
+import type { LocalizedCopy } from '../i18n/support';
+import { sharedCopy } from '../i18n/support';
+interface Props {
+  id: string;
+  first: LocalizedCopy;
+  second?: LocalizedCopy;
+}
+const { id, first, second } = Astro.props;
+---
+<div class="bd07-hint" data-hint={id}>
+  <button type="button" class="bd07-hint__button" aria-expanded="false" aria-controls={`hint-panel-${id}`}>
+    <span aria-hidden="true">💡</span><span data-support-values={JSON.stringify(sharedCopy.hint)}>Hint</span>
+  </button>
+  <div class="bd07-hint__panel" id={`hint-panel-${id}`} hidden>
+    <p data-support-values={JSON.stringify(first)}>{first.en}</p>
+    {second && <button type="button" class="bd07-hint__next" data-hint-next data-support-values={JSON.stringify(sharedCopy.strongerHint)}>Show another hint</button>}
+    {second && <p data-hint-second data-support-values={JSON.stringify(second)} hidden>{second.en}</p>}
+    <button type="button" class="bd07-hint__close" aria-label="Close hint" data-hint-close>×</button>
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-hint]').forEach((hint) => {
+    if (hint.dataset.hintReady === 'true') return;
+    hint.dataset.hintReady = 'true';
+    const trigger = hint.querySelector<HTMLButtonElement>('.bd07-hint__button');
+    const panel = hint.querySelector<HTMLElement>('.bd07-hint__panel');
+    if (!trigger || !panel) return;
+    trigger.addEventListener('click', () => {
+      panel.hidden = !panel.hidden;
+      trigger.setAttribute('aria-expanded', String(!panel.hidden));
+    });
+    hint.querySelector<HTMLButtonElement>('[data-hint-close]')?.addEventListener('click', () => {
+      panel.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.focus();
+    });
+    hint.querySelector<HTMLButtonElement>('[data-hint-next]')?.addEventListener('click', (event) => {
+      hint.querySelector<HTMLElement>('[data-hint-second]')?.removeAttribute('hidden');
+      (event.currentTarget as HTMLButtonElement).hidden = true;
+    });
+  });
+</script>
+
