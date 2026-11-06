@@ -1,7 +1,16 @@
-name: Deploy Be Deutsch website to GitHub Pages
+name: Deploy verified Be Deutsch website to GitHub Pages
 
 on:
   workflow_dispatch:
+    inputs:
+      release_commit:
+        description: Exact main-branch commit approved for BD-A2-PUBLIC-RELEASE-01
+        required: true
+        type: string
+      confirmation:
+        description: Enter PUBLISH_BD_A2_PUBLIC_RELEASE_01
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -12,52 +21,113 @@ concurrency:
   group: be-deutsch-pages
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: 22.23.4
+  PNPM_VERSION: 11.25.0
+  TZ: UTC
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+  NODE_ENV: production
+  SOURCE_DATE_EPOCH: "0"
+
 jobs:
   build:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      inputs.confirmation == 'PUBLISH_BD_A2_PUBLIC_RELEASE_01' &&
+      inputs.release_commit == github.sha
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     defaults:
       run:
         working-directory: 07_Website
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Check out the exact production commit without retained credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install pinned pnpm
+        uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
         with:
           version: 11.25.0
+          run_install: false
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Install pinned Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: 22
+          node-version: 22.23.4
           cache: pnpm
           cache-dependency-path: 07_Website/pnpm-lock.yaml
 
-      - name: Install pinned dependencies
+      - name: Verify production event, commit, runner and toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/main"
+          test "$GITHUB_SHA" = "${{ inputs.release_commit }}"
+          test "${{ inputs.confirmation }}" = "PUBLISH_BD_A2_PUBLIC_RELEASE_01"
+          test "$(node --version)" = "v${NODE_VERSION}"
+          test "$(pnpm --version)" = "${PNPM_VERSION}"
+          test "$RUNNER_OS" = "Linux"
+          node --version
+          pnpm --version
+          uname -a
+
+      - name: Install frozen dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Audit pinned dependencies
+      - name: Audit current dependency advisories
         run: pnpm audit --audit-level low
 
-      - name: Run legal guard and production build
-        run: pnpm build:production
+      - name: Enforce owner authorization and build the public artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ../manifests
+          pnpm build:production
+
+      - name: Verify public release inventory
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          ARTIFACT="$GITHUB_WORKSPACE/release-dist"
+          test -d "$ARTIFACT"
+          FILES="$(find "$ARTIFACT" -type f | wc -l | tr -d ' ')"
+          HTML="$(find "$ARTIFACT" -type f -name '*.html' | wc -l | tr -d ' ')"
+          AUDIO="$(find "$ARTIFACT/a2-expanded-audio" -type f -iname '*.mp3' | wc -l | tr -d ' ')"
+          SITEMAP="$(grep -o '<loc>' "$ARTIFACT/sitemap-0.xml" | wc -l | tr -d ' ')"
+          test "$FILES" = "3053"
+          test "$HTML" = "240"
+          test "$AUDIO" = "59"
+          test "$SITEMAP" = "238"
+          test ! -e "$ARTIFACT/a2/audio-review/index.html"
+          test ! -e "$ARTIFACT/a2/review-index/index.html"
+          (
+            cd "$ARTIFACT"
+            find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/production-artifact.sha256"
+          sha256sum "$RUNNER_TEMP/production-artifact.sha256"
+          printf 'files=%s html=%s sitemap=%s audio=%s\n' "$FILES" "$HTML" "$SITEMAP" "$AUDIO"
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
-      - name: Upload static Pages artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload validated Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
-          path: 07_Website/dist
+          path: release-dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy the validated Pages artifact
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

@@ -65,7 +65,9 @@ for (const asset of assets) {
 for (const file of files) assert(!/\.(?:zip|xlsx|map|pem|key|pfx|p12|env|log)$/i.test(file), `Forbidden artifact file: ${file}`);
 const release = JSON.parse(readFileSync(path.join(artifact, 'a2-release.json'), 'utf8'));
 assert.equal(release.releaseId, 'BD-A2-FULL-WEB-RC1-2026-11-05');
-assert.equal(release.publicationAuthorized, false); assert.equal(release.deploymentAuthorized, false); assert.equal(release.authorizationReference, null);
+assert.equal(release.publicationAuthorized, release.deploymentAuthorized, 'Publication and deployment authorization must agree');
+if (release.publicationAuthorized) assert.ok(release.authorizationReference, 'Authorized publication requires an owner authorization reference');
+else assert.equal(release.authorizationReference, null, 'Unauthorized release candidate must not contain an authorization reference');
 
 const report = { status: 'PASS', artifact, htmlPages: routes.size, sitemapEntries: sitemapRoutes.size, requiredRoutes: [...requiredPublicRoutes].sort(), sitemapRoutes: [...sitemapRoutes].sort(), excludedReviewRoutes: [...reviewOnlyRoutes].sort(), audio: { total: 59, listening: 24, podcastChapters: 30, podcastMasters: 5 } };
 writeFileSync(path.join(manifestRoot, 'PUBLIC_ROUTE_MANIFEST.json'), `${JSON.stringify(report, null, 2)}\n`);
