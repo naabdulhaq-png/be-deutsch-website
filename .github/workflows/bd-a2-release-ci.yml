@@ -1,4 +1,4 @@
-name: BD A2 release review CI
+name: BD A2 canonical Linux reproducibility
 
 on:
   push:
@@ -9,24 +9,30 @@ permissions:
   contents: read
 
 concurrency:
-  group: bd-a2-release-ci-${{ github.ref }}
+  group: bd-a2-canonical-linux-${{ github.ref }}
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: 22.23.4
+  PNPM_VERSION: 11.25.0
+  TZ: UTC
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+  NODE_ENV: production
+  SOURCE_DATE_EPOCH: "0"
+
 jobs:
-  review-build:
+  canonical-two-build:
     if: github.ref == 'refs/heads/review/bd-a2-release-ci-01'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    defaults:
-      run:
-        shell: bash
-        working-directory: 07_Website
+    timeout-minutes: 45
     steps:
-      - name: Check out review commit without retained credentials
+      - name: Check out the exact review commit without retained credentials
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 1
           persist-credentials: false
+          path: source
 
       - name: Install pinned pnpm
         uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
@@ -39,30 +45,152 @@ jobs:
         with:
           node-version: 22.23.4
 
-      - name: Verify toolchain
+      - name: Verify event, commit, runner and toolchain
+        shell: bash
         run: |
-          test "$(node --version)" = "v22.23.4"
-          test "$(pnpm --version)" = "11.25.0"
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/review/bd-a2-release-ci-01"
+          test "$(git -C source rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(node --version)" = "v${NODE_VERSION}"
+          test "$(pnpm --version)" = "${PNPM_VERSION}"
+          test "$RUNNER_OS" = "Linux"
+          uname -a
+          node --version
+          pnpm --version
 
-      - name: Install locked dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Audit current dependency advisories
-        run: pnpm audit --audit-level low
-
-      - name: Verify immutable Unit-1 baseline and prepare ephemeral regression fixture
-        working-directory: .
+      - name: Create two independent clean source workspaces
+        shell: bash
         run: |
-          node ci-tools/prepare-ui08-baseline-fixture.mjs
-          mkdir -p manifests
+          set -euo pipefail
+          SOURCE_ARCHIVE="$RUNNER_TEMP/bd-a2-source.tar"
+          tar \
+            --exclude=.git \
+            --exclude=node_modules \
+            --exclude=dist \
+            --exclude=release-dist \
+            --exclude=.astro \
+            --sort=name \
+            --mtime='@0' \
+            --owner=0 \
+            --group=0 \
+            --numeric-owner \
+            -C "$GITHUB_WORKSPACE/source" \
+            -cf "$SOURCE_ARCHIVE" .
+          mkdir -p "$RUNNER_TEMP/build-a" "$RUNNER_TEMP/build-b" "$RUNNER_TEMP/evidence"
+          tar -xf "$SOURCE_ARCHIVE" -C "$RUNNER_TEMP/build-a"
+          tar -xf "$SOURCE_ARCHIVE" -C "$RUNNER_TEMP/build-b"
+          (
+            cd "$RUNNER_TEMP/build-a"
+            find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/source-a.sha256"
+          (
+            cd "$RUNNER_TEMP/build-b"
+            find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/source-b.sha256"
+          diff -u "$RUNNER_TEMP/evidence/source-a.sha256" "$RUNNER_TEMP/evidence/source-b.sha256"
+          sha256sum "$RUNNER_TEMP/evidence/source-a.sha256"
 
-      - name: Build and validate release candidate
-        run: pnpm build:release-candidate
+      - name: Clean install and validate Build A
+        shell: bash
+        working-directory: ${{ runner.temp }}/build-a/07_Website
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile --store-dir "$RUNNER_TEMP/pnpm-store-a"
+          pnpm audit --audit-level low
+          node --input-type=module -e "import sharp from 'sharp'; console.log(JSON.stringify(sharp.versions, null, 2))" > "$RUNNER_TEMP/evidence/sharp-a.json"
+          node ../ci-tools/prepare-ui08-baseline-fixture.mjs
+          mkdir -p ../manifests
+          pnpm build:release-candidate
+          node --experimental-strip-types --test tests/a2-release.test.ts
+          pnpm list --depth Infinity --json \
+            | sed "s#${RUNNER_TEMP}/build-a#BUILD_ROOT#g" \
+            > "$RUNNER_TEMP/evidence/dependencies-a.json"
 
-      - name: Run Unit-1 behavioral contracts
-        run: node --experimental-strip-types --test tests/a2-release.test.ts
+      - name: Clean install and validate Build B
+        shell: bash
+        working-directory: ${{ runner.temp }}/build-b/07_Website
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile --store-dir "$RUNNER_TEMP/pnpm-store-b"
+          node --input-type=module -e "import sharp from 'sharp'; console.log(JSON.stringify(sharp.versions, null, 2))" > "$RUNNER_TEMP/evidence/sharp-b.json"
+          node ../ci-tools/prepare-ui08-baseline-fixture.mjs
+          mkdir -p ../manifests
+          pnpm build:release-candidate
+          node --experimental-strip-types --test tests/a2-release.test.ts
+          pnpm list --depth Infinity --json \
+            | sed "s#${RUNNER_TEMP}/build-b#BUILD_ROOT#g" \
+            > "$RUNNER_TEMP/evidence/dependencies-b.json"
 
-      - name: Compare CI artifact with validated local reference
-        working-directory: .
-        run: node ci-tools/compare-release-reference.mjs
+      - name: Verify identical dependency and native-image resolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          diff -u "$RUNNER_TEMP/evidence/sharp-a.json" "$RUNNER_TEMP/evidence/sharp-b.json"
+          diff -u "$RUNNER_TEMP/evidence/dependencies-a.json" "$RUNNER_TEMP/evidence/dependencies-b.json"
 
+      - name: Strictly compare complete Build A and Build B artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_A="$RUNNER_TEMP/build-a/release-dist"
+          ARTIFACT_B="$RUNNER_TEMP/build-b/release-dist"
+          test -d "$ARTIFACT_A"
+          test -d "$ARTIFACT_B"
+          (
+            cd "$ARTIFACT_A"
+            find . -type f -printf '%P\n' | LC_ALL=C sort
+          ) > "$RUNNER_TEMP/evidence/files-a.txt"
+          (
+            cd "$ARTIFACT_B"
+            find . -type f -printf '%P\n' | LC_ALL=C sort
+          ) > "$RUNNER_TEMP/evidence/files-b.txt"
+          diff -u "$RUNNER_TEMP/evidence/files-a.txt" "$RUNNER_TEMP/evidence/files-b.txt"
+          (
+            cd "$ARTIFACT_A"
+            find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/build-a.sha256"
+          (
+            cd "$ARTIFACT_B"
+            find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/build-b.sha256"
+          diff -u "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256"
+
+          FILES="$(wc -l < "$RUNNER_TEMP/evidence/files-a.txt" | tr -d ' ')"
+          HTML="$(find "$ARTIFACT_A" -type f -name '*.html' | wc -l | tr -d ' ')"
+          AUDIO="$(find "$ARTIFACT_A/a2-expanded-audio" -type f -iname '*.mp3' | wc -l | tr -d ' ')"
+          SITEMAP="$(grep -o '<loc>' "$ARTIFACT_A/sitemap-0.xml" | wc -l | tr -d ' ')"
+          test "$FILES" = "3053"
+          test "$HTML" = "240"
+          test "$AUDIO" = "59"
+          test "$SITEMAP" = "238"
+          test ! -e "$ARTIFACT_A/a2/audio-review/index.html"
+          test ! -e "$ARTIFACT_A/a2/review-index/index.html"
+
+          MANIFEST_SHA="$(sha256sum "$RUNNER_TEMP/evidence/build-a.sha256" | cut -d' ' -f1)"
+          printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","files":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
+            "$GITHUB_SHA" "$RUNNER_OS" "$(node --version)" "$(pnpm --version)" "$FILES" "$HTML" "$SITEMAP" "$AUDIO" "$MANIFEST_SHA" \
+            | tee "$RUNNER_TEMP/evidence/STRICT_TWO_BUILD_COMPARISON.json"
+
+          {
+            echo '## Canonical Linux reproducibility'
+            echo
+            echo "- Commit: \`$GITHUB_SHA\`"
+            echo "- Toolchain: \`$RUNNER_OS / $(node --version) / pnpm $(pnpm --version)\`"
+            echo "- Files: \`$FILES\`"
+            echo "- Public HTML: \`$HTML\`"
+            echo "- Sitemap entries: \`$SITEMAP\`"
+            echo "- Audio assets: \`$AUDIO\`"
+            echo "- Canonical manifest SHA-256: \`$MANIFEST_SHA\`"
+            echo '- Build A vs Build B: **exact path and SHA-256 equality PASS**'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          # Preserve the complete canonical checksum list in the non-deployment job log.
+          echo 'BEGIN_CANONICAL_ARTIFACT_SHA256_MANIFEST'
+          cat "$RUNNER_TEMP/evidence/build-a.sha256"
+          echo 'END_CANONICAL_ARTIFACT_SHA256_MANIFEST'
+
+      - name: Confirm the job contains no deployment stage
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'Review-only build and validation complete. No artifact upload, Pages deployment, release, tag, merge, or hosting action was invoked.'
