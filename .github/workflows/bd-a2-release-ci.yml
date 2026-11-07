@@ -102,6 +102,10 @@ jobs:
           mkdir -p ../manifests
           pnpm build:release-candidate
           node --experimental-strip-types --test tests/a2-release.test.ts
+          node ../ci-tools/check-a2-reachability.mjs \
+            --site ../release-dist \
+            --inventory ../ci-tools/a2-reachability-inventory.json \
+            --output "$RUNNER_TEMP/evidence/reachability-a.json"
           pnpm list --depth Infinity --json \
             | sed "s#${RUNNER_TEMP}/build-a#BUILD_ROOT#g" \
             > "$RUNNER_TEMP/evidence/dependencies-a.json"
@@ -117,6 +121,10 @@ jobs:
           mkdir -p ../manifests
           pnpm build:release-candidate
           node --experimental-strip-types --test tests/a2-release.test.ts
+          node ../ci-tools/check-a2-reachability.mjs \
+            --site ../release-dist \
+            --inventory ../ci-tools/a2-reachability-inventory.json \
+            --output "$RUNNER_TEMP/evidence/reachability-b.json"
           pnpm list --depth Infinity --json \
             | sed "s#${RUNNER_TEMP}/build-b#BUILD_ROOT#g" \
             > "$RUNNER_TEMP/evidence/dependencies-b.json"
@@ -127,6 +135,42 @@ jobs:
           set -euo pipefail
           diff -u "$RUNNER_TEMP/evidence/sharp-a.json" "$RUNNER_TEMP/evidence/sharp-b.json"
           diff -u "$RUNNER_TEMP/evidence/dependencies-a.json" "$RUNNER_TEMP/evidence/dependencies-b.json"
+          diff -u "$RUNNER_TEMP/evidence/reachability-a.json" "$RUNNER_TEMP/evidence/reachability-b.json"
+
+      - name: Browser-validate learner journeys, media and all-unit navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v google-chrome
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/build-a/release-dist" \
+            > "$RUNNER_TEMP/evidence/http-server.log" 2>&1 &
+          SERVER_PID=$!
+          google-chrome \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --autoplay-policy=no-user-gesture-required \
+            --remote-debugging-address=127.0.0.1 \
+            --remote-debugging-port=9222 \
+            --user-data-dir="$RUNNER_TEMP/chrome-a" \
+            about:blank > "$RUNNER_TEMP/evidence/chrome.log" 2>&1 &
+          CHROME_PID=$!
+          cleanup() {
+            kill "$CHROME_PID" "$SERVER_PID" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+          for attempt in $(seq 1 40); do
+            curl --fail --silent http://127.0.0.1:4173/a2/ > /dev/null \
+              && curl --fail --silent http://127.0.0.1:9222/json/version > /dev/null \
+              && break
+            sleep 0.25
+          done
+          curl --fail --silent http://127.0.0.1:4173/a2/ > /dev/null
+          curl --fail --silent http://127.0.0.1:9222/json/version > /dev/null
+          node source/ci-tools/check-a2-browser-reachability.mjs \
+            --site http://127.0.0.1:4173 \
+            --browser http://127.0.0.1:9222 \
+            --output "$RUNNER_TEMP/evidence/browser-reachability.json"
 
       - name: Strictly compare complete Build A and Build B artifacts
         shell: bash
@@ -165,6 +209,8 @@ jobs:
           test "$SITEMAP" = "238"
           test ! -e "$ARTIFACT_A/a2/audio-review/index.html"
           test ! -e "$ARTIFACT_A/a2/review-index/index.html"
+          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/reachability-a.json');if(r.status!=='PASS'||r.reachableRecords!==885||r.unreachableRecords!==0)process.exit(1)"
+          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/browser-reachability.json');if(r.status!=='PASS'||r.failed!==0)process.exit(1)"
 
           MANIFEST_SHA="$(sha256sum "$RUNNER_TEMP/evidence/build-a.sha256" | cut -d' ' -f1)"
           printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","files":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
@@ -180,6 +226,8 @@ jobs:
             echo "- Public HTML: \`$HTML\`"
             echo "- Sitemap entries: \`$SITEMAP\`"
             echo "- Audio assets: \`$AUDIO\`"
+            echo '- Approved A2 records reachable: `885/885`'
+            echo '- Browser learner journeys: **PASS**'
             echo "- Canonical manifest SHA-256: \`$MANIFEST_SHA\`"
             echo '- Build A vs Build B: **exact path and SHA-256 equality PASS**'
           } >> "$GITHUB_STEP_SUMMARY"

@@ -3,7 +3,7 @@ import DraftExercise from '../DraftExercise.astro';
 interface Props { lesson: any; exercises: any[] }
 const { lesson, exercises } = Astro.props;
 ---
-<section class="bd08-section-heading"><div><p class="section-kicker">Grammar · sentence structure</p><h2>{lesson.title}</h2><p>{lesson.learning_objective}</p></div><span class="bd08-draft-chip">Draft · review required</span></section>
+<section class="bd08-section-heading"><div><p class="section-kicker">Grammar · sentence structure</p><h2>{lesson.title}</h2><p>{lesson.learning_objective}</p></div><span class="bd08-draft-chip">Approved course content</span></section>
 <section class="bd08-explanation-card">
   <h3>Concept</h3>
   <p data-support-values={JSON.stringify(lesson.explanation_drafts)}>{lesson.explanation_drafts.en}</p>
