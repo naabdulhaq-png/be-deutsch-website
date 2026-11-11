@@ -137,41 +137,6 @@ jobs:
           diff -u "$RUNNER_TEMP/evidence/dependencies-a.json" "$RUNNER_TEMP/evidence/dependencies-b.json"
           diff -u "$RUNNER_TEMP/evidence/reachability-a.json" "$RUNNER_TEMP/evidence/reachability-b.json"
 
-      - name: Browser-validate learner journeys, media and all-unit navigation
-        shell: bash
-        run: |
-          set -euo pipefail
-          command -v google-chrome
-          python3 -m http.server 4173 --bind 127.0.0.1 --directory "$RUNNER_TEMP/build-a/release-dist" \
-            > "$RUNNER_TEMP/evidence/http-server.log" 2>&1 &
-          SERVER_PID=$!
-          google-chrome \
-            --headless=new \
-            --no-sandbox \
-            --disable-gpu \
-            --autoplay-policy=no-user-gesture-required \
-            --remote-debugging-address=127.0.0.1 \
-            --remote-debugging-port=9222 \
-            --user-data-dir="$RUNNER_TEMP/chrome-a" \
-            about:blank > "$RUNNER_TEMP/evidence/chrome.log" 2>&1 &
-          CHROME_PID=$!
-          cleanup() {
-            kill "$CHROME_PID" "$SERVER_PID" 2>/dev/null || true
-          }
-          trap cleanup EXIT
-          for attempt in $(seq 1 40); do
-            curl --fail --silent http://127.0.0.1:4173/a2/ > /dev/null \
-              && curl --fail --silent http://127.0.0.1:9222/json/version > /dev/null \
-              && break
-            sleep 0.25
-          done
-          curl --fail --silent http://127.0.0.1:4173/a2/ > /dev/null
-          curl --fail --silent http://127.0.0.1:9222/json/version > /dev/null
-          node source/ci-tools/check-a2-browser-reachability.mjs \
-            --site http://127.0.0.1:4173 \
-            --browser http://127.0.0.1:9222 \
-            --output "$RUNNER_TEMP/evidence/browser-reachability.json"
-
       - name: Strictly compare complete Build A and Build B artifacts
         shell: bash
         run: |
@@ -210,7 +175,6 @@ jobs:
           test ! -e "$ARTIFACT_A/a2/audio-review/index.html"
           test ! -e "$ARTIFACT_A/a2/review-index/index.html"
           node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/reachability-a.json');if(r.status!=='PASS'||r.reachableRecords!==885||r.unreachableRecords!==0)process.exit(1)"
-          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/browser-reachability.json');if(r.status!=='PASS'||r.failed!==0)process.exit(1)"
 
           MANIFEST_SHA="$(sha256sum "$RUNNER_TEMP/evidence/build-a.sha256" | cut -d' ' -f1)"
           printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","files":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
@@ -227,7 +191,6 @@ jobs:
             echo "- Sitemap entries: \`$SITEMAP\`"
             echo "- Audio assets: \`$AUDIO\`"
             echo '- Approved A2 records reachable: `885/885`'
-            echo '- Browser learner journeys: **PASS**'
             echo "- Canonical manifest SHA-256: \`$MANIFEST_SHA\`"
             echo '- Build A vs Build B: **exact path and SHA-256 equality PASS**'
           } >> "$GITHUB_STEP_SUMMARY"
@@ -236,6 +199,125 @@ jobs:
           echo 'BEGIN_CANONICAL_ARTIFACT_SHA256_MANIFEST'
           cat "$RUNNER_TEMP/evidence/build-a.sha256"
           echo 'END_CANONICAL_ARTIFACT_SHA256_MANIFEST'
+
+      - name: Browser-validate learner journeys, media and all-unit navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_A="$RUNNER_TEMP/build-a/release-dist"
+          SERVER_HOST="127.0.0.1"
+          SERVER_PORT="4173"
+          CDP_HOST="127.0.0.1"
+          CDP_PORT="9222"
+          SERVER_LOG="$RUNNER_TEMP/evidence/http-server.log"
+          CHROME_LOG="$RUNNER_TEMP/evidence/chrome.log"
+          SERVER_PID=""
+          CHROME_PID=""
+
+          cleanup() {
+            if [ -n "$CHROME_PID" ]; then kill "$CHROME_PID" 2>/dev/null || true; fi
+            if [ -n "$SERVER_PID" ]; then kill "$SERVER_PID" 2>/dev/null || true; fi
+          }
+          diagnostics() {
+            echo '--- browser harness diagnostics ---'
+            if [ -n "$SERVER_PID" ]; then ps -p "$SERVER_PID" -o pid=,stat=,cmd= || true; fi
+            if [ -n "$CHROME_PID" ]; then ps -p "$CHROME_PID" -o pid=,stat=,cmd= || true; fi
+            echo '--- http-server.log ---'
+            test -f "$SERVER_LOG" && cat "$SERVER_LOG" || true
+            echo '--- chrome.log ---'
+            test -f "$CHROME_LOG" && cat "$CHROME_LOG" || true
+            echo '--- end diagnostics ---'
+          }
+          finish() {
+            status=$?
+            trap - EXIT
+            if [ "$status" -ne 0 ]; then diagnostics; fi
+            cleanup
+            exit "$status"
+          }
+          trap finish EXIT
+
+          test -d "$ARTIFACT_A"
+          CHROME_BIN=""
+          for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$candidate" >/dev/null 2>&1; then
+              CHROME_BIN="$(command -v "$candidate")"
+              break
+            fi
+          done
+          test -n "$CHROME_BIN"
+          echo "Chrome binary: $CHROME_BIN"
+
+          python3 -m http.server "$SERVER_PORT" \
+            --bind "$SERVER_HOST" \
+            --directory "$ARTIFACT_A" \
+            > "$SERVER_LOG" 2>&1 &
+          SERVER_PID=$!
+          SERVER_READY=0
+          for attempt in $(seq 1 60); do
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo 'Static server exited before becoming ready.' >&2
+              exit 1
+            fi
+            if curl --noproxy '*' --ipv4 --fail --silent --show-error --max-time 2 \
+              "http://${SERVER_HOST}:${SERVER_PORT}/a2/" > /dev/null; then
+              SERVER_READY=1
+              break
+            fi
+            sleep 0.25
+          done
+          if [ "$SERVER_READY" -ne 1 ]; then
+            echo 'Static server readiness timed out.' >&2
+            exit 1
+          fi
+          echo "Static server ready: http://${SERVER_HOST}:${SERVER_PORT}/a2/"
+
+          "$CHROME_BIN" \
+            --headless \
+            --no-sandbox \
+            --disable-gpu \
+            --disable-dev-shm-usage \
+            --no-first-run \
+            --no-default-browser-check \
+            --autoplay-policy=no-user-gesture-required \
+            --remote-allow-origins='*' \
+            --remote-debugging-address="$CDP_HOST" \
+            --remote-debugging-port="$CDP_PORT" \
+            --user-data-dir="$RUNNER_TEMP/chrome-a" \
+            about:blank > "$CHROME_LOG" 2>&1 &
+          CHROME_PID=$!
+          CDP_READY=0
+          for attempt in $(seq 1 120); do
+            if ! kill -0 "$CHROME_PID" 2>/dev/null; then
+              echo 'Chrome exited before the DevTools endpoint became ready.' >&2
+              exit 1
+            fi
+            if curl --noproxy '*' --ipv4 --fail --silent --show-error --max-time 2 \
+              "http://${CDP_HOST}:${CDP_PORT}/json/version" \
+              > "$RUNNER_TEMP/evidence/cdp-version.json"; then
+              CDP_READY=1
+              break
+            fi
+            sleep 0.25
+          done
+          if [ "$CDP_READY" -ne 1 ]; then
+            echo 'Chrome DevTools readiness timed out.' >&2
+            exit 1
+          fi
+          echo "Chrome DevTools ready: http://${CDP_HOST}:${CDP_PORT}/json/version"
+          cat "$RUNNER_TEMP/evidence/cdp-version.json"
+
+          node source/ci-tools/check-a2-browser-reachability.mjs \
+            --site "http://${SERVER_HOST}:${SERVER_PORT}" \
+            --browser "http://${CDP_HOST}:${CDP_PORT}" \
+            --output "$RUNNER_TEMP/evidence/browser-reachability.json"
+          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/browser-reachability.json');if(r.status!=='PASS'||r.failed!==0)process.exit(1)"
+          {
+            echo '## Browser learner validation'
+            echo
+            echo '- Browser harness readiness: **PASS**'
+            echo '- Learner navigation, languages, RTL, mobile, exercises and media: **PASS**'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Confirm the job contains no deployment stage
         shell: bash
