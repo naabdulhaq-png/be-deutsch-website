@@ -153,7 +153,6 @@ jobs:
             cd "$ARTIFACT_B"
             find . -type f -printf '%P\n' | LC_ALL=C sort
           ) > "$RUNNER_TEMP/evidence/files-b.txt"
-          diff -u "$RUNNER_TEMP/evidence/files-a.txt" "$RUNNER_TEMP/evidence/files-b.txt"
           (
             cd "$ARTIFACT_A"
             find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
@@ -162,23 +161,40 @@ jobs:
             cd "$ARTIFACT_B"
             find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
           ) > "$RUNNER_TEMP/evidence/build-b.sha256"
-          diff -u "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256"
 
-          FILES="$(wc -l < "$RUNNER_TEMP/evidence/files-a.txt" | tr -d ' ')"
+          FILES_A="$(wc -l < "$RUNNER_TEMP/evidence/files-a.txt" | tr -d ' ')"
+          FILES_B="$(wc -l < "$RUNNER_TEMP/evidence/files-b.txt" | tr -d ' ')"
           HTML="$(find "$ARTIFACT_A" -type f -name '*.html' | wc -l | tr -d ' ')"
           AUDIO="$(find "$ARTIFACT_A/a2-expanded-audio" -type f -iname '*.mp3' | wc -l | tr -d ' ')"
           SITEMAP="$(grep -o '<loc>' "$ARTIFACT_A/sitemap-0.xml" | wc -l | tr -d ' ')"
-          test "$FILES" = "3053"
+          MISSING_PATHS="$(comm -23 "$RUNNER_TEMP/evidence/files-a.txt" "$RUNNER_TEMP/evidence/files-b.txt" | wc -l | tr -d ' ')"
+          EXTRA_PATHS="$(comm -13 "$RUNNER_TEMP/evidence/files-a.txt" "$RUNNER_TEMP/evidence/files-b.txt" | wc -l | tr -d ' ')"
+          if diff -u "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256" > "$RUNNER_TEMP/evidence/hash-diff.txt"; then
+            DIFFERING_HASHES=0
+          else
+            DIFFERING_HASHES="$({ diff --old-group-format='%<' --new-group-format='' --unchanged-group-format='' "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256" || true; } | wc -l | tr -d ' ')"
+          fi
+
+          printf 'Artifact metrics: files_a=%s files_b=%s html=%s sitemap=%s audio=%s missing_paths=%s extra_paths=%s differing_hashes=%s\n' \
+            "$FILES_A" "$FILES_B" "$HTML" "$SITEMAP" "$AUDIO" "$MISSING_PATHS" "$EXTRA_PATHS" "$DIFFERING_HASHES"
+
+          test "$FILES_A" = "3054"
+          test "$FILES_B" = "3054"
           test "$HTML" = "240"
           test "$AUDIO" = "59"
           test "$SITEMAP" = "238"
+          test "$MISSING_PATHS" = "0"
+          test "$EXTRA_PATHS" = "0"
+          test "$DIFFERING_HASHES" = "0"
+          diff -u "$RUNNER_TEMP/evidence/files-a.txt" "$RUNNER_TEMP/evidence/files-b.txt"
+          diff -u "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256"
           test ! -e "$ARTIFACT_A/a2/audio-review/index.html"
           test ! -e "$ARTIFACT_A/a2/review-index/index.html"
           node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/reachability-a.json');if(r.status!=='PASS'||r.reachableRecords!==885||r.unreachableRecords!==0)process.exit(1)"
 
           MANIFEST_SHA="$(sha256sum "$RUNNER_TEMP/evidence/build-a.sha256" | cut -d' ' -f1)"
-          printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","files":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
-            "$GITHUB_SHA" "$RUNNER_OS" "$(node --version)" "$(pnpm --version)" "$FILES" "$HTML" "$SITEMAP" "$AUDIO" "$MANIFEST_SHA" \
+          printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","filesA":%s,"filesB":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"missingPaths":%s,"extraPaths":%s,"differingHashes":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
+            "$GITHUB_SHA" "$RUNNER_OS" "$(node --version)" "$(pnpm --version)" "$FILES_A" "$FILES_B" "$HTML" "$SITEMAP" "$AUDIO" "$MISSING_PATHS" "$EXTRA_PATHS" "$DIFFERING_HASHES" "$MANIFEST_SHA" \
             | tee "$RUNNER_TEMP/evidence/STRICT_TWO_BUILD_COMPARISON.json"
 
           {
@@ -186,10 +202,14 @@ jobs:
             echo
             echo "- Commit: \`$GITHUB_SHA\`"
             echo "- Toolchain: \`$RUNNER_OS / $(node --version) / pnpm $(pnpm --version)\`"
-            echo "- Files: \`$FILES\`"
+            echo "- Build A files: \`$FILES_A\`"
+            echo "- Build B files: \`$FILES_B\`"
             echo "- Public HTML: \`$HTML\`"
             echo "- Sitemap entries: \`$SITEMAP\`"
             echo "- Audio assets: \`$AUDIO\`"
+            echo "- Missing paths: \`$MISSING_PATHS\`"
+            echo "- Extra paths: \`$EXTRA_PATHS\`"
+            echo "- Differing hashes: \`$DIFFERING_HASHES\`"
             echo '- Approved A2 records reachable: `885/885`'
             echo "- Canonical manifest SHA-256: \`$MANIFEST_SHA\`"
             echo '- Build A vs Build B: **exact path and SHA-256 equality PASS**'
