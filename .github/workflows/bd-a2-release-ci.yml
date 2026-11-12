@@ -138,6 +138,8 @@ jobs:
           diff -u "$RUNNER_TEMP/evidence/reachability-a.json" "$RUNNER_TEMP/evidence/reachability-b.json"
 
       - name: Strictly compare complete Build A and Build B artifacts
+        id: strict_comparison
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -190,7 +192,59 @@ jobs:
           diff -u "$RUNNER_TEMP/evidence/build-a.sha256" "$RUNNER_TEMP/evidence/build-b.sha256"
           test ! -e "$ARTIFACT_A/a2/audio-review/index.html"
           test ! -e "$ARTIFACT_A/a2/review-index/index.html"
-          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/reachability-a.json');if(r.status!=='PASS'||r.reachableRecords!==885||r.unreachableRecords!==0)process.exit(1)"
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+
+          const reportPath = `${process.env.RUNNER_TEMP}/evidence/reachability-a.json`;
+          let report;
+          try {
+            report = JSON.parse(readFileSync(reportPath, 'utf8'));
+          } catch (error) {
+            console.error(`Reachability report is not valid JSON: ${error.message}`);
+            process.exit(1);
+          }
+
+          const expectedCounts = {
+            vocabulary_record: 300,
+            grammar_topic: 40,
+            activity: 384,
+            listening_passage: 24,
+            listening_question: 72,
+            podcast_episode: 5,
+            podcast_chapter: 30,
+            podcast_question: 30
+          };
+          const failures = [];
+          if (!report || typeof report !== 'object' || Array.isArray(report)) failures.push('root must be an object');
+          if (report?.schemaVersion !== '1.0.0') failures.push('schemaVersion must equal 1.0.0');
+          if (report?.status !== 'PASS') failures.push('status must equal PASS');
+          if (typeof report?.sourceInventorySha256 !== 'string' || !/^[a-f0-9]{64}$/i.test(report.sourceInventorySha256)) failures.push('sourceInventorySha256 must be a 64-character hexadecimal SHA-256');
+          for (const [field, expected] of Object.entries({
+            expectedRecords: 885,
+            presentedRecords: 885,
+            reachableRecords: 885,
+            reachableRoutes: 238,
+            publicHtmlPages: 240,
+            unitsReachable: 10
+          })) {
+            if (typeof report?.[field] !== 'number' || !Number.isInteger(report[field])) failures.push(`${field} must be an integer`);
+            else if (report[field] !== expected) failures.push(`${field} must equal ${expected}, received ${report[field]}`);
+          }
+          if (!Array.isArray(report?.failures)) failures.push('failures must be an array');
+          else if (report.failures.length !== 0) failures.push(`failures must contain zero entries, received ${report.failures.length}`);
+          if (!report?.counts || typeof report.counts !== 'object' || Array.isArray(report.counts)) failures.push('counts must be an object');
+          else {
+            for (const [field, expected] of Object.entries(expectedCounts)) {
+              if (typeof report.counts[field] !== 'number' || !Number.isInteger(report.counts[field])) failures.push(`counts.${field} must be an integer`);
+              else if (report.counts[field] !== expected) failures.push(`counts.${field} must equal ${expected}, received ${report.counts[field]}`);
+            }
+          }
+          if (failures.length) {
+            console.error(`Reachability assertion failed:\n- ${failures.join('\n- ')}`);
+            process.exit(1);
+          }
+          console.log('Reachability schema and contract: PASS (885/885 records, 10/10 units, zero failures).');
+          NODE
 
           MANIFEST_SHA="$(sha256sum "$RUNNER_TEMP/evidence/build-a.sha256" | cut -d' ' -f1)"
           printf '{"status":"PASS","sourceCommit":"%s","runnerOS":"%s","node":"%s","pnpm":"%s","filesA":%s,"filesB":%s,"htmlPages":%s,"sitemapEntries":%s,"audioAssets":%s,"missingPaths":%s,"extraPaths":%s,"differingHashes":%s,"manifestSha256":"%s","exactPathAndHashEquality":true}\n' \
@@ -221,6 +275,8 @@ jobs:
           echo 'END_CANONICAL_ARTIFACT_SHA256_MANIFEST'
 
       - name: Browser-validate learner journeys, media and all-unit navigation
+        id: browser_validation
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -268,9 +324,56 @@ jobs:
           test -n "$CHROME_BIN"
           echo "Chrome binary: $CHROME_BIN"
 
-          python3 -m http.server "$SERVER_PORT" \
-            --bind "$SERVER_HOST" \
-            --directory "$ARTIFACT_A" \
+          cat > "$RUNNER_TEMP/evidence/range-server.mjs" <<'NODE_SERVER'
+          import { createReadStream, statSync } from 'node:fs';
+          import { createServer } from 'node:http';
+          import { extname, join, normalize, resolve, sep } from 'node:path';
+
+          const root = resolve(process.argv[2]);
+          const host = process.argv[3];
+          const port = Number(process.argv[4]);
+          const mime = {
+            '.avif': 'image/avif', '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
+            '.jpeg': 'image/jpeg', '.jpg': 'image/jpeg', '.js': 'text/javascript; charset=utf-8',
+            '.json': 'application/json; charset=utf-8', '.mp3': 'audio/mpeg', '.png': 'image/png',
+            '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8'
+          };
+          const server = createServer((request, response) => {
+            try {
+              const pathname = decodeURIComponent(new URL(request.url, `http://${host}`).pathname);
+              const relative = normalize(pathname).replace(/^([/\\])+/, '');
+              let file = resolve(join(root, relative));
+              if (file !== root && !file.startsWith(`${root}${sep}`)) throw new Error('Path outside root');
+              let stat = statSync(file);
+              if (stat.isDirectory()) { file = join(file, 'index.html'); stat = statSync(file); }
+              if (!stat.isFile()) throw new Error('Not a file');
+              const headers = { 'Accept-Ranges': 'bytes', 'Content-Type': mime[extname(file).toLowerCase()] ?? 'application/octet-stream' };
+              const range = request.headers.range?.match(/^bytes=(\d*)-(\d*)$/);
+              if (range) {
+                const start = range[1] ? Number(range[1]) : 0;
+                const end = range[2] ? Math.min(Number(range[2]), stat.size - 1) : stat.size - 1;
+                if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || start > end || start >= stat.size) {
+                  response.writeHead(416, { ...headers, 'Content-Range': `bytes */${stat.size}` });
+                  response.end();
+                  return;
+                }
+                response.writeHead(206, { ...headers, 'Content-Length': end - start + 1, 'Content-Range': `bytes ${start}-${end}/${stat.size}` });
+                if (request.method === 'HEAD') response.end();
+                else createReadStream(file, { start, end }).pipe(response);
+                return;
+              }
+              response.writeHead(200, { ...headers, 'Content-Length': stat.size });
+              if (request.method === 'HEAD') response.end();
+              else createReadStream(file).pipe(response);
+            } catch {
+              response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+              response.end('Not found');
+            }
+          });
+          server.listen(port, host, () => console.log(`Range server listening on http://${host}:${port}`));
+          NODE_SERVER
+
+          node "$RUNNER_TEMP/evidence/range-server.mjs" "$ARTIFACT_A" "$SERVER_HOST" "$SERVER_PORT" \
             > "$SERVER_LOG" 2>&1 &
           SERVER_PID=$!
           SERVER_READY=0
@@ -331,7 +434,96 @@ jobs:
             --site "http://${SERVER_HOST}:${SERVER_PORT}" \
             --browser "http://${CDP_HOST}:${CDP_PORT}" \
             --output "$RUNNER_TEMP/evidence/browser-reachability.json"
-          node -e "const r=require(process.env.RUNNER_TEMP+'/evidence/browser-reachability.json');if(r.status!=='PASS'||r.failed!==0)process.exit(1)"
+          CDP_ENDPOINT="http://${CDP_HOST}:${CDP_PORT}" \
+          SITE_ENDPOINT="http://${SERVER_HOST}:${SERVER_PORT}" \
+          BROWSER_REPORT="$RUNNER_TEMP/evidence/browser-reachability.json" \
+          node --input-type=module <<'NODE_KEYBOARD'
+          import { readFileSync, writeFileSync } from 'node:fs';
+
+          const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+          const target = await fetch(`${process.env.CDP_ENDPOINT}/json/new?about:blank`, { method: 'PUT' }).then((response) => response.json());
+          const socket = new WebSocket(target.webSocketDebuggerUrl);
+          await new Promise((resolve, reject) => {
+            socket.addEventListener('open', resolve, { once: true });
+            socket.addEventListener('error', reject, { once: true });
+          });
+          let messageId = 0;
+          const pending = new Map();
+          socket.addEventListener('message', (event) => {
+            const message = JSON.parse(event.data);
+            if (!message.id || !pending.has(message.id)) return;
+            const task = pending.get(message.id);
+            pending.delete(message.id);
+            message.error ? task.reject(new Error(message.error.message)) : task.resolve(message.result);
+          });
+          const cdp = (method, params = {}) => new Promise((resolve, reject) => {
+            const id = ++messageId;
+            pending.set(id, { resolve, reject });
+            socket.send(JSON.stringify({ id, method, params }));
+          });
+          const evaluate = async (expression) => {
+            const response = await cdp('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true });
+            if (response.exceptionDetails) throw new Error(response.exceptionDetails.exception?.description ?? response.exceptionDetails.text);
+            return response.result.value;
+          };
+          await cdp('Page.enable');
+          await cdp('Runtime.enable');
+          await cdp('Page.navigate', { url: `${process.env.SITE_ENDPOINT}/a2/` });
+          for (let attempt = 0; attempt < 40; attempt += 1) {
+            await wait(100);
+            if (await evaluate('document.readyState === "complete"')) break;
+          }
+          await cdp('Input.dispatchKeyEvent', { type: 'rawKeyDown', key: 'Tab', code: 'Tab', windowsVirtualKeyCode: 9, nativeVirtualKeyCode: 9 });
+          await cdp('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Tab', code: 'Tab', windowsVirtualKeyCode: 9, nativeVirtualKeyCode: 9 });
+          await wait(100);
+          const evidence = await evaluate(`(()=>{const node=document.activeElement;const rect=node?.getBoundingClientRect();return {tag:node?.tagName,href:node?.getAttribute?.('href'),className:String(node?.className??''),focusVisible:Boolean(node?.matches?.(':focus-visible')),visible:Boolean(rect&&rect.width>0&&rect.height>0)}})()`);
+          const pass = ['A', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'].includes(evidence.tag) && evidence.focusVisible && evidence.visible;
+          const report = JSON.parse(readFileSync(process.env.BROWSER_REPORT, 'utf8'));
+          report.checks.push({ name: 'Keyboard Tab reaches a visible focusable learner control', pass, evidence });
+          report.total = report.checks.length;
+          report.passed = report.checks.filter((check) => check.pass).length;
+          report.failed = report.checks.filter((check) => !check.pass).length;
+          report.status = report.failed === 0 ? 'PASS' : 'FAIL';
+          writeFileSync(process.env.BROWSER_REPORT, `${JSON.stringify(report, null, 2)}\n`);
+          socket.close();
+          NODE_KEYBOARD
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+
+          const reportPath = `${process.env.RUNNER_TEMP}/evidence/browser-reachability.json`;
+          let report;
+          try {
+            report = JSON.parse(readFileSync(reportPath, 'utf8'));
+          } catch (error) {
+            console.error(`Browser report is not valid JSON: ${error.message}`);
+            process.exit(1);
+          }
+
+          const failures = [];
+          if (!report || typeof report !== 'object' || Array.isArray(report)) failures.push('root must be an object');
+          if (report?.schemaVersion !== '1.0.0') failures.push('schemaVersion must equal 1.0.0');
+          if (report?.status !== 'PASS') failures.push('status must equal PASS');
+          for (const [field, expected] of Object.entries({ total: 17, passed: 17, failed: 0 })) {
+            if (typeof report?.[field] !== 'number' || !Number.isInteger(report[field])) failures.push(`${field} must be an integer`);
+            else if (report[field] !== expected) failures.push(`${field} must equal ${expected}, received ${report[field]}`);
+          }
+          if (!Array.isArray(report?.checks)) failures.push('checks must be an array');
+          else {
+            if (report.checks.length !== 17) failures.push(`checks must contain 17 entries, received ${report.checks.length}`);
+            report.checks.forEach((check, index) => {
+              if (!check || typeof check !== 'object' || Array.isArray(check)) failures.push(`checks[${index}] must be an object`);
+              else {
+                if (typeof check.name !== 'string' || check.name.length === 0) failures.push(`checks[${index}].name must be a non-empty string`);
+                if (check.pass !== true) failures.push(`checks[${index}].pass must equal true`);
+              }
+            });
+          }
+          if (failures.length) {
+            console.error(`Browser assertion failed:\n- ${failures.join('\n- ')}`);
+            process.exit(1);
+          }
+          console.log('Browser report schema and contract: PASS (17/17 checks, zero failures).');
+          NODE
           {
             echo '## Browser learner validation'
             echo
@@ -339,8 +531,16 @@ jobs:
             echo '- Learner navigation, languages, RTL, mobile, exercises and media: **PASS**'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Confirm the job contains no deployment stage
+      - name: Enforce strict comparison and browser validation outcomes
+        if: ${{ always() }}
         shell: bash
+        env:
+          STRICT_COMPARISON_OUTCOME: ${{ steps.strict_comparison.outcome }}
+          BROWSER_VALIDATION_OUTCOME: ${{ steps.browser_validation.outcome }}
         run: |
           set -euo pipefail
+          printf 'Independent gate outcomes: strict_comparison=%s browser_validation=%s\n' \
+            "$STRICT_COMPARISON_OUTCOME" "$BROWSER_VALIDATION_OUTCOME"
+          test "$STRICT_COMPARISON_OUTCOME" = "success"
+          test "$BROWSER_VALIDATION_OUTCOME" = "success"
           echo 'Review-only build and validation complete. No artifact upload, Pages deployment, release, tag, merge, or hosting action was invoked.'
