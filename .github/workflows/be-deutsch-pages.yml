@@ -100,7 +100,7 @@ jobs:
           HTML="$(find "$ARTIFACT" -type f -name '*.html' | wc -l | tr -d ' ')"
           AUDIO="$(find "$ARTIFACT/a2-expanded-audio" -type f -iname '*.mp3' | wc -l | tr -d ' ')"
           SITEMAP="$(grep -o '<loc>' "$ARTIFACT/sitemap-0.xml" | wc -l | tr -d ' ')"
-          test "$FILES" = "3054"
+          test "$FILES" = "3047"
           test "$HTML" = "240"
           test "$AUDIO" = "59"
           test "$SITEMAP" = "238"

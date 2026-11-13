@@ -1,8 +1,9 @@
 ---
-import logo from '../../assets/branding/be_deutsch_logo.svg';
+import logo from '../../assets/branding/be_deutsch_ring_mark.svg';
 import course from '../data/integrated-course.json';
 import '../../styles/bd-ui-02.css';
 import '../../styles/bd-ui-07.css';
+import '../../styles/design-3.css';
 
 interface Props {
   unit: number;
@@ -60,7 +61,7 @@ const searchIndex = [
       {unit === 1 && <a href="/a2/unit-1/review/"><span aria-hidden="true">✓</span>Assessment</a>}
     </nav>
     <label class="bd08-unit-switch"><span>Course outline</span><select data-bd-course-switch aria-label="Switch A2 unit">{course.units.map(item => <option value={`/a2/unit-${item.unit}/`} selected={item.unit === unit}>Unit {item.unit} · {item.title}</option>)}</select></label>
-    <a class="bd-ui02__switch-link" href="/grammar/">Switch to A1 Foundations →</a>
+    <a class="bd-ui02__switch-link" href="/vocabulary/">Open A1 Foundations →</a>
     <p class="bd-ui02__note">German remains primary. Choose a support language for explanations, translations and learning hints.</p>
   </aside>
   <div class="bd-ui02__backdrop" data-bd-drawer-close hidden></div>
@@ -69,7 +70,7 @@ const searchIndex = [
     <div class="bd-ui02__search"><span aria-hidden="true">⌕</span><label class="bd-ui02__sr" for="bd-course-search">Search this unit</label><input id="bd-course-search" type="search" placeholder="Search lessons, topics or words…" autocomplete="off" aria-controls="bd-search-results" aria-expanded="false"/><div id="bd-search-results" class="bd-ui02__results" role="listbox" hidden></div></div>
     <div class="bd-ui02__context"><small>Current lesson</small><strong>{title}</strong></div>
     <label class="bd-ui02__course"><span>Unit</span><select data-bd-course-switch aria-label="Switch unit">{course.units.map(item => <option value={`/a2/unit-${item.unit}/`} selected={item.unit === unit}>A2 · Unit {item.unit}</option>)}</select></label>
-    <a class="bd-ui02__home" href="/a2/" aria-label="A2 course overview">⌂</a>
+    <a class="bd-ui02__home" href="/a2/" aria-label="A2 course overview"><img src={logo.src} width="48" height="48" alt=""/></a>
   </header>
 </div>
 <script>import '../../scripts/bd-ui-02';</script>

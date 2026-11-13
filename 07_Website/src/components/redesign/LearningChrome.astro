@@ -1,5 +1,5 @@
 ---
-import logo from '../../assets/branding/be_deutsch_logo.svg';
+import logo from '../../assets/branding/be_deutsch_ring_mark.svg';
 import a2 from '../../a2/data/course.json';
 import integratedCourse from '../../a2/data/integrated-course.json';
 import vocabularyA1 from '../../data/vocabulary-course.json';
@@ -7,6 +7,7 @@ import listeningA1 from '../../data/listening-course.json';
 import { grammarLessons } from '../../data/grammar-course';
 import '../../styles/bd-ui-02.css';
 import '../../styles/bd-ui-07.css';
+import '../../styles/design-3.css';
 
 interface Props {
   area: 'vocabulary' | 'grammar' | 'listening' | 'podcast' | 'overview';
@@ -58,7 +59,7 @@ const searchIndex = [
     <div class="bd-ui02__brand"><a href="/" aria-label="Be Deutsch home"><img src={logo.src} alt="Be Deutsch" /></a><button type="button" data-bd-drawer-close aria-label="Close course outline">×</button></div>
     <div class="bd-ui07__course-heading">
       <span class:list={['bd-ui02__level', level === 'A1' && 'is-a1']}>{level}</span>
-      <div><strong>{level === 'A2' ? 'A2 Unit 1' : 'A1 Foundations'}</strong><small>{level === 'A2' ? 'Life Updates and Recent Experiences' : 'Published course'}</small></div>
+      <div><strong>{level === 'A2' ? 'A2 Complete Course' : 'A1 Foundations'}</strong><small>{level === 'A2' ? 'Unit 1 · Life updates' : 'Vocabulary · Grammar · Listening'}</small></div>
     </div>
     <nav class="bd-ui07__category-cards" aria-label="Learning sections">
       {groups.map((group) => {
@@ -79,7 +80,7 @@ const searchIndex = [
       </> : <a href="/testing/"><span aria-hidden="true">✓</span>Practice and tests</a>}
     </nav>
     {level === 'A2' && <label class="bd-ui02__unit-switch"><span>Choose A2 unit</span><select data-bd-course-switch aria-label="Switch A2 unit">{integratedCourse.units.map((item) => <option value={`/a2/unit-${item.unit}/`} selected={item.unit === 1}>Unit {item.unit} · {item.title}</option>)}</select></label>}
-    <a class="bd-ui02__switch-link" href={level === 'A2' ? '/grammar/' : '/a2/unit-1/'}>Switch to {level === 'A2' ? 'A1 Foundations' : 'A2 Unit 1'} →</a>
+    <a class="bd-ui02__switch-link" href={level === 'A2' ? '/vocabulary/' : '/a2/'}>{level === 'A2' ? 'Open A1 Foundations' : 'Open A2 Complete Course'} →</a>
     {level === 'A2' && <p class="bd-ui02__note">All ten approved A2 units are available from the course overview and unit selector.</p>}
   </aside>
   <div class="bd-ui02__backdrop" data-bd-drawer-close hidden></div>
@@ -88,7 +89,7 @@ const searchIndex = [
     <div class="bd-ui02__search"><span aria-hidden="true">⌕</span><label class="bd-ui02__sr" for="bd-course-search">Search lessons, topics or words</label><input id="bd-course-search" type="search" placeholder="Search lessons, topics or words…" autocomplete="off" aria-controls="bd-search-results" aria-expanded="false"/><div id="bd-search-results" class="bd-ui02__results" role="listbox" hidden></div></div>
     <div class="bd-ui02__context"><small>Current lesson</small><strong>{title}</strong></div>
     <label class="bd-ui02__course"><span>Course</span><select data-bd-course-switch aria-label="Switch course level"><option value="/grammar/" selected={level === 'A1'}>A1 · Foundations</option><option value="/a2/" selected={level === 'A2'}>A2 · Complete course</option></select></label>
-    <a class="bd-ui02__home" href={level === 'A2' ? '/a2/' : '/'} aria-label={level === 'A2' ? 'A2 course overview' : 'Website home'}>⌂</a>
+    <a class="bd-ui02__home" href={level === 'A2' ? '/a2/' : '/'} aria-label={level === 'A2' ? 'A2 course overview' : 'Website home'}><img src={logo.src} width="48" height="48" alt=""/></a>
   </header>
 </div>
 <script>import '../../scripts/bd-ui-02';</script>
