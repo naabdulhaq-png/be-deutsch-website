@@ -20,6 +20,7 @@ env:
   LC_ALL: C.UTF-8
   NODE_ENV: production
   SOURCE_DATE_EPOCH: "0"
+  APPROVED_REDESIGN_FILE_COUNT: "3047"
 
 jobs:
   canonical-two-build:
@@ -102,6 +103,10 @@ jobs:
           mkdir -p ../manifests
           pnpm build:release-candidate
           node --experimental-strip-types --test tests/a2-release.test.ts
+          node ../ci-tools/check-a2-reachability.mjs \
+            --site ../release-dist \
+            --inventory ../ci-tools/a2-reachability-inventory.json \
+            --output "$RUNNER_TEMP/evidence/A2_885_REACHABILITY.json"
           pnpm list --depth Infinity --json \
             | sed "s#${RUNNER_TEMP}/build-a#BUILD_ROOT#g" \
             > "$RUNNER_TEMP/evidence/dependencies-a.json"
@@ -112,6 +117,7 @@ jobs:
         run: |
           set -euo pipefail
           pnpm install --frozen-lockfile --store-dir "$RUNNER_TEMP/pnpm-store-b"
+          pnpm audit --audit-level low
           node --input-type=module -e "import sharp from 'sharp'; console.log(JSON.stringify(sharp.versions, null, 2))" > "$RUNNER_TEMP/evidence/sharp-b.json"
           node ../ci-tools/prepare-ui08-baseline-fixture.mjs
           mkdir -p ../manifests
@@ -159,7 +165,7 @@ jobs:
           HTML="$(find "$ARTIFACT_A" -type f -name '*.html' | wc -l | tr -d ' ')"
           AUDIO="$(find "$ARTIFACT_A/a2-expanded-audio" -type f -iname '*.mp3' | wc -l | tr -d ' ')"
           SITEMAP="$(grep -o '<loc>' "$ARTIFACT_A/sitemap-0.xml" | wc -l | tr -d ' ')"
-          test "$FILES" = "3053"
+          test "$FILES" = "$APPROVED_REDESIGN_FILE_COUNT"
           test "$HTML" = "240"
           test "$AUDIO" = "59"
           test "$SITEMAP" = "238"
@@ -188,6 +194,35 @@ jobs:
           echo 'BEGIN_CANONICAL_ARTIFACT_SHA256_MANIFEST'
           cat "$RUNNER_TEMP/evidence/build-a.sha256"
           echo 'END_CANONICAL_ARTIFACT_SHA256_MANIFEST'
+
+      - name: Verify approved audio bytes against the review source
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_AUDIO="$GITHUB_WORKSPACE/source/07_Website/public/a2-expanded-audio"
+          BUILT_AUDIO="$RUNNER_TEMP/build-a/release-dist/a2-expanded-audio"
+          (
+            cd "$SOURCE_AUDIO"
+            find . -type f -iname '*.mp3' -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/source-a2-audio.sha256"
+          (
+            cd "$BUILT_AUDIO"
+            find . -type f -iname '*.mp3' -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+          ) > "$RUNNER_TEMP/evidence/built-a2-audio.sha256"
+          diff -u "$RUNNER_TEMP/evidence/source-a2-audio.sha256" "$RUNNER_TEMP/evidence/built-a2-audio.sha256"
+          test "$(wc -l < "$RUNNER_TEMP/evidence/built-a2-audio.sha256" | tr -d ' ')" = "59"
+          echo 'A2 audio preservation: 59/59 exact relative paths and SHA-256 PASS'
+
+      - name: Run mandatory rendered browser, accessibility and media checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v google-chrome-stable || command -v google-chrome || command -v chromium
+          node "$GITHUB_WORKSPACE/source/ci-tools/check-redesign-browser.mjs" \
+            "$RUNNER_TEMP/build-a/release-dist" \
+            "$RUNNER_TEMP/evidence/browser"
+          cat "$RUNNER_TEMP/evidence/browser/BROWSER_ACCESSIBILITY_RESULTS.json"
+          cat "$RUNNER_TEMP/evidence/A2_885_REACHABILITY.json"
 
       - name: Confirm the job contains no deployment stage
         shell: bash
